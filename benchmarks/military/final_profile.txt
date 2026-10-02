@@ -1,0 +1,325 @@
+Military & Logistics v1 — FINAL SOURCE / actual mature-world diagnostic
+
+생산 코드 40개 파일의 해시가 최종 동결 목록과 일치합니다.
+캠페인 원본은 SQLite mode=ro로만 열고 하나의 확정된 읽기 transaction을 backup API로 복사했습니다.
+원본 DB 파일을 직접 복사하지 않았으며, 캠페인 DB/로그 및 기존 month2 진단은 수정하지 않았습니다.
+
+실제 성장 세계: 1898-02-01 / fictional-military-industrial_front
+복제본 하루 진행 후: 1898-02-02
+범위: 실제 Engine.advance(1) 한 번 + Engine.save 한 번. 전체 Auditor/저장 검증 유지.
+새 주문·월 전체 재실행 없음. 월 경계 통과: False
+CPU는 현재 진단 process만 측정(time.process_time). 동시 캠페인 경합은 wall time에 영향을 줄 수 있습니다.
+cProfile/timer 오버헤드를 포함합니다. 누적 부모·자식 함수 비용은 중첩되므로 합산하면 안 됩니다.
+군사·복사·저장·Auditor·NPC의 누적 시간은 비합산이며, exclusive 분류만 함수 self CPU를 한 번씩 더합니다.
+
+{
+  "backup": {
+    "wall_seconds": 0.7102257999940775,
+    "ledger_rows": 5153,
+    "database_bytes": 45047808,
+    "current_state_sql_payload_sha256": "8dd90031f96a153b8c22ab49b9780c548db0d67820f2151ec07b722602d88153"
+  },
+  "opening_world": {
+    "date": "1898-02-01",
+    "scenario_id": "fictional-military-industrial_front",
+    "countries": 4,
+    "regions": 4,
+    "persons": 20,
+    "npc_memories": 914,
+    "crisis_events": 67,
+    "formations": 7,
+    "operations": 13,
+    "shipments": 12,
+    "loss_receipts": 57,
+    "database_bytes": 45047808
+  },
+  "closing_world": {
+    "date": "1898-02-02",
+    "database_bytes": 45064192,
+    "json_bytes": 138233068,
+    "ledger_rows": 5159
+  },
+  "engine_open_unprofiled_wall_seconds": 6.809176899987506
+}
+
+=== advance_one_actual_day ===
+{
+  "wall_seconds_with_profiler": 22.31625630002236,
+  "process_cpu_seconds_with_profiler": 16.609375,
+  "profile_self_cpu_seconds": 16.59375,
+  "exclusive_self_cpu_categories": {
+    "json": 2.9375,
+    "other": 8.890625,
+    "auditor_and_validation": 0.4375,
+    "storage_and_save": 0.171875,
+    "copy": 3.109375,
+    "engine": 0.015625,
+    "npc": 0.25,
+    "military": 0.015625,
+    "crisis": 0.5,
+    "economy_and_projects": 0.0,
+    "sqlite": 0.265625
+  }
+}
+         15215739 function calls (8981030 primitive calls) in 16.594 seconds
+
+   Ordered by: cumulative time
+   List reduced from 350 to 50 due to restriction <50>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.016    0.016   16.609   16.609 profile_military_candidate.py:143(<lambda>)
+        1    0.000    0.000   16.594   16.594 engine.py:640(advance)
+        2    0.062    0.031   11.500    5.750 {built-in method builtins.next}
+        2    0.016    0.008   11.438    5.719 engine.py:542(_transaction)
+        3    0.000    0.000    6.375    2.125 dataclasses.py:1308(asdict)
+1576536/1035    1.828    0.000    6.375    0.006 dataclasses.py:1382(<genexpr>)
+2850974/3    3.297    0.000    6.375    2.125 dataclasses.py:1332(_asdict_inner)
+        3    0.000    0.000    6.375    2.125 models.py:108(to_dict)
+        1    0.000    0.000    5.984    5.984 contextlib.py:132(__enter__)
+        1    0.000    0.000    5.516    5.516 contextlib.py:141(__exit__)
+321480/60024    0.219    0.000    4.672    0.000 dataclasses.py:1373(<genexpr>)
+ 97300/45    0.453    0.000    4.344    0.097 copy.py:217(_deepcopy_dict)
+951693/34    2.078    0.000    4.344    0.128 copy.py:118(deepcopy)
+     17/1    0.000    0.000    4.344    4.344 copy.py:247(_reconstruct)
+        2    0.000    0.000    4.203    2.102 engine.py:525(_payload)
+13648/6111    0.125    0.000    3.031    0.000 copy.py:191(_deepcopy_list)
+        1    0.000    0.000    2.984    2.984 persistence.py:42(normalize_engine)
+        4    0.000    0.000    2.938    0.734 audit.py:26(check)
+        4    0.000    0.000    2.938    0.734 audit.py:40(core_validator)
+        5    0.125    0.025    1.922    0.384 npc_state.py:556(validate)
+        2    0.000    0.000    1.531    0.766 persistence.py:55(validate_engine)
+     9884    0.047    0.000    1.516    0.000 encoder.py:183(encode)
+     9884    0.000    0.000    1.516    0.000 __init__.py:183(dumps)
+     3795    0.000    0.000    1.500    0.000 npc_state.py:42(_json)
+    14811    0.031    0.000    1.484    0.000 __init__.py:299(loads)
+     9884    1.469    0.000    1.469    0.000 encoder.py:205(iterencode)
+        5    0.000    0.000    1.469    0.294 crisis_state.py:477(validate)
+        5    0.000    0.000    1.469    0.294 crisis_state.py:241(_validate_state)
+    14811    0.047    0.000    1.391    0.000 decoder.py:333(decode)
+    14811    1.312    0.000    1.312    0.000 decoder.py:344(raw_decode)
+        1    0.031    0.031    1.203    1.203 state_storage.py:115(compact)
+     5510    0.062    0.000    1.172    0.000 state_storage.py:80(_store)
+  1598826    0.859    0.000    0.859    0.000 {built-in method builtins.isinstance}
+        5    0.188    0.037    0.844    0.169 crisis_response.py:736(validation_issues)
+  2233475    0.781    0.000    0.781    0.000 {method 'get' of 'dict' objects}
+  1173657    0.453    0.000    0.453    0.000 {built-in method builtins.id}
+        9    0.000    0.000    0.438    0.049 engine.py:21(encode)
+194990/310    0.219    0.000    0.422    0.001 crisis_state.py:45(_tuples)
+195300/1240    0.109    0.000    0.422    0.000 crisis_state.py:46(<genexpr>)
+        1    0.000    0.000    0.406    0.406 engine.py:124(_stored_payload)
+        1    0.000    0.000    0.391    0.391 state_storage.py:187(read)
+     5505    0.031    0.000    0.359    0.000 state_storage.py:165(_expand)
+   840728    0.344    0.000    0.344    0.000 copy.py:172(_deepcopy_atomic)
+   332519    0.188    0.000    0.328    0.000 dataclasses.py:1296(_is_dataclass_instance)
+    57159    0.141    0.000    0.281    0.000 models.py:8(canonical_date)
+   624126    0.281    0.000    0.281    0.000 {built-in method builtins.hasattr}
+    20825    0.250    0.000    0.250    0.000 {method 'execute' of 'sqlite3.Connection' objects}
+    36615    0.062    0.000    0.234    0.000 {built-in method builtins.any}
+        5    0.047    0.009    0.219    0.044 military_state.py:131(validate)
+   110965    0.109    0.000    0.203    0.000 copy.py:231(_keep_alive)
+
+
+
+Top 30 exclusive function self CPU times
+         15215739 function calls (8981030 primitive calls) in 16.594 seconds
+
+   Ordered by: internal time
+   List reduced from 350 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+2850974/3    3.297    0.000    6.375    2.125 dataclasses.py:1332(_asdict_inner)
+951693/34    2.078    0.000    4.344    0.128 copy.py:118(deepcopy)
+1576536/1035    1.828    0.000    6.375    0.006 dataclasses.py:1382(<genexpr>)
+     9884    1.469    0.000    1.469    0.000 encoder.py:205(iterencode)
+    14811    1.312    0.000    1.312    0.000 decoder.py:344(raw_decode)
+  1598826    0.859    0.000    0.859    0.000 {built-in method builtins.isinstance}
+  2233475    0.781    0.000    0.781    0.000 {method 'get' of 'dict' objects}
+ 97300/45    0.453    0.000    4.344    0.097 copy.py:217(_deepcopy_dict)
+  1173657    0.453    0.000    0.453    0.000 {built-in method builtins.id}
+   840728    0.344    0.000    0.344    0.000 copy.py:172(_deepcopy_atomic)
+   624126    0.281    0.000    0.281    0.000 {built-in method builtins.hasattr}
+    20825    0.250    0.000    0.250    0.000 {method 'execute' of 'sqlite3.Connection' objects}
+321480/60024    0.219    0.000    4.672    0.000 dataclasses.py:1373(<genexpr>)
+194990/310    0.219    0.000    0.422    0.001 crisis_state.py:45(_tuples)
+   332519    0.188    0.000    0.328    0.000 dataclasses.py:1296(_is_dataclass_instance)
+        5    0.188    0.037    0.844    0.169 crisis_response.py:736(validation_issues)
+     5510    0.172    0.000    0.172    0.000 {built-in method zlib.compress}
+    57159    0.141    0.000    0.281    0.000 models.py:8(canonical_date)
+13648/6111    0.125    0.000    3.031    0.000 copy.py:191(_deepcopy_list)
+        5    0.125    0.025    1.922    0.384 npc_state.py:556(validate)
+   110965    0.109    0.000    0.203    0.000 copy.py:231(_keep_alive)
+195300/1240    0.109    0.000    0.422    0.000 crisis_state.py:46(<genexpr>)
+   208911    0.109    0.000    0.109    0.000 {method 'append' of 'list' objects}
+   392541    0.078    0.000    0.078    0.000 {method 'items' of 'dict' objects}
+     5510    0.062    0.000    1.172    0.000 state_storage.py:80(_store)
+    36580    0.062    0.000    0.078    0.000 npc_state.py:50(_identifier)
+    31961    0.062    0.000    0.078    0.000 <frozen importlib._bootstrap>:645(parent)
+    36615    0.062    0.000    0.234    0.000 {built-in method builtins.any}
+        2    0.062    0.031   11.500    5.750 {built-in method builtins.next}
+     4285    0.062    0.000    0.062    0.000 {built-in method zlib.decompress}
+
+
+
+
+=== save_one_complete_json ===
+{
+  "wall_seconds_with_profiler": 173.25002030000906,
+  "process_cpu_seconds_with_profiler": 125.578125,
+  "profile_self_cpu_seconds": 125.57812500000001,
+  "exclusive_self_cpu_categories": {
+    "other": 16.53125,
+    "json": 89.5625,
+    "engine": 0.125,
+    "auditor_and_validation": 0.140625,
+    "storage_and_save": 0.28125,
+    "copy": 18.59375,
+    "crisis": 0.109375,
+    "military": 0.0,
+    "economy_and_projects": 0.015625,
+    "npc": 0.09375,
+    "sqlite": 0.125
+  }
+}
+         171552350 function calls (77523593 primitive calls) in 125.578 seconds
+
+   Ordered by: cumulative time
+   List reduced from 364 to 50 due to restriction <50>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.156    0.156  125.578  125.578 profile_military_candidate.py:144(<lambda>)
+        1    0.062    0.062  125.422  125.422 engine.py:742(save)
+     6269    0.172    0.000   92.578    0.015 __init__.py:183(dumps)
+     6269    4.344    0.001   92.406    0.015 encoder.py:183(encode)
+ 12137828    7.469    0.000   86.031    0.000 encoder.py:414(_iterencode)
+89070058/12137828   58.375    0.000   78.562    0.000 encoder.py:334(_iterencode_dict)
+19461174/10191384   12.750    0.000   45.703    0.000 encoder.py:278(_iterencode_list)
+        1    0.016    0.016   30.359   30.359 persistence.py:123(validate_snapshot)
+        1    0.062    0.062   28.875   28.875 persistence.py:15(migrate_snapshot)
+ 631515/3    4.094    0.000   26.734    8.911 copy.py:217(_deepcopy_dict)
+5469216/3   11.859    0.000   26.734    8.911 copy.py:118(deepcopy)
+81042/17000    0.438    0.000   22.828    0.001 copy.py:191(_deepcopy_list)
+ 10994824    5.094    0.000    5.094    0.000 {method 'get' of 'dict' objects}
+ 11123070    4.547    0.000    4.547    0.000 {built-in method builtins.isinstance}
+  7568307    2.422    0.000    2.422    0.000 {built-in method builtins.id}
+        1    0.000    0.000    2.078    2.078 dataclasses.py:1308(asdict)
+525612/345    0.641    0.000    2.078    0.006 dataclasses.py:1382(<genexpr>)
+    16823    0.094    0.000    2.078    0.000 __init__.py:299(loads)
+ 950486/1    0.953    0.000    2.078    2.078 dataclasses.py:1332(_asdict_inner)
+        1    0.000    0.000    2.078    2.078 models.py:108(to_dict)
+    16823    0.094    0.000    1.844    0.000 decoder.py:333(decode)
+     6269    1.828    0.000    1.828    0.000 encoder.py:205(iterencode)
+    16823    1.703    0.000    1.703    0.000 decoder.py:344(raw_decode)
+    10904    0.031    0.000    1.594    0.000 state_storage.py:165(_expand)
+  3372782    1.516    0.000    1.516    0.000 {built-in method _json.encode_basestring}
+107160/20008    0.094    0.000    1.469    0.000 dataclasses.py:1373(<genexpr>)
+   712557    0.859    0.000    1.359    0.000 copy.py:231(_keep_alive)
+  4756659    1.344    0.000    1.344    0.000 copy.py:172(_deepcopy_atomic)
+        1    0.062    0.062    1.219    1.219 state_storage.py:244(export_archive)
+        1    0.000    0.000    1.172    1.172 engine.py:21(encode)
+  1046438    1.125    0.000    1.125    0.000 encoder.py:224(floatstr)
+        1    0.062    0.062    0.828    0.828 engine.py:615(ledger)
+        1    0.031    0.031    0.734    0.734 state_storage.py:255(validate_archive)
+        1    0.000    0.000    0.672    0.672 persistence.py:55(validate_engine)
+        1    0.000    0.000    0.656    0.656 audit.py:26(check)
+        1    0.000    0.000    0.656    0.656 audit.py:40(core_validator)
+  1075365    0.609    0.000    0.609    0.000 {method 'append' of 'list' objects}
+  1352398    0.578    0.000    0.578    0.000 {method 'items' of 'dict' objects}
+     5394    0.000    0.000    0.562    0.000 state_storage.py:16(_encode)
+        1    0.000    0.000    0.484    0.484 engine.py:124(_stored_payload)
+        3    0.000    0.000    0.484    0.161 tempfile.py:497(func_wrapper)
+        1    0.484    0.484    0.484    0.484 {method 'write' of '_io.TextIOWrapper' objects}
+        1    0.000    0.000    0.469    0.469 state_storage.py:187(read)
+        1    0.000    0.000    0.328    0.328 crisis_state.py:477(validate)
+        1    0.016    0.016    0.328    0.328 crisis_state.py:241(_validate_state)
+        1    0.016    0.016    0.266    0.266 npc_state.py:556(validate)
+      759    0.000    0.000    0.234    0.000 npc_state.py:42(_json)
+        1    0.047    0.047    0.188    0.188 crisis_response.py:736(validation_issues)
+     6274    0.172    0.000    0.172    0.000 {method 'join' of 'str' objects}
+    20706    0.047    0.000    0.156    0.000 {built-in method builtins.any}
+
+
+
+Top 30 exclusive function self CPU times
+         171552350 function calls (77523593 primitive calls) in 125.578 seconds
+
+   Ordered by: internal time
+   List reduced from 364 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+89070058/12137828   58.375    0.000   78.562    0.000 encoder.py:334(_iterencode_dict)
+19461174/10191384   12.750    0.000   45.703    0.000 encoder.py:278(_iterencode_list)
+5469216/3   11.859    0.000   26.734    8.911 copy.py:118(deepcopy)
+ 12137828    7.469    0.000   86.031    0.000 encoder.py:414(_iterencode)
+ 10994824    5.094    0.000    5.094    0.000 {method 'get' of 'dict' objects}
+ 11123070    4.547    0.000    4.547    0.000 {built-in method builtins.isinstance}
+     6269    4.344    0.001   92.406    0.015 encoder.py:183(encode)
+ 631515/3    4.094    0.000   26.734    8.911 copy.py:217(_deepcopy_dict)
+  7568307    2.422    0.000    2.422    0.000 {built-in method builtins.id}
+     6269    1.828    0.000    1.828    0.000 encoder.py:205(iterencode)
+    16823    1.703    0.000    1.703    0.000 decoder.py:344(raw_decode)
+  3372782    1.516    0.000    1.516    0.000 {built-in method _json.encode_basestring}
+  4756659    1.344    0.000    1.344    0.000 copy.py:172(_deepcopy_atomic)
+  1046438    1.125    0.000    1.125    0.000 encoder.py:224(floatstr)
+ 950486/1    0.953    0.000    2.078    2.078 dataclasses.py:1332(_asdict_inner)
+   712557    0.859    0.000    1.359    0.000 copy.py:231(_keep_alive)
+525612/345    0.641    0.000    2.078    0.006 dataclasses.py:1382(<genexpr>)
+  1075365    0.609    0.000    0.609    0.000 {method 'append' of 'list' objects}
+  1352398    0.578    0.000    0.578    0.000 {method 'items' of 'dict' objects}
+        1    0.484    0.484    0.484    0.484 {method 'write' of '_io.TextIOWrapper' objects}
+81042/17000    0.438    0.000   22.828    0.001 copy.py:191(_deepcopy_list)
+     6269    0.172    0.000   92.578    0.015 __init__.py:183(dumps)
+     6274    0.172    0.000    0.172    0.000 {method 'join' of 'str' objects}
+        1    0.156    0.156  125.578  125.578 profile_military_candidate.py:144(<lambda>)
+     9684    0.156    0.000    0.156    0.000 {built-in method zlib.decompress}
+    15192    0.156    0.000    0.156    0.000 {built-in method _hashlib.openssl_sha256}
+     9689    0.109    0.000    0.109    0.000 {method 'execute' of 'sqlite3.Connection' objects}
+    10904    0.094    0.000    0.094    0.000 __init__.py:244(detect_encoding)
+    16823    0.094    0.000    1.844    0.000 decoder.py:333(decode)
+107160/20008    0.094    0.000    1.469    0.000 dataclasses.py:1373(<genexpr>)
+
+
+
+
+생산 소스 SHA-256
+{
+  "__init__.py": "becd7c5217666290ce7b6ab5f0b8e4f9515dfbffbf306f2777fb037e162e2f78",
+  "__main__.py": "b71170e9a95954c9091eb11fb0c5c7eca996d02d8b326c93b820be22bb053ad8",
+  "audit.py": "ccbe7f7c28da8e37d325082701817c47c3f32502fe1757676c65d1a5c79467f4",
+  "benchmark.py": "b56ad7ae7c26306cf53591c4f0f3a53027e6e11aeb240452c282499b3405c02a",
+  "calibration.py": "d164971ea2e4a21a52a401c97044cd66d8ad0af8d8777318dc8a5de90b04e68f",
+  "calibration_report.py": "ec3ec783d40e2cd369c951d0d72ef8020f7c411c196e06a478741443a677ccbb",
+  "credit.py": "0696c89c853bfa1683c67b69f6a0bd6554adaaa00851b1022bf9f75cfcdaa51c",
+  "crisis.py": "184aace25d0ef9e53c8f67b4f098aa5798c3fdaedc3de8f9692cead952146b14",
+  "crisis_benchmark.py": "77e733f8853422eca25c23371f918503e87de874ea6cac8af6ebee23bf01c734",
+  "crisis_effects.py": "e30138d6a494678d7f11ec535ac4e6e92fd19ca350c8ee7b79998995eb2bba74",
+  "crisis_response.py": "ef00d4a72b7f4e901462547ee8941fcb594007e9fd549e94409fa6bed18136d0",
+  "crisis_risk.py": "2ce9050ebee40c8a40390195be58817938021ee8104fc58335c935ee55b33d5c",
+  "crisis_state.py": "21d365674f53a94bbd55f87858eb7f1350307dd1318812983560a6b3c4b4c694",
+  "demography.py": "f7c4ee52c141347657056de76d9f4c2d65caa6b215e398b9e4d950a957b2a220",
+  "economy.py": "df0be6370d9f156eef4da0dfc65466fa29d185a7201e1b55634c05ad6406d41a",
+  "engine.py": "4ab30ff52968879c0a8f786e5f65171fe0e477ead2549a3f14a3180e38325815",
+  "guardrails.py": "ba89f34996f6815aec2be7562ad0a8b4ea362eb2b5637b8866001521c3a41242",
+  "labour.py": "667a36b48b75410b23f34f60e21a5f4eab493e0884de3e31f4727cebbe701541",
+  "military.py": "09b2382452a940e04c6137d9cb293e1f93c5a7241605a95a00a593da168ee6a5",
+  "military_benchmark.py": "5887c34cafd2c594251ad5bcbf6dd941eeeec2d55ca5234620b9f368fc39b073",
+  "military_bridge.py": "f8a1be0d2eb1f4ab6c90a5b396bdca7c762bc84412fafcce0e0380cb57fd6d4a",
+  "military_combat.py": "7e0b7484877c8966ed7a7a6cc9e68410df4257be9a5e20afb86885c9bb94ff79",
+  "military_innovation.py": "07831bbf9960ab649554fabd2b924035bb36d575bf047a46d06572ebc810f580",
+  "military_innovation_benchmark.py": "b1d32a62d41e45ed2c20749898e4b2d24cd64366ca2feafc10aa6e633b07b20e",
+  "military_logistics.py": "7fb438763a5c8a0f1fcc9b62facafbb4f6da1423647f3694750d11318ca720d4",
+  "military_operations.py": "02df9673c7637e8fffaf4202102127e5414679f534054d5214ebf3c6ea934a51",
+  "military_politics.py": "5f460f0448d83b005d15005ac427304568cd58ac4043b31710ec784c85c14e4c",
+  "military_state.py": "fbbb7677f3e8e2551ed4ae783ba308bdae084259e5c8bacf3dd34b396e446e3e",
+  "models.py": "ea73b82a03e221255af543a7d004b5d9ee2bec305ddd69a13bf11f13bd8224d4",
+  "npc.py": "4ae0e0b77ba47be69832a56d54279ea51a58709611b3a286469bd96664979a0b",
+  "npc_benchmark.py": "30a05c336d3182476a8f8e6a74a6b8c8c52f885ec7040601fda8d49e988245d1",
+  "npc_decision.py": "d7ece4636aac80394235ac6b9b6b133559826abadac3dd7dc032b9d2bc99804b",
+  "npc_runtime.py": "4ff7273f86b1814ae6ceeb8c6a3983a1cfa7fbf838cec7e28fb7520bd2b3503c",
+  "npc_state.py": "e46dbf85530a510c906d5b8d3a823e0d213d6987f73150debeee2cc76ea80c3a",
+  "order_execution.py": "902f39901d3ab4ad0747e462699242b9dd4ca832d09f84dfa4bafca6aa4a499f",
+  "performance_benchmark.py": "48c303f855b627e4c9367692c4a81bcbcc98b26b3ae08cd2abea895b2c65d4cd",
+  "persistence.py": "953de44b524fef4f112b0ab8bbfd662ba9b6a40cd2353d05b46a690029b23a3a",
+  "projects.py": "f13f5554c506d55fd21753515a75712b3ee4e296295b13e21c6dafe5dda33dfd",
+  "stabilization_benchmark.py": "af5d447ce6d4f65146a4e08ce1dba9a46a2aa6f6ad1d7a5c6106f9affa65254c",
+  "state_storage.py": "3f565549442eceffb8ead97e5ef3cd1f31d9292d04fae1807cdf0a0e6dafecf0"
+}

@@ -1,0 +1,14 @@
+﻿category,label,before_seconds,after_seconds,post_boundary
+world_state_copying,세계·상태 복사,17.0923176,8.002032400000001,copy.py:deepcopy
+npc_tick,NPC 시간 진행,15.2470928,8.5131923,npc.py:tick
+npc_view_construction,NPC가 보는 정보 구성,9.7941014,0.2524424,npc_state.py:_actor_read_view
+report_lookup,받은 보고 조회,0.21810410000000002,0.07669250000000001,npc_state.py:_known_events
+memory_lookup,기억 조회,6.948661,0.3827876,npc_state.py:_effective_entries
+memory_reevaluation,기억 강도 재계산,0.4310875,0.25106900000000004,npc_state.py:_memory_weight
+relation_ruler_evaluation,관계·통치자 평가,5.0152258000000005,2.9327406000000003,npc_state.py:evaluate_ruler
+government_decision,정부 결정,3.9009179,2.5571460000000004,npc.py:_run_council
+crisis_evaluation,위기 평가,6.5886084,0.8411674,crisis.py:tick
+event_reporting,사건 보고 전달,0.41715270000000004,0.41387640000000003,crisis_response.py:deliver_due
+auditor,모순 검사,1.8925969,1.7852209,audit.py:check
+economy,경제 계산,0.39571500000000004,0.3742422,economy.py:tick
+serialization,JSON 변환,3.896594100020593,3.3388603999919724,"World.to_dict + JSON encoding, 별도 단계"

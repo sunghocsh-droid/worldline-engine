@@ -1,0 +1,1596 @@
+{
+  "profile_schema": 1,
+  "source_sha256": {
+    "__init__.py": "becd7c5217666290ce7b6ab5f0b8e4f9515dfbffbf306f2777fb037e162e2f78",
+    "__main__.py": "b71170e9a95954c9091eb11fb0c5c7eca996d02d8b326c93b820be22bb053ad8",
+    "audit.py": "ccbe7f7c28da8e37d325082701817c47c3f32502fe1757676c65d1a5c79467f4",
+    "benchmark.py": "b56ad7ae7c26306cf53591c4f0f3a53027e6e11aeb240452c282499b3405c02a",
+    "calibration.py": "d164971ea2e4a21a52a401c97044cd66d8ad0af8d8777318dc8a5de90b04e68f",
+    "calibration_report.py": "ec3ec783d40e2cd369c951d0d72ef8020f7c411c196e06a478741443a677ccbb",
+    "credit.py": "0696c89c853bfa1683c67b69f6a0bd6554adaaa00851b1022bf9f75cfcdaa51c",
+    "crisis.py": "184aace25d0ef9e53c8f67b4f098aa5798c3fdaedc3de8f9692cead952146b14",
+    "crisis_benchmark.py": "77e733f8853422eca25c23371f918503e87de874ea6cac8af6ebee23bf01c734",
+    "crisis_effects.py": "e30138d6a494678d7f11ec535ac4e6e92fd19ca350c8ee7b79998995eb2bba74",
+    "crisis_response.py": "ef00d4a72b7f4e901462547ee8941fcb594007e9fd549e94409fa6bed18136d0",
+    "crisis_risk.py": "2ce9050ebee40c8a40390195be58817938021ee8104fc58335c935ee55b33d5c",
+    "crisis_state.py": "21d365674f53a94bbd55f87858eb7f1350307dd1318812983560a6b3c4b4c694",
+    "demography.py": "f7c4ee52c141347657056de76d9f4c2d65caa6b215e398b9e4d950a957b2a220",
+    "economy.py": "df0be6370d9f156eef4da0dfc65466fa29d185a7201e1b55634c05ad6406d41a",
+    "engine.py": "4ab30ff52968879c0a8f786e5f65171fe0e477ead2549a3f14a3180e38325815",
+    "guardrails.py": "ba89f34996f6815aec2be7562ad0a8b4ea362eb2b5637b8866001521c3a41242",
+    "labour.py": "667a36b48b75410b23f34f60e21a5f4eab493e0884de3e31f4727cebbe701541",
+    "military.py": "09b2382452a940e04c6137d9cb293e1f93c5a7241605a95a00a593da168ee6a5",
+    "military_benchmark.py": "5887c34cafd2c594251ad5bcbf6dd941eeeec2d55ca5234620b9f368fc39b073",
+    "military_bridge.py": "f8a1be0d2eb1f4ab6c90a5b396bdca7c762bc84412fafcce0e0380cb57fd6d4a",
+    "military_combat.py": "7e0b7484877c8966ed7a7a6cc9e68410df4257be9a5e20afb86885c9bb94ff79",
+    "military_innovation.py": "07831bbf9960ab649554fabd2b924035bb36d575bf047a46d06572ebc810f580",
+    "military_innovation_benchmark.py": "b1d32a62d41e45ed2c20749898e4b2d24cd64366ca2feafc10aa6e633b07b20e",
+    "military_logistics.py": "7fb438763a5c8a0f1fcc9b62facafbb4f6da1423647f3694750d11318ca720d4",
+    "military_operations.py": "02df9673c7637e8fffaf4202102127e5414679f534054d5214ebf3c6ea934a51",
+    "military_politics.py": "5f460f0448d83b005d15005ac427304568cd58ac4043b31710ec784c85c14e4c",
+    "military_state.py": "fbbb7677f3e8e2551ed4ae783ba308bdae084259e5c8bacf3dd34b396e446e3e",
+    "models.py": "ea73b82a03e221255af543a7d004b5d9ee2bec305ddd69a13bf11f13bd8224d4",
+    "npc.py": "4ae0e0b77ba47be69832a56d54279ea51a58709611b3a286469bd96664979a0b",
+    "npc_benchmark.py": "30a05c336d3182476a8f8e6a74a6b8c8c52f885ec7040601fda8d49e988245d1",
+    "npc_decision.py": "d7ece4636aac80394235ac6b9b6b133559826abadac3dd7dc032b9d2bc99804b",
+    "npc_runtime.py": "4ff7273f86b1814ae6ceeb8c6a3983a1cfa7fbf838cec7e28fb7520bd2b3503c",
+    "npc_state.py": "e46dbf85530a510c906d5b8d3a823e0d213d6987f73150debeee2cc76ea80c3a",
+    "order_execution.py": "902f39901d3ab4ad0747e462699242b9dd4ca832d09f84dfa4bafca6aa4a499f",
+    "performance_benchmark.py": "48c303f855b627e4c9367692c4a81bcbcc98b26b3ae08cd2abea895b2c65d4cd",
+    "persistence.py": "953de44b524fef4f112b0ab8bbfd662ba9b6a40cd2353d05b46a690029b23a3a",
+    "projects.py": "f13f5554c506d55fd21753515a75712b3ee4e296295b13e21c6dafe5dda33dfd",
+    "stabilization_benchmark.py": "af5d447ce6d4f65146a4e08ce1dba9a46a2aa6f6ad1d7a5c6106f9affa65254c",
+    "state_storage.py": "3f565549442eceffb8ead97e5ef3cd1f31d9292d04fae1807cdf0a0e6dafecf0"
+  },
+  "source_matches_final_frozen_manifest": true,
+  "source_database": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\benchmarks\\military\\industrial_front\\game.sqlite",
+  "source_access": "SQLite URI mode=ro; pinned committed read transaction; sqlite3 backup API",
+  "backup_database": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military_candidate_diagnostic\\run-20261001-181128\\committed_snapshot.sqlite",
+  "profile_database": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military_candidate_diagnostic\\run-20261001-181128\\profile_clone.sqlite",
+  "backup": {
+    "wall_seconds": 0.7102257999940775,
+    "ledger_rows": 5153,
+    "database_bytes": 45047808,
+    "current_state_sql_payload_sha256": "8dd90031f96a153b8c22ab49b9780c548db0d67820f2151ec07b722602d88153"
+  },
+  "clone_backup": {
+    "wall_seconds": 0.7447575999831315,
+    "ledger_rows": 5153,
+    "database_bytes": 45047808,
+    "current_state_sql_payload_sha256": "8dd90031f96a153b8c22ab49b9780c548db0d67820f2151ec07b722602d88153"
+  },
+  "profile_script_sha256": "542f1ebab2f52d1ca37b0f7ca8fbc371cd033f934fc2620a6636b61d8804dd48",
+  "engine_open_unprofiled_wall_seconds": 6.809176899987506,
+  "scope": {
+    "actual_growth_state_at_least_one_year": true,
+    "full_daily_auditor": true,
+    "engine_startup_full_validation": true,
+    "save_full_snapshot_validation": true,
+    "new_campaign_month": false,
+    "new_policy_orders": false,
+    "source_campaign_mutated_by_diagnostic": false,
+    "profiled_day_count": 1,
+    "profiled_save_count": 1,
+    "advance_crosses_month_boundary": false
+  },
+  "opening_world": {
+    "date": "1898-02-01",
+    "scenario_id": "fictional-military-industrial_front",
+    "countries": 4,
+    "regions": 4,
+    "persons": 20,
+    "npc_memories": 914,
+    "crisis_events": 67,
+    "formations": 7,
+    "operations": 13,
+    "shipments": 12,
+    "loss_receipts": 57,
+    "database_bytes": 45047808
+  },
+  "closing_world": {
+    "date": "1898-02-02",
+    "database_bytes": 45064192,
+    "json_bytes": 138233068,
+    "ledger_rows": 5159
+  },
+  "measurements": [
+    {
+      "operation": "advance_one_actual_day",
+      "wall_seconds_with_profiler": 22.31625630002236,
+      "process_cpu_seconds_with_profiler": 16.609375,
+      "profile_timer": "time.process_time; current diagnostic process only",
+      "profile_self_cpu_seconds": 16.59375,
+      "exclusive_self_cpu_categories": {
+        "json": 2.9375,
+        "other": 8.890625,
+        "auditor_and_validation": 0.4375,
+        "storage_and_save": 0.171875,
+        "copy": 3.109375,
+        "engine": 0.015625,
+        "npc": 0.25,
+        "military": 0.015625,
+        "crisis": 0.5,
+        "economy_and_projects": 0.0,
+        "sqlite": 0.265625
+      },
+      "top_50_cumulative_cpu": [
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\profile_military_candidate.py",
+          "line": 143,
+          "function": "<lambda>",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.015625,
+          "cumulative_cpu_seconds": 16.609375
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\engine.py",
+          "line": 640,
+          "function": "advance",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 16.59375
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.next>",
+          "primitive_calls": 2,
+          "total_calls": 2,
+          "self_cpu_seconds": 0.0625,
+          "cumulative_cpu_seconds": 11.5
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\engine.py",
+          "line": 542,
+          "function": "_transaction",
+          "primitive_calls": 2,
+          "total_calls": 2,
+          "self_cpu_seconds": 0.015625,
+          "cumulative_cpu_seconds": 11.4375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\dataclasses.py",
+          "line": 1308,
+          "function": "asdict",
+          "primitive_calls": 3,
+          "total_calls": 3,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 6.375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\dataclasses.py",
+          "line": 1382,
+          "function": "<genexpr>",
+          "primitive_calls": 1035,
+          "total_calls": 1576536,
+          "self_cpu_seconds": 1.8281250000000002,
+          "cumulative_cpu_seconds": 6.375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\dataclasses.py",
+          "line": 1332,
+          "function": "_asdict_inner",
+          "primitive_calls": 3,
+          "total_calls": 2850974,
+          "self_cpu_seconds": 3.296875,
+          "cumulative_cpu_seconds": 6.375
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\models.py",
+          "line": 108,
+          "function": "to_dict",
+          "primitive_calls": 3,
+          "total_calls": 3,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 6.375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\contextlib.py",
+          "line": 132,
+          "function": "__enter__",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 5.984375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\contextlib.py",
+          "line": 141,
+          "function": "__exit__",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 5.515625
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\dataclasses.py",
+          "line": 1373,
+          "function": "<genexpr>",
+          "primitive_calls": 60024,
+          "total_calls": 321480,
+          "self_cpu_seconds": 0.21875,
+          "cumulative_cpu_seconds": 4.671875
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 217,
+          "function": "_deepcopy_dict",
+          "primitive_calls": 45,
+          "total_calls": 97300,
+          "self_cpu_seconds": 0.45312500000000006,
+          "cumulative_cpu_seconds": 4.34375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 118,
+          "function": "deepcopy",
+          "primitive_calls": 34,
+          "total_calls": 951693,
+          "self_cpu_seconds": 2.078125,
+          "cumulative_cpu_seconds": 4.34375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 247,
+          "function": "_reconstruct",
+          "primitive_calls": 1,
+          "total_calls": 17,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 4.34375
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\engine.py",
+          "line": 525,
+          "function": "_payload",
+          "primitive_calls": 2,
+          "total_calls": 2,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 4.203125
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 191,
+          "function": "_deepcopy_list",
+          "primitive_calls": 6111,
+          "total_calls": 13648,
+          "self_cpu_seconds": 0.125,
+          "cumulative_cpu_seconds": 3.03125
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\persistence.py",
+          "line": 42,
+          "function": "normalize_engine",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 2.984375
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\audit.py",
+          "line": 26,
+          "function": "check",
+          "primitive_calls": 4,
+          "total_calls": 4,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 2.9375
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\audit.py",
+          "line": 40,
+          "function": "core_validator",
+          "primitive_calls": 4,
+          "total_calls": 4,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 2.9375
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\npc_state.py",
+          "line": 556,
+          "function": "validate",
+          "primitive_calls": 5,
+          "total_calls": 5,
+          "self_cpu_seconds": 0.125,
+          "cumulative_cpu_seconds": 1.9218750000000002
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\persistence.py",
+          "line": 55,
+          "function": "validate_engine",
+          "primitive_calls": 2,
+          "total_calls": 2,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 1.53125
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+          "line": 183,
+          "function": "encode",
+          "primitive_calls": 9884,
+          "total_calls": 9884,
+          "self_cpu_seconds": 0.046875,
+          "cumulative_cpu_seconds": 1.515625
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\__init__.py",
+          "line": 183,
+          "function": "dumps",
+          "primitive_calls": 9884,
+          "total_calls": 9884,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 1.515625
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\npc_state.py",
+          "line": 42,
+          "function": "_json",
+          "primitive_calls": 3795,
+          "total_calls": 3795,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 1.5
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\__init__.py",
+          "line": 299,
+          "function": "loads",
+          "primitive_calls": 14811,
+          "total_calls": 14811,
+          "self_cpu_seconds": 0.03125,
+          "cumulative_cpu_seconds": 1.484375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+          "line": 205,
+          "function": "iterencode",
+          "primitive_calls": 9884,
+          "total_calls": 9884,
+          "self_cpu_seconds": 1.46875,
+          "cumulative_cpu_seconds": 1.46875
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\crisis_state.py",
+          "line": 477,
+          "function": "validate",
+          "primitive_calls": 5,
+          "total_calls": 5,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 1.46875
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\crisis_state.py",
+          "line": 241,
+          "function": "_validate_state",
+          "primitive_calls": 5,
+          "total_calls": 5,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 1.46875
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\decoder.py",
+          "line": 333,
+          "function": "decode",
+          "primitive_calls": 14811,
+          "total_calls": 14811,
+          "self_cpu_seconds": 0.046875,
+          "cumulative_cpu_seconds": 1.390625
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\decoder.py",
+          "line": 344,
+          "function": "raw_decode",
+          "primitive_calls": 14811,
+          "total_calls": 14811,
+          "self_cpu_seconds": 1.3125,
+          "cumulative_cpu_seconds": 1.3125
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\state_storage.py",
+          "line": 115,
+          "function": "compact",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.03125,
+          "cumulative_cpu_seconds": 1.203125
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\state_storage.py",
+          "line": 80,
+          "function": "_store",
+          "primitive_calls": 5510,
+          "total_calls": 5510,
+          "self_cpu_seconds": 0.0625,
+          "cumulative_cpu_seconds": 1.171875
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.isinstance>",
+          "primitive_calls": 1598826,
+          "total_calls": 1598826,
+          "self_cpu_seconds": 0.859375,
+          "cumulative_cpu_seconds": 0.859375
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\crisis_response.py",
+          "line": 736,
+          "function": "validation_issues",
+          "primitive_calls": 5,
+          "total_calls": 5,
+          "self_cpu_seconds": 0.1875,
+          "cumulative_cpu_seconds": 0.84375
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'get' of 'dict' objects>",
+          "primitive_calls": 2233475,
+          "total_calls": 2233475,
+          "self_cpu_seconds": 0.78125,
+          "cumulative_cpu_seconds": 0.78125
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.id>",
+          "primitive_calls": 1173657,
+          "total_calls": 1173657,
+          "self_cpu_seconds": 0.45312500000000006,
+          "cumulative_cpu_seconds": 0.45312500000000006
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\engine.py",
+          "line": 21,
+          "function": "encode",
+          "primitive_calls": 9,
+          "total_calls": 9,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 0.4375
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\crisis_state.py",
+          "line": 45,
+          "function": "_tuples",
+          "primitive_calls": 310,
+          "total_calls": 194990,
+          "self_cpu_seconds": 0.21875,
+          "cumulative_cpu_seconds": 0.421875
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\crisis_state.py",
+          "line": 46,
+          "function": "<genexpr>",
+          "primitive_calls": 1240,
+          "total_calls": 195300,
+          "self_cpu_seconds": 0.109375,
+          "cumulative_cpu_seconds": 0.421875
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\engine.py",
+          "line": 124,
+          "function": "_stored_payload",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 0.40625
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\state_storage.py",
+          "line": 187,
+          "function": "read",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 0.390625
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\state_storage.py",
+          "line": 165,
+          "function": "_expand",
+          "primitive_calls": 5505,
+          "total_calls": 5505,
+          "self_cpu_seconds": 0.03125,
+          "cumulative_cpu_seconds": 0.359375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 172,
+          "function": "_deepcopy_atomic",
+          "primitive_calls": 840728,
+          "total_calls": 840728,
+          "self_cpu_seconds": 0.34375,
+          "cumulative_cpu_seconds": 0.34375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\dataclasses.py",
+          "line": 1296,
+          "function": "_is_dataclass_instance",
+          "primitive_calls": 332519,
+          "total_calls": 332519,
+          "self_cpu_seconds": 0.1875,
+          "cumulative_cpu_seconds": 0.328125
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\models.py",
+          "line": 8,
+          "function": "canonical_date",
+          "primitive_calls": 57159,
+          "total_calls": 57159,
+          "self_cpu_seconds": 0.140625,
+          "cumulative_cpu_seconds": 0.28125
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.hasattr>",
+          "primitive_calls": 624126,
+          "total_calls": 624126,
+          "self_cpu_seconds": 0.28125,
+          "cumulative_cpu_seconds": 0.28125
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'execute' of 'sqlite3.Connection' objects>",
+          "primitive_calls": 20825,
+          "total_calls": 20825,
+          "self_cpu_seconds": 0.25,
+          "cumulative_cpu_seconds": 0.25
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.any>",
+          "primitive_calls": 36615,
+          "total_calls": 36615,
+          "self_cpu_seconds": 0.0625,
+          "cumulative_cpu_seconds": 0.23437500000000003
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\military_state.py",
+          "line": 131,
+          "function": "validate",
+          "primitive_calls": 5,
+          "total_calls": 5,
+          "self_cpu_seconds": 0.046875,
+          "cumulative_cpu_seconds": 0.21875
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 231,
+          "function": "_keep_alive",
+          "primitive_calls": 110965,
+          "total_calls": 110965,
+          "self_cpu_seconds": 0.109375,
+          "cumulative_cpu_seconds": 0.203125
+        }
+      ],
+      "top_30_self_cpu": [
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\dataclasses.py",
+          "line": 1332,
+          "function": "_asdict_inner",
+          "primitive_calls": 3,
+          "total_calls": 2850974,
+          "self_cpu_seconds": 3.296875,
+          "cumulative_cpu_seconds": 6.375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 118,
+          "function": "deepcopy",
+          "primitive_calls": 34,
+          "total_calls": 951693,
+          "self_cpu_seconds": 2.078125,
+          "cumulative_cpu_seconds": 4.34375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\dataclasses.py",
+          "line": 1382,
+          "function": "<genexpr>",
+          "primitive_calls": 1035,
+          "total_calls": 1576536,
+          "self_cpu_seconds": 1.8281250000000002,
+          "cumulative_cpu_seconds": 6.375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+          "line": 205,
+          "function": "iterencode",
+          "primitive_calls": 9884,
+          "total_calls": 9884,
+          "self_cpu_seconds": 1.46875,
+          "cumulative_cpu_seconds": 1.46875
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\decoder.py",
+          "line": 344,
+          "function": "raw_decode",
+          "primitive_calls": 14811,
+          "total_calls": 14811,
+          "self_cpu_seconds": 1.3125,
+          "cumulative_cpu_seconds": 1.3125
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.isinstance>",
+          "primitive_calls": 1598826,
+          "total_calls": 1598826,
+          "self_cpu_seconds": 0.859375,
+          "cumulative_cpu_seconds": 0.859375
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'get' of 'dict' objects>",
+          "primitive_calls": 2233475,
+          "total_calls": 2233475,
+          "self_cpu_seconds": 0.78125,
+          "cumulative_cpu_seconds": 0.78125
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 217,
+          "function": "_deepcopy_dict",
+          "primitive_calls": 45,
+          "total_calls": 97300,
+          "self_cpu_seconds": 0.45312500000000006,
+          "cumulative_cpu_seconds": 4.34375
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.id>",
+          "primitive_calls": 1173657,
+          "total_calls": 1173657,
+          "self_cpu_seconds": 0.45312500000000006,
+          "cumulative_cpu_seconds": 0.45312500000000006
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 172,
+          "function": "_deepcopy_atomic",
+          "primitive_calls": 840728,
+          "total_calls": 840728,
+          "self_cpu_seconds": 0.34375,
+          "cumulative_cpu_seconds": 0.34375
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.hasattr>",
+          "primitive_calls": 624126,
+          "total_calls": 624126,
+          "self_cpu_seconds": 0.28125,
+          "cumulative_cpu_seconds": 0.28125
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'execute' of 'sqlite3.Connection' objects>",
+          "primitive_calls": 20825,
+          "total_calls": 20825,
+          "self_cpu_seconds": 0.25,
+          "cumulative_cpu_seconds": 0.25
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\dataclasses.py",
+          "line": 1373,
+          "function": "<genexpr>",
+          "primitive_calls": 60024,
+          "total_calls": 321480,
+          "self_cpu_seconds": 0.21875,
+          "cumulative_cpu_seconds": 4.671875
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\crisis_state.py",
+          "line": 45,
+          "function": "_tuples",
+          "primitive_calls": 310,
+          "total_calls": 194990,
+          "self_cpu_seconds": 0.21875,
+          "cumulative_cpu_seconds": 0.421875
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\dataclasses.py",
+          "line": 1296,
+          "function": "_is_dataclass_instance",
+          "primitive_calls": 332519,
+          "total_calls": 332519,
+          "self_cpu_seconds": 0.1875,
+          "cumulative_cpu_seconds": 0.328125
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\crisis_response.py",
+          "line": 736,
+          "function": "validation_issues",
+          "primitive_calls": 5,
+          "total_calls": 5,
+          "self_cpu_seconds": 0.1875,
+          "cumulative_cpu_seconds": 0.84375
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method zlib.compress>",
+          "primitive_calls": 5510,
+          "total_calls": 5510,
+          "self_cpu_seconds": 0.171875,
+          "cumulative_cpu_seconds": 0.171875
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\models.py",
+          "line": 8,
+          "function": "canonical_date",
+          "primitive_calls": 57159,
+          "total_calls": 57159,
+          "self_cpu_seconds": 0.140625,
+          "cumulative_cpu_seconds": 0.28125
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 191,
+          "function": "_deepcopy_list",
+          "primitive_calls": 6111,
+          "total_calls": 13648,
+          "self_cpu_seconds": 0.125,
+          "cumulative_cpu_seconds": 3.03125
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\npc_state.py",
+          "line": 556,
+          "function": "validate",
+          "primitive_calls": 5,
+          "total_calls": 5,
+          "self_cpu_seconds": 0.125,
+          "cumulative_cpu_seconds": 1.9218750000000002
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 231,
+          "function": "_keep_alive",
+          "primitive_calls": 110965,
+          "total_calls": 110965,
+          "self_cpu_seconds": 0.109375,
+          "cumulative_cpu_seconds": 0.203125
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\crisis_state.py",
+          "line": 46,
+          "function": "<genexpr>",
+          "primitive_calls": 1240,
+          "total_calls": 195300,
+          "self_cpu_seconds": 0.109375,
+          "cumulative_cpu_seconds": 0.421875
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'append' of 'list' objects>",
+          "primitive_calls": 208911,
+          "total_calls": 208911,
+          "self_cpu_seconds": 0.109375,
+          "cumulative_cpu_seconds": 0.109375
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'items' of 'dict' objects>",
+          "primitive_calls": 392541,
+          "total_calls": 392541,
+          "self_cpu_seconds": 0.078125,
+          "cumulative_cpu_seconds": 0.078125
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\state_storage.py",
+          "line": 80,
+          "function": "_store",
+          "primitive_calls": 5510,
+          "total_calls": 5510,
+          "self_cpu_seconds": 0.0625,
+          "cumulative_cpu_seconds": 1.171875
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\npc_state.py",
+          "line": 50,
+          "function": "_identifier",
+          "primitive_calls": 36580,
+          "total_calls": 36580,
+          "self_cpu_seconds": 0.0625,
+          "cumulative_cpu_seconds": 0.078125
+        },
+        {
+          "file": "<frozen importlib._bootstrap>",
+          "line": 645,
+          "function": "parent",
+          "primitive_calls": 31961,
+          "total_calls": 31961,
+          "self_cpu_seconds": 0.0625,
+          "cumulative_cpu_seconds": 0.078125
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.any>",
+          "primitive_calls": 36615,
+          "total_calls": 36615,
+          "self_cpu_seconds": 0.0625,
+          "cumulative_cpu_seconds": 0.23437500000000003
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.next>",
+          "primitive_calls": 2,
+          "total_calls": 2,
+          "self_cpu_seconds": 0.0625,
+          "cumulative_cpu_seconds": 11.5
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method zlib.decompress>",
+          "primitive_calls": 4285,
+          "total_calls": 4285,
+          "self_cpu_seconds": 0.0625,
+          "cumulative_cpu_seconds": 0.0625
+        }
+      ],
+      "result": "1898-02-02"
+    },
+    {
+      "operation": "save_one_complete_json",
+      "wall_seconds_with_profiler": 173.25002030000906,
+      "process_cpu_seconds_with_profiler": 125.578125,
+      "profile_timer": "time.process_time; current diagnostic process only",
+      "profile_self_cpu_seconds": 125.57812500000001,
+      "exclusive_self_cpu_categories": {
+        "other": 16.53125,
+        "json": 89.5625,
+        "engine": 0.125,
+        "auditor_and_validation": 0.140625,
+        "storage_and_save": 0.28125,
+        "copy": 18.59375,
+        "crisis": 0.109375,
+        "military": 0.0,
+        "economy_and_projects": 0.015625,
+        "npc": 0.09375,
+        "sqlite": 0.125
+      },
+      "top_50_cumulative_cpu": [
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\profile_military_candidate.py",
+          "line": 144,
+          "function": "<lambda>",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.15625,
+          "cumulative_cpu_seconds": 125.57812500000001
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\engine.py",
+          "line": 742,
+          "function": "save",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0625,
+          "cumulative_cpu_seconds": 125.42187500000001
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\__init__.py",
+          "line": 183,
+          "function": "dumps",
+          "primitive_calls": 6269,
+          "total_calls": 6269,
+          "self_cpu_seconds": 0.171875,
+          "cumulative_cpu_seconds": 92.578125
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+          "line": 183,
+          "function": "encode",
+          "primitive_calls": 6269,
+          "total_calls": 6269,
+          "self_cpu_seconds": 4.34375,
+          "cumulative_cpu_seconds": 92.40625
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+          "line": 414,
+          "function": "_iterencode",
+          "primitive_calls": 12137828,
+          "total_calls": 12137828,
+          "self_cpu_seconds": 7.468750000000001,
+          "cumulative_cpu_seconds": 86.03125
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+          "line": 334,
+          "function": "_iterencode_dict",
+          "primitive_calls": 12137828,
+          "total_calls": 89070058,
+          "self_cpu_seconds": 58.37500000000001,
+          "cumulative_cpu_seconds": 78.5625
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+          "line": 278,
+          "function": "_iterencode_list",
+          "primitive_calls": 10191384,
+          "total_calls": 19461174,
+          "self_cpu_seconds": 12.75,
+          "cumulative_cpu_seconds": 45.703125
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\persistence.py",
+          "line": 123,
+          "function": "validate_snapshot",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.015625,
+          "cumulative_cpu_seconds": 30.359375000000004
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\persistence.py",
+          "line": 15,
+          "function": "migrate_snapshot",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0625,
+          "cumulative_cpu_seconds": 28.875000000000004
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 217,
+          "function": "_deepcopy_dict",
+          "primitive_calls": 3,
+          "total_calls": 631515,
+          "self_cpu_seconds": 4.09375,
+          "cumulative_cpu_seconds": 26.734375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 118,
+          "function": "deepcopy",
+          "primitive_calls": 3,
+          "total_calls": 5469216,
+          "self_cpu_seconds": 11.859375,
+          "cumulative_cpu_seconds": 26.734375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 191,
+          "function": "_deepcopy_list",
+          "primitive_calls": 17000,
+          "total_calls": 81042,
+          "self_cpu_seconds": 0.4375,
+          "cumulative_cpu_seconds": 22.828125
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'get' of 'dict' objects>",
+          "primitive_calls": 10994824,
+          "total_calls": 10994824,
+          "self_cpu_seconds": 5.09375,
+          "cumulative_cpu_seconds": 5.09375
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.isinstance>",
+          "primitive_calls": 11123070,
+          "total_calls": 11123070,
+          "self_cpu_seconds": 4.546875,
+          "cumulative_cpu_seconds": 4.546875
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.id>",
+          "primitive_calls": 7568307,
+          "total_calls": 7568307,
+          "self_cpu_seconds": 2.421875,
+          "cumulative_cpu_seconds": 2.421875
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\dataclasses.py",
+          "line": 1308,
+          "function": "asdict",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 2.078125
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\dataclasses.py",
+          "line": 1382,
+          "function": "<genexpr>",
+          "primitive_calls": 345,
+          "total_calls": 525612,
+          "self_cpu_seconds": 0.640625,
+          "cumulative_cpu_seconds": 2.078125
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\__init__.py",
+          "line": 299,
+          "function": "loads",
+          "primitive_calls": 16823,
+          "total_calls": 16823,
+          "self_cpu_seconds": 0.09375,
+          "cumulative_cpu_seconds": 2.078125
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\dataclasses.py",
+          "line": 1332,
+          "function": "_asdict_inner",
+          "primitive_calls": 1,
+          "total_calls": 950486,
+          "self_cpu_seconds": 0.9531250000000001,
+          "cumulative_cpu_seconds": 2.078125
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\models.py",
+          "line": 108,
+          "function": "to_dict",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 2.078125
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\decoder.py",
+          "line": 333,
+          "function": "decode",
+          "primitive_calls": 16823,
+          "total_calls": 16823,
+          "self_cpu_seconds": 0.09375,
+          "cumulative_cpu_seconds": 1.8437500000000002
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+          "line": 205,
+          "function": "iterencode",
+          "primitive_calls": 6269,
+          "total_calls": 6269,
+          "self_cpu_seconds": 1.8281250000000002,
+          "cumulative_cpu_seconds": 1.8281250000000002
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\decoder.py",
+          "line": 344,
+          "function": "raw_decode",
+          "primitive_calls": 16823,
+          "total_calls": 16823,
+          "self_cpu_seconds": 1.703125,
+          "cumulative_cpu_seconds": 1.703125
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\state_storage.py",
+          "line": 165,
+          "function": "_expand",
+          "primitive_calls": 10904,
+          "total_calls": 10904,
+          "self_cpu_seconds": 0.03125,
+          "cumulative_cpu_seconds": 1.59375
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method _json.encode_basestring>",
+          "primitive_calls": 3372782,
+          "total_calls": 3372782,
+          "self_cpu_seconds": 1.515625,
+          "cumulative_cpu_seconds": 1.515625
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\dataclasses.py",
+          "line": 1373,
+          "function": "<genexpr>",
+          "primitive_calls": 20008,
+          "total_calls": 107160,
+          "self_cpu_seconds": 0.09375,
+          "cumulative_cpu_seconds": 1.46875
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 231,
+          "function": "_keep_alive",
+          "primitive_calls": 712557,
+          "total_calls": 712557,
+          "self_cpu_seconds": 0.859375,
+          "cumulative_cpu_seconds": 1.359375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 172,
+          "function": "_deepcopy_atomic",
+          "primitive_calls": 4756659,
+          "total_calls": 4756659,
+          "self_cpu_seconds": 1.34375,
+          "cumulative_cpu_seconds": 1.34375
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\state_storage.py",
+          "line": 244,
+          "function": "export_archive",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0625,
+          "cumulative_cpu_seconds": 1.21875
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\engine.py",
+          "line": 21,
+          "function": "encode",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 1.171875
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+          "line": 224,
+          "function": "floatstr",
+          "primitive_calls": 1046438,
+          "total_calls": 1046438,
+          "self_cpu_seconds": 1.125,
+          "cumulative_cpu_seconds": 1.125
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\engine.py",
+          "line": 615,
+          "function": "ledger",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0625,
+          "cumulative_cpu_seconds": 0.828125
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\state_storage.py",
+          "line": 255,
+          "function": "validate_archive",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.03125,
+          "cumulative_cpu_seconds": 0.734375
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\persistence.py",
+          "line": 55,
+          "function": "validate_engine",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 0.671875
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\audit.py",
+          "line": 26,
+          "function": "check",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 0.65625
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\audit.py",
+          "line": 40,
+          "function": "core_validator",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 0.65625
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'append' of 'list' objects>",
+          "primitive_calls": 1075365,
+          "total_calls": 1075365,
+          "self_cpu_seconds": 0.609375,
+          "cumulative_cpu_seconds": 0.609375
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'items' of 'dict' objects>",
+          "primitive_calls": 1352398,
+          "total_calls": 1352398,
+          "self_cpu_seconds": 0.578125,
+          "cumulative_cpu_seconds": 0.578125
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\state_storage.py",
+          "line": 16,
+          "function": "_encode",
+          "primitive_calls": 5394,
+          "total_calls": 5394,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 0.5625
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\engine.py",
+          "line": 124,
+          "function": "_stored_payload",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 0.48437500000000006
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\tempfile.py",
+          "line": 497,
+          "function": "func_wrapper",
+          "primitive_calls": 3,
+          "total_calls": 3,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 0.48437500000000006
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'write' of '_io.TextIOWrapper' objects>",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.48437500000000006,
+          "cumulative_cpu_seconds": 0.48437500000000006
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\state_storage.py",
+          "line": 187,
+          "function": "read",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 0.46875000000000006
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\crisis_state.py",
+          "line": 477,
+          "function": "validate",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 0.328125
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\crisis_state.py",
+          "line": 241,
+          "function": "_validate_state",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.015625,
+          "cumulative_cpu_seconds": 0.328125
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\npc_state.py",
+          "line": 556,
+          "function": "validate",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.015625,
+          "cumulative_cpu_seconds": 0.265625
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\npc_state.py",
+          "line": 42,
+          "function": "_json",
+          "primitive_calls": 759,
+          "total_calls": 759,
+          "self_cpu_seconds": 0.0,
+          "cumulative_cpu_seconds": 0.23437500000000003
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military-political-staging\\worldline\\crisis_response.py",
+          "line": 736,
+          "function": "validation_issues",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.046875,
+          "cumulative_cpu_seconds": 0.1875
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'join' of 'str' objects>",
+          "primitive_calls": 6274,
+          "total_calls": 6274,
+          "self_cpu_seconds": 0.171875,
+          "cumulative_cpu_seconds": 0.171875
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.any>",
+          "primitive_calls": 20706,
+          "total_calls": 20706,
+          "self_cpu_seconds": 0.046875,
+          "cumulative_cpu_seconds": 0.15625
+        }
+      ],
+      "top_30_self_cpu": [
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+          "line": 334,
+          "function": "_iterencode_dict",
+          "primitive_calls": 12137828,
+          "total_calls": 89070058,
+          "self_cpu_seconds": 58.37500000000001,
+          "cumulative_cpu_seconds": 78.5625
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+          "line": 278,
+          "function": "_iterencode_list",
+          "primitive_calls": 10191384,
+          "total_calls": 19461174,
+          "self_cpu_seconds": 12.75,
+          "cumulative_cpu_seconds": 45.703125
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 118,
+          "function": "deepcopy",
+          "primitive_calls": 3,
+          "total_calls": 5469216,
+          "self_cpu_seconds": 11.859375,
+          "cumulative_cpu_seconds": 26.734375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+          "line": 414,
+          "function": "_iterencode",
+          "primitive_calls": 12137828,
+          "total_calls": 12137828,
+          "self_cpu_seconds": 7.468750000000001,
+          "cumulative_cpu_seconds": 86.03125
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'get' of 'dict' objects>",
+          "primitive_calls": 10994824,
+          "total_calls": 10994824,
+          "self_cpu_seconds": 5.09375,
+          "cumulative_cpu_seconds": 5.09375
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.isinstance>",
+          "primitive_calls": 11123070,
+          "total_calls": 11123070,
+          "self_cpu_seconds": 4.546875,
+          "cumulative_cpu_seconds": 4.546875
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+          "line": 183,
+          "function": "encode",
+          "primitive_calls": 6269,
+          "total_calls": 6269,
+          "self_cpu_seconds": 4.34375,
+          "cumulative_cpu_seconds": 92.40625
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 217,
+          "function": "_deepcopy_dict",
+          "primitive_calls": 3,
+          "total_calls": 631515,
+          "self_cpu_seconds": 4.09375,
+          "cumulative_cpu_seconds": 26.734375
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method builtins.id>",
+          "primitive_calls": 7568307,
+          "total_calls": 7568307,
+          "self_cpu_seconds": 2.421875,
+          "cumulative_cpu_seconds": 2.421875
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+          "line": 205,
+          "function": "iterencode",
+          "primitive_calls": 6269,
+          "total_calls": 6269,
+          "self_cpu_seconds": 1.8281250000000002,
+          "cumulative_cpu_seconds": 1.8281250000000002
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\decoder.py",
+          "line": 344,
+          "function": "raw_decode",
+          "primitive_calls": 16823,
+          "total_calls": 16823,
+          "self_cpu_seconds": 1.703125,
+          "cumulative_cpu_seconds": 1.703125
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method _json.encode_basestring>",
+          "primitive_calls": 3372782,
+          "total_calls": 3372782,
+          "self_cpu_seconds": 1.515625,
+          "cumulative_cpu_seconds": 1.515625
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 172,
+          "function": "_deepcopy_atomic",
+          "primitive_calls": 4756659,
+          "total_calls": 4756659,
+          "self_cpu_seconds": 1.34375,
+          "cumulative_cpu_seconds": 1.34375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+          "line": 224,
+          "function": "floatstr",
+          "primitive_calls": 1046438,
+          "total_calls": 1046438,
+          "self_cpu_seconds": 1.125,
+          "cumulative_cpu_seconds": 1.125
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\dataclasses.py",
+          "line": 1332,
+          "function": "_asdict_inner",
+          "primitive_calls": 1,
+          "total_calls": 950486,
+          "self_cpu_seconds": 0.9531250000000001,
+          "cumulative_cpu_seconds": 2.078125
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 231,
+          "function": "_keep_alive",
+          "primitive_calls": 712557,
+          "total_calls": 712557,
+          "self_cpu_seconds": 0.859375,
+          "cumulative_cpu_seconds": 1.359375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\dataclasses.py",
+          "line": 1382,
+          "function": "<genexpr>",
+          "primitive_calls": 345,
+          "total_calls": 525612,
+          "self_cpu_seconds": 0.640625,
+          "cumulative_cpu_seconds": 2.078125
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'append' of 'list' objects>",
+          "primitive_calls": 1075365,
+          "total_calls": 1075365,
+          "self_cpu_seconds": 0.609375,
+          "cumulative_cpu_seconds": 0.609375
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'items' of 'dict' objects>",
+          "primitive_calls": 1352398,
+          "total_calls": 1352398,
+          "self_cpu_seconds": 0.578125,
+          "cumulative_cpu_seconds": 0.578125
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'write' of '_io.TextIOWrapper' objects>",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.48437500000000006,
+          "cumulative_cpu_seconds": 0.48437500000000006
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+          "line": 191,
+          "function": "_deepcopy_list",
+          "primitive_calls": 17000,
+          "total_calls": 81042,
+          "self_cpu_seconds": 0.4375,
+          "cumulative_cpu_seconds": 22.828125
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\__init__.py",
+          "line": 183,
+          "function": "dumps",
+          "primitive_calls": 6269,
+          "total_calls": 6269,
+          "self_cpu_seconds": 0.171875,
+          "cumulative_cpu_seconds": 92.578125
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'join' of 'str' objects>",
+          "primitive_calls": 6274,
+          "total_calls": 6274,
+          "self_cpu_seconds": 0.171875,
+          "cumulative_cpu_seconds": 0.171875
+        },
+        {
+          "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\profile_military_candidate.py",
+          "line": 144,
+          "function": "<lambda>",
+          "primitive_calls": 1,
+          "total_calls": 1,
+          "self_cpu_seconds": 0.15625,
+          "cumulative_cpu_seconds": 125.57812500000001
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method zlib.decompress>",
+          "primitive_calls": 9684,
+          "total_calls": 9684,
+          "self_cpu_seconds": 0.15625,
+          "cumulative_cpu_seconds": 0.15625
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<built-in method _hashlib.openssl_sha256>",
+          "primitive_calls": 15192,
+          "total_calls": 15192,
+          "self_cpu_seconds": 0.15625,
+          "cumulative_cpu_seconds": 0.15625
+        },
+        {
+          "file": "~",
+          "line": 0,
+          "function": "<method 'execute' of 'sqlite3.Connection' objects>",
+          "primitive_calls": 9689,
+          "total_calls": 9689,
+          "self_cpu_seconds": 0.109375,
+          "cumulative_cpu_seconds": 0.109375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\__init__.py",
+          "line": 244,
+          "function": "detect_encoding",
+          "primitive_calls": 10904,
+          "total_calls": 10904,
+          "self_cpu_seconds": 0.09375,
+          "cumulative_cpu_seconds": 0.09375
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\decoder.py",
+          "line": 333,
+          "function": "decode",
+          "primitive_calls": 16823,
+          "total_calls": 16823,
+          "self_cpu_seconds": 0.09375,
+          "cumulative_cpu_seconds": 1.8437500000000002
+        },
+        {
+          "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\dataclasses.py",
+          "line": 1373,
+          "function": "<genexpr>",
+          "primitive_calls": 20008,
+          "total_calls": 107160,
+          "self_cpu_seconds": 0.09375,
+          "cumulative_cpu_seconds": 1.46875
+        }
+      ],
+      "result": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\work\\military_candidate_diagnostic\\run-20261001-181128\\profile_save.json"
+    }
+  ],
+  "interpretation": [
+    "cProfile uses current-process CPU time; competing campaign CPU is excluded, but contention affects wall time.",
+    "The timer and cProfile add instrumentation cost. These are profiled wall/CPU times, not ordinary campaign speed.",
+    "Cumulative parent/child costs overlap. Military, copying, save, Auditor and NPC cumulative times must not be summed.",
+    "Exclusive category totals sum function self CPU only and assign every profiled function to exactly one category.",
+    "This is one actual day plus one validated JSON save from a mature industrial-front snapshot, not a complete month or a campaign benchmark.",
+    "The original pre-fix month-two diagnostic and all live campaign files/logs were left intact."
+  ]
+}

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="16" time="19.470" timestamp="2026-10-01T01:04:59.201405+09:00" hostname="sung"><testcase classname="tests.test_npc_campaign" name="test_fictional_campaign_uses_four_governments_and_private_reports" time="0.015" /><testcase classname="tests.test_npc_campaign" name="test_campaign_decisions_are_diverse_and_authorized" time="2.072" /><testcase classname="tests.test_npc_campaign" name="test_government_actions_have_unambiguous_unique_ids" time="0.001"><failure message="AssertionError: assert 2 == 8&#10; +  where 2 = len({'action-17', 'action-33'})&#10; +  and   8 = len([{'id': 'action-17', 'date': '1897-01-02', 'country': 'a', 'proposer': 'a:education', ...}, {'id': 'action-17', 'date'...oser': 'a:education', ...}, {'id': 'action-33', 'date': '1897-02-01', 'country': 'b', 'proposer': 'b:ruler', ...}, ...])">short_campaign = {'campaign_schema': 1, 'months': 2, 'seed': 731, 'initial_sha256': 'f890e402afd1502b362ae15813055ba25f2877fbe9e07704b898dddc527d34a6', ...}
+
+    def test_government_actions_have_unambiguous_unique_ids(short_campaign):
+        actions = [e["action"] for e in short_campaign["events"] if e["kind"] == "npc_action"]
+&gt;       assert len({a["id"] for a in actions}) == len(actions)
+E       AssertionError: assert 2 == 8
+E        +  where 2 = len({'action-17', 'action-33'})
+E        +  and   8 = len([{'id': 'action-17', 'date': '1897-01-02', 'country': 'a', 'proposer': 'a:education', ...}, {'id': 'action-17', 'date'...oser': 'a:education', ...}, {'id': 'action-33', 'date': '1897-02-01', 'country': 'b', 'proposer': 'b:ruler', ...}, ...])
+
+tests\test_npc_campaign.py:50: AssertionError</failure></testcase><testcase classname="tests.test_npc_campaign" name="test_government_councils_keep_operating_across_short_and_long_months" time="3.962"><failure message="AssertionError: assert {'1897-01', '1897-02'} == {'1897-01', '...2', '1897-03'}&#10;  &#10;  Extra items in the right set:&#10;  '1897-03'&#10;  Use -v to get more diff">def test_government_councils_keep_operating_across_short_and_long_months():
+        data = run_campaign(months=3)
+        for country in COUNTRIES:
+            actions = [e["action"] for e in data["events"] if e["kind"] == "npc_action" and e["action"]["country"] == country]
+&gt;           assert {a["date"][:7] for a in actions} == {"1897-01", "1897-02", "1897-03"}
+E           AssertionError: assert {'1897-01', '1897-02'} == {'1897-01', '...2', '1897-03'}
+E             
+E             Extra items in the right set:
+E             '1897-03'
+E             Use -v to get more diff
+
+tests\test_npc_campaign.py:57: AssertionError</failure></testcase><testcase classname="tests.test_npc_campaign" name="test_ruler_in_cabinet_does_not_receive_a_second_vote" time="2.350"><failure message="AssertionError: assert 'development' == 'industrialization'&#10;  &#10;  - industrialization&#10;  + development">def test_ruler_in_cabinet_does_not_receive_a_second_vote():
+        plain = campaign_world()
+        listed = copy.deepcopy(plain)
+        listed.npc_state["governments"]["a"]["cabinet"].append("a:ruler")
+        Auditor().check(listed)
+        results = []
+        for world in (plain, listed):
+            replay = CampaignReplay(world)
+            replay.month()
+            action = next(e["action"] for e in replay.events if e["kind"] == "npc_action" and e["action"]["country"] == "a")
+            results.append(action["option"])
+&gt;       assert results[0] == results[1]
+E       AssertionError: assert 'development' == 'industrialization'
+E         
+E         - industrialization
+E         + development
+
+tests\test_npc_campaign.py:71: AssertionError</failure></testcase><testcase classname="tests.test_npc_campaign" name="test_accepted_ruler_vacancy_configuration_does_not_crash" time="0.351"><failure message="ValueError: Invalid NPC objective record">def test_accepted_ruler_vacancy_configuration_does_not_crash():
+        world = campaign_world()
+        world.npc_state["governments"]["a"]["ruler"] = None
+        issues = npc_state.validate(world.npc_state, world.countries, world.regions, world.date)
+        if issues:
+            assert any("ruler" in issue or "government" in issue for issue in issues)
+        else:
+&gt;           CampaignReplay(world).month()
+
+tests\test_npc_campaign.py:81: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+worldline\npc_benchmark.py:162: in month
+    self.events.extend(copy.deepcopy(self._npc_tick(w, event, self.rng)))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+worldline\npc.py:422: in tick
+    events = _settlement_records(world)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+worldline\npc.py:203: in _settlement_records
+    event = _new_record(world, government["ruler"], "economic_performance", facts,
+worldline\npc.py:98: in _new_record
+    npc_state.record_fact(state, event_id, world.date, subject, category, facts, source)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+state = {'version': 1, 'persons': {'a:ruler': {'id': 'a:ruler', 'country': 'a', 'name': '가상 A ruler', 'kind': 'individual', .....ry': 'd', 'regime': 'coalition', 'ruler': 'd:ruler', 'cabinet': ['d:finance', 'd:military', 'd:education'], ...}}, ...}
+event_id = 'record-2', day = '1897-02-01', subject = None
+category = 'economic_performance'
+facts = {'performance': 0, 'gdp': 4020, 'growth': 0, 'requested_budget_balance': 44, ...}
+source = 'measured economic settlement'
+
+    def record_fact(state, event_id, day, subject, category, facts, source):
+        """Write an immutable objective record without informing any actor."""
+        _day(day)
+        if not all(_identifier(v) for v in (event_id, subject, category, source)) or not isinstance(facts, dict):
+&gt;           raise ValueError("Invalid NPC objective record")
+E           ValueError: Invalid NPC objective record
+
+worldline\npc_state.py:177: ValueError</failure></testcase><testcase classname="tests.test_npc_campaign" name="test_accepted_empty_evaluation_date_does_not_crash" time="0.056"><failure message="TypeError: '&lt;=' not supported between instances of 'NoneType' and 'str'">def test_accepted_empty_evaluation_date_does_not_crash():
+        world = campaign_world()
+        world.npc_state["schedules"]["a:ruler"] = {"next_due": None, "last_evaluated": None}
+        issues = npc_state.validate(world.npc_state, world.countries, world.regions, world.date)
+        if issues:
+            assert any("schedule" in issue for issue in issues)
+        else:
+&gt;           CampaignReplay(world).month()
+
+tests\test_npc_campaign.py:91: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+worldline\npc_benchmark.py:162: in month
+    self.events.extend(copy.deepcopy(self._npc_tick(w, event, self.rng)))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+world = World(date='1897-01-02', scenario_id='fictional-npc-campaign', schema_version=3, countries={'a': Country(name='가상 개발국 ... 'adapter': {'last_sensing_date': '1897-01-02', 'last_settlement': '1897-01-01', 'record_sequence': 1, 'pending': {}}})
+tick_event = {'previous_date': '1897-01-01', 'date': '1897-01-02', 'days': 1}
+rng = &lt;random.Random object at 0x000001C959C65C60&gt;
+
+    def tick(world, tick_event, rng):
+        state = _state(world)
+        adapter = state["adapter"]
+        today = canonical_date(world.date)
+        events = _settlement_records(world)
+        if today.day == 1 or adapter["last_sensing_date"] is None:
+            sense(world)
+        recommendations, options_by_actor, actual_by_actor = {}, {}, {}
+        for actor, person in sorted(state["persons"].items()):
+            schedule = state["schedules"].setdefault(actor, {"next_due": world.date, "last_evaluated": None})
+&gt;           due = schedule.get("next_due", world.date) &lt;= world.date
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           TypeError: '&lt;=' not supported between instances of 'NoneType' and 'str'
+
+worldline\npc.py:428: TypeError</failure></testcase><testcase classname="tests.test_npc_campaign" name="test_distressed_government_can_authorize_a_lower_future_budget" time="0.023"><failure message="assert False is True">def test_distressed_government_can_authorize_a_lower_future_budget():
+        world = campaign_world()
+        country, economic = world.countries["c"], world.economy["countries"]["c"]
+        country.treasury, country.debt = 0, 100
+        cr = economic["credit"]
+        cr.update(domestic_debt=100, foreign_debt=0, distress_state="default", arrears=1000,
+                  default_count=1, missed_service_days=365)
+        cr["emergency_used"] = dict(cr["emergency_capacity"])
+        cr["public_asset_claims"] = 0
+        cr["financial_access"] = {k: False for k in cr["financial_access"]}
+        credit.refresh(world, "c")
+        Auditor().check(world)
+        npc.sense(world)
+        view, options, actual_quotes = npc.options_for(world, "c:finance")
+        decision = npc_decision.decide(view, options, random.Random(SEED))
+        evaluated = next(e for e in decision["evaluations"] if e["option"] == "fiscal_consolidation")
+&gt;       assert evaluated["eligible"] is True
+E       assert False is True
+
+tests\test_npc_campaign.py:110: AssertionError</failure></testcase><testcase classname="tests.test_npc_campaign" name="test_false_information_and_memory_have_calculated_reasons" time="0.001" /><testcase classname="tests.test_npc_campaign" name="test_campaign_explanation_scores_reconstruct_actual_decisions" time="0.002" /><testcase classname="tests.test_npc_campaign" name="test_short_campaign_same_seed_reproduces_all_events_and_rng" time="2.204" /><testcase classname="tests.test_npc_campaign" name="test_campaign_checkpoint_preserves_pending_memories_actions_and_rng" time="3.764" /><testcase classname="tests.test_npc_campaign" name="test_campaign_research_ticks_match_actual_sqlite_engine" time="3.912" /><testcase classname="tests.test_npc_campaign" name="test_campaign_checkpoint_tampering_is_rejected" time="0.068" /><testcase classname="tests.test_npc_campaign" name="test_campaign_checkpoint_requires_matching_source" time="0.075" /><testcase classname="tests.test_npc_campaign" name="test_campaign_export_and_report_match_actual_actions" time="0.291" /></testsuite></testsuites>

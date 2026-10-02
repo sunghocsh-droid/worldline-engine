@@ -1,0 +1,26 @@
+{
+  "tests": {
+    "tests": 642,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "frozen_source_and_tests_unchanged": true,
+  "long_campaign_exact_replay": true,
+  "actual_sqlite_exact_replay": true,
+  "report_alias_equal": true,
+  "files_sha256": {
+    "CRISIS_EVENT_REPORT.md": "650a3e7416f6842a6855f101daa7cccab91fa05acedc509387bed06289fff36a",
+    "CRISIS_SIMULATION_REPORT.md": "650a3e7416f6842a6855f101daa7cccab91fa05acedc509387bed06289fff36a",
+    "CRISIS_EVENT_GUIDE.md": "6b2033969f746ffcb49e7b995728d662188a55a29c678ced2bbf5c70a84c3ceb",
+    "CRISIS_DESIGN.md": "b212239a332ab714646ad5b9b1ad1d3f8970d9aa8a46e8ccff5973b09c027cd5",
+    "CRISIS_REQUIREMENTS_CHECK.md": "530a489296bc6f88e1a05ee470b219de5b50f0d1185d77f7ef87fd2f3f452e7e",
+    "TEST_RESULTS.md": "99178175690379580967fe68794559dae46514e91270b015cab23401db7c2a1d",
+    "benchmarks/crisis/pytest_full.xml": "ff094ebebd1e07e8106c2a5f9daa68e24879be578a06029c73eb580aa8b3b1ee",
+    "benchmarks/crisis/pytest_full.txt": "95b6a923ab2dc6dc893977349adedbcac5eaffa765fc4cc330fb2432344c4123",
+    "benchmarks/crisis/final_verification.json": "2f06783a0e45c9c6b813944179bcebff59e5b1d692790820e270e4e767235f41",
+    "benchmarks/crisis/final_validation.json": "0a0d6f67b72f92054ea724933647e530c16be140a81345073bf2b4469de78458",
+    "benchmarks/crisis/campaign.csv": "ad1d2a8cbfd95676628ad29c5ff7748d56a1c0e6d971d56087a22f8707df94bb",
+    "benchmarks/crisis/summary.json": "9db4ddc183798cabb16622c0a27576e52118db29bbaf6037152b55541cb8973b"
+  }
+}

@@ -1,0 +1,68 @@
+         50976334 function calls (41754557 primitive calls) in 24.769 seconds
+
+   Ordered by: cumulative time
+   List reduced from 437 to 60 due to restriction <60>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.008    0.008   24.775   24.775 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\crisis_benchmark.py:165(month)
+7708364/71167    8.408    0.000   17.092    0.000 C:\Users\c\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\copy.py:118(deepcopy)
+568721/74187    2.871    0.000   16.847    0.000 C:\Users\c\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\copy.py:217(_deepcopy_dict)
+       31    0.041    0.001   15.247    0.492 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc.py:465(tick)
+      110    0.076    0.001    9.794    0.089 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc_state.py:490(actor_view)
+109305/92939    0.204    0.000    8.117    0.000 C:\Users\c\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\copy.py:191(_deepcopy_list)
+      174    0.130    0.001    6.949    0.040 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc_state.py:277(effective_memory)
+       31    0.006    0.000    6.589    0.213 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\crisis.py:525(tick)
+       31    0.036    0.001    5.956    0.192 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\crisis_response.py:639(process_due)
+       62    0.017    0.000    5.713    0.092 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\crisis_response.py:572(_local)
+       64    0.025    0.000    5.015    0.078 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc_state.py:412(evaluate_ruler)
+       32    0.009    0.000    4.410    0.138 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc.py:243(options_for)
+        4    0.011    0.003    3.901    0.975 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc.py:408(_run_council)
+       64    0.083    0.001    3.363    0.053 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc_state.py:452(_evaluate_known)
+ 17453009    3.257    0.000    3.257    0.000 {method 'get' of 'dict' objects}
+     1551    0.018    0.000    2.648    0.002 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc_state.py:43(_json)
+        4    0.000    0.000    2.470    0.617 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc.py:351(execute_intent)
+        4    0.013    0.003    2.469    0.617 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\order_execution.py:28(execute)
+        4    0.000    0.000    2.456    0.614 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\order_execution.py:41(validate_order)
+        4    0.006    0.002    2.456    0.614 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\order_execution.py:24(economic_candidate)
+  600/536    0.001    0.000    2.452    0.005 C:\Users\c\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\copy.py:247(_reconstruct)
+        1    0.000    0.000    1.893    1.893 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\audit.py:26(check)
+        1    0.001    0.001    1.893    1.893 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\audit.py:40(core_validator)
+      168    0.009    0.000    1.711    0.010 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\credit.py:288(assess)
+      160    0.007    0.000    1.634    0.010 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\guardrails.py:55(estimated_fiscal_risk)
+     2752    0.007    0.000    1.531    0.001 C:\Users\c\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\json\__init__.py:183(dumps)
+     2752    0.005    0.000    1.523    0.001 C:\Users\c\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\json\encoder.py:183(encode)
+     2752    1.516    0.001    1.516    0.001 C:\Users\c\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\json\encoder.py:205(iterencode)
+       32    0.004    0.000    1.475    0.046 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc_decision.py:384(decide)
+     1739    0.002    0.000    1.276    0.001 C:\Users\c\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\json\__init__.py:299(loads)
+     1739    0.005    0.000    1.273    0.001 C:\Users\c\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\json\decoder.py:333(decode)
+  9135707    1.272    0.000    1.272    0.000 {built-in method builtins.id}
+     1739    1.264    0.001    1.264    0.001 C:\Users\c\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\json\decoder.py:344(raw_decode)
+      224    0.294    0.001    1.166    0.005 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc_decision.py:174(_evaluate)
+        1    0.066    0.066    1.113    1.113 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc_state.py:533(validate)
+  7030094    0.804    0.000    0.804    0.000 C:\Users\c\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\copy.py:172(_deepcopy_atomic)
+   294306    0.307    0.000    0.736    0.000 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc_state.py:33(_day)
+        1    0.000    0.000    0.694    0.694 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\crisis_state.py:477(validate)
+        1    0.009    0.009    0.694    0.694 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\crisis_state.py:241(_validate_state)
+   678094    0.425    0.000    0.653    0.000 C:\Users\c\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\copy.py:231(_keep_alive)
+   119896    0.220    0.000    0.586    0.000 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc_decision.py:163(_memory_value)
+       67    0.005    0.000    0.540    0.008 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\crisis_benchmark.py:113(observe)
+538424/856    0.209    0.000    0.442    0.001 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\crisis_state.py:45(_tuples)
+539280/3424    0.160    0.000    0.440    0.000 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\crisis_state.py:46(<genexpr>)
+    49746    0.106    0.000    0.431    0.000 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc_state.py:269(_memory_weight)
+       62    0.133    0.002    0.417    0.007 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\crisis_response.py:160(deliver_due)
+       31    0.001    0.000    0.396    0.013 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\economy.py:659(tick)
+       32    0.001    0.000    0.361    0.011 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\guardrails.py:117(can_fund_war)
+   349935    0.318    0.000    0.318    0.000 {method 'isoformat' of 'datetime.date' objects}
+        4    0.040    0.010    0.286    0.072 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\crisis_risk.py:263(detect)
+   173114    0.156    0.000    0.256    0.000 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc_decision.py:36(_number)
+    46155    0.037    0.000    0.244    0.000 {built-in method builtins.all}
+   170624    0.151    0.000    0.224    0.000 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\crisis_response.py:152(_observation_order)
+        1    0.050    0.050    0.219    0.219 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\crisis_response.py:721(validation_issues)
+      104    0.037    0.000    0.218    0.002 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc_state.py:216(_known_events)
+  1440276    0.208    0.000    0.208    0.000 {built-in method builtins.isinstance}
+   900076    0.180    0.000    0.180    0.000 {method 'append' of 'list' objects}
+        4    0.003    0.001    0.167    0.042 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\economy.py:526(finance_and_investment)
+        4    0.001    0.000    0.163    0.041 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\credit.py:478(settle)
+   135276    0.160    0.000    0.160    0.000 C:\Users\c\Documents\Codex\2026-09-30\worldline-engine-chatgpt-llm-gdp-python\outputs\worldline-engine\tests\fixtures\crisis_v1_source\npc_state.py:220(<genexpr>)
+
+

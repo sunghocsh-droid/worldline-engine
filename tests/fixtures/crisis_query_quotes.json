@@ -1,0 +1,3422 @@
+{
+  "purpose": "Actual pre-copy-optimization quotes; no coefficients or financing formulas changed",
+  "cases": {
+    "healthy": {
+      "project": {
+        "country": "a",
+        "purpose": "general",
+        "amount": 100,
+        "physical_feasibility": {
+          "feasible": true,
+          "missing_resources": {},
+          "region": "ra",
+          "construction_workers": 235.63636363636363,
+          "committed_construction_workers": 0.0,
+          "available_construction_workers": 235.63636363636363,
+          "required_workers": 0.1,
+          "delayed_by_labour": false,
+          "reasons": []
+        },
+        "normal_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 13007,
+          "shortfall": 0
+        },
+        "emergency_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 100,
+          "shortfall": 0,
+          "instruments_available": {
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 1287,
+            "foreign_borrowing": 429,
+            "forced_loans": 220,
+            "requisition": 91,
+            "delayed_payments": 357,
+            "asset_sales": 137,
+            "monetary_financing": 143
+          },
+          "selected_sources": {
+            "reserves": 100,
+            "normal_borrowing": 0
+          }
+        },
+        "expected_consequences": {
+          "debt_increase": 0,
+          "domestic_debt_increase": 0,
+          "foreign_debt_increase": 0,
+          "closing_reserves": 900,
+          "annual_debt_service_increase": 0.0,
+          "new_borrowing_cost": 0.05943115877117335,
+          "civilian_income_cost": 0,
+          "creditworthiness_change_estimate": -0.5256625148403486,
+          "creditworthiness_target_after_financing": 94.46105153603331,
+          "default_risk": 0.05538948463966691,
+          "inflation_risk": 0.0,
+          "arrears_increase": 0,
+          "social_pressure_increase": 0.0,
+          "emergency_finance": 0,
+          "financing_sources": {
+            "reserves": 100,
+            "normal_borrowing": 0
+          },
+          "funding_shortfall": 0,
+          "projected_risk_reasons": [
+            {
+              "factor": "debt_to_gdp",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "debt_service_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "recent_deficit_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "reserve_coverage",
+              "value": 0.4841312533620226,
+              "risk_cushion": 0.09682625067240452
+            },
+            {
+              "factor": "war",
+              "value": false,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "instability",
+              "value": 0.25,
+              "risk_contribution": 0.0625
+            },
+            {
+              "factor": "arrears_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "past_defaults",
+              "value": 0,
+              "risk_contribution": 0.0
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "factor": "debt_to_gdp",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "debt_service_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "recent_deficit_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "reserve_coverage",
+            "value": 0.5379236148466918,
+            "risk_cushion": 0.10758472296933837
+          },
+          {
+            "factor": "war",
+            "value": false,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "instability",
+            "value": 0.25,
+            "risk_contribution": 0.0625
+          },
+          {
+            "factor": "arrears_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "past_defaults",
+            "value": 0,
+            "risk_contribution": 0.0
+          }
+        ],
+        "true_state": {
+          "cost": 100,
+          "risk": 0.05538948463966691,
+          "consequences": {
+            "debt_increase": 0,
+            "domestic_debt_increase": 0,
+            "foreign_debt_increase": 0,
+            "closing_reserves": 900,
+            "annual_debt_service_increase": 0.0,
+            "new_borrowing_cost": 0.05943115877117335,
+            "civilian_income_cost": 0,
+            "creditworthiness_change_estimate": -0.5256625148403486,
+            "creditworthiness_target_after_financing": 94.46105153603331,
+            "default_risk": 0.05538948463966691,
+            "inflation_risk": 0.0,
+            "arrears_increase": 0,
+            "social_pressure_increase": 0.0,
+            "emergency_finance": 0,
+            "financing_sources": {
+              "reserves": 100,
+              "normal_borrowing": 0
+            },
+            "funding_shortfall": 0,
+            "projected_risk_reasons": [
+              {
+                "factor": "debt_to_gdp",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "debt_service_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "recent_deficit_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "reserve_coverage",
+                "value": 0.4841312533620226,
+                "risk_cushion": 0.09682625067240452
+              },
+              {
+                "factor": "war",
+                "value": false,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "instability",
+                "value": 0.25,
+                "risk_contribution": 0.0625
+              },
+              {
+                "factor": "arrears_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "past_defaults",
+                "value": 0,
+                "risk_contribution": 0.0
+              }
+            ]
+          }
+        },
+        "perceived_state": {
+          "cost": 80,
+          "risk": 0.2,
+          "bias_factors": [
+            {
+              "factor": "optimism",
+              "value": 0.2
+            }
+          ]
+        },
+        "project_id": "query-project",
+        "execution_feasibility": true
+      },
+      "war_regional": {
+        "country": "a",
+        "purpose": "war",
+        "amount": 400,
+        "physical_feasibility": {
+          "feasible": true,
+          "required_manpower": 200,
+          "available_civilian_manpower": 5400.0,
+          "eligible_additional_recruits": 2650.0,
+          "missing_resources": {},
+          "region": "ra",
+          "note": "War cost is advisory; political intent is never cancelled by risk."
+        },
+        "normal_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 13007,
+          "shortfall": 0
+        },
+        "emergency_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 400,
+          "shortfall": 0,
+          "instruments_available": {
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 1287,
+            "foreign_borrowing": 429,
+            "forced_loans": 220,
+            "requisition": 91,
+            "delayed_payments": 357,
+            "asset_sales": 137,
+            "monetary_financing": 143
+          },
+          "selected_sources": {
+            "reserves": 400,
+            "normal_borrowing": 0
+          }
+        },
+        "expected_consequences": {
+          "debt_increase": 0,
+          "domestic_debt_increase": 0,
+          "foreign_debt_increase": 0,
+          "closing_reserves": 600,
+          "annual_debt_service_increase": 0.0,
+          "new_borrowing_cost": 0.05956160012779327,
+          "civilian_income_cost": 0,
+          "creditworthiness_change_estimate": -0.6887142106152453,
+          "creditworthiness_target_after_financing": 94.29799984025841,
+          "default_risk": 0.057020001597415854,
+          "inflation_risk": 0.0,
+          "arrears_increase": 0,
+          "social_pressure_increase": 0.0,
+          "emergency_finance": 0,
+          "financing_sources": {
+            "reserves": 400,
+            "normal_borrowing": 0
+          },
+          "funding_shortfall": 0,
+          "projected_risk_reasons": [
+            {
+              "factor": "debt_to_gdp",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "debt_service_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "recent_deficit_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "reserve_coverage",
+              "value": 0.32275416890801506,
+              "risk_cushion": 0.06455083378160302
+            },
+            {
+              "factor": "war",
+              "value": false,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "instability",
+              "value": 0.25,
+              "risk_contribution": 0.0625
+            },
+            {
+              "factor": "arrears_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "past_defaults",
+              "value": 0,
+              "risk_contribution": 0.0
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "factor": "debt_to_gdp",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "debt_service_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "recent_deficit_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "reserve_coverage",
+            "value": 0.5379236148466918,
+            "risk_cushion": 0.10758472296933837
+          },
+          {
+            "factor": "war",
+            "value": false,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "instability",
+            "value": 0.25,
+            "risk_contribution": 0.0625
+          },
+          {
+            "factor": "arrears_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "past_defaults",
+            "value": 0,
+            "risk_contribution": 0.0
+          }
+        ],
+        "true_state": {
+          "cost": 400,
+          "risk": 0.057020001597415854,
+          "consequences": {
+            "debt_increase": 0,
+            "domestic_debt_increase": 0,
+            "foreign_debt_increase": 0,
+            "closing_reserves": 600,
+            "annual_debt_service_increase": 0.0,
+            "new_borrowing_cost": 0.05956160012779327,
+            "civilian_income_cost": 0,
+            "creditworthiness_change_estimate": -0.6887142106152453,
+            "creditworthiness_target_after_financing": 94.29799984025841,
+            "default_risk": 0.057020001597415854,
+            "inflation_risk": 0.0,
+            "arrears_increase": 0,
+            "social_pressure_increase": 0.0,
+            "emergency_finance": 0,
+            "financing_sources": {
+              "reserves": 400,
+              "normal_borrowing": 0
+            },
+            "funding_shortfall": 0,
+            "projected_risk_reasons": [
+              {
+                "factor": "debt_to_gdp",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "debt_service_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "recent_deficit_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "reserve_coverage",
+                "value": 0.32275416890801506,
+                "risk_cushion": 0.06455083378160302
+              },
+              {
+                "factor": "war",
+                "value": false,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "instability",
+                "value": 0.25,
+                "risk_contribution": 0.0625
+              },
+              {
+                "factor": "arrears_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "past_defaults",
+                "value": 0,
+                "risk_contribution": 0.0
+              }
+            ]
+          }
+        },
+        "perceived_state": {
+          "cost": 80,
+          "risk": 0.2,
+          "bias_factors": [
+            {
+              "factor": "optimism",
+              "value": 0.2
+            }
+          ]
+        },
+        "execution_feasibility": true
+      },
+      "war_all_regions": {
+        "country": "a",
+        "purpose": "war",
+        "amount": 400,
+        "physical_feasibility": {
+          "feasible": true,
+          "required_manpower": 200,
+          "available_civilian_manpower": 10800.0,
+          "eligible_additional_recruits": 5300.0,
+          "missing_resources": {},
+          "region": null,
+          "note": "War cost is advisory; political intent is never cancelled by risk."
+        },
+        "normal_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 13007,
+          "shortfall": 0
+        },
+        "emergency_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 400,
+          "shortfall": 0,
+          "instruments_available": {
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 1287,
+            "foreign_borrowing": 429,
+            "forced_loans": 220,
+            "requisition": 72,
+            "delayed_payments": 357,
+            "asset_sales": 137,
+            "monetary_financing": 143
+          },
+          "selected_sources": {
+            "reserves": 400,
+            "normal_borrowing": 0
+          }
+        },
+        "expected_consequences": {
+          "debt_increase": 0,
+          "domestic_debt_increase": 0,
+          "foreign_debt_increase": 0,
+          "closing_reserves": 600,
+          "annual_debt_service_increase": 0.0,
+          "new_borrowing_cost": 0.05956160012779327,
+          "civilian_income_cost": 0,
+          "creditworthiness_change_estimate": -0.6887142106152453,
+          "creditworthiness_target_after_financing": 94.29799984025841,
+          "default_risk": 0.057020001597415854,
+          "inflation_risk": 0.0,
+          "arrears_increase": 0,
+          "social_pressure_increase": 0.0,
+          "emergency_finance": 0,
+          "financing_sources": {
+            "reserves": 400,
+            "normal_borrowing": 0
+          },
+          "funding_shortfall": 0,
+          "projected_risk_reasons": [
+            {
+              "factor": "debt_to_gdp",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "debt_service_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "recent_deficit_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "reserve_coverage",
+              "value": 0.32275416890801506,
+              "risk_cushion": 0.06455083378160302
+            },
+            {
+              "factor": "war",
+              "value": false,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "instability",
+              "value": 0.25,
+              "risk_contribution": 0.0625
+            },
+            {
+              "factor": "arrears_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "past_defaults",
+              "value": 0,
+              "risk_contribution": 0.0
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "factor": "debt_to_gdp",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "debt_service_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "recent_deficit_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "reserve_coverage",
+            "value": 0.5379236148466918,
+            "risk_cushion": 0.10758472296933837
+          },
+          {
+            "factor": "war",
+            "value": false,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "instability",
+            "value": 0.25,
+            "risk_contribution": 0.0625
+          },
+          {
+            "factor": "arrears_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "past_defaults",
+            "value": 0,
+            "risk_contribution": 0.0
+          }
+        ],
+        "true_state": {
+          "cost": 400,
+          "risk": 0.057020001597415854,
+          "consequences": {
+            "debt_increase": 0,
+            "domestic_debt_increase": 0,
+            "foreign_debt_increase": 0,
+            "closing_reserves": 600,
+            "annual_debt_service_increase": 0.0,
+            "new_borrowing_cost": 0.05956160012779327,
+            "civilian_income_cost": 0,
+            "creditworthiness_change_estimate": -0.6887142106152453,
+            "creditworthiness_target_after_financing": 94.29799984025841,
+            "default_risk": 0.057020001597415854,
+            "inflation_risk": 0.0,
+            "arrears_increase": 0,
+            "social_pressure_increase": 0.0,
+            "emergency_finance": 0,
+            "financing_sources": {
+              "reserves": 400,
+              "normal_borrowing": 0
+            },
+            "funding_shortfall": 0,
+            "projected_risk_reasons": [
+              {
+                "factor": "debt_to_gdp",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "debt_service_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "recent_deficit_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "reserve_coverage",
+                "value": 0.32275416890801506,
+                "risk_cushion": 0.06455083378160302
+              },
+              {
+                "factor": "war",
+                "value": false,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "instability",
+                "value": 0.25,
+                "risk_contribution": 0.0625
+              },
+              {
+                "factor": "arrears_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "past_defaults",
+                "value": 0,
+                "risk_contribution": 0.0
+              }
+            ]
+          }
+        },
+        "perceived_state": {
+          "cost": 80,
+          "risk": 0.2,
+          "bias_factors": [
+            {
+              "factor": "optimism",
+              "value": 0.2
+            }
+          ]
+        },
+        "execution_feasibility": true
+      }
+    },
+    "debt": {
+      "project": {
+        "country": "a",
+        "purpose": "general",
+        "amount": 100,
+        "physical_feasibility": {
+          "feasible": true,
+          "missing_resources": {},
+          "region": "ra",
+          "construction_workers": 235.63636363636363,
+          "committed_construction_workers": 0.0,
+          "available_construction_workers": 235.63636363636363,
+          "required_workers": 0.1,
+          "delayed_by_labour": false,
+          "reasons": []
+        },
+        "normal_financial_feasibility": {
+          "possible": false,
+          "feasible": false,
+          "available": 0,
+          "shortfall": 100
+        },
+        "emergency_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 100,
+          "shortfall": 0,
+          "instruments_available": {
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 1287,
+            "foreign_borrowing": 429,
+            "forced_loans": 220,
+            "requisition": 91,
+            "delayed_payments": 357,
+            "asset_sales": 137,
+            "monetary_financing": 143
+          },
+          "selected_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0,
+            "emergency_taxation": 100
+          }
+        },
+        "expected_consequences": {
+          "debt_increase": 0,
+          "domestic_debt_increase": 0,
+          "foreign_debt_increase": 0,
+          "closing_reserves": 0,
+          "annual_debt_service_increase": 0.0,
+          "new_borrowing_cost": 0.1465180249319545,
+          "civilian_income_cost": 100,
+          "creditworthiness_change_estimate": -44.381327261538445,
+          "creditworthiness_target_after_financing": 50.60538678933521,
+          "default_risk": 0.49394613210664784,
+          "inflation_risk": 0.0,
+          "arrears_increase": 0,
+          "social_pressure_increase": 0.6993006993006993,
+          "emergency_finance": 100,
+          "financing_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0,
+            "emergency_taxation": 100
+          },
+          "funding_shortfall": 0,
+          "projected_risk_reasons": [
+            {
+              "factor": "debt_to_gdp",
+              "value": 0.8391608391608392,
+              "risk_contribution": 0.23496503496503499
+            },
+            {
+              "factor": "debt_service_to_revenue",
+              "value": 0.258203335126412,
+              "risk_contribution": 0.0903711672942442
+            },
+            {
+              "factor": "recent_deficit_to_revenue",
+              "value": 0.9682625067240452,
+              "risk_contribution": 0.29047875201721357
+            },
+            {
+              "factor": "reserve_coverage",
+              "value": 0.0,
+              "risk_cushion": 0.0
+            },
+            {
+              "factor": "war",
+              "value": false,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "instability",
+              "value": 0.25,
+              "risk_contribution": 0.0625
+            },
+            {
+              "factor": "arrears_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "past_defaults",
+              "value": 0,
+              "risk_contribution": 0.0
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "factor": "debt_to_gdp",
+            "value": 0.8391608391608392,
+            "risk_contribution": 0.23496503496503499
+          },
+          {
+            "factor": "debt_service_to_revenue",
+            "value": 0.258203335126412,
+            "risk_contribution": 0.0903711672942442
+          },
+          {
+            "factor": "recent_deficit_to_revenue",
+            "value": 0.9682625067240452,
+            "risk_contribution": 0.29047875201721357
+          },
+          {
+            "factor": "reserve_coverage",
+            "value": 0.0,
+            "risk_cushion": 0.0
+          },
+          {
+            "factor": "war",
+            "value": false,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "instability",
+            "value": 0.25,
+            "risk_contribution": 0.0625
+          },
+          {
+            "factor": "arrears_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "past_defaults",
+            "value": 0,
+            "risk_contribution": 0.0
+          }
+        ],
+        "true_state": {
+          "cost": 100,
+          "risk": 0.49394613210664784,
+          "consequences": {
+            "debt_increase": 0,
+            "domestic_debt_increase": 0,
+            "foreign_debt_increase": 0,
+            "closing_reserves": 0,
+            "annual_debt_service_increase": 0.0,
+            "new_borrowing_cost": 0.1465180249319545,
+            "civilian_income_cost": 100,
+            "creditworthiness_change_estimate": -44.381327261538445,
+            "creditworthiness_target_after_financing": 50.60538678933521,
+            "default_risk": 0.49394613210664784,
+            "inflation_risk": 0.0,
+            "arrears_increase": 0,
+            "social_pressure_increase": 0.6993006993006993,
+            "emergency_finance": 100,
+            "financing_sources": {
+              "reserves": 0,
+              "normal_borrowing": 0,
+              "emergency_taxation": 100
+            },
+            "funding_shortfall": 0,
+            "projected_risk_reasons": [
+              {
+                "factor": "debt_to_gdp",
+                "value": 0.8391608391608392,
+                "risk_contribution": 0.23496503496503499
+              },
+              {
+                "factor": "debt_service_to_revenue",
+                "value": 0.258203335126412,
+                "risk_contribution": 0.0903711672942442
+              },
+              {
+                "factor": "recent_deficit_to_revenue",
+                "value": 0.9682625067240452,
+                "risk_contribution": 0.29047875201721357
+              },
+              {
+                "factor": "reserve_coverage",
+                "value": 0.0,
+                "risk_cushion": 0.0
+              },
+              {
+                "factor": "war",
+                "value": false,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "instability",
+                "value": 0.25,
+                "risk_contribution": 0.0625
+              },
+              {
+                "factor": "arrears_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "past_defaults",
+                "value": 0,
+                "risk_contribution": 0.0
+              }
+            ]
+          }
+        },
+        "perceived_state": {
+          "cost": 80,
+          "risk": 0.2,
+          "bias_factors": [
+            {
+              "factor": "optimism",
+              "value": 0.2
+            }
+          ]
+        },
+        "project_id": "query-project",
+        "execution_feasibility": true
+      },
+      "war_regional": {
+        "country": "a",
+        "purpose": "war",
+        "amount": 400,
+        "physical_feasibility": {
+          "feasible": true,
+          "required_manpower": 200,
+          "available_civilian_manpower": 5400.0,
+          "eligible_additional_recruits": 2650.0,
+          "missing_resources": {},
+          "region": "ra",
+          "note": "War cost is advisory; political intent is never cancelled by risk."
+        },
+        "normal_financial_feasibility": {
+          "possible": false,
+          "feasible": false,
+          "available": 0,
+          "shortfall": 400
+        },
+        "emergency_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 400,
+          "shortfall": 0,
+          "instruments_available": {
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 1287,
+            "foreign_borrowing": 429,
+            "forced_loans": 220,
+            "requisition": 91,
+            "delayed_payments": 357,
+            "asset_sales": 137,
+            "monetary_financing": 143
+          },
+          "selected_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0,
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 150
+          }
+        },
+        "expected_consequences": {
+          "debt_increase": 150,
+          "domestic_debt_increase": 150,
+          "foreign_debt_increase": 0,
+          "closing_reserves": 0,
+          "annual_debt_service_increase": 25.710693536853,
+          "new_borrowing_cost": 0.1482218542956518,
+          "civilian_income_cost": 250,
+          "creditworthiness_change_estimate": -44.983637949716716,
+          "creditworthiness_target_after_financing": 50.00307610115694,
+          "default_risk": 0.4999692389884306,
+          "inflation_risk": 0.0,
+          "arrears_increase": 0,
+          "social_pressure_increase": 1.7482517482517483,
+          "emergency_finance": 400,
+          "financing_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0,
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 150
+          },
+          "funding_shortfall": 0,
+          "projected_risk_reasons": [
+            {
+              "factor": "debt_to_gdp",
+              "value": 0.8496503496503497,
+              "risk_contribution": 0.23790209790209793
+            },
+            {
+              "factor": "debt_service_to_revenue",
+              "value": 0.2720337243339715,
+              "risk_contribution": 0.09521180351689001
+            },
+            {
+              "factor": "recent_deficit_to_revenue",
+              "value": 0.9682625067240452,
+              "risk_contribution": 0.29047875201721357
+            },
+            {
+              "factor": "reserve_coverage",
+              "value": 0.0,
+              "risk_cushion": 0.0
+            },
+            {
+              "factor": "war",
+              "value": false,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "instability",
+              "value": 0.25,
+              "risk_contribution": 0.0625
+            },
+            {
+              "factor": "arrears_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "past_defaults",
+              "value": 0,
+              "risk_contribution": 0.0
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "factor": "debt_to_gdp",
+            "value": 0.8391608391608392,
+            "risk_contribution": 0.23496503496503499
+          },
+          {
+            "factor": "debt_service_to_revenue",
+            "value": 0.258203335126412,
+            "risk_contribution": 0.0903711672942442
+          },
+          {
+            "factor": "recent_deficit_to_revenue",
+            "value": 0.9682625067240452,
+            "risk_contribution": 0.29047875201721357
+          },
+          {
+            "factor": "reserve_coverage",
+            "value": 0.0,
+            "risk_cushion": 0.0
+          },
+          {
+            "factor": "war",
+            "value": false,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "instability",
+            "value": 0.25,
+            "risk_contribution": 0.0625
+          },
+          {
+            "factor": "arrears_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "past_defaults",
+            "value": 0,
+            "risk_contribution": 0.0
+          }
+        ],
+        "true_state": {
+          "cost": 400,
+          "risk": 0.4999692389884306,
+          "consequences": {
+            "debt_increase": 150,
+            "domestic_debt_increase": 150,
+            "foreign_debt_increase": 0,
+            "closing_reserves": 0,
+            "annual_debt_service_increase": 25.710693536853,
+            "new_borrowing_cost": 0.1482218542956518,
+            "civilian_income_cost": 250,
+            "creditworthiness_change_estimate": -44.983637949716716,
+            "creditworthiness_target_after_financing": 50.00307610115694,
+            "default_risk": 0.4999692389884306,
+            "inflation_risk": 0.0,
+            "arrears_increase": 0,
+            "social_pressure_increase": 1.7482517482517483,
+            "emergency_finance": 400,
+            "financing_sources": {
+              "reserves": 0,
+              "normal_borrowing": 0,
+              "emergency_taxation": 250,
+              "domestic_war_bonds": 150
+            },
+            "funding_shortfall": 0,
+            "projected_risk_reasons": [
+              {
+                "factor": "debt_to_gdp",
+                "value": 0.8496503496503497,
+                "risk_contribution": 0.23790209790209793
+              },
+              {
+                "factor": "debt_service_to_revenue",
+                "value": 0.2720337243339715,
+                "risk_contribution": 0.09521180351689001
+              },
+              {
+                "factor": "recent_deficit_to_revenue",
+                "value": 0.9682625067240452,
+                "risk_contribution": 0.29047875201721357
+              },
+              {
+                "factor": "reserve_coverage",
+                "value": 0.0,
+                "risk_cushion": 0.0
+              },
+              {
+                "factor": "war",
+                "value": false,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "instability",
+                "value": 0.25,
+                "risk_contribution": 0.0625
+              },
+              {
+                "factor": "arrears_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "past_defaults",
+                "value": 0,
+                "risk_contribution": 0.0
+              }
+            ]
+          }
+        },
+        "perceived_state": {
+          "cost": 80,
+          "risk": 0.2,
+          "bias_factors": [
+            {
+              "factor": "optimism",
+              "value": 0.2
+            }
+          ]
+        },
+        "execution_feasibility": true
+      },
+      "war_all_regions": {
+        "country": "a",
+        "purpose": "war",
+        "amount": 400,
+        "physical_feasibility": {
+          "feasible": true,
+          "required_manpower": 200,
+          "available_civilian_manpower": 10800.0,
+          "eligible_additional_recruits": 5300.0,
+          "missing_resources": {},
+          "region": null,
+          "note": "War cost is advisory; political intent is never cancelled by risk."
+        },
+        "normal_financial_feasibility": {
+          "possible": false,
+          "feasible": false,
+          "available": 0,
+          "shortfall": 400
+        },
+        "emergency_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 400,
+          "shortfall": 0,
+          "instruments_available": {
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 1287,
+            "foreign_borrowing": 429,
+            "forced_loans": 220,
+            "requisition": 72,
+            "delayed_payments": 357,
+            "asset_sales": 137,
+            "monetary_financing": 143
+          },
+          "selected_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0,
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 150
+          }
+        },
+        "expected_consequences": {
+          "debt_increase": 150,
+          "domestic_debt_increase": 150,
+          "foreign_debt_increase": 0,
+          "closing_reserves": 0,
+          "annual_debt_service_increase": 25.710693536853,
+          "new_borrowing_cost": 0.1482218542956518,
+          "civilian_income_cost": 250,
+          "creditworthiness_change_estimate": -44.983637949716716,
+          "creditworthiness_target_after_financing": 50.00307610115694,
+          "default_risk": 0.4999692389884306,
+          "inflation_risk": 0.0,
+          "arrears_increase": 0,
+          "social_pressure_increase": 1.7482517482517483,
+          "emergency_finance": 400,
+          "financing_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0,
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 150
+          },
+          "funding_shortfall": 0,
+          "projected_risk_reasons": [
+            {
+              "factor": "debt_to_gdp",
+              "value": 0.8496503496503497,
+              "risk_contribution": 0.23790209790209793
+            },
+            {
+              "factor": "debt_service_to_revenue",
+              "value": 0.2720337243339715,
+              "risk_contribution": 0.09521180351689001
+            },
+            {
+              "factor": "recent_deficit_to_revenue",
+              "value": 0.9682625067240452,
+              "risk_contribution": 0.29047875201721357
+            },
+            {
+              "factor": "reserve_coverage",
+              "value": 0.0,
+              "risk_cushion": 0.0
+            },
+            {
+              "factor": "war",
+              "value": false,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "instability",
+              "value": 0.25,
+              "risk_contribution": 0.0625
+            },
+            {
+              "factor": "arrears_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "past_defaults",
+              "value": 0,
+              "risk_contribution": 0.0
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "factor": "debt_to_gdp",
+            "value": 0.8391608391608392,
+            "risk_contribution": 0.23496503496503499
+          },
+          {
+            "factor": "debt_service_to_revenue",
+            "value": 0.258203335126412,
+            "risk_contribution": 0.0903711672942442
+          },
+          {
+            "factor": "recent_deficit_to_revenue",
+            "value": 0.9682625067240452,
+            "risk_contribution": 0.29047875201721357
+          },
+          {
+            "factor": "reserve_coverage",
+            "value": 0.0,
+            "risk_cushion": 0.0
+          },
+          {
+            "factor": "war",
+            "value": false,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "instability",
+            "value": 0.25,
+            "risk_contribution": 0.0625
+          },
+          {
+            "factor": "arrears_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "past_defaults",
+            "value": 0,
+            "risk_contribution": 0.0
+          }
+        ],
+        "true_state": {
+          "cost": 400,
+          "risk": 0.4999692389884306,
+          "consequences": {
+            "debt_increase": 150,
+            "domestic_debt_increase": 150,
+            "foreign_debt_increase": 0,
+            "closing_reserves": 0,
+            "annual_debt_service_increase": 25.710693536853,
+            "new_borrowing_cost": 0.1482218542956518,
+            "civilian_income_cost": 250,
+            "creditworthiness_change_estimate": -44.983637949716716,
+            "creditworthiness_target_after_financing": 50.00307610115694,
+            "default_risk": 0.4999692389884306,
+            "inflation_risk": 0.0,
+            "arrears_increase": 0,
+            "social_pressure_increase": 1.7482517482517483,
+            "emergency_finance": 400,
+            "financing_sources": {
+              "reserves": 0,
+              "normal_borrowing": 0,
+              "emergency_taxation": 250,
+              "domestic_war_bonds": 150
+            },
+            "funding_shortfall": 0,
+            "projected_risk_reasons": [
+              {
+                "factor": "debt_to_gdp",
+                "value": 0.8496503496503497,
+                "risk_contribution": 0.23790209790209793
+              },
+              {
+                "factor": "debt_service_to_revenue",
+                "value": 0.2720337243339715,
+                "risk_contribution": 0.09521180351689001
+              },
+              {
+                "factor": "recent_deficit_to_revenue",
+                "value": 0.9682625067240452,
+                "risk_contribution": 0.29047875201721357
+              },
+              {
+                "factor": "reserve_coverage",
+                "value": 0.0,
+                "risk_cushion": 0.0
+              },
+              {
+                "factor": "war",
+                "value": false,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "instability",
+                "value": 0.25,
+                "risk_contribution": 0.0625
+              },
+              {
+                "factor": "arrears_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "past_defaults",
+                "value": 0,
+                "risk_contribution": 0.0
+              }
+            ]
+          }
+        },
+        "perceived_state": {
+          "cost": 80,
+          "risk": 0.2,
+          "bias_factors": [
+            {
+              "factor": "optimism",
+              "value": 0.2
+            }
+          ]
+        },
+        "execution_feasibility": true
+      }
+    },
+    "default": {
+      "project": {
+        "country": "a",
+        "purpose": "general",
+        "amount": 100,
+        "physical_feasibility": {
+          "feasible": true,
+          "missing_resources": {},
+          "region": "ra",
+          "construction_workers": 235.63636363636363,
+          "committed_construction_workers": 0.0,
+          "available_construction_workers": 235.63636363636363,
+          "required_workers": 0.1,
+          "delayed_by_labour": false,
+          "reasons": []
+        },
+        "normal_financial_feasibility": {
+          "possible": false,
+          "feasible": false,
+          "available": 0,
+          "shortfall": 100
+        },
+        "emergency_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 100,
+          "shortfall": 0,
+          "instruments_available": {
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 1287,
+            "foreign_borrowing": 0,
+            "forced_loans": 220,
+            "requisition": 91,
+            "delayed_payments": 357,
+            "asset_sales": 137,
+            "monetary_financing": 143
+          },
+          "selected_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0,
+            "emergency_taxation": 100
+          }
+        },
+        "expected_consequences": {
+          "debt_increase": 0,
+          "domestic_debt_increase": 0,
+          "foreign_debt_increase": 0,
+          "closing_reserves": 0,
+          "annual_debt_service_increase": 0.0,
+          "new_borrowing_cost": 0.20968028112369372,
+          "civilian_income_cost": 100,
+          "creditworthiness_change_estimate": -67.61876149178875,
+          "creditworthiness_target_after_financing": 27.367952559084905,
+          "default_risk": 0.7263204744091509,
+          "inflation_risk": 0.0,
+          "arrears_increase": 0,
+          "social_pressure_increase": 0.6993006993006993,
+          "emergency_finance": 100,
+          "financing_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0,
+            "emergency_taxation": 100
+          },
+          "funding_shortfall": 0,
+          "projected_risk_reasons": [
+            {
+              "factor": "debt_to_gdp",
+              "value": 0.8391608391608392,
+              "risk_contribution": 0.23496503496503499
+            },
+            {
+              "factor": "debt_service_to_revenue",
+              "value": 0.258203335126412,
+              "risk_contribution": 0.0903711672942442
+            },
+            {
+              "factor": "recent_deficit_to_revenue",
+              "value": 0.9682625067240452,
+              "risk_contribution": 0.29047875201721357
+            },
+            {
+              "factor": "reserve_coverage",
+              "value": 0.0,
+              "risk_cushion": 0.0
+            },
+            {
+              "factor": "war",
+              "value": false,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "instability",
+              "value": 0.25,
+              "risk_contribution": 0.0625
+            },
+            {
+              "factor": "arrears_to_revenue",
+              "value": 0.4841312533620226,
+              "risk_contribution": 0.3146853146853147
+            },
+            {
+              "factor": "past_defaults",
+              "value": 1,
+              "risk_contribution": 0.3
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "factor": "debt_to_gdp",
+            "value": 0.8391608391608392,
+            "risk_contribution": 0.23496503496503499
+          },
+          {
+            "factor": "debt_service_to_revenue",
+            "value": 0.258203335126412,
+            "risk_contribution": 0.0903711672942442
+          },
+          {
+            "factor": "recent_deficit_to_revenue",
+            "value": 0.9682625067240452,
+            "risk_contribution": 0.29047875201721357
+          },
+          {
+            "factor": "reserve_coverage",
+            "value": 0.0,
+            "risk_cushion": 0.0
+          },
+          {
+            "factor": "war",
+            "value": false,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "instability",
+            "value": 0.25,
+            "risk_contribution": 0.0625
+          },
+          {
+            "factor": "arrears_to_revenue",
+            "value": 0.4841312533620226,
+            "risk_contribution": 0.3146853146853147
+          },
+          {
+            "factor": "past_defaults",
+            "value": 1,
+            "risk_contribution": 0.3
+          }
+        ],
+        "true_state": {
+          "cost": 100,
+          "risk": 0.7263204744091509,
+          "consequences": {
+            "debt_increase": 0,
+            "domestic_debt_increase": 0,
+            "foreign_debt_increase": 0,
+            "closing_reserves": 0,
+            "annual_debt_service_increase": 0.0,
+            "new_borrowing_cost": 0.20968028112369372,
+            "civilian_income_cost": 100,
+            "creditworthiness_change_estimate": -67.61876149178875,
+            "creditworthiness_target_after_financing": 27.367952559084905,
+            "default_risk": 0.7263204744091509,
+            "inflation_risk": 0.0,
+            "arrears_increase": 0,
+            "social_pressure_increase": 0.6993006993006993,
+            "emergency_finance": 100,
+            "financing_sources": {
+              "reserves": 0,
+              "normal_borrowing": 0,
+              "emergency_taxation": 100
+            },
+            "funding_shortfall": 0,
+            "projected_risk_reasons": [
+              {
+                "factor": "debt_to_gdp",
+                "value": 0.8391608391608392,
+                "risk_contribution": 0.23496503496503499
+              },
+              {
+                "factor": "debt_service_to_revenue",
+                "value": 0.258203335126412,
+                "risk_contribution": 0.0903711672942442
+              },
+              {
+                "factor": "recent_deficit_to_revenue",
+                "value": 0.9682625067240452,
+                "risk_contribution": 0.29047875201721357
+              },
+              {
+                "factor": "reserve_coverage",
+                "value": 0.0,
+                "risk_cushion": 0.0
+              },
+              {
+                "factor": "war",
+                "value": false,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "instability",
+                "value": 0.25,
+                "risk_contribution": 0.0625
+              },
+              {
+                "factor": "arrears_to_revenue",
+                "value": 0.4841312533620226,
+                "risk_contribution": 0.3146853146853147
+              },
+              {
+                "factor": "past_defaults",
+                "value": 1,
+                "risk_contribution": 0.3
+              }
+            ]
+          }
+        },
+        "perceived_state": {
+          "cost": 80,
+          "risk": 0.2,
+          "bias_factors": [
+            {
+              "factor": "optimism",
+              "value": 0.2
+            }
+          ]
+        },
+        "project_id": "query-project",
+        "execution_feasibility": true
+      },
+      "war_regional": {
+        "country": "a",
+        "purpose": "war",
+        "amount": 400,
+        "physical_feasibility": {
+          "feasible": true,
+          "required_manpower": 200,
+          "available_civilian_manpower": 5400.0,
+          "eligible_additional_recruits": 2650.0,
+          "missing_resources": {},
+          "region": "ra",
+          "note": "War cost is advisory; political intent is never cancelled by risk."
+        },
+        "normal_financial_feasibility": {
+          "possible": false,
+          "feasible": false,
+          "available": 0,
+          "shortfall": 400
+        },
+        "emergency_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 400,
+          "shortfall": 0,
+          "instruments_available": {
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 1287,
+            "foreign_borrowing": 0,
+            "forced_loans": 220,
+            "requisition": 91,
+            "delayed_payments": 357,
+            "asset_sales": 137,
+            "monetary_financing": 143
+          },
+          "selected_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0,
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 150
+          }
+        },
+        "expected_consequences": {
+          "debt_increase": 150,
+          "domestic_debt_increase": 150,
+          "foreign_debt_increase": 0,
+          "closing_reserves": 0,
+          "annual_debt_service_increase": 35.19284286277616,
+          "new_borrowing_cost": 0.21157820536689273,
+          "civilian_income_cost": 250,
+          "creditworthiness_change_estimate": -67.99273141956871,
+          "creditworthiness_target_after_financing": 26.993982631304945,
+          "default_risk": 0.7300601736869505,
+          "inflation_risk": 0.0,
+          "arrears_increase": 0,
+          "social_pressure_increase": 1.7482517482517483,
+          "emergency_finance": 400,
+          "financing_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0,
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 150
+          },
+          "funding_shortfall": 0,
+          "projected_risk_reasons": [
+            {
+              "factor": "debt_to_gdp",
+              "value": 0.8496503496503497,
+              "risk_contribution": 0.23790209790209793
+            },
+            {
+              "factor": "debt_service_to_revenue",
+              "value": 0.2771343963758882,
+              "risk_contribution": 0.09699703873156088
+            },
+            {
+              "factor": "recent_deficit_to_revenue",
+              "value": 0.9682625067240452,
+              "risk_contribution": 0.29047875201721357
+            },
+            {
+              "factor": "reserve_coverage",
+              "value": 0.0,
+              "risk_cushion": 0.0
+            },
+            {
+              "factor": "war",
+              "value": false,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "instability",
+              "value": 0.25,
+              "risk_contribution": 0.0625
+            },
+            {
+              "factor": "arrears_to_revenue",
+              "value": 0.4841312533620226,
+              "risk_contribution": 0.3146853146853147
+            },
+            {
+              "factor": "past_defaults",
+              "value": 1,
+              "risk_contribution": 0.3
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "factor": "debt_to_gdp",
+            "value": 0.8391608391608392,
+            "risk_contribution": 0.23496503496503499
+          },
+          {
+            "factor": "debt_service_to_revenue",
+            "value": 0.258203335126412,
+            "risk_contribution": 0.0903711672942442
+          },
+          {
+            "factor": "recent_deficit_to_revenue",
+            "value": 0.9682625067240452,
+            "risk_contribution": 0.29047875201721357
+          },
+          {
+            "factor": "reserve_coverage",
+            "value": 0.0,
+            "risk_cushion": 0.0
+          },
+          {
+            "factor": "war",
+            "value": false,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "instability",
+            "value": 0.25,
+            "risk_contribution": 0.0625
+          },
+          {
+            "factor": "arrears_to_revenue",
+            "value": 0.4841312533620226,
+            "risk_contribution": 0.3146853146853147
+          },
+          {
+            "factor": "past_defaults",
+            "value": 1,
+            "risk_contribution": 0.3
+          }
+        ],
+        "true_state": {
+          "cost": 400,
+          "risk": 0.7300601736869505,
+          "consequences": {
+            "debt_increase": 150,
+            "domestic_debt_increase": 150,
+            "foreign_debt_increase": 0,
+            "closing_reserves": 0,
+            "annual_debt_service_increase": 35.19284286277616,
+            "new_borrowing_cost": 0.21157820536689273,
+            "civilian_income_cost": 250,
+            "creditworthiness_change_estimate": -67.99273141956871,
+            "creditworthiness_target_after_financing": 26.993982631304945,
+            "default_risk": 0.7300601736869505,
+            "inflation_risk": 0.0,
+            "arrears_increase": 0,
+            "social_pressure_increase": 1.7482517482517483,
+            "emergency_finance": 400,
+            "financing_sources": {
+              "reserves": 0,
+              "normal_borrowing": 0,
+              "emergency_taxation": 250,
+              "domestic_war_bonds": 150
+            },
+            "funding_shortfall": 0,
+            "projected_risk_reasons": [
+              {
+                "factor": "debt_to_gdp",
+                "value": 0.8496503496503497,
+                "risk_contribution": 0.23790209790209793
+              },
+              {
+                "factor": "debt_service_to_revenue",
+                "value": 0.2771343963758882,
+                "risk_contribution": 0.09699703873156088
+              },
+              {
+                "factor": "recent_deficit_to_revenue",
+                "value": 0.9682625067240452,
+                "risk_contribution": 0.29047875201721357
+              },
+              {
+                "factor": "reserve_coverage",
+                "value": 0.0,
+                "risk_cushion": 0.0
+              },
+              {
+                "factor": "war",
+                "value": false,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "instability",
+                "value": 0.25,
+                "risk_contribution": 0.0625
+              },
+              {
+                "factor": "arrears_to_revenue",
+                "value": 0.4841312533620226,
+                "risk_contribution": 0.3146853146853147
+              },
+              {
+                "factor": "past_defaults",
+                "value": 1,
+                "risk_contribution": 0.3
+              }
+            ]
+          }
+        },
+        "perceived_state": {
+          "cost": 80,
+          "risk": 0.2,
+          "bias_factors": [
+            {
+              "factor": "optimism",
+              "value": 0.2
+            }
+          ]
+        },
+        "execution_feasibility": true
+      },
+      "war_all_regions": {
+        "country": "a",
+        "purpose": "war",
+        "amount": 400,
+        "physical_feasibility": {
+          "feasible": true,
+          "required_manpower": 200,
+          "available_civilian_manpower": 10800.0,
+          "eligible_additional_recruits": 5300.0,
+          "missing_resources": {},
+          "region": null,
+          "note": "War cost is advisory; political intent is never cancelled by risk."
+        },
+        "normal_financial_feasibility": {
+          "possible": false,
+          "feasible": false,
+          "available": 0,
+          "shortfall": 400
+        },
+        "emergency_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 400,
+          "shortfall": 0,
+          "instruments_available": {
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 1287,
+            "foreign_borrowing": 0,
+            "forced_loans": 220,
+            "requisition": 72,
+            "delayed_payments": 357,
+            "asset_sales": 137,
+            "monetary_financing": 143
+          },
+          "selected_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0,
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 150
+          }
+        },
+        "expected_consequences": {
+          "debt_increase": 150,
+          "domestic_debt_increase": 150,
+          "foreign_debt_increase": 0,
+          "closing_reserves": 0,
+          "annual_debt_service_increase": 35.19284286277616,
+          "new_borrowing_cost": 0.21157820536689273,
+          "civilian_income_cost": 250,
+          "creditworthiness_change_estimate": -67.99273141956871,
+          "creditworthiness_target_after_financing": 26.993982631304945,
+          "default_risk": 0.7300601736869505,
+          "inflation_risk": 0.0,
+          "arrears_increase": 0,
+          "social_pressure_increase": 1.7482517482517483,
+          "emergency_finance": 400,
+          "financing_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0,
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 150
+          },
+          "funding_shortfall": 0,
+          "projected_risk_reasons": [
+            {
+              "factor": "debt_to_gdp",
+              "value": 0.8496503496503497,
+              "risk_contribution": 0.23790209790209793
+            },
+            {
+              "factor": "debt_service_to_revenue",
+              "value": 0.2771343963758882,
+              "risk_contribution": 0.09699703873156088
+            },
+            {
+              "factor": "recent_deficit_to_revenue",
+              "value": 0.9682625067240452,
+              "risk_contribution": 0.29047875201721357
+            },
+            {
+              "factor": "reserve_coverage",
+              "value": 0.0,
+              "risk_cushion": 0.0
+            },
+            {
+              "factor": "war",
+              "value": false,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "instability",
+              "value": 0.25,
+              "risk_contribution": 0.0625
+            },
+            {
+              "factor": "arrears_to_revenue",
+              "value": 0.4841312533620226,
+              "risk_contribution": 0.3146853146853147
+            },
+            {
+              "factor": "past_defaults",
+              "value": 1,
+              "risk_contribution": 0.3
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "factor": "debt_to_gdp",
+            "value": 0.8391608391608392,
+            "risk_contribution": 0.23496503496503499
+          },
+          {
+            "factor": "debt_service_to_revenue",
+            "value": 0.258203335126412,
+            "risk_contribution": 0.0903711672942442
+          },
+          {
+            "factor": "recent_deficit_to_revenue",
+            "value": 0.9682625067240452,
+            "risk_contribution": 0.29047875201721357
+          },
+          {
+            "factor": "reserve_coverage",
+            "value": 0.0,
+            "risk_cushion": 0.0
+          },
+          {
+            "factor": "war",
+            "value": false,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "instability",
+            "value": 0.25,
+            "risk_contribution": 0.0625
+          },
+          {
+            "factor": "arrears_to_revenue",
+            "value": 0.4841312533620226,
+            "risk_contribution": 0.3146853146853147
+          },
+          {
+            "factor": "past_defaults",
+            "value": 1,
+            "risk_contribution": 0.3
+          }
+        ],
+        "true_state": {
+          "cost": 400,
+          "risk": 0.7300601736869505,
+          "consequences": {
+            "debt_increase": 150,
+            "domestic_debt_increase": 150,
+            "foreign_debt_increase": 0,
+            "closing_reserves": 0,
+            "annual_debt_service_increase": 35.19284286277616,
+            "new_borrowing_cost": 0.21157820536689273,
+            "civilian_income_cost": 250,
+            "creditworthiness_change_estimate": -67.99273141956871,
+            "creditworthiness_target_after_financing": 26.993982631304945,
+            "default_risk": 0.7300601736869505,
+            "inflation_risk": 0.0,
+            "arrears_increase": 0,
+            "social_pressure_increase": 1.7482517482517483,
+            "emergency_finance": 400,
+            "financing_sources": {
+              "reserves": 0,
+              "normal_borrowing": 0,
+              "emergency_taxation": 250,
+              "domestic_war_bonds": 150
+            },
+            "funding_shortfall": 0,
+            "projected_risk_reasons": [
+              {
+                "factor": "debt_to_gdp",
+                "value": 0.8496503496503497,
+                "risk_contribution": 0.23790209790209793
+              },
+              {
+                "factor": "debt_service_to_revenue",
+                "value": 0.2771343963758882,
+                "risk_contribution": 0.09699703873156088
+              },
+              {
+                "factor": "recent_deficit_to_revenue",
+                "value": 0.9682625067240452,
+                "risk_contribution": 0.29047875201721357
+              },
+              {
+                "factor": "reserve_coverage",
+                "value": 0.0,
+                "risk_cushion": 0.0
+              },
+              {
+                "factor": "war",
+                "value": false,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "instability",
+                "value": 0.25,
+                "risk_contribution": 0.0625
+              },
+              {
+                "factor": "arrears_to_revenue",
+                "value": 0.4841312533620226,
+                "risk_contribution": 0.3146853146853147
+              },
+              {
+                "factor": "past_defaults",
+                "value": 1,
+                "risk_contribution": 0.3
+              }
+            ]
+          }
+        },
+        "perceived_state": {
+          "cost": 80,
+          "risk": 0.2,
+          "bias_factors": [
+            {
+              "factor": "optimism",
+              "value": 0.2
+            }
+          ]
+        },
+        "execution_feasibility": true
+      }
+    },
+    "exhausted": {
+      "project": {
+        "country": "a",
+        "purpose": "general",
+        "amount": 100,
+        "physical_feasibility": {
+          "feasible": true,
+          "missing_resources": {},
+          "region": "ra",
+          "construction_workers": 235.63636363636363,
+          "committed_construction_workers": 0.0,
+          "available_construction_workers": 235.63636363636363,
+          "required_workers": 0.1,
+          "delayed_by_labour": false,
+          "reasons": []
+        },
+        "normal_financial_feasibility": {
+          "possible": false,
+          "feasible": false,
+          "available": 0,
+          "shortfall": 100
+        },
+        "emergency_financial_feasibility": {
+          "possible": false,
+          "feasible": false,
+          "available": 0,
+          "shortfall": 100,
+          "instruments_available": {
+            "emergency_taxation": 0,
+            "domestic_war_bonds": 0,
+            "foreign_borrowing": 0,
+            "forced_loans": 0,
+            "requisition": 0,
+            "delayed_payments": 0,
+            "asset_sales": 0,
+            "monetary_financing": 0
+          },
+          "selected_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0
+          }
+        },
+        "expected_consequences": {
+          "debt_increase": 0,
+          "domestic_debt_increase": 0,
+          "foreign_debt_increase": 0,
+          "closing_reserves": 0,
+          "annual_debt_service_increase": 0.0,
+          "new_borrowing_cost": 0.20961895241850736,
+          "civilian_income_cost": 0,
+          "creditworthiness_change_estimate": -67.5421006103058,
+          "creditworthiness_target_after_financing": 27.444613440567867,
+          "default_risk": 0.7255538655943213,
+          "inflation_risk": 0.0,
+          "arrears_increase": 0,
+          "social_pressure_increase": 0.0,
+          "emergency_finance": 0,
+          "financing_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0
+          },
+          "funding_shortfall": 100,
+          "projected_risk_reasons": [
+            {
+              "factor": "debt_to_gdp",
+              "value": 0.8391608391608392,
+              "risk_contribution": 0.23496503496503499
+            },
+            {
+              "factor": "debt_service_to_revenue",
+              "value": 0.258203335126412,
+              "risk_contribution": 0.0903711672942442
+            },
+            {
+              "factor": "recent_deficit_to_revenue",
+              "value": 0.9682625067240452,
+              "risk_contribution": 0.29047875201721357
+            },
+            {
+              "factor": "reserve_coverage",
+              "value": 0.0,
+              "risk_cushion": 0.0
+            },
+            {
+              "factor": "war",
+              "value": false,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "instability",
+              "value": 0.25,
+              "risk_contribution": 0.0625
+            },
+            {
+              "factor": "arrears_to_revenue",
+              "value": 0.4841312533620226,
+              "risk_contribution": 0.3146853146853147
+            },
+            {
+              "factor": "past_defaults",
+              "value": 1,
+              "risk_contribution": 0.3
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "factor": "debt_to_gdp",
+            "value": 0.8391608391608392,
+            "risk_contribution": 0.23496503496503499
+          },
+          {
+            "factor": "debt_service_to_revenue",
+            "value": 0.258203335126412,
+            "risk_contribution": 0.0903711672942442
+          },
+          {
+            "factor": "recent_deficit_to_revenue",
+            "value": 0.9682625067240452,
+            "risk_contribution": 0.29047875201721357
+          },
+          {
+            "factor": "reserve_coverage",
+            "value": 0.0,
+            "risk_cushion": 0.0
+          },
+          {
+            "factor": "war",
+            "value": false,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "instability",
+            "value": 0.25,
+            "risk_contribution": 0.0625
+          },
+          {
+            "factor": "arrears_to_revenue",
+            "value": 0.4841312533620226,
+            "risk_contribution": 0.3146853146853147
+          },
+          {
+            "factor": "past_defaults",
+            "value": 1,
+            "risk_contribution": 0.3
+          }
+        ],
+        "true_state": {
+          "cost": 100,
+          "risk": 0.7255538655943213,
+          "consequences": {
+            "debt_increase": 0,
+            "domestic_debt_increase": 0,
+            "foreign_debt_increase": 0,
+            "closing_reserves": 0,
+            "annual_debt_service_increase": 0.0,
+            "new_borrowing_cost": 0.20961895241850736,
+            "civilian_income_cost": 0,
+            "creditworthiness_change_estimate": -67.5421006103058,
+            "creditworthiness_target_after_financing": 27.444613440567867,
+            "default_risk": 0.7255538655943213,
+            "inflation_risk": 0.0,
+            "arrears_increase": 0,
+            "social_pressure_increase": 0.0,
+            "emergency_finance": 0,
+            "financing_sources": {
+              "reserves": 0,
+              "normal_borrowing": 0
+            },
+            "funding_shortfall": 100,
+            "projected_risk_reasons": [
+              {
+                "factor": "debt_to_gdp",
+                "value": 0.8391608391608392,
+                "risk_contribution": 0.23496503496503499
+              },
+              {
+                "factor": "debt_service_to_revenue",
+                "value": 0.258203335126412,
+                "risk_contribution": 0.0903711672942442
+              },
+              {
+                "factor": "recent_deficit_to_revenue",
+                "value": 0.9682625067240452,
+                "risk_contribution": 0.29047875201721357
+              },
+              {
+                "factor": "reserve_coverage",
+                "value": 0.0,
+                "risk_cushion": 0.0
+              },
+              {
+                "factor": "war",
+                "value": false,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "instability",
+                "value": 0.25,
+                "risk_contribution": 0.0625
+              },
+              {
+                "factor": "arrears_to_revenue",
+                "value": 0.4841312533620226,
+                "risk_contribution": 0.3146853146853147
+              },
+              {
+                "factor": "past_defaults",
+                "value": 1,
+                "risk_contribution": 0.3
+              }
+            ]
+          }
+        },
+        "perceived_state": {
+          "cost": 80,
+          "risk": 0.2,
+          "bias_factors": [
+            {
+              "factor": "optimism",
+              "value": 0.2
+            }
+          ]
+        },
+        "project_id": "query-project",
+        "execution_feasibility": false
+      },
+      "war_regional": {
+        "country": "a",
+        "purpose": "war",
+        "amount": 400,
+        "physical_feasibility": {
+          "feasible": true,
+          "required_manpower": 200,
+          "available_civilian_manpower": 5400.0,
+          "eligible_additional_recruits": 2650.0,
+          "missing_resources": {},
+          "region": "ra",
+          "note": "War cost is advisory; political intent is never cancelled by risk."
+        },
+        "normal_financial_feasibility": {
+          "possible": false,
+          "feasible": false,
+          "available": 0,
+          "shortfall": 400
+        },
+        "emergency_financial_feasibility": {
+          "possible": false,
+          "feasible": false,
+          "available": 0,
+          "shortfall": 400,
+          "instruments_available": {
+            "emergency_taxation": 0,
+            "domestic_war_bonds": 0,
+            "foreign_borrowing": 0,
+            "forced_loans": 0,
+            "requisition": 0,
+            "delayed_payments": 0,
+            "asset_sales": 0,
+            "monetary_financing": 0
+          },
+          "selected_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0
+          }
+        },
+        "expected_consequences": {
+          "debt_increase": 0,
+          "domestic_debt_increase": 0,
+          "foreign_debt_increase": 0,
+          "closing_reserves": 0,
+          "annual_debt_service_increase": 0.0,
+          "new_borrowing_cost": 0.20961895241850736,
+          "civilian_income_cost": 0,
+          "creditworthiness_change_estimate": -67.5421006103058,
+          "creditworthiness_target_after_financing": 27.444613440567867,
+          "default_risk": 0.7255538655943213,
+          "inflation_risk": 0.0,
+          "arrears_increase": 0,
+          "social_pressure_increase": 0.0,
+          "emergency_finance": 0,
+          "financing_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0
+          },
+          "funding_shortfall": 400,
+          "projected_risk_reasons": [
+            {
+              "factor": "debt_to_gdp",
+              "value": 0.8391608391608392,
+              "risk_contribution": 0.23496503496503499
+            },
+            {
+              "factor": "debt_service_to_revenue",
+              "value": 0.258203335126412,
+              "risk_contribution": 0.0903711672942442
+            },
+            {
+              "factor": "recent_deficit_to_revenue",
+              "value": 0.9682625067240452,
+              "risk_contribution": 0.29047875201721357
+            },
+            {
+              "factor": "reserve_coverage",
+              "value": 0.0,
+              "risk_cushion": 0.0
+            },
+            {
+              "factor": "war",
+              "value": false,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "instability",
+              "value": 0.25,
+              "risk_contribution": 0.0625
+            },
+            {
+              "factor": "arrears_to_revenue",
+              "value": 0.4841312533620226,
+              "risk_contribution": 0.3146853146853147
+            },
+            {
+              "factor": "past_defaults",
+              "value": 1,
+              "risk_contribution": 0.3
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "factor": "debt_to_gdp",
+            "value": 0.8391608391608392,
+            "risk_contribution": 0.23496503496503499
+          },
+          {
+            "factor": "debt_service_to_revenue",
+            "value": 0.258203335126412,
+            "risk_contribution": 0.0903711672942442
+          },
+          {
+            "factor": "recent_deficit_to_revenue",
+            "value": 0.9682625067240452,
+            "risk_contribution": 0.29047875201721357
+          },
+          {
+            "factor": "reserve_coverage",
+            "value": 0.0,
+            "risk_cushion": 0.0
+          },
+          {
+            "factor": "war",
+            "value": false,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "instability",
+            "value": 0.25,
+            "risk_contribution": 0.0625
+          },
+          {
+            "factor": "arrears_to_revenue",
+            "value": 0.4841312533620226,
+            "risk_contribution": 0.3146853146853147
+          },
+          {
+            "factor": "past_defaults",
+            "value": 1,
+            "risk_contribution": 0.3
+          }
+        ],
+        "true_state": {
+          "cost": 400,
+          "risk": 0.7255538655943213,
+          "consequences": {
+            "debt_increase": 0,
+            "domestic_debt_increase": 0,
+            "foreign_debt_increase": 0,
+            "closing_reserves": 0,
+            "annual_debt_service_increase": 0.0,
+            "new_borrowing_cost": 0.20961895241850736,
+            "civilian_income_cost": 0,
+            "creditworthiness_change_estimate": -67.5421006103058,
+            "creditworthiness_target_after_financing": 27.444613440567867,
+            "default_risk": 0.7255538655943213,
+            "inflation_risk": 0.0,
+            "arrears_increase": 0,
+            "social_pressure_increase": 0.0,
+            "emergency_finance": 0,
+            "financing_sources": {
+              "reserves": 0,
+              "normal_borrowing": 0
+            },
+            "funding_shortfall": 400,
+            "projected_risk_reasons": [
+              {
+                "factor": "debt_to_gdp",
+                "value": 0.8391608391608392,
+                "risk_contribution": 0.23496503496503499
+              },
+              {
+                "factor": "debt_service_to_revenue",
+                "value": 0.258203335126412,
+                "risk_contribution": 0.0903711672942442
+              },
+              {
+                "factor": "recent_deficit_to_revenue",
+                "value": 0.9682625067240452,
+                "risk_contribution": 0.29047875201721357
+              },
+              {
+                "factor": "reserve_coverage",
+                "value": 0.0,
+                "risk_cushion": 0.0
+              },
+              {
+                "factor": "war",
+                "value": false,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "instability",
+                "value": 0.25,
+                "risk_contribution": 0.0625
+              },
+              {
+                "factor": "arrears_to_revenue",
+                "value": 0.4841312533620226,
+                "risk_contribution": 0.3146853146853147
+              },
+              {
+                "factor": "past_defaults",
+                "value": 1,
+                "risk_contribution": 0.3
+              }
+            ]
+          }
+        },
+        "perceived_state": {
+          "cost": 80,
+          "risk": 0.2,
+          "bias_factors": [
+            {
+              "factor": "optimism",
+              "value": 0.2
+            }
+          ]
+        },
+        "execution_feasibility": false
+      },
+      "war_all_regions": {
+        "country": "a",
+        "purpose": "war",
+        "amount": 400,
+        "physical_feasibility": {
+          "feasible": true,
+          "required_manpower": 200,
+          "available_civilian_manpower": 10800.0,
+          "eligible_additional_recruits": 5300.0,
+          "missing_resources": {},
+          "region": null,
+          "note": "War cost is advisory; political intent is never cancelled by risk."
+        },
+        "normal_financial_feasibility": {
+          "possible": false,
+          "feasible": false,
+          "available": 0,
+          "shortfall": 400
+        },
+        "emergency_financial_feasibility": {
+          "possible": false,
+          "feasible": false,
+          "available": 0,
+          "shortfall": 400,
+          "instruments_available": {
+            "emergency_taxation": 0,
+            "domestic_war_bonds": 0,
+            "foreign_borrowing": 0,
+            "forced_loans": 0,
+            "requisition": 0,
+            "delayed_payments": 0,
+            "asset_sales": 0,
+            "monetary_financing": 0
+          },
+          "selected_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0
+          }
+        },
+        "expected_consequences": {
+          "debt_increase": 0,
+          "domestic_debt_increase": 0,
+          "foreign_debt_increase": 0,
+          "closing_reserves": 0,
+          "annual_debt_service_increase": 0.0,
+          "new_borrowing_cost": 0.20961895241850736,
+          "civilian_income_cost": 0,
+          "creditworthiness_change_estimate": -67.5421006103058,
+          "creditworthiness_target_after_financing": 27.444613440567867,
+          "default_risk": 0.7255538655943213,
+          "inflation_risk": 0.0,
+          "arrears_increase": 0,
+          "social_pressure_increase": 0.0,
+          "emergency_finance": 0,
+          "financing_sources": {
+            "reserves": 0,
+            "normal_borrowing": 0
+          },
+          "funding_shortfall": 400,
+          "projected_risk_reasons": [
+            {
+              "factor": "debt_to_gdp",
+              "value": 0.8391608391608392,
+              "risk_contribution": 0.23496503496503499
+            },
+            {
+              "factor": "debt_service_to_revenue",
+              "value": 0.258203335126412,
+              "risk_contribution": 0.0903711672942442
+            },
+            {
+              "factor": "recent_deficit_to_revenue",
+              "value": 0.9682625067240452,
+              "risk_contribution": 0.29047875201721357
+            },
+            {
+              "factor": "reserve_coverage",
+              "value": 0.0,
+              "risk_cushion": 0.0
+            },
+            {
+              "factor": "war",
+              "value": false,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "instability",
+              "value": 0.25,
+              "risk_contribution": 0.0625
+            },
+            {
+              "factor": "arrears_to_revenue",
+              "value": 0.4841312533620226,
+              "risk_contribution": 0.3146853146853147
+            },
+            {
+              "factor": "past_defaults",
+              "value": 1,
+              "risk_contribution": 0.3
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "factor": "debt_to_gdp",
+            "value": 0.8391608391608392,
+            "risk_contribution": 0.23496503496503499
+          },
+          {
+            "factor": "debt_service_to_revenue",
+            "value": 0.258203335126412,
+            "risk_contribution": 0.0903711672942442
+          },
+          {
+            "factor": "recent_deficit_to_revenue",
+            "value": 0.9682625067240452,
+            "risk_contribution": 0.29047875201721357
+          },
+          {
+            "factor": "reserve_coverage",
+            "value": 0.0,
+            "risk_cushion": 0.0
+          },
+          {
+            "factor": "war",
+            "value": false,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "instability",
+            "value": 0.25,
+            "risk_contribution": 0.0625
+          },
+          {
+            "factor": "arrears_to_revenue",
+            "value": 0.4841312533620226,
+            "risk_contribution": 0.3146853146853147
+          },
+          {
+            "factor": "past_defaults",
+            "value": 1,
+            "risk_contribution": 0.3
+          }
+        ],
+        "true_state": {
+          "cost": 400,
+          "risk": 0.7255538655943213,
+          "consequences": {
+            "debt_increase": 0,
+            "domestic_debt_increase": 0,
+            "foreign_debt_increase": 0,
+            "closing_reserves": 0,
+            "annual_debt_service_increase": 0.0,
+            "new_borrowing_cost": 0.20961895241850736,
+            "civilian_income_cost": 0,
+            "creditworthiness_change_estimate": -67.5421006103058,
+            "creditworthiness_target_after_financing": 27.444613440567867,
+            "default_risk": 0.7255538655943213,
+            "inflation_risk": 0.0,
+            "arrears_increase": 0,
+            "social_pressure_increase": 0.0,
+            "emergency_finance": 0,
+            "financing_sources": {
+              "reserves": 0,
+              "normal_borrowing": 0
+            },
+            "funding_shortfall": 400,
+            "projected_risk_reasons": [
+              {
+                "factor": "debt_to_gdp",
+                "value": 0.8391608391608392,
+                "risk_contribution": 0.23496503496503499
+              },
+              {
+                "factor": "debt_service_to_revenue",
+                "value": 0.258203335126412,
+                "risk_contribution": 0.0903711672942442
+              },
+              {
+                "factor": "recent_deficit_to_revenue",
+                "value": 0.9682625067240452,
+                "risk_contribution": 0.29047875201721357
+              },
+              {
+                "factor": "reserve_coverage",
+                "value": 0.0,
+                "risk_cushion": 0.0
+              },
+              {
+                "factor": "war",
+                "value": false,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "instability",
+                "value": 0.25,
+                "risk_contribution": 0.0625
+              },
+              {
+                "factor": "arrears_to_revenue",
+                "value": 0.4841312533620226,
+                "risk_contribution": 0.3146853146853147
+              },
+              {
+                "factor": "past_defaults",
+                "value": 1,
+                "risk_contribution": 0.3
+              }
+            ]
+          }
+        },
+        "perceived_state": {
+          "cost": 80,
+          "risk": 0.2,
+          "bias_factors": [
+            {
+              "factor": "optimism",
+              "value": 0.2
+            }
+          ]
+        },
+        "execution_feasibility": false
+      }
+    },
+    "resource_shortage": {
+      "project": {
+        "country": "a",
+        "purpose": "general",
+        "amount": 100,
+        "physical_feasibility": {
+          "feasible": false,
+          "missing_resources": {
+            "raw_materials": {
+              "required": 2.0,
+              "available": 0
+            }
+          },
+          "region": "ra",
+          "construction_workers": 235.63636363636363,
+          "committed_construction_workers": 0.0,
+          "available_construction_workers": 235.63636363636363,
+          "required_workers": 0.1,
+          "delayed_by_labour": false,
+          "reasons": [
+            "missing regional resources"
+          ]
+        },
+        "normal_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 13007,
+          "shortfall": 0
+        },
+        "emergency_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 100,
+          "shortfall": 0,
+          "instruments_available": {
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 1287,
+            "foreign_borrowing": 429,
+            "forced_loans": 220,
+            "requisition": 91,
+            "delayed_payments": 357,
+            "asset_sales": 137,
+            "monetary_financing": 143
+          },
+          "selected_sources": {
+            "reserves": 100,
+            "normal_borrowing": 0
+          }
+        },
+        "expected_consequences": {
+          "debt_increase": 0,
+          "domestic_debt_increase": 0,
+          "foreign_debt_increase": 0,
+          "closing_reserves": 900,
+          "annual_debt_service_increase": 0.0,
+          "new_borrowing_cost": 0.05943115877117335,
+          "civilian_income_cost": 0,
+          "creditworthiness_change_estimate": -0.5256625148403486,
+          "creditworthiness_target_after_financing": 94.46105153603331,
+          "default_risk": 0.05538948463966691,
+          "inflation_risk": 0.0,
+          "arrears_increase": 0,
+          "social_pressure_increase": 0.0,
+          "emergency_finance": 0,
+          "financing_sources": {
+            "reserves": 100,
+            "normal_borrowing": 0
+          },
+          "funding_shortfall": 0,
+          "projected_risk_reasons": [
+            {
+              "factor": "debt_to_gdp",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "debt_service_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "recent_deficit_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "reserve_coverage",
+              "value": 0.4841312533620226,
+              "risk_cushion": 0.09682625067240452
+            },
+            {
+              "factor": "war",
+              "value": false,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "instability",
+              "value": 0.25,
+              "risk_contribution": 0.0625
+            },
+            {
+              "factor": "arrears_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "past_defaults",
+              "value": 0,
+              "risk_contribution": 0.0
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "factor": "debt_to_gdp",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "debt_service_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "recent_deficit_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "reserve_coverage",
+            "value": 0.5379236148466918,
+            "risk_cushion": 0.10758472296933837
+          },
+          {
+            "factor": "war",
+            "value": false,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "instability",
+            "value": 0.25,
+            "risk_contribution": 0.0625
+          },
+          {
+            "factor": "arrears_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "past_defaults",
+            "value": 0,
+            "risk_contribution": 0.0
+          }
+        ],
+        "true_state": {
+          "cost": 100,
+          "risk": 0.05538948463966691,
+          "consequences": {
+            "debt_increase": 0,
+            "domestic_debt_increase": 0,
+            "foreign_debt_increase": 0,
+            "closing_reserves": 900,
+            "annual_debt_service_increase": 0.0,
+            "new_borrowing_cost": 0.05943115877117335,
+            "civilian_income_cost": 0,
+            "creditworthiness_change_estimate": -0.5256625148403486,
+            "creditworthiness_target_after_financing": 94.46105153603331,
+            "default_risk": 0.05538948463966691,
+            "inflation_risk": 0.0,
+            "arrears_increase": 0,
+            "social_pressure_increase": 0.0,
+            "emergency_finance": 0,
+            "financing_sources": {
+              "reserves": 100,
+              "normal_borrowing": 0
+            },
+            "funding_shortfall": 0,
+            "projected_risk_reasons": [
+              {
+                "factor": "debt_to_gdp",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "debt_service_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "recent_deficit_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "reserve_coverage",
+                "value": 0.4841312533620226,
+                "risk_cushion": 0.09682625067240452
+              },
+              {
+                "factor": "war",
+                "value": false,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "instability",
+                "value": 0.25,
+                "risk_contribution": 0.0625
+              },
+              {
+                "factor": "arrears_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "past_defaults",
+                "value": 0,
+                "risk_contribution": 0.0
+              }
+            ]
+          }
+        },
+        "perceived_state": {
+          "cost": 80,
+          "risk": 0.2,
+          "bias_factors": [
+            {
+              "factor": "optimism",
+              "value": 0.2
+            }
+          ]
+        },
+        "project_id": "query-project",
+        "execution_feasibility": false
+      },
+      "war_regional": {
+        "country": "a",
+        "purpose": "war",
+        "amount": 400,
+        "physical_feasibility": {
+          "feasible": false,
+          "required_manpower": 200,
+          "available_civilian_manpower": 5400.0,
+          "eligible_additional_recruits": 2650.0,
+          "missing_resources": {
+            "raw_materials": {
+              "required": 5,
+              "available": 0
+            }
+          },
+          "region": "ra",
+          "note": "War cost is advisory; political intent is never cancelled by risk."
+        },
+        "normal_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 13007,
+          "shortfall": 0
+        },
+        "emergency_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 400,
+          "shortfall": 0,
+          "instruments_available": {
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 1287,
+            "foreign_borrowing": 429,
+            "forced_loans": 220,
+            "requisition": 91,
+            "delayed_payments": 357,
+            "asset_sales": 137,
+            "monetary_financing": 143
+          },
+          "selected_sources": {
+            "reserves": 400,
+            "normal_borrowing": 0
+          }
+        },
+        "expected_consequences": {
+          "debt_increase": 0,
+          "domestic_debt_increase": 0,
+          "foreign_debt_increase": 0,
+          "closing_reserves": 600,
+          "annual_debt_service_increase": 0.0,
+          "new_borrowing_cost": 0.05956160012779327,
+          "civilian_income_cost": 0,
+          "creditworthiness_change_estimate": -0.6887142106152453,
+          "creditworthiness_target_after_financing": 94.29799984025841,
+          "default_risk": 0.057020001597415854,
+          "inflation_risk": 0.0,
+          "arrears_increase": 0,
+          "social_pressure_increase": 0.0,
+          "emergency_finance": 0,
+          "financing_sources": {
+            "reserves": 400,
+            "normal_borrowing": 0
+          },
+          "funding_shortfall": 0,
+          "projected_risk_reasons": [
+            {
+              "factor": "debt_to_gdp",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "debt_service_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "recent_deficit_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "reserve_coverage",
+              "value": 0.32275416890801506,
+              "risk_cushion": 0.06455083378160302
+            },
+            {
+              "factor": "war",
+              "value": false,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "instability",
+              "value": 0.25,
+              "risk_contribution": 0.0625
+            },
+            {
+              "factor": "arrears_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "past_defaults",
+              "value": 0,
+              "risk_contribution": 0.0
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "factor": "debt_to_gdp",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "debt_service_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "recent_deficit_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "reserve_coverage",
+            "value": 0.5379236148466918,
+            "risk_cushion": 0.10758472296933837
+          },
+          {
+            "factor": "war",
+            "value": false,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "instability",
+            "value": 0.25,
+            "risk_contribution": 0.0625
+          },
+          {
+            "factor": "arrears_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "past_defaults",
+            "value": 0,
+            "risk_contribution": 0.0
+          }
+        ],
+        "true_state": {
+          "cost": 400,
+          "risk": 0.057020001597415854,
+          "consequences": {
+            "debt_increase": 0,
+            "domestic_debt_increase": 0,
+            "foreign_debt_increase": 0,
+            "closing_reserves": 600,
+            "annual_debt_service_increase": 0.0,
+            "new_borrowing_cost": 0.05956160012779327,
+            "civilian_income_cost": 0,
+            "creditworthiness_change_estimate": -0.6887142106152453,
+            "creditworthiness_target_after_financing": 94.29799984025841,
+            "default_risk": 0.057020001597415854,
+            "inflation_risk": 0.0,
+            "arrears_increase": 0,
+            "social_pressure_increase": 0.0,
+            "emergency_finance": 0,
+            "financing_sources": {
+              "reserves": 400,
+              "normal_borrowing": 0
+            },
+            "funding_shortfall": 0,
+            "projected_risk_reasons": [
+              {
+                "factor": "debt_to_gdp",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "debt_service_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "recent_deficit_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "reserve_coverage",
+                "value": 0.32275416890801506,
+                "risk_cushion": 0.06455083378160302
+              },
+              {
+                "factor": "war",
+                "value": false,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "instability",
+                "value": 0.25,
+                "risk_contribution": 0.0625
+              },
+              {
+                "factor": "arrears_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "past_defaults",
+                "value": 0,
+                "risk_contribution": 0.0
+              }
+            ]
+          }
+        },
+        "perceived_state": {
+          "cost": 80,
+          "risk": 0.2,
+          "bias_factors": [
+            {
+              "factor": "optimism",
+              "value": 0.2
+            }
+          ]
+        },
+        "execution_feasibility": false
+      },
+      "war_all_regions": {
+        "country": "a",
+        "purpose": "war",
+        "amount": 400,
+        "physical_feasibility": {
+          "feasible": false,
+          "required_manpower": 200,
+          "available_civilian_manpower": 10800.0,
+          "eligible_additional_recruits": 5300.0,
+          "missing_resources": {
+            "raw_materials": {
+              "required": 220,
+              "available": 200.0
+            }
+          },
+          "region": null,
+          "note": "War cost is advisory; political intent is never cancelled by risk."
+        },
+        "normal_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 13007,
+          "shortfall": 0
+        },
+        "emergency_financial_feasibility": {
+          "possible": true,
+          "feasible": true,
+          "available": 400,
+          "shortfall": 0,
+          "instruments_available": {
+            "emergency_taxation": 250,
+            "domestic_war_bonds": 1287,
+            "foreign_borrowing": 429,
+            "forced_loans": 220,
+            "requisition": 79,
+            "delayed_payments": 357,
+            "asset_sales": 137,
+            "monetary_financing": 143
+          },
+          "selected_sources": {
+            "reserves": 400,
+            "normal_borrowing": 0
+          }
+        },
+        "expected_consequences": {
+          "debt_increase": 0,
+          "domestic_debt_increase": 0,
+          "foreign_debt_increase": 0,
+          "closing_reserves": 600,
+          "annual_debt_service_increase": 0.0,
+          "new_borrowing_cost": 0.05956160012779327,
+          "civilian_income_cost": 0,
+          "creditworthiness_change_estimate": -0.6887142106152453,
+          "creditworthiness_target_after_financing": 94.29799984025841,
+          "default_risk": 0.057020001597415854,
+          "inflation_risk": 0.0,
+          "arrears_increase": 0,
+          "social_pressure_increase": 0.0,
+          "emergency_finance": 0,
+          "financing_sources": {
+            "reserves": 400,
+            "normal_borrowing": 0
+          },
+          "funding_shortfall": 0,
+          "projected_risk_reasons": [
+            {
+              "factor": "debt_to_gdp",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "debt_service_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "recent_deficit_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "reserve_coverage",
+              "value": 0.32275416890801506,
+              "risk_cushion": 0.06455083378160302
+            },
+            {
+              "factor": "war",
+              "value": false,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "instability",
+              "value": 0.25,
+              "risk_contribution": 0.0625
+            },
+            {
+              "factor": "arrears_to_revenue",
+              "value": 0.0,
+              "risk_contribution": 0.0
+            },
+            {
+              "factor": "past_defaults",
+              "value": 0,
+              "risk_contribution": 0.0
+            }
+          ]
+        },
+        "reasons": [
+          {
+            "factor": "debt_to_gdp",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "debt_service_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "recent_deficit_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "reserve_coverage",
+            "value": 0.5379236148466918,
+            "risk_cushion": 0.10758472296933837
+          },
+          {
+            "factor": "war",
+            "value": false,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "instability",
+            "value": 0.25,
+            "risk_contribution": 0.0625
+          },
+          {
+            "factor": "arrears_to_revenue",
+            "value": 0.0,
+            "risk_contribution": 0.0
+          },
+          {
+            "factor": "past_defaults",
+            "value": 0,
+            "risk_contribution": 0.0
+          }
+        ],
+        "true_state": {
+          "cost": 400,
+          "risk": 0.057020001597415854,
+          "consequences": {
+            "debt_increase": 0,
+            "domestic_debt_increase": 0,
+            "foreign_debt_increase": 0,
+            "closing_reserves": 600,
+            "annual_debt_service_increase": 0.0,
+            "new_borrowing_cost": 0.05956160012779327,
+            "civilian_income_cost": 0,
+            "creditworthiness_change_estimate": -0.6887142106152453,
+            "creditworthiness_target_after_financing": 94.29799984025841,
+            "default_risk": 0.057020001597415854,
+            "inflation_risk": 0.0,
+            "arrears_increase": 0,
+            "social_pressure_increase": 0.0,
+            "emergency_finance": 0,
+            "financing_sources": {
+              "reserves": 400,
+              "normal_borrowing": 0
+            },
+            "funding_shortfall": 0,
+            "projected_risk_reasons": [
+              {
+                "factor": "debt_to_gdp",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "debt_service_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "recent_deficit_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "reserve_coverage",
+                "value": 0.32275416890801506,
+                "risk_cushion": 0.06455083378160302
+              },
+              {
+                "factor": "war",
+                "value": false,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "instability",
+                "value": 0.25,
+                "risk_contribution": 0.0625
+              },
+              {
+                "factor": "arrears_to_revenue",
+                "value": 0.0,
+                "risk_contribution": 0.0
+              },
+              {
+                "factor": "past_defaults",
+                "value": 0,
+                "risk_contribution": 0.0
+              }
+            ]
+          }
+        },
+        "perceived_state": {
+          "cost": 80,
+          "risk": 0.2,
+          "bias_factors": [
+            {
+              "factor": "optimism",
+              "value": 0.2
+            }
+          ]
+        },
+        "execution_feasibility": false
+      }
+    }
+  }
+}

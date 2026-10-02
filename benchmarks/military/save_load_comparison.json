@@ -1,0 +1,16 @@
+{
+  "equal": true,
+  "differences": [],
+  "reference_sha256": "c694317c63a456239d1a5f1f88a4e13825c177ce85b540e1c797167b8e07e92b",
+  "replay_sha256": "c694317c63a456239d1a5f1f88a4e13825c177ce85b540e1c797167b8e07e92b",
+  "reference_months": 36,
+  "replay_months": 36,
+  "restored_at_month": 18,
+  "actual_restored_run_seconds": 8652.497981699998,
+  "monthly_statistics_equal": true,
+  "dated_actions_equal": true,
+  "actual_database_dates": {
+    "game.sqlite": "1898-07-01",
+    "continued.sqlite": "1900-01-01"
+  }
+}

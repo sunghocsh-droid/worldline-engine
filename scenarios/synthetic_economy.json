@@ -1,0 +1,14 @@
+{
+  "schema_version": 2,
+  "scenario_id": "synthetic_economy",
+  "date": "1897-01-01",
+  "countries": {
+    "a": {"name": "가상 시험국 A", "population": 10000, "treasury": 100000},
+    "b": {"name": "가상 시험국 B", "population": 10000, "treasury": 100000}
+  },
+  "regions": {
+    "ra": {"name": "가상 지역 A", "owner": "a", "population": 10000},
+    "rb": {"name": "가상 지역 B", "owner": "b", "population": 10000}
+  },
+  "note": "역사 자료가 아닌 실행 예제. korea_1897 빈 골격은 유지한다. 경제는 --economy로 명시적으로 초기화한다."
+}

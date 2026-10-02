@@ -1,0 +1,76 @@
+{
+  "tests": {
+    "tests": 413,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "duration_seconds": 421.71,
+  "junit_duration_seconds": 421.327,
+  "console_summary": "413 passed in 421.71s (0:07:01)",
+  "existing_tests": 268,
+  "new_npc_tests": 145,
+  "tests_by_file": {
+    "test_calibration": 35,
+    "test_credit_stabilization": 50,
+    "test_economy": 29,
+    "test_economy_edges": 28,
+    "test_engine": 24,
+    "test_foundations": 11,
+    "test_labour_stabilization": 28,
+    "test_npc_campaign": 18,
+    "test_npc_decision": 46,
+    "test_npc_extensions": 18,
+    "test_npc_integration": 27,
+    "test_npc_required_scenarios": 3,
+    "test_npc_state": 33,
+    "test_stabilization_benchmark": 10,
+    "test_stabilization_integration": 22,
+    "test_structure": 31
+  },
+  "source_sha256": {
+    "npc.py": "e797b560d8482508f16744eac6b592358221f1fb2ff82d537e0d8d5e60f4da11",
+    "npc_state.py": "5ab90b976b691d125c823761aebac4f0a95145df569fef8988231405d227d549",
+    "npc_decision.py": "7061517ea254e5a28f1629be1d7d419082f69d255a9455fd216d97fe522f0fe3",
+    "order_execution.py": "62546606d06a7a13ff0f9db136d667afafe418b9ec2d334c7202738fefc427e8",
+    "economy.py": "d570fa881cba02832342315f99e3a902c6cb57da3b767b387ddfd07eb2898261",
+    "credit.py": "0696c89c853bfa1683c67b69f6a0bd6554adaaa00851b1022bf9f75cfcdaa51c",
+    "guardrails.py": "bb48d15ae6aa0d87eecaac9b1ac514806e0f4831026edd947ed9e6906345d65e",
+    "labour.py": "667a36b48b75410b23f34f60e21a5f4eab493e0884de3e31f4727cebbe701541",
+    "projects.py": "4e102ea361db9f97219ae09f0686e2a040c5e7849902f86da89ecc41830f76a3",
+    "calibration.py": "d164971ea2e4a21a52a401c97044cd66d8ad0af8d8777318dc8a5de90b04e68f",
+    "models.py": "f4df80c980a76b944884f156058be430d2d24b4acafc11a8654f75175f342184",
+    "audit.py": "7a0b24dd66334c1e39acd2dc962bc92596d43711bb09fae27a10bf8d6d2e7eca",
+    "engine.py": "dee1b1a369ae1c6b4bd764b580b75eeddc2ba3e412be2a81fe9f2f1d7c18269a",
+    "persistence.py": "0212cd02b86f73ce2d5197b6bd102e862bf347e14ccc8f7da923a2cc94c1a6a7",
+    "npc_benchmark.py": "7772bad51654eba5461160a073086a8416cc92ec6c687b3f45b19ba372038ad9"
+  },
+  "original_files_unchanged": {
+    "tests/conftest.py": true,
+    "tests/test_calibration.py": true,
+    "tests/test_economy.py": true,
+    "tests/test_economy_edges.py": true,
+    "tests/test_engine.py": true,
+    "tests/test_foundations.py": true,
+    "tests/test_structure.py": true,
+    "worldline/calibration.py": true
+  },
+  "original_checkpoint_archive_sha256": "7daff1e976d1f6a4b4964106df56648906422a8566616a2b4d69582bb10025c6",
+  "campaign": {
+    "months": 240,
+    "seed": 731,
+    "initial_sha256": "f890e402afd1502b362ae15813055ba25f2877fbe9e07704b898dddc527d34a6",
+    "decision_count": 4968,
+    "action_count": 964,
+    "combat_resolutions": 0,
+    "midpoint_restore_month": 120,
+    "complete_world_events_rng_equal": true,
+    "equality_evidence": "test_long_campaign_same_seed_and_midpoint_save_reproduce_twenty_years passed"
+  },
+  "example_versions": {
+    "save_schema": 4,
+    "world_schema": 3,
+    "economy": 3,
+    "npc": 1
+  }
+}

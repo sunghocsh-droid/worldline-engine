@@ -1,0 +1,203 @@
+{
+  "world_state_copying": {
+    "boundary": "copy.py:deepcopy",
+    "called": true,
+    "calls": 7708364,
+    "self_seconds": 7.702326500000001,
+    "cumulative_seconds": 15.865984200000002,
+    "function_rows": [
+      {
+        "boundary": "copy.py:deepcopy",
+        "calls": 7708364,
+        "self_seconds": 7.702326500000001,
+        "cumulative_seconds": 15.865984200000002
+      }
+    ],
+    "method": "First called equivalent internal/public boundary; nested alternatives are not added"
+  },
+  "npc_tick": {
+    "boundary": "npc.py:tick",
+    "called": true,
+    "calls": 31,
+    "self_seconds": 0.0348728,
+    "cumulative_seconds": 13.8728519,
+    "function_rows": [
+      {
+        "boundary": "npc.py:tick",
+        "calls": 31,
+        "self_seconds": 0.0348728,
+        "cumulative_seconds": 13.8728519
+      }
+    ],
+    "method": "First called equivalent internal/public boundary; nested alternatives are not added"
+  },
+  "npc_view_construction": {
+    "boundary": "npc_state.py:actor_view",
+    "called": true,
+    "calls": 110,
+    "self_seconds": 0.07310230000000001,
+    "cumulative_seconds": 9.235153200000001,
+    "function_rows": [
+      {
+        "boundary": "npc_state.py:actor_view",
+        "calls": 110,
+        "self_seconds": 0.07310230000000001,
+        "cumulative_seconds": 9.235153200000001
+      }
+    ],
+    "method": "First called equivalent internal/public boundary; nested alternatives are not added"
+  },
+  "report_lookup": {
+    "boundary": "npc_state.py:_known_events",
+    "called": true,
+    "calls": 104,
+    "self_seconds": 0.03107,
+    "cumulative_seconds": 0.0719645,
+    "function_rows": [
+      {
+        "boundary": "npc_state.py:_known_events",
+        "calls": 104,
+        "self_seconds": 0.03107,
+        "cumulative_seconds": 0.0719645
+      }
+    ],
+    "method": "First called equivalent internal/public boundary; nested alternatives are not added"
+  },
+  "memory_lookup": {
+    "boundary": "npc_state.py:effective_memory",
+    "called": true,
+    "calls": 174,
+    "self_seconds": 0.127858,
+    "cumulative_seconds": 6.4563180000000004,
+    "function_rows": [
+      {
+        "boundary": "npc_state.py:effective_memory",
+        "calls": 174,
+        "self_seconds": 0.127858,
+        "cumulative_seconds": 6.4563180000000004
+      }
+    ],
+    "method": "First called equivalent internal/public boundary; nested alternatives are not added"
+  },
+  "memory_reevaluation": {
+    "boundary": "npc_state.py:_memory_weight",
+    "called": true,
+    "calls": 49746,
+    "self_seconds": 0.10722350000000001,
+    "cumulative_seconds": 0.4118565,
+    "function_rows": [
+      {
+        "boundary": "npc_state.py:_memory_weight",
+        "calls": 49746,
+        "self_seconds": 0.10722350000000001,
+        "cumulative_seconds": 0.4118565
+      }
+    ],
+    "method": "First called equivalent internal/public boundary; nested alternatives are not added"
+  },
+  "relation_ruler_evaluation": {
+    "boundary": "npc_state.py:evaluate_ruler",
+    "called": true,
+    "calls": 64,
+    "self_seconds": 0.0218951,
+    "cumulative_seconds": 4.5634212000000005,
+    "function_rows": [
+      {
+        "boundary": "npc_state.py:evaluate_ruler",
+        "calls": 64,
+        "self_seconds": 0.0218951,
+        "cumulative_seconds": 4.5634212000000005
+      }
+    ],
+    "method": "First called equivalent internal/public boundary; nested alternatives are not added"
+  },
+  "government_decision": {
+    "boundary": "npc.py:_run_council",
+    "called": true,
+    "calls": 4,
+    "self_seconds": 0.0084194,
+    "cumulative_seconds": 3.5656966000000003,
+    "function_rows": [
+      {
+        "boundary": "npc.py:_run_council",
+        "calls": 4,
+        "self_seconds": 0.0084194,
+        "cumulative_seconds": 3.5656966000000003
+      }
+    ],
+    "method": "First called equivalent internal/public boundary; nested alternatives are not added"
+  },
+  "crisis_evaluation": {
+    "boundary": "crisis.py:tick",
+    "called": true,
+    "calls": 31,
+    "self_seconds": 0.004568,
+    "cumulative_seconds": 6.524791100000001,
+    "function_rows": [
+      {
+        "boundary": "crisis.py:tick",
+        "calls": 31,
+        "self_seconds": 0.004568,
+        "cumulative_seconds": 6.524791100000001
+      }
+    ],
+    "method": "First called equivalent internal/public boundary; nested alternatives are not added"
+  },
+  "event_reporting": {
+    "boundary": "crisis_response.py:deliver_due",
+    "called": true,
+    "calls": 62,
+    "self_seconds": 0.1336695,
+    "cumulative_seconds": 0.4104121,
+    "function_rows": [
+      {
+        "boundary": "crisis_response.py:deliver_due",
+        "calls": 62,
+        "self_seconds": 0.1336695,
+        "cumulative_seconds": 0.4104121
+      }
+    ],
+    "method": "First called equivalent internal/public boundary; nested alternatives are not added"
+  },
+  "auditor": {
+    "boundary": "audit.py:check",
+    "called": true,
+    "calls": 1,
+    "self_seconds": 2.05e-05,
+    "cumulative_seconds": 1.598972,
+    "function_rows": [
+      {
+        "boundary": "audit.py:check",
+        "calls": 1,
+        "self_seconds": 2.05e-05,
+        "cumulative_seconds": 1.598972
+      }
+    ],
+    "method": "First called equivalent internal/public boundary; nested alternatives are not added"
+  },
+  "economy": {
+    "boundary": "economy.py:tick",
+    "called": true,
+    "calls": 31,
+    "self_seconds": 0.0009363,
+    "cumulative_seconds": 0.3606672,
+    "function_rows": [
+      {
+        "boundary": "economy.py:tick",
+        "calls": 31,
+        "self_seconds": 0.0009363,
+        "cumulative_seconds": 0.3606672
+      }
+    ],
+    "method": "First called equivalent internal/public boundary; nested alternatives are not added"
+  },
+  "serialization": {
+    "boundary": "models.py:to_dict",
+    "called": false,
+    "calls": 0,
+    "self_seconds": 0,
+    "cumulative_seconds": 0,
+    "function_rows": [],
+    "method": "First called equivalent internal/public boundary; nested alternatives are not added"
+  }
+}

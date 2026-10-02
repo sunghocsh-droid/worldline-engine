@@ -1,0 +1,4230 @@
+{
+  "빠른 성장": {
+    "month": 360,
+    "date": "1927-02-01",
+    "population": 12891,
+    "gdp": 20121,
+    "gdp_per_capita": 1.5608564114498487,
+    "government_revenue": 222,
+    "government_expenditure": 214,
+    "debt": 0,
+    "reserves": 3704,
+    "literacy": 0.9739344629126313,
+    "skilled_labour": 2147.591452523633,
+    "capital_stock": 29141.77489289378,
+    "infrastructure": {
+      "roads": 55.9648508664835,
+      "railways": 56.217851715575655,
+      "ports": 55.82654011879512,
+      "electricity": 56.21483578564893,
+      "communications": 36.947357477060095,
+      "sanitation": 55.90299111209566
+    },
+    "urbanization": 0.6483307268435348,
+    "sector_output": {
+      "agriculture": 7550.148060434112,
+      "mining": 7062.139629105044,
+      "light_industry": 1388.5055306627796,
+      "heavy_industry": 2310.3955396315787,
+      "machinery": 1581.227273320496,
+      "chemicals": 416.5516591988337,
+      "energy": 6921.0579657765575,
+      "construction": 899.6223483762117,
+      "transport": 1624.2602082918986,
+      "shipping": 277.7011061325559,
+      "services": 1110.8044245302235
+    },
+    "technology": {
+      "agriculture": {
+        "access": true,
+        "discovery": true,
+        "installed": true,
+        "adoption": 0.9998395694794113,
+        "diffusion": 0.9807599437881156,
+        "domestic_capability": 0.7048935079033314,
+        "foreign_experts": 0.0020599999999999998
+      },
+      "mining": {
+        "access": true,
+        "discovery": true,
+        "installed": true,
+        "adoption": 0.9998801961945931,
+        "diffusion": 0.983583944467865,
+        "domestic_capability": 0.7229397704407291,
+        "foreign_experts": 0.00194
+      },
+      "light_industry": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "heavy_industry": {
+        "access": true,
+        "discovery": true,
+        "installed": true,
+        "adoption": 0.9999100013477683,
+        "diffusion": 0.9859599151401357,
+        "domestic_capability": 0.73972864981305,
+        "foreign_experts": 0.00182
+      },
+      "machinery": {
+        "access": true,
+        "discovery": true,
+        "installed": true,
+        "adoption": 0.9999483869508096,
+        "diffusion": 0.9896625238480108,
+        "domestic_capability": 0.7699688606183253,
+        "foreign_experts": 0.0016400000000000002
+      },
+      "chemicals": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "energy": {
+        "access": true,
+        "discovery": true,
+        "installed": true,
+        "adoption": 0.9999318500961378,
+        "diffusion": 0.987959565474094,
+        "domestic_capability": 0.7552791306391636,
+        "foreign_experts": 0.0016400000000000002
+      },
+      "construction": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "transport": {
+        "access": true,
+        "discovery": true,
+        "installed": true,
+        "adoption": 0.9997835321936492,
+        "diffusion": 0.9773924355149333,
+        "domestic_capability": 0.6854311821043975,
+        "foreign_experts": 0.0021
+      },
+      "shipping": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "services": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      }
+    },
+    "labour": {
+      "agriculture": 2042.2446576271047,
+      "mining": 626.3543163020049,
+      "light_industry": 894.7918804314356,
+      "heavy_industry": 536.8751282588612,
+      "machinery": 357.9167521725742,
+      "chemicals": 268.4375641294306,
+      "energy": 447.3959402157178,
+      "construction": 447.3959402157178,
+      "transport": 447.3959402157178,
+      "shipping": 178.9583760862871,
+      "services": 715.8335043451484,
+      "military": 126.4,
+      "military_service": 100,
+      "military_support": 26.400000000000006,
+      "skilled": 2147.591452523633,
+      "professionals": 443.46767816627096,
+      "manufacturing": 2058.0213249923017,
+      "transport_logistics": 626.3543163020049
+    },
+    "trade": {
+      "exports": 41.20127786391913,
+      "imports": 7.897743926028179,
+      "partners": [
+        "b"
+      ]
+    },
+    "bottlenecks": {
+      "agriculture": [
+        "labour"
+      ],
+      "mining": [
+        "labour"
+      ],
+      "light_industry": [
+        "labour"
+      ],
+      "heavy_industry": [
+        "labour"
+      ],
+      "machinery": [
+        "labour"
+      ],
+      "chemicals": [
+        "labour"
+      ],
+      "energy": [
+        "labour"
+      ],
+      "construction": [
+        "labour"
+      ],
+      "transport": [
+        "labour"
+      ],
+      "shipping": [
+        "labour"
+      ],
+      "services": [
+        "labour"
+      ]
+    },
+    "explain": {
+      "date": "1927-02-01",
+      "period_start": "1927-01-01",
+      "elapsed_days": 31,
+      "gdp": 20121,
+      "gdp_per_capita": 1.5608564114498487,
+      "real_growth_estimate": 0.0029408832618882386,
+      "sector_value_added": {
+        "agriculture": 7512.397320131942,
+        "mining": 2318.7358448894897,
+        "light_industry": 1291.310143516385,
+        "heavy_industry": 1944.5829125232458,
+        "machinery": 1376.985417183265,
+        "chemicals": 333.24132735906693,
+        "energy": 1614.913525347863,
+        "construction": 802.1632606354553,
+        "transport": 1563.3504504809523,
+        "shipping": 259.1876990570521,
+        "services": 1104.3247320537973
+      },
+      "sector_changes": {
+        "agriculture": 13.097081047018946,
+        "mining": 7.882439049109507,
+        "light_industry": 1.9805630893552006,
+        "heavy_industry": 12.839096439967534,
+        "machinery": 8.759919855309363,
+        "chemicals": 0.5111130553174803,
+        "energy": 5.061627320676735,
+        "construction": 1.2724475513463176,
+        "transport": 5.819545001251072,
+        "shipping": 0.39753237635801497,
+        "services": 1.6937718749829855
+      },
+      "sector_shares": {
+        "agriculture": 0.3733574573380157,
+        "mining": 0.11523848944550373,
+        "light_industry": 0.06417662049450788,
+        "heavy_industry": 0.0966435214837493,
+        "machinery": 0.0684345824965021,
+        "chemicals": 0.0165617085147117,
+        "energy": 0.08025933426455933,
+        "construction": 0.03986658620387846,
+        "transport": 0.0776967090858765,
+        "shipping": 0.012881328844775771,
+        "services": 0.05488366182791962
+      },
+      "population": {
+        "period_start": "1927-01-01",
+        "period_end": "1927-02-01",
+        "elapsed_days": 31,
+        "before": 12881,
+        "after": 12891,
+        "births": 25,
+        "deaths": 15,
+        "migration": 0,
+        "war_losses": 0,
+        "epidemic_losses": 0,
+        "disaster_losses": 0,
+        "sources": [
+          "explicit monthly migration",
+          "v1 monthly birth/death model"
+        ]
+      },
+      "finance": {
+        "taxes": 205,
+        "tariffs": 0,
+        "state_enterprises": 17,
+        "other_revenue": 0,
+        "military": 34,
+        "administration": 34,
+        "education": 45,
+        "infrastructure": 56,
+        "welfare": 0,
+        "other": 0,
+        "subsidy": 45,
+        "debt_service": 0,
+        "other_expenditure": 0,
+        "budget_balance": 8,
+        "government_debt": 0,
+        "foreign_debt": 0,
+        "reserves": 3704,
+        "interest_rate": 0.04,
+        "deficit_months": 0,
+        "borrowed": 0,
+        "opening_treasury": 3696,
+        "opening_debt": 0,
+        "total_revenue": 222,
+        "total_expenditure": 214,
+        "foreign_profit_remittances": 2.7217656719892065,
+        "private_disposable_income": 1501.2014442691996,
+        "net_private_saving": 62.500315980268,
+        "replacement_reserve": 117.69241400667075,
+        "replacement_need": 127.23065089968246
+      },
+      "labour": {
+        "agriculture": 2042.2446576271047,
+        "mining": 626.3543163020049,
+        "light_industry": 894.7918804314356,
+        "heavy_industry": 536.8751282588612,
+        "machinery": 357.9167521725742,
+        "chemicals": 268.4375641294306,
+        "energy": 447.3959402157178,
+        "construction": 447.3959402157178,
+        "transport": 447.3959402157178,
+        "shipping": 178.9583760862871,
+        "services": 715.8335043451484,
+        "military": 126.4,
+        "military_service": 100.0,
+        "military_support": 26.400000000000006,
+        "skilled": 2147.591452523633,
+        "professionals": 443.46767816627096,
+        "manufacturing": 2058.0213249923017,
+        "transport_logistics": 626.3543163020049
+      },
+      "trade": {
+        "exports": 41.20127786391913,
+        "imports": 7.897743926028179,
+        "partners": [
+          "b"
+        ]
+      },
+      "production_factors": {
+        "ra": {
+          "agriculture": {
+            "labour_capacity": 3676.0403837287886,
+            "capital_capacity": 10746.766909819005,
+            "binding_capacity": 3676.0403837287886,
+            "skilled_labour": 1.0,
+            "technology": 2.3824408130895263,
+            "infrastructure": 1.117109362461714,
+            "railway_access": 0.5292693347452813,
+            "market_access": 0.7717157833889887,
+            "disruption": 1.0,
+            "logistics_access": 0.5013376125233109,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7717157833889887,
+            "construction_demand": 1,
+            "harvest": 1.0,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 641.2454517081027,
+            "depreciation_amount": 31.279681351572076,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "mining": {
+            "labour_capacity": 1127.4377693436088,
+            "capital_capacity": 4682.028878791006,
+            "binding_capacity": 1127.4377693436088,
+            "skilled_labour": 1.0,
+            "technology": 2.4219735237942692,
+            "infrastructure": 1.117109362461714,
+            "railway_access": 0.5292693347452813,
+            "market_access": 0.7717157833889887,
+            "disruption": 1.0,
+            "logistics_access": 0.5013376125233109,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7717157833889887,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1.0,
+            "unit_multiplier": 3,
+            "elapsed_days": 31,
+            "unconstrained_output": 599.7981602801544,
+            "depreciation_amount": 13.627574938247864,
+            "input_supply": 1.0,
+            "energy_supply": 1.0,
+            "raw_material_supply": 1
+          },
+          "light_industry": {
+            "labour_capacity": 1610.6253847765843,
+            "capital_capacity": 2403.62074667176,
+            "binding_capacity": 1610.6253847765843,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.117109362461714,
+            "railway_access": 0.5292693347452813,
+            "market_access": 0.7717157833889887,
+            "disruption": 1.0,
+            "logistics_access": 0.5013376125233109,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7717157833889887,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 117.92786698779773,
+            "depreciation_amount": 6.996010211892335,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "heavy_industry": {
+            "labour_capacity": 966.3752308659501,
+            "capital_capacity": 4324.021783978265,
+            "binding_capacity": 966.3752308659501,
+            "skilled_labour": 1.0,
+            "technology": 2.458554313855351,
+            "infrastructure": 1.117109362461714,
+            "railway_access": 0.5292693347452813,
+            "market_access": 0.7717157833889887,
+            "disruption": 1.0,
+            "logistics_access": 0.5013376125233109,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.8704925301574187,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1.127996276471957,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 196.22537459884643,
+            "depreciation_amount": 12.585554771502366,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "machinery": {
+            "labour_capacity": 644.2501539106336,
+            "capital_capacity": 4662.041278891063,
+            "binding_capacity": 644.2501539106336,
+            "skilled_labour": 1.0,
+            "technology": 2.5239399925181774,
+            "infrastructure": 1.117109362461714,
+            "railway_access": 0.5292693347452813,
+            "market_access": 0.7717157833889887,
+            "disruption": 1.0,
+            "logistics_access": 0.5013376125233109,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.8704925301574187,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1.127996276471957,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 134.2960149943435,
+            "depreciation_amount": 13.569398766651389,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "chemicals": {
+            "labour_capacity": 483.18761543297506,
+            "capital_capacity": 716.6063440211421,
+            "binding_capacity": 483.18761543297506,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.117109362461714,
+            "railway_access": 0.5292693347452813,
+            "market_access": 0.7717157833889887,
+            "disruption": 1.0,
+            "logistics_access": 0.5013376125233109,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7717157833889887,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 35.3783600963393,
+            "depreciation_amount": 2.085763865876372,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "energy": {
+            "labour_capacity": 805.3126923882921,
+            "capital_capacity": 5640.156083948082,
+            "binding_capacity": 805.3126923882921,
+            "skilled_labour": 1.0,
+            "technology": 2.4922687785308666,
+            "infrastructure": 1.117109362461714,
+            "railway_access": 0.5292693347452813,
+            "market_access": 0.7717157833889887,
+            "disruption": 1.0,
+            "logistics_access": 0.5013376125233109,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7717157833889887,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 4,
+            "elapsed_days": 31,
+            "unconstrained_output": 587.8158820248583,
+            "depreciation_amount": 16.41631260447593,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1.0
+          },
+          "construction": {
+            "labour_capacity": 805.3126923882921,
+            "capital_capacity": 2633.4000582052254,
+            "binding_capacity": 805.3126923882921,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.117109362461714,
+            "railway_access": 0.5292693347452813,
+            "market_access": 0.7717157833889887,
+            "disruption": 1.0,
+            "logistics_access": 0.5013376125233109,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 1,
+            "construction_demand": 1.3839888294158715,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 76.40628164291113,
+            "depreciation_amount": 7.664808903281414,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "transport": {
+            "labour_capacity": 805.3126923882921,
+            "capital_capacity": 2652.7744396585176,
+            "binding_capacity": 805.3126923882921,
+            "skilled_labour": 1.0,
+            "technology": 2.3395804660808017,
+            "infrastructure": 1.117109362461714,
+            "railway_access": 0.5292693347452813,
+            "market_access": 0.7717157833889887,
+            "disruption": 1.0,
+            "logistics_access": 0.5013376125233109,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7717157833889887,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 137.9508670056133,
+            "depreciation_amount": 7.721200233188186,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "shipping": {
+            "labour_capacity": 322.1250769553168,
+            "capital_capacity": 1908.1441148476724,
+            "binding_capacity": 322.1250769553168,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.117109362461714,
+            "railway_access": 0.5292693347452813,
+            "market_access": 0.7717157833889887,
+            "disruption": 1.0,
+            "logistics_access": 0.5013376125233109,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7717157833889887,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 23.58557339755954,
+            "depreciation_amount": 5.5538693996218775,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "services": {
+            "labour_capacity": 1288.5003078212671,
+            "capital_capacity": 3343.101700508929,
+            "binding_capacity": 1288.5003078212671,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.117109362461714,
+            "railway_access": 0.5292693347452813,
+            "market_access": 0.7717157833889887,
+            "disruption": 1.0,
+            "logistics_access": 0.5013376125233109,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7717157833889887,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 94.34229359023816,
+            "depreciation_amount": 9.730475853372647,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          }
+        }
+      },
+      "bottlenecks": {
+        "ra": {
+          "agriculture": [
+            "labour"
+          ],
+          "mining": [
+            "labour"
+          ],
+          "light_industry": [
+            "labour"
+          ],
+          "heavy_industry": [
+            "labour"
+          ],
+          "machinery": [
+            "labour"
+          ],
+          "chemicals": [
+            "labour"
+          ],
+          "energy": [
+            "labour"
+          ],
+          "construction": [
+            "labour"
+          ],
+          "transport": [
+            "labour"
+          ],
+          "shipping": [
+            "labour"
+          ],
+          "services": [
+            "labour"
+          ]
+        }
+      },
+      "trade_routes": {
+        "a-export": {
+          "diplomacy": 1,
+          "disruption": 1.0,
+          "tariff": 0.05,
+          "transport_capacity": 41.20127786391913,
+          "requested": 97.06457925636008,
+          "base_transport_capacity": 96.95800943734791,
+          "port_access": 0.4249393949299513,
+          "available": 301.0791419568877,
+          "value": 41.20127786391913
+        },
+        "a-import": {
+          "diplomacy": 1,
+          "disruption": 1.0,
+          "tariff": 0.05,
+          "transport_capacity": 23.693231778084538,
+          "requested": 97.06457925636008,
+          "base_transport_capacity": 55.75673157342878,
+          "port_access": 0.4249393949299513,
+          "available": 33276.22910931201,
+          "value": 7.897743926028179
+        }
+      },
+      "shock_ids": [],
+      "new_projects": [
+        "economy-2458",
+        "economy-2459",
+        "economy-2460"
+      ],
+      "warnings": [],
+      "explanation_kind": "sector value-added differences and production constraints; not an additive causal decomposition"
+    },
+    "projects": {
+      "planned": 0,
+      "funded": 3,
+      "under_construction": 42,
+      "in_progress": 11,
+      "commissioning": 4,
+      "training": 24,
+      "completed": 1692,
+      "cancelled": 0,
+      "disrupted": 0
+    }
+  },
+  "투자 대비 정체": {
+    "month": 360,
+    "date": "1927-02-01",
+    "population": 12794,
+    "gdp": 9533,
+    "gdp_per_capita": 0.7451148976082539,
+    "government_revenue": 105,
+    "government_expenditure": 94,
+    "debt": 0,
+    "reserves": 4951,
+    "literacy": 0.9881379949574169,
+    "skilled_labour": 2187.8571817556194,
+    "capital_stock": 21841.55768036725,
+    "infrastructure": {
+      "roads": 36.947357477060095,
+      "railways": 36.947357477060095,
+      "ports": 36.947357477060095,
+      "electricity": 36.947357477060095,
+      "communications": 36.947357477060095,
+      "sanitation": 36.947357477060095
+    },
+    "urbanization": 0.6430291695980493,
+    "sector_output": {
+      "agriculture": 2920.580868561807,
+      "mining": 2678.1598783328664,
+      "light_industry": 1275.314227777555,
+      "heavy_industry": 810.0448288738096,
+      "machinery": 540.029885915873,
+      "chemicals": 382.5942683332665,
+      "energy": 2550.62845555511,
+      "construction": 719.8936496021184,
+      "transport": 637.6571138887775,
+      "shipping": 255.06284555551096,
+      "services": 1020.2513822220438
+    },
+    "technology": {
+      "agriculture": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "mining": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "light_industry": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "heavy_industry": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "machinery": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "chemicals": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "energy": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "construction": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "transport": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "shipping": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "services": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      }
+    },
+    "labour": {
+      "agriculture": 2035.479664172727,
+      "mining": 622.1753154689258,
+      "light_industry": 888.8218792413224,
+      "heavy_industry": 533.2931275447933,
+      "machinery": 355.5287516965289,
+      "chemicals": 266.64656377239663,
+      "energy": 444.4109396206612,
+      "construction": 444.4109396206612,
+      "transport": 444.4109396206612,
+      "shipping": 177.76437584826445,
+      "services": 711.0575033930578,
+      "military": 112.0,
+      "military_service": 100,
+      "military_support": 12.0,
+      "skilled": 2187.8571817556194,
+      "professionals": 452.276218046872,
+      "manufacturing": 2044.2903222550412,
+      "transport_logistics": 622.1753154689256
+    },
+    "trade": {
+      "exports": 41.20127786391913,
+      "imports": 7.897743926028179,
+      "partners": [
+        "b"
+      ]
+    },
+    "bottlenecks": {
+      "agriculture": [
+        "labour"
+      ],
+      "mining": [
+        "labour"
+      ],
+      "light_industry": [
+        "labour"
+      ],
+      "heavy_industry": [
+        "labour"
+      ],
+      "machinery": [
+        "labour"
+      ],
+      "chemicals": [
+        "labour"
+      ],
+      "energy": [
+        "labour"
+      ],
+      "construction": [
+        "labour"
+      ],
+      "transport": [
+        "labour"
+      ],
+      "shipping": [
+        "labour"
+      ],
+      "services": [
+        "labour"
+      ]
+    },
+    "explain": {
+      "date": "1927-02-01",
+      "period_start": "1927-01-01",
+      "elapsed_days": 31,
+      "gdp": 9533,
+      "gdp_per_capita": 0.7451148976082539,
+      "real_growth_estimate": 0.0008398950131234262,
+      "sector_value_added": {
+        "agriculture": 2905.977964218998,
+        "mining": 879.3291600526243,
+        "light_industry": 1186.0422318331264,
+        "heavy_industry": 681.7877309687898,
+        "machinery": 470.2760256517395,
+        "chemicals": 306.07541466661314,
+        "energy": 595.1466396295257,
+        "construction": 641.9051708952222,
+        "transport": 613.7449721179485,
+        "shipping": 238.05865585181022,
+        "services": 1014.2999158257485
+      },
+      "sector_changes": {
+        "agriculture": -1.0653051458780283,
+        "mining": 0.8085488871598727,
+        "light_industry": 1.0905735533847292,
+        "heavy_industry": 0.6003557363702612,
+        "machinery": 0.41410676205077834,
+        "chemicals": 0.2814383363573256,
+        "energy": 0.5472412095837171,
+        "construction": 2.7602318965473387,
+        "transport": 0.5643424973832225,
+        "shipping": 0.21889648383347549,
+        "services": 0.9326553757618967
+      },
+      "sector_shares": {
+        "agriculture": 0.3048449097940139,
+        "mining": 0.09224399557604045,
+        "light_industry": 0.12441902231431126,
+        "heavy_industry": 0.07152136798866074,
+        "machinery": 0.0493332208238617,
+        "chemicals": 0.03210813479078999,
+        "energy": 0.06243248431542501,
+        "construction": 0.06733758009429913,
+        "transport": 0.06438349945028204,
+        "shipping": 0.024972993726169995,
+        "services": 0.10640279112614573
+      },
+      "population": {
+        "period_start": "1927-01-01",
+        "period_end": "1927-02-01",
+        "elapsed_days": 31,
+        "before": 12785,
+        "after": 12794,
+        "births": 25,
+        "deaths": 16,
+        "migration": 0,
+        "war_losses": 0,
+        "epidemic_losses": 0,
+        "disaster_losses": 0,
+        "sources": [
+          "explicit monthly migration",
+          "v1 monthly birth/death model"
+        ]
+      },
+      "finance": {
+        "taxes": 97,
+        "tariffs": 0,
+        "state_enterprises": 8,
+        "other_revenue": 0,
+        "military": 15,
+        "administration": 15,
+        "education": 30,
+        "infrastructure": 0,
+        "welfare": 0,
+        "other": 0,
+        "subsidy": 34,
+        "debt_service": 0,
+        "other_expenditure": 0,
+        "budget_balance": 11,
+        "government_debt": 0,
+        "foreign_debt": 0,
+        "reserves": 4951,
+        "interest_rate": 0.04,
+        "deficit_months": 0,
+        "borrowed": 0,
+        "opening_treasury": 4940,
+        "opening_debt": 0,
+        "total_revenue": 105,
+        "total_expenditure": 94,
+        "foreign_profit_remittances": 0.36389370366980217,
+        "private_disposable_income": 712.2579154280468,
+        "net_private_saving": 29.64530259254858,
+        "replacement_reserve": 88.21310385642117,
+        "replacement_need": 95.35848830586232
+      },
+      "labour": {
+        "agriculture": 2035.479664172727,
+        "mining": 622.1753154689258,
+        "light_industry": 888.8218792413224,
+        "heavy_industry": 533.2931275447933,
+        "machinery": 355.5287516965289,
+        "chemicals": 266.64656377239663,
+        "energy": 444.4109396206612,
+        "construction": 444.4109396206612,
+        "transport": 444.4109396206612,
+        "shipping": 177.76437584826445,
+        "services": 711.0575033930578,
+        "military": 112.0,
+        "military_service": 100.0,
+        "military_support": 12.0,
+        "skilled": 2187.8571817556194,
+        "professionals": 452.276218046872,
+        "manufacturing": 2044.2903222550412,
+        "transport_logistics": 622.1753154689256
+      },
+      "trade": {
+        "exports": 41.20127786391913,
+        "imports": 7.897743926028179,
+        "partners": [
+          "b"
+        ]
+      },
+      "production_factors": {
+        "ra": {
+          "agriculture": {
+            "labour_capacity": 3663.863395510909,
+            "capital_capacity": 8517.595297990629,
+            "binding_capacity": 3663.863395510909,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.7556009106597029,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7556009106597029,
+            "construction_demand": 1,
+            "harvest": 1.0,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 248.04933404223567,
+            "depreciation_amount": 24.791425089844303,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "mining": {
+            "labour_capacity": 1119.9155678440663,
+            "capital_capacity": 1340.3131953460406,
+            "binding_capacity": 1119.9155678440663,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.7556009106597029,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7556009106597029,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1.0,
+            "unit_multiplier": 3,
+            "elapsed_days": 31,
+            "unconstrained_output": 227.46015405018863,
+            "depreciation_amount": 3.9011332444017444,
+            "input_supply": 1.0,
+            "energy_supply": 1.0,
+            "raw_material_supply": 1
+          },
+          "light_industry": {
+            "labour_capacity": 1599.8793826343804,
+            "capital_capacity": 1910.847918350754,
+            "binding_capacity": 1599.8793826343804,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.7556009106597029,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7556009106597029,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 108.31435907151838,
+            "depreciation_amount": 5.56173912571935,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "heavy_industry": {
+            "labour_capacity": 959.9276295806279,
+            "capital_capacity": 7810.834463120993,
+            "binding_capacity": 959.9276295806279,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.7556009106597029,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7998951644501341,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1.0586212287009535,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 68.79832793174822,
+            "depreciation_amount": 22.73431769261449,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "machinery": {
+            "labour_capacity": 639.951753053752,
+            "capital_capacity": 7981.007096428176,
+            "binding_capacity": 639.951753053752,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.7556009106597029,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7998951644501341,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1.0586212287009535,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 45.86555195449881,
+            "depreciation_amount": 23.229624401066797,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "chemicals": {
+            "labour_capacity": 479.96381479031396,
+            "capital_capacity": 567.4136722241363,
+            "binding_capacity": 479.96381479031396,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.7556009106597029,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7556009106597029,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 32.494307721455506,
+            "depreciation_amount": 1.6515217097972086,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "energy": {
+            "labour_capacity": 799.9396913171902,
+            "capital_capacity": 933.3107228242269,
+            "binding_capacity": 799.9396913171902,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.7556009106597029,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7556009106597029,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 4,
+            "elapsed_days": 31,
+            "unconstrained_output": 216.62871814303676,
+            "depreciation_amount": 2.7165064858040076,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1.0
+          },
+          "construction": {
+            "labour_capacity": 799.9396913171902,
+            "capital_capacity": 928.5143663672911,
+            "binding_capacity": 799.9396913171902,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.7556009106597029,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.8530482689986516,
+            "construction_demand": 1.1289667031420978,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 61.14165243196074,
+            "depreciation_amount": 2.702546147510597,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "transport": {
+            "labour_capacity": 799.9396913171902,
+            "capital_capacity": 926.4827121634357,
+            "binding_capacity": 799.9396913171902,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.7556009106597029,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7556009106597029,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 54.15717953575919,
+            "depreciation_amount": 2.696632788018719,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "shipping": {
+            "labour_capacity": 319.975876526876,
+            "capital_capacity": 355.2846999212042,
+            "binding_capacity": 319.975876526876,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.7556009106597029,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7556009106597029,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 21.66287181430367,
+            "depreciation_amount": 1.0340963283078535,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "services": {
+            "labour_capacity": 1279.903506107504,
+            "capital_capacity": 1490.732375813987,
+            "binding_capacity": 1279.903506107504,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.7556009106597029,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7556009106597029,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 86.65148725721468,
+            "depreciation_amount": 4.33894529277725,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          }
+        }
+      },
+      "bottlenecks": {
+        "ra": {
+          "agriculture": [
+            "labour"
+          ],
+          "mining": [
+            "labour"
+          ],
+          "light_industry": [
+            "labour"
+          ],
+          "heavy_industry": [
+            "labour"
+          ],
+          "machinery": [
+            "labour"
+          ],
+          "chemicals": [
+            "labour"
+          ],
+          "energy": [
+            "labour"
+          ],
+          "construction": [
+            "labour"
+          ],
+          "transport": [
+            "labour"
+          ],
+          "shipping": [
+            "labour"
+          ],
+          "services": [
+            "labour"
+          ]
+        }
+      },
+      "trade_routes": {
+        "a-export": {
+          "diplomacy": 1,
+          "disruption": 1.0,
+          "tariff": 0.05,
+          "transport_capacity": 41.20127786391913,
+          "requested": 97.06457925636008,
+          "base_transport_capacity": 96.95800943734791,
+          "port_access": 0.4249393949299513,
+          "available": 264.2555988397433,
+          "value": 41.20127786391913
+        },
+        "a-import": {
+          "diplomacy": 1,
+          "disruption": 1.0,
+          "tariff": 0.05,
+          "transport_capacity": 23.693231778084538,
+          "requested": 97.06457925636008,
+          "base_transport_capacity": 55.75673157342878,
+          "port_access": 0.4249393949299513,
+          "available": 33276.22910931201,
+          "value": 7.897743926028179
+        }
+      },
+      "shock_ids": [],
+      "new_projects": [
+        "economy-2099",
+        "economy-2100"
+      ],
+      "warnings": [],
+      "explanation_kind": "sector value-added differences and production constraints; not an additive causal decomposition"
+    },
+    "projects": {
+      "planned": 0,
+      "funded": 2,
+      "under_construction": 31,
+      "in_progress": 11,
+      "commissioning": 3,
+      "training": 24,
+      "completed": 1339,
+      "cancelled": 0,
+      "disrupted": 0
+    }
+  },
+  "군비 과다": {
+    "month": 360,
+    "date": "1927-02-01",
+    "population": 12481,
+    "gdp": 1814,
+    "gdp_per_capita": 0.1453409181956574,
+    "government_revenue": 20,
+    "government_expenditure": 14038,
+    "debt": 700644,
+    "reserves": 0,
+    "literacy": 0.65,
+    "skilled_labour": 1533.0475403866205,
+    "capital_stock": 9614.52228990533,
+    "infrastructure": {
+      "roads": 36.947357477060095,
+      "railways": 36.947357477060095,
+      "ports": 36.947357477060095,
+      "electricity": 36.947357477060095,
+      "communications": 36.947357477060095,
+      "sanitation": 36.947357477060095
+    },
+    "urbanization": 0.5417409901593401,
+    "sector_output": {
+      "agriculture": 758.4058172583906,
+      "mining": 360.3116873050206,
+      "light_industry": 170.65250261099357,
+      "heavy_industry": 247.85321167332367,
+      "machinery": 165.23547444888246,
+      "chemicals": 50.46148945514795,
+      "energy": 327.6806459299281,
+      "construction": 84.56093145953307,
+      "transport": 81.30382755923522,
+      "shipping": 31.09793717038606,
+      "services": 131.55962905523887
+    },
+    "technology": {
+      "agriculture": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "mining": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "light_industry": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "heavy_industry": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "machinery": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "chemicals": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "energy": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "construction": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "transport": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "shipping": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "services": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      }
+    },
+    "labour": {
+      "agriculture": 2482.0716476472703,
+      "mining": 541.8163357539838,
+      "light_industry": 774.0233367914054,
+      "heavy_industry": 464.41400207484315,
+      "machinery": 309.60933471656216,
+      "chemicals": 232.20700103742158,
+      "energy": 387.0116683957027,
+      "construction": 387.0116683957027,
+      "transport": 387.0116683957027,
+      "shipping": 154.80466735828108,
+      "services": 619.2186694331243,
+      "military": 124.8,
+      "military_service": 100,
+      "military_support": 24.799999999999997,
+      "skilled": 1533.0475403866205,
+      "professionals": 329.61401046819077,
+      "manufacturing": 1780.2536746202322,
+      "transport_logistics": 541.8163357539838
+    },
+    "trade": {
+      "exports": 5.780499231764606,
+      "imports": 1.1080457952751686,
+      "partners": [
+        "b"
+      ]
+    },
+    "bottlenecks": {
+      "agriculture": [
+        "capital",
+        "debt"
+      ],
+      "mining": [
+        "capital",
+        "debt"
+      ],
+      "light_industry": [
+        "capital",
+        "debt"
+      ],
+      "heavy_industry": [
+        "labour",
+        "debt"
+      ],
+      "machinery": [
+        "labour",
+        "debt"
+      ],
+      "chemicals": [
+        "capital",
+        "debt"
+      ],
+      "energy": [
+        "capital",
+        "debt"
+      ],
+      "construction": [
+        "capital",
+        "debt"
+      ],
+      "transport": [
+        "capital",
+        "debt"
+      ],
+      "shipping": [
+        "capital",
+        "debt"
+      ],
+      "services": [
+        "capital",
+        "debt"
+      ]
+    },
+    "explain": {
+      "date": "1927-02-01",
+      "period_start": "1927-01-01",
+      "elapsed_days": 31,
+      "gdp": 1814,
+      "gdp_per_capita": 0.1453409181956574,
+      "real_growth_estimate": -0.003296703296703285,
+      "sector_value_added": {
+        "agriculture": 754.6137881720987,
+        "mining": 118.3023373318151,
+        "light_industry": 158.706827428224,
+        "heavy_industry": 208.60978649171406,
+        "machinery": 143.89255899923515,
+        "chemicals": 40.36919156411835,
+        "energy": 76.4588173836499,
+        "construction": 75.40016388475033,
+        "transport": 78.25493402576389,
+        "shipping": 29.024741359026986,
+        "services": 130.79219788575
+      },
+      "sector_changes": {
+        "agriculture": -3.384501590316063,
+        "mining": -0.5305951933472528,
+        "light_industry": -0.7118124771163252,
+        "heavy_industry": 0.6596451116421918,
+        "machinery": 0.45500273377300005,
+        "chemicals": -0.18105896710355296,
+        "energy": -0.3429237486575545,
+        "construction": -0.3377082053466154,
+        "transport": -0.35097947163390586,
+        "shipping": -0.13017822471293528,
+        "services": -0.5866131903281939
+      },
+      "sector_shares": {
+        "agriculture": 0.4158968515561454,
+        "mining": 0.0652009947329692,
+        "light_industry": 0.08746947230814378,
+        "heavy_industry": 0.11497292358765768,
+        "machinery": 0.07930475587399491,
+        "chemicals": 0.02224902318847466,
+        "energy": 0.042139412136363096,
+        "construction": 0.04155594723818287,
+        "transport": 0.0431293215021756,
+        "shipping": 0.015996657810468946,
+        "services": 0.0720846400654239
+      },
+      "population": {
+        "period_start": "1927-01-01",
+        "period_end": "1927-02-01",
+        "elapsed_days": 31,
+        "before": 12483,
+        "after": 12481,
+        "births": 24,
+        "deaths": 26,
+        "migration": 0,
+        "war_losses": 0,
+        "epidemic_losses": 0,
+        "disaster_losses": 0,
+        "sources": [
+          "explicit monthly migration",
+          "v1 monthly birth/death model"
+        ]
+      },
+      "finance": {
+        "taxes": 18,
+        "tariffs": 0,
+        "state_enterprises": 2,
+        "other_revenue": 0,
+        "military": 32,
+        "administration": 0,
+        "education": 0,
+        "infrastructure": 0,
+        "welfare": 0,
+        "other": 0,
+        "subsidy": 10,
+        "debt_service": 13996,
+        "other_expenditure": 0,
+        "budget_balance": -14018,
+        "government_debt": 700644,
+        "foreign_debt": 87573,
+        "reserves": 0,
+        "interest_rate": 0.24000000000000002,
+        "deficit_months": 360,
+        "borrowed": 14018,
+        "opening_treasury": 0,
+        "opening_debt": 686626,
+        "total_revenue": 20,
+        "total_expenditure": 14038,
+        "foreign_profit_remittances": 0.0873445029583751,
+        "private_disposable_income": 136.01453407323487,
+        "net_private_saving": 0.07863240769316267,
+        "replacement_reserve": 0.5411879797624813,
+        "replacement_need": 41.97623286605144
+      },
+      "labour": {
+        "agriculture": 2482.0716476472703,
+        "mining": 541.8163357539838,
+        "light_industry": 774.0233367914054,
+        "heavy_industry": 464.41400207484315,
+        "machinery": 309.60933471656216,
+        "chemicals": 232.20700103742158,
+        "energy": 387.0116683957027,
+        "construction": 387.0116683957027,
+        "transport": 387.0116683957027,
+        "shipping": 154.80466735828108,
+        "services": 619.2186694331243,
+        "military": 124.8,
+        "military_service": 100.0,
+        "military_support": 24.799999999999997,
+        "skilled": 1533.0475403866205,
+        "professionals": 329.61401046819077,
+        "manufacturing": 1780.2536746202322,
+        "transport_logistics": 541.8163357539838
+      },
+      "trade": {
+        "exports": 5.780499231764606,
+        "imports": 1.1080457952751686,
+        "partners": [
+          "b"
+        ]
+      },
+      "production_factors": {
+        "ra": {
+          "agriculture": {
+            "labour_capacity": 4467.728965765086,
+            "capital_capacity": 2875.5714062156057,
+            "binding_capacity": 2875.5714062156057,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 275.0685041262719,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1.0,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 64.4125488630414,
+            "depreciation_amount": 8.369676019299746,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "mining": {
+            "labour_capacity": 975.2694043571709,
+            "capital_capacity": 455.3859168631234,
+            "binding_capacity": 455.3859168631234,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 275.0685041262719,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1.0,
+            "unit_multiplier": 3,
+            "elapsed_days": 31,
+            "unconstrained_output": 30.601814538234628,
+            "depreciation_amount": 1.325452249127816,
+            "input_supply": 1.0,
+            "energy_supply": 1.0,
+            "raw_material_supply": 1
+          },
+          "light_industry": {
+            "labour_capacity": 1393.2420062245299,
+            "capital_capacity": 647.0460085357132,
+            "binding_capacity": 647.0460085357132,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 275.0685041262719,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 14.493774194358357,
+            "depreciation_amount": 1.883300636986139,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "heavy_industry": {
+            "labour_capacity": 835.9452037347177,
+            "capital_capacity": 4316.88157320519,
+            "binding_capacity": 835.9452037347177,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 275.0685041262719,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.2810471917314318,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1.1241887669257271,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 21.050546744857627,
+            "depreciation_amount": 12.564772379957168,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "machinery": {
+            "labour_capacity": 557.2968024898119,
+            "capital_capacity": 4391.684703706422,
+            "binding_capacity": 557.2968024898119,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 275.0685041262719,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.2810471917314318,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1.1241887669257271,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 14.033697829905087,
+            "depreciation_amount": 12.782495357091879,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "chemicals": {
+            "labour_capacity": 417.97260186735883,
+            "capital_capacity": 191.32977739652006,
+            "binding_capacity": 191.32977739652006,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 275.0685041262719,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 4.285770337286538,
+            "depreciation_amount": 0.5568869707746511,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "energy": {
+            "labour_capacity": 696.6210031122649,
+            "capital_capacity": 310.6084745013659,
+            "binding_capacity": 310.6084745013659,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 275.0685041262719,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 4,
+            "elapsed_days": 31,
+            "unconstrained_output": 27.830411024185675,
+            "depreciation_amount": 0.9040611180115614,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1.0
+          },
+          "construction": {
+            "labour_capacity": 696.6210031122649,
+            "capital_capacity": 308.271582871531,
+            "binding_capacity": 308.271582871531,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 275.0685041262719,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.2600152231391715,
+            "construction_demand": 1.040060892556686,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 7.181887329439795,
+            "depreciation_amount": 0.8972593304462608,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "transport": {
+            "labour_capacity": 696.6210031122649,
+            "capital_capacity": 308.271582871531,
+            "binding_capacity": 308.271582871531,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 275.0685041262719,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 6.905256587222717,
+            "depreciation_amount": 0.8972593304462608,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "shipping": {
+            "labour_capacity": 278.6484012449059,
+            "capital_capacity": 117.91093486428852,
+            "binding_capacity": 117.91093486428852,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 275.0685041262719,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 2.641194663786213,
+            "depreciation_amount": 0.3431931204398878,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "services": {
+            "labour_capacity": 1114.5936049796237,
+            "capital_capacity": 498.82147382670456,
+            "binding_capacity": 498.82147382670456,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.054963636957971,
+            "railway_access": 0.4249393949299513,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.4595459301340845,
+            "debt_ratio": 275.0685041262719,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 11.173557536198372,
+            "depreciation_amount": 1.4518763534700734,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          }
+        }
+      },
+      "bottlenecks": {
+        "ra": {
+          "agriculture": [
+            "capital",
+            "debt"
+          ],
+          "mining": [
+            "capital",
+            "debt"
+          ],
+          "light_industry": [
+            "capital",
+            "debt"
+          ],
+          "heavy_industry": [
+            "labour",
+            "debt"
+          ],
+          "machinery": [
+            "labour",
+            "debt"
+          ],
+          "chemicals": [
+            "capital",
+            "debt"
+          ],
+          "energy": [
+            "capital",
+            "debt"
+          ],
+          "construction": [
+            "capital",
+            "debt"
+          ],
+          "transport": [
+            "capital",
+            "debt"
+          ],
+          "shipping": [
+            "capital",
+            "debt"
+          ],
+          "services": [
+            "capital",
+            "debt"
+          ]
+        }
+      },
+      "trade_routes": {
+        "a-export": {
+          "diplomacy": 1,
+          "disruption": 1.0,
+          "tariff": 0.05,
+          "transport_capacity": 5.780499231764606,
+          "requested": 97.06457925636008,
+          "base_transport_capacity": 13.603114469340943,
+          "port_access": 0.4249393949299513,
+          "available": 34.96028556543873,
+          "value": 5.780499231764606
+        },
+        "a-import": {
+          "diplomacy": 1,
+          "disruption": 1.0,
+          "tariff": 0.05,
+          "transport_capacity": 3.324137385825506,
+          "requested": 97.06457925636008,
+          "base_transport_capacity": 7.822615237576337,
+          "port_access": 0.4249393949299513,
+          "available": 36577.48605909225,
+          "value": 1.1080457952751686
+        }
+      },
+      "shock_ids": [],
+      "new_projects": [
+        "economy-1626"
+      ],
+      "warnings": [
+        "persistent budget deficit",
+        "high public debt",
+        "food shortage: ra"
+      ],
+      "explanation_kind": "sector value-added differences and production constraints; not an additive causal decomposition"
+    },
+    "projects": {
+      "planned": 0,
+      "funded": 1,
+      "under_construction": 13,
+      "in_progress": 0,
+      "commissioning": 3,
+      "training": 0,
+      "completed": 919,
+      "cancelled": 0,
+      "disrupted": 0
+    }
+  },
+  "부채 과다": {
+    "month": 360,
+    "date": "1927-02-01",
+    "population": 11215,
+    "gdp": 2016,
+    "gdp_per_capita": 0.17975925100312082,
+    "government_revenue": 23,
+    "government_expenditure": 106644,
+    "debt": 5334200,
+    "reserves": 0,
+    "literacy": 1,
+    "skilled_labour": 2109.315250472508,
+    "capital_stock": 18193.950494923145,
+    "infrastructure": {
+      "roads": 36.947357477060095,
+      "railways": 83.08337736312328,
+      "ports": 84.22470070032382,
+      "electricity": 82.98176444960632,
+      "communications": 36.947357477060095,
+      "sanitation": 83.95273010011287
+    },
+    "urbanization": 0.7015631554265627,
+    "sector_output": {
+      "agriculture": 460.7048198582368,
+      "mining": 833.9408150568572,
+      "light_industry": 103.4551700123242,
+      "heavy_industry": 238.26880430195905,
+      "machinery": 158.84586953463946,
+      "chemicals": 30.877687273454555,
+      "energy": 794.2293476731973,
+      "construction": 64.42321558129757,
+      "transport": 198.5573369182993,
+      "shipping": 79.42293476731973,
+      "services": 317.6917390692789
+    },
+    "technology": {
+      "agriculture": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "mining": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "light_industry": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "heavy_industry": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "machinery": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "chemicals": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "energy": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "construction": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "transport": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "shipping": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "services": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      }
+    },
+    "labour": {
+      "agriculture": 1634.565909148647,
+      "mining": 564.255247926536,
+      "light_industry": 806.0789256093369,
+      "heavy_industry": 483.647355365602,
+      "machinery": 322.43157024373477,
+      "chemicals": 241.823677682801,
+      "energy": 403.03946280466846,
+      "construction": 403.03946280466846,
+      "transport": 403.03946280466846,
+      "shipping": 161.21578512186738,
+      "services": 644.8631404874695,
+      "military": 100.0,
+      "military_service": 100,
+      "military_support": 0.0,
+      "skilled": 2109.315250472508,
+      "professionals": 454.32816368294544,
+      "manufacturing": 1853.9815289014746,
+      "transport_logistics": 564.2552479265358
+    },
+    "trade": {
+      "exports": 7.029282784399014,
+      "imports": 4.436250301562086,
+      "partners": [
+        "b"
+      ]
+    },
+    "bottlenecks": {
+      "agriculture": [
+        "capital",
+        "debt"
+      ],
+      "mining": [
+        "labour",
+        "debt"
+      ],
+      "light_industry": [
+        "capital",
+        "debt"
+      ],
+      "heavy_industry": [
+        "labour",
+        "debt"
+      ],
+      "machinery": [
+        "labour",
+        "debt"
+      ],
+      "chemicals": [
+        "capital",
+        "debt"
+      ],
+      "energy": [
+        "labour",
+        "debt"
+      ],
+      "construction": [
+        "capital",
+        "debt"
+      ],
+      "transport": [
+        "labour",
+        "debt"
+      ],
+      "shipping": [
+        "labour",
+        "debt"
+      ],
+      "services": [
+        "labour",
+        "debt"
+      ]
+    },
+    "explain": {
+      "date": "1927-02-01",
+      "period_start": "1927-01-01",
+      "elapsed_days": 31,
+      "gdp": 2016,
+      "gdp_per_capita": 0.17975925100312082,
+      "real_growth_estimate": -0.001980198019801982,
+      "sector_value_added": {
+        "agriculture": 458.40129575894565,
+        "mining": 273.8105676103348,
+        "light_industry": 96.21330811146149,
+        "heavy_industry": 200.54291028748221,
+        "machinery": 138.32827805308185,
+        "chemicals": 24.70214981876364,
+        "energy": 185.32018112374604,
+        "construction": 57.44403389332366,
+        "transport": 191.11143678386307,
+        "shipping": 74.12807244949839,
+        "services": 315.8385372580414
+      },
+      "sector_changes": {
+        "agriculture": -2.053276574853953,
+        "mining": -0.24467436712251356,
+        "light_industry": -0.4309598021693972,
+        "heavy_industry": -0.17920312602885247,
+        "machinery": -0.12360875689776663,
+        "chemicals": -0.11064616535916016,
+        "energy": -0.16560024847549926,
+        "construction": 0.14795211520955576,
+        "transport": -0.17077525624034706,
+        "shipping": -0.06624009939021391,
+        "services": -0.2822301377589156
+      },
+      "sector_shares": {
+        "agriculture": 0.22739955571876228,
+        "mining": 0.13582946209304464,
+        "light_industry": 0.047728624943250426,
+        "heavy_industry": 0.09948350740679841,
+        "machinery": 0.06862063712218111,
+        "chemicals": 0.01225401835914321,
+        "energy": 0.09193195403928571,
+        "construction": 0.028496315143281107,
+        "transport": 0.09480482760301338,
+        "shipping": 0.036772781615714276,
+        "services": 0.15667831595552548
+      },
+      "population": {
+        "period_start": "1927-01-01",
+        "period_end": "1927-02-01",
+        "elapsed_days": 31,
+        "before": 11224,
+        "after": 11215,
+        "births": 22,
+        "deaths": 31,
+        "migration": 0,
+        "war_losses": 0,
+        "epidemic_losses": 0,
+        "disaster_losses": 0,
+        "sources": [
+          "explicit monthly migration",
+          "v1 monthly birth/death model"
+        ]
+      },
+      "finance": {
+        "taxes": 21,
+        "tariffs": 0,
+        "state_enterprises": 2,
+        "other_revenue": 0,
+        "military": 0,
+        "administration": 0,
+        "education": 17,
+        "infrastructure": 35,
+        "welfare": 0,
+        "other": 0,
+        "subsidy": 35,
+        "debt_service": 106557,
+        "other_expenditure": 0,
+        "budget_balance": -106621,
+        "government_debt": 5334200,
+        "foreign_debt": 666767,
+        "reserves": 0,
+        "interest_rate": 0.24000000000000002,
+        "deficit_months": 360,
+        "borrowed": 106621,
+        "opening_treasury": 0,
+        "opening_debt": 5227579,
+        "total_revenue": 23,
+        "total_expenditure": 106644,
+        "foreign_profit_remittances": 0.07477709240154809,
+        "private_disposable_income": 150.13361716952943,
+        "net_private_saving": 0.013040281548547923,
+        "replacement_reserve": 0.15284780660311623,
+        "replacement_need": 79.43332801153929
+      },
+      "labour": {
+        "agriculture": 1634.565909148647,
+        "mining": 564.255247926536,
+        "light_industry": 806.0789256093369,
+        "heavy_industry": 483.647355365602,
+        "machinery": 322.43157024373477,
+        "chemicals": 241.823677682801,
+        "energy": 403.03946280466846,
+        "construction": 403.03946280466846,
+        "transport": 403.03946280466846,
+        "shipping": 161.21578512186738,
+        "services": 644.8631404874695,
+        "military": 100.0,
+        "military_service": 100.0,
+        "military_support": 0.0,
+        "skilled": 2109.315250472508,
+        "professionals": 454.32816368294544,
+        "manufacturing": 1853.9815289014746,
+        "transport_logistics": 564.2552479265358
+      },
+      "trade": {
+        "exports": 7.029282784399014,
+        "imports": 4.436250301562086,
+        "partners": [
+          "b"
+        ]
+      },
+      "production_factors": {
+        "ra": {
+          "agriculture": {
+            "labour_capacity": 2942.218636467565,
+            "capital_capacity": 1683.2820523295948,
+            "binding_capacity": 1683.2820523295948,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0947774776559638,
+            "railway_access": 0.6242956784634868,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.5124902062250274,
+            "debt_ratio": 2330.61925991975,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1.0,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 39.12835456330231,
+            "depreciation_amount": 4.899382917999544,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "mining": {
+            "labour_capacity": 1015.6594462677648,
+            "capital_capacity": 4234.7015858098275,
+            "binding_capacity": 1015.6594462677648,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0947774776559638,
+            "railway_access": 0.6242956784634868,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.5124902062250274,
+            "debt_ratio": 2330.61925991975,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1.0,
+            "unit_multiplier": 3,
+            "elapsed_days": 31,
+            "unconstrained_output": 70.82785004592486,
+            "depreciation_amount": 12.325578225959607,
+            "input_supply": 1.0,
+            "energy_supply": 1.0,
+            "raw_material_supply": 1
+          },
+          "light_industry": {
+            "labour_capacity": 1450.9420660968065,
+            "capital_capacity": 377.9952442347749,
+            "binding_capacity": 377.9952442347749,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0947774776559638,
+            "railway_access": 0.6242956784634868,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.5124902062250274,
+            "debt_ratio": 2330.61925991975,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 8.786603480498767,
+            "depreciation_amount": 1.1001979377882076,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "heavy_industry": {
+            "labour_capacity": 870.5652396580836,
+            "capital_capacity": 4071.124017471807,
+            "binding_capacity": 870.5652396580836,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0947774776559638,
+            "railway_access": 0.6242956784634868,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.5124902062250274,
+            "debt_ratio": 2330.61925991975,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1.0,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 20.236528584549948,
+            "depreciation_amount": 11.84946720049358,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "machinery": {
+            "labour_capacity": 580.3768264387226,
+            "capital_capacity": 4149.526548664495,
+            "binding_capacity": 580.3768264387226,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0947774776559638,
+            "railway_access": 0.6242956784634868,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.5124902062250274,
+            "debt_ratio": 2330.61925991975,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1.0,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 13.491019056366637,
+            "depreciation_amount": 12.077666640701338,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "chemicals": {
+            "labour_capacity": 435.2826198290418,
+            "capital_capacity": 112.81813118613658,
+            "binding_capacity": 112.81813118613658,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0947774776559638,
+            "railway_access": 0.6242956784634868,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.5124902062250274,
+            "debt_ratio": 2330.61925991975,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 2.6224885081564144,
+            "depreciation_amount": 0.32836993895884553,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "energy": {
+            "labour_capacity": 725.4710330484032,
+            "capital_capacity": 6062.396574116102,
+            "binding_capacity": 725.4710330484032,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0947774776559638,
+            "railway_access": 0.6242956784634868,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.5124902062250274,
+            "debt_ratio": 2330.61925991975,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 4,
+            "elapsed_days": 31,
+            "unconstrained_output": 67.4550952818332,
+            "depreciation_amount": 17.64529133798879,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1.0
+          },
+          "construction": {
+            "labour_capacity": 725.4710330484032,
+            "capital_capacity": 180.6246395342064,
+            "binding_capacity": 180.6246395342064,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0947774776559638,
+            "railway_access": 0.6242956784634868,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.5124902062250274,
+            "debt_ratio": 2330.61925991975,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.3257913508693714,
+            "construction_demand": 1.3031654034774856,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 5.471560775397876,
+            "depreciation_amount": 0.5257284554771923,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "transport": {
+            "labour_capacity": 725.4710330484032,
+            "capital_capacity": 2106.2685539848208,
+            "binding_capacity": 725.4710330484032,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0947774776559638,
+            "railway_access": 0.6242956784634868,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.5124902062250274,
+            "debt_ratio": 2330.61925991975,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 16.8637738204583,
+            "depreciation_amount": 6.130533002375434,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "shipping": {
+            "labour_capacity": 290.1884132193613,
+            "capital_capacity": 2051.741742242409,
+            "binding_capacity": 290.1884132193613,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0947774776559638,
+            "railway_access": 0.6242956784634868,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.5124902062250274,
+            "debt_ratio": 2330.61925991975,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 6.745509528183319,
+            "depreciation_amount": 5.971826545751585,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "services": {
+            "labour_capacity": 1160.7536528774451,
+            "capital_capacity": 2260.4466528105463,
+            "binding_capacity": 1160.7536528774451,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0947774776559638,
+            "railway_access": 0.6242956784634868,
+            "market_access": 0.25,
+            "disruption": 1.0,
+            "logistics_access": 0.5124902062250274,
+            "debt_ratio": 2330.61925991975,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.25,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 31,
+            "unconstrained_output": 26.982038112733274,
+            "depreciation_amount": 6.579285808045163,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          }
+        }
+      },
+      "bottlenecks": {
+        "ra": {
+          "agriculture": [
+            "capital",
+            "debt"
+          ],
+          "mining": [
+            "labour",
+            "debt"
+          ],
+          "light_industry": [
+            "capital",
+            "debt"
+          ],
+          "heavy_industry": [
+            "labour",
+            "debt"
+          ],
+          "machinery": [
+            "labour",
+            "debt"
+          ],
+          "chemicals": [
+            "capital",
+            "debt"
+          ],
+          "energy": [
+            "labour",
+            "debt"
+          ],
+          "construction": [
+            "capital",
+            "debt"
+          ],
+          "transport": [
+            "labour",
+            "debt"
+          ],
+          "shipping": [
+            "labour",
+            "debt"
+          ],
+          "services": [
+            "labour",
+            "debt"
+          ]
+        }
+      },
+      "trade_routes": {
+        "a-export": {
+          "diplomacy": 1,
+          "disruption": 1.0,
+          "tariff": 0.05,
+          "transport_capacity": 16.2957700778803,
+          "requested": 97.06457925636008,
+          "base_transport_capacity": 38.34845691481854,
+          "port_access": 0.4249393949299513,
+          "available": 7.029282784399014,
+          "value": 7.029282784399014
+        },
+        "a-import": {
+          "diplomacy": 1,
+          "disruption": 1.0,
+          "tariff": 0.05,
+          "transport_capacity": 13.308750904686258,
+          "requested": 97.06457925636008,
+          "base_transport_capacity": 31.319174130419526,
+          "port_access": 0.4249393949299513,
+          "available": 35624.222287059354,
+          "value": 4.436250301562086
+        }
+      },
+      "shock_ids": [],
+      "new_projects": [
+        "economy-2235",
+        "economy-2236",
+        "economy-2237"
+      ],
+      "warnings": [
+        "persistent budget deficit",
+        "high public debt",
+        "food shortage: ra"
+      ],
+      "explanation_kind": "sector value-added differences and production constraints; not an additive causal decomposition"
+    },
+    "projects": {
+      "planned": 0,
+      "funded": 3,
+      "under_construction": 23,
+      "in_progress": 11,
+      "commissioning": 4,
+      "training": 24,
+      "completed": 1482,
+      "cancelled": 0,
+      "disrupted": 0
+    }
+  },
+  "전쟁 피해": {
+    "month": 25,
+    "date": "1899-03-01",
+    "population": 9432,
+    "gdp": 2008,
+    "gdp_per_capita": 0.21289228159457166,
+    "government_revenue": 20,
+    "government_expenditure": 107,
+    "debt": 0,
+    "reserves": 1129,
+    "literacy": 0.65,
+    "skilled_labour": 714.2158331802146,
+    "capital_stock": 3871.9342380704948,
+    "infrastructure": {
+      "roads": 33.74577005873599,
+      "railways": 33.85447203546999,
+      "ports": 33.74538098470057,
+      "electricity": 33.73840258531845,
+      "communications": 33.51393485508449,
+      "sanitation": 33.74557862918301
+    },
+    "urbanization": 0.5161870848218016,
+    "sector_output": {
+      "agriculture": 898.4928769951522,
+      "mining": 462.4550153763501,
+      "light_industry": 199.7867101612082,
+      "heavy_industry": 141.46245171977083,
+      "machinery": 88.5996391714392,
+      "chemicals": 57.26085834096176,
+      "energy": 481.17855213415226,
+      "construction": 124.49500160102778,
+      "transport": 108.31817972992232,
+      "shipping": 45.7500281100591,
+      "services": 165.5026673744816
+    },
+    "technology": {
+      "agriculture": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "mining": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "light_industry": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "heavy_industry": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "machinery": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "chemicals": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "energy": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "construction": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "transport": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "shipping": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "services": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      }
+    },
+    "labour": {
+      "agriculture": 1922.2264983431708,
+      "mining": 401.6693547563237,
+      "light_industry": 573.8133639376052,
+      "heavy_industry": 344.28801836256304,
+      "machinery": 229.52534557504208,
+      "chemicals": 172.14400918128152,
+      "energy": 286.9066819688026,
+      "construction": 286.9066819688026,
+      "transport": 286.9066819688026,
+      "shipping": 114.76267278752104,
+      "services": 459.05069115008416,
+      "military": 108.8,
+      "military_service": 100,
+      "military_support": 8.799999999999997,
+      "skilled": 714.2158331802146,
+      "professionals": 120.76508938923233,
+      "manufacturing": 1319.770737056492,
+      "transport_logistics": 401.6693547563236
+    },
+    "trade": {
+      "exports": 6.68520771359434,
+      "imports": 1.3304629729998005,
+      "partners": [
+        "b"
+      ]
+    },
+    "bottlenecks": {
+      "agriculture": [
+        "capital"
+      ],
+      "mining": [
+        "capital"
+      ],
+      "light_industry": [
+        "capital"
+      ],
+      "heavy_industry": [
+        "capital"
+      ],
+      "machinery": [
+        "capital",
+        "skills"
+      ],
+      "chemicals": [
+        "capital"
+      ],
+      "energy": [
+        "capital"
+      ],
+      "construction": [
+        "capital"
+      ],
+      "transport": [
+        "capital"
+      ],
+      "shipping": [
+        "capital"
+      ],
+      "services": [
+        "capital"
+      ]
+    },
+    "explain": {
+      "date": "1899-03-01",
+      "period_start": "1899-02-01",
+      "elapsed_days": 28,
+      "gdp": 2008,
+      "gdp_per_capita": 0.21289228159457166,
+      "real_growth_estimate": -0.7095327643570085,
+      "sector_value_added": {
+        "agriculture": 894.0004126101765,
+        "mining": 151.83939671523493,
+        "light_industry": 185.80164044992358,
+        "heavy_industry": 119.06423019747376,
+        "machinery": 77.15551911179496,
+        "chemicals": 45.808686672769404,
+        "energy": 112.27499549796887,
+        "construction": 111.00804309424976,
+        "transport": 104.25624799005023,
+        "shipping": 42.700026236055166,
+        "services": 164.53723514813046
+      },
+      "sector_changes": {
+        "agriculture": -2188.0012223423482,
+        "mining": -371.6159197764524,
+        "light_industry": -454.73605009946795,
+        "heavy_industry": -289.7867381707512,
+        "machinery": -185.50468840957814,
+        "chemicals": -110.65415411016093,
+        "energy": -274.78491499886485,
+        "construction": -267.51258680287503,
+        "transport": -255.1596115856873,
+        "shipping": -104.50521977474467,
+        "services": -402.6929591383969
+      },
+      "sector_shares": {
+        "agriculture": 0.44512036646784,
+        "mining": 0.07560042138326388,
+        "light_industry": 0.0925101298845356,
+        "heavy_industry": 0.05928175538977095,
+        "machinery": 0.03841552247362763,
+        "chemicals": 0.022808020121221892,
+        "energy": 0.05590141395496501,
+        "construction": 0.055270601809594484,
+        "transport": 0.05190890144715009,
+        "shipping": 0.021260226570686155,
+        "services": 0.08192264049734435
+      },
+      "population": {
+        "period_start": "1899-02-01",
+        "period_end": "1899-03-01",
+        "elapsed_days": 28,
+        "before": 10157,
+        "after": 9432,
+        "births": 18,
+        "deaths": 12,
+        "migration": 0,
+        "war_losses": 731,
+        "epidemic_losses": 0,
+        "disaster_losses": 0,
+        "sources": [
+          "benchmark-shock",
+          "explicit monthly migration",
+          "v1 monthly birth/death model"
+        ]
+      },
+      "finance": {
+        "taxes": 18,
+        "tariffs": 0,
+        "state_enterprises": 2,
+        "other_revenue": 0,
+        "military": 10,
+        "administration": 10,
+        "education": 14,
+        "infrastructure": 17,
+        "welfare": 0,
+        "other": 42,
+        "subsidy": 14,
+        "debt_service": 0,
+        "other_expenditure": 42,
+        "budget_balance": -87,
+        "government_debt": 0,
+        "foreign_debt": 0,
+        "reserves": 1129,
+        "interest_rate": 0.04,
+        "deficit_months": 1,
+        "borrowed": 0,
+        "opening_treasury": 1216,
+        "opening_debt": 0,
+        "total_revenue": 20,
+        "total_expenditure": 107,
+        "foreign_profit_remittances": 0.04096041209897633,
+        "private_disposable_income": 136.03164272287958,
+        "net_private_saving": 5.627665594508144,
+        "replacement_reserve": 14.084181067755923,
+        "replacement_need": 15.265409180716647
+      },
+      "labour": {
+        "agriculture": 1922.2264983431708,
+        "mining": 401.6693547563237,
+        "light_industry": 573.8133639376052,
+        "heavy_industry": 344.28801836256304,
+        "machinery": 229.52534557504208,
+        "chemicals": 172.14400918128152,
+        "energy": 286.9066819688026,
+        "construction": 286.9066819688026,
+        "transport": 286.9066819688026,
+        "shipping": 114.76267278752104,
+        "services": 459.05069115008416,
+        "military": 108.8,
+        "military_service": 100.0,
+        "military_support": 8.799999999999997,
+        "skilled": 714.2158331802146,
+        "professionals": 120.76508938923233,
+        "manufacturing": 1319.770737056492,
+        "transport_logistics": 401.6693547563236
+      },
+      "trade": {
+        "exports": 6.68520771359434,
+        "imports": 1.3304629729998005,
+        "partners": [
+          "b"
+        ]
+      },
+      "production_factors": {
+        "ra": {
+          "agriculture": {
+            "labour_capacity": 3460.0076970177074,
+            "capital_capacity": 2498.3576394321053,
+            "binding_capacity": 2498.3576394321053,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0417624460422112,
+            "railway_access": 0.4037288794943426,
+            "market_access": 0.7504702858141048,
+            "disruption": 0.45999999999999996,
+            "logistics_access": 0.44624036777516807,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7504702858141048,
+            "construction_demand": 1,
+            "harvest": 1.0,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 68.92548097497058,
+            "depreciation_amount": 6.566649345557413,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "mining": {
+            "labour_capacity": 723.0048385613826,
+            "capital_capacity": 428.63557042438663,
+            "binding_capacity": 428.63557042438663,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0417624460422112,
+            "railway_access": 0.4037288794943426,
+            "market_access": 0.7504702858141048,
+            "disruption": 0.45999999999999996,
+            "logistics_access": 0.44624036777516807,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7504702858141048,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1.0,
+            "unit_multiplier": 3,
+            "elapsed_days": 28,
+            "unconstrained_output": 35.476001179555624,
+            "depreciation_amount": 1.1266199216577049,
+            "input_supply": 1.0,
+            "energy_supply": 1.0,
+            "raw_material_supply": 1
+          },
+          "light_industry": {
+            "labour_capacity": 1032.8640550876894,
+            "capital_capacity": 555.5287819949577,
+            "binding_capacity": 555.5287819949577,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0417624460422112,
+            "railway_access": 0.4037288794943426,
+            "market_access": 0.7504702858141048,
+            "disruption": 0.45999999999999996,
+            "logistics_access": 0.44624036777516807,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7504702858141048,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 15.326103793188572,
+            "depreciation_amount": 1.4601443184710352,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "heavy_industry": {
+            "labour_capacity": 619.7184330526135,
+            "capital_capacity": 371.6784457791767,
+            "binding_capacity": 371.6784457791767,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0417624460422112,
+            "railway_access": 0.4037288794943426,
+            "market_access": 0.7504702858141048,
+            "disruption": 0.45999999999999996,
+            "logistics_access": 0.44624036777516807,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7942318058732394,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1.058312128922816,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 10.851914104530364,
+            "depreciation_amount": 0.9769145874921301,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "machinery": {
+            "labour_capacity": 413.14562203507575,
+            "capital_capacity": 271.3513291650233,
+            "binding_capacity": 271.3513291650233,
+            "skilled_labour": 0.8578793137191433,
+            "technology": 1.0,
+            "infrastructure": 1.0417624460422112,
+            "railway_access": 0.4037288794943426,
+            "market_access": 0.7504702858141048,
+            "disruption": 0.45999999999999996,
+            "logistics_access": 0.44624036777516807,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7942318058732394,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1.058312128922816,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 6.796684648767938,
+            "depreciation_amount": 0.7132161544664462,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "chemicals": {
+            "labour_capacity": 309.85921652630674,
+            "capital_capacity": 165.9484241440585,
+            "binding_capacity": 165.9484241440585,
+            "skilled_labour": 0.9594551764629718,
+            "technology": 1.0,
+            "infrastructure": 1.0417624460422112,
+            "railway_access": 0.4037288794943426,
+            "market_access": 0.7504702858141048,
+            "disruption": 0.45999999999999996,
+            "logistics_access": 0.44624036777516807,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7504702858141048,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 4.392613790539532,
+            "depreciation_amount": 0.43617658801226233,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "energy": {
+            "labour_capacity": 516.4320275438447,
+            "capital_capacity": 334.4923878739122,
+            "binding_capacity": 334.4923878739122,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0417624460422112,
+            "railway_access": 0.4037288794943426,
+            "market_access": 0.7504702858141048,
+            "disruption": 0.45999999999999996,
+            "logistics_access": 0.44624036777516807,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7504702858141048,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 4,
+            "elapsed_days": 28,
+            "unconstrained_output": 36.912327287003464,
+            "depreciation_amount": 0.8791752570802638,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1.0
+          },
+          "construction": {
+            "labour_capacity": 516.4320275438447,
+            "capital_capacity": 293.30703433376016,
+            "binding_capacity": 293.30703433376016,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0417624460422112,
+            "railway_access": 0.4037288794943426,
+            "market_access": 0.7504702858141048,
+            "disruption": 0.45999999999999996,
+            "logistics_access": 0.44624036777516807,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.8857331659968845,
+            "construction_demand": 1.1802374893977947,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 9.550301492681584,
+            "depreciation_amount": 0.7709242322460189,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "transport": {
+            "labour_capacity": 516.4320275438447,
+            "capital_capacity": 301.19053667143464,
+            "binding_capacity": 301.19053667143464,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0417624460422112,
+            "railway_access": 0.4037288794943426,
+            "market_access": 0.7504702858141048,
+            "disruption": 0.45999999999999996,
+            "logistics_access": 0.44624036777516807,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7504702858141048,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 8.30933981489815,
+            "depreciation_amount": 0.7916451229020732,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "shipping": {
+            "labour_capacity": 206.57281101753787,
+            "capital_capacity": 127.2129531123889,
+            "binding_capacity": 127.2129531123889,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0417624460422112,
+            "railway_access": 0.4037288794943426,
+            "market_access": 0.7504702858141048,
+            "disruption": 0.45999999999999996,
+            "logistics_access": 0.44624036777516807,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7504702858141048,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 3.509591197483986,
+            "depreciation_amount": 0.3343648011466358,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "services": {
+            "labour_capacity": 826.2912440701515,
+            "capital_capacity": 460.1982541745378,
+            "binding_capacity": 460.1982541745378,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0417624460422112,
+            "railway_access": 0.4037288794943426,
+            "market_access": 0.7504702858141048,
+            "disruption": 0.45999999999999996,
+            "logistics_access": 0.44624036777516807,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7504702858141048,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 12.696095031467081,
+            "depreciation_amount": 1.2095788516846635,
+            "input_supply": 1.0,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          }
+        }
+      },
+      "bottlenecks": {
+        "ra": {
+          "agriculture": [
+            "capital"
+          ],
+          "mining": [
+            "capital"
+          ],
+          "light_industry": [
+            "capital"
+          ],
+          "heavy_industry": [
+            "capital"
+          ],
+          "machinery": [
+            "capital",
+            "skills"
+          ],
+          "chemicals": [
+            "capital"
+          ],
+          "energy": [
+            "capital"
+          ],
+          "construction": [
+            "capital"
+          ],
+          "transport": [
+            "capital"
+          ],
+          "shipping": [
+            "capital"
+          ],
+          "services": [
+            "capital"
+          ]
+        }
+      },
+      "trade_routes": {
+        "a-export": {
+          "diplomacy": 1,
+          "disruption": 0.09999999999999998,
+          "tariff": 0.05,
+          "transport_capacity": 6.68520771359434,
+          "requested": 8.76712328767123,
+          "base_transport_capacity": 16.590574786832114,
+          "port_access": 0.4029521459919742,
+          "available": 74.77117431886013,
+          "value": 6.68520771359434
+        },
+        "a-import": {
+          "diplomacy": 1,
+          "disruption": 0.09999999999999998,
+          "tariff": 0.05,
+          "transport_capacity": 3.9913889189994016,
+          "requested": 8.76712328767123,
+          "base_transport_capacity": 9.905367073237773,
+          "port_access": 0.4029521459919742,
+          "available": 1933.143732086984,
+          "value": 1.3304629729998005
+        }
+      },
+      "shock_ids": [
+        "benchmark-shock"
+      ],
+      "new_projects": [
+        "economy-165",
+        "economy-166",
+        "economy-167"
+      ],
+      "warnings": [],
+      "explanation_kind": "sector value-added differences and production constraints; not an additive causal decomposition"
+    },
+    "projects": {
+      "planned": 0,
+      "funded": 3,
+      "under_construction": 0,
+      "in_progress": 0,
+      "commissioning": 0,
+      "training": 0,
+      "completed": 46,
+      "cancelled": 0,
+      "disrupted": 72
+    }
+  },
+  "전력 병목": {
+    "month": 1,
+    "date": "1897-03-01",
+    "population": 9981,
+    "gdp": 0,
+    "gdp_per_capita": 0.0,
+    "government_revenue": 0,
+    "government_expenditure": 0,
+    "debt": 0,
+    "reserves": 1000,
+    "literacy": 0.65,
+    "skilled_labour": 366.5834090812534,
+    "capital_stock": 99174.30327243468,
+    "infrastructure": {
+      "roads": 49.918837203539425,
+      "railways": 49.918837203539425,
+      "ports": 49.918837203539425,
+      "electricity": 49.918837203539425,
+      "communications": 49.918837203539425,
+      "sanitation": 49.918837203539425
+    },
+    "urbanization": 0.5014452622141217,
+    "sector_output": {
+      "agriculture": 0.0,
+      "mining": 0.0,
+      "light_industry": 0.0,
+      "heavy_industry": 0.0,
+      "machinery": 0.0,
+      "chemicals": 0.0,
+      "energy": 0.0,
+      "construction": 0.0,
+      "transport": 0.0,
+      "shipping": 0.0,
+      "services": 0.0
+    },
+    "technology": {
+      "agriculture": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "mining": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "light_industry": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "heavy_industry": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "machinery": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "chemicals": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "energy": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "construction": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "transport": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "shipping": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      },
+      "services": {
+        "access": false,
+        "discovery": false,
+        "installed": false,
+        "adoption": 0.0,
+        "diffusion": 0.0,
+        "domestic_capability": 0.0,
+        "foreign_experts": 0.0
+      }
+    },
+    "labour": {
+      "agriculture": 2071.6495927712394,
+      "mining": 422.20823364729677,
+      "light_industry": 603.1546194961383,
+      "heavy_industry": 361.89277169768286,
+      "machinery": 241.26184779845528,
+      "chemicals": 180.94638584884143,
+      "energy": 301.5773097480691,
+      "construction": 301.5773097480691,
+      "transport": 301.5773097480691,
+      "shipping": 120.63092389922764,
+      "services": 482.52369559691056,
+      "military": 100.0,
+      "military_service": 100,
+      "military_support": 0.0,
+      "skilled": 366.5834090812534,
+      "professionals": 60.62979628358041,
+      "manufacturing": 1387.2556248411179,
+      "transport_logistics": 422.20823364729677
+    },
+    "trade": {
+      "exports": 0.0,
+      "imports": 0.0,
+      "partners": [
+        "b"
+      ]
+    },
+    "bottlenecks": {
+      "agriculture": [
+        "labour",
+        "energy"
+      ],
+      "mining": [
+        "labour",
+        "energy"
+      ],
+      "light_industry": [
+        "labour",
+        "energy"
+      ],
+      "heavy_industry": [
+        "labour",
+        "skills",
+        "energy"
+      ],
+      "machinery": [
+        "labour",
+        "skills",
+        "energy"
+      ],
+      "chemicals": [
+        "labour",
+        "skills",
+        "energy"
+      ],
+      "energy": [
+        "capital",
+        "skills"
+      ],
+      "construction": [
+        "labour",
+        "energy"
+      ],
+      "transport": [
+        "labour",
+        "energy"
+      ],
+      "shipping": [
+        "labour",
+        "skills",
+        "energy"
+      ],
+      "services": [
+        "labour",
+        "energy"
+      ]
+    },
+    "explain": {
+      "date": "1897-03-01",
+      "period_start": "1897-02-01",
+      "elapsed_days": 28,
+      "gdp": 0,
+      "gdp_per_capita": 0.0,
+      "real_growth_estimate": 0,
+      "sector_value_added": {
+        "agriculture": 0.0,
+        "mining": 0.0,
+        "light_industry": 0.0,
+        "heavy_industry": 0.0,
+        "machinery": 0.0,
+        "chemicals": 0.0,
+        "energy": 0.0,
+        "construction": 0.0,
+        "transport": 0.0,
+        "shipping": 0.0,
+        "services": 0.0
+      },
+      "sector_changes": {
+        "agriculture": 0.0,
+        "mining": 0.0,
+        "light_industry": 0.0,
+        "heavy_industry": 0.0,
+        "machinery": 0.0,
+        "chemicals": 0.0,
+        "energy": 0.0,
+        "construction": 0.0,
+        "transport": 0.0,
+        "shipping": 0.0,
+        "services": 0.0
+      },
+      "sector_shares": {
+        "agriculture": 0.0,
+        "mining": 0.0,
+        "light_industry": 0.0,
+        "heavy_industry": 0.0,
+        "machinery": 0.0,
+        "chemicals": 0.0,
+        "energy": 0.0,
+        "construction": 0.0,
+        "transport": 0.0,
+        "shipping": 0.0,
+        "services": 0.0
+      },
+      "population": {
+        "period_start": "1897-02-01",
+        "period_end": "1897-03-01",
+        "elapsed_days": 28,
+        "before": 10007,
+        "after": 9981,
+        "births": 17,
+        "deaths": 43,
+        "migration": 0,
+        "war_losses": 0,
+        "epidemic_losses": 0,
+        "disaster_losses": 0,
+        "sources": [
+          "explicit monthly migration",
+          "v1 monthly birth/death model"
+        ]
+      },
+      "finance": {
+        "taxes": 0,
+        "tariffs": 0,
+        "state_enterprises": 0,
+        "other_revenue": 0,
+        "military": 0,
+        "administration": 0,
+        "education": 0,
+        "infrastructure": 0,
+        "welfare": 0,
+        "other": 0,
+        "subsidy": 0,
+        "debt_service": 0,
+        "other_expenditure": 0,
+        "budget_balance": 0,
+        "government_debt": 0,
+        "foreign_debt": 0,
+        "reserves": 1000,
+        "interest_rate": 0.04,
+        "deficit_months": 0,
+        "borrowed": 0,
+        "opening_treasury": 1000,
+        "opening_debt": 0,
+        "total_revenue": 0,
+        "total_expenditure": 0,
+        "foreign_profit_remittances": 0.0,
+        "private_disposable_income": 0,
+        "net_private_saving": 0.0,
+        "replacement_reserve": 0,
+        "replacement_need": 391.00259110305626
+      },
+      "labour": {
+        "agriculture": 2071.6495927712394,
+        "mining": 422.20823364729677,
+        "light_industry": 603.1546194961383,
+        "heavy_industry": 361.89277169768286,
+        "machinery": 241.26184779845528,
+        "chemicals": 180.94638584884143,
+        "energy": 301.5773097480691,
+        "construction": 301.5773097480691,
+        "transport": 301.5773097480691,
+        "shipping": 120.63092389922764,
+        "services": 482.52369559691056,
+        "military": 100.0,
+        "military_service": 100.0,
+        "military_support": 0.0,
+        "skilled": 366.5834090812534,
+        "professionals": 60.62979628358041,
+        "manufacturing": 1387.2556248411179,
+        "transport_logistics": 422.20823364729677
+      },
+      "trade": {
+        "exports": 0.0,
+        "imports": 0.0,
+        "partners": [
+          "b"
+        ]
+      },
+      "production_factors": {
+        "ra": {
+          "agriculture": {
+            "labour_capacity": 3728.969266988231,
+            "capital_capacity": 14876.145490865201,
+            "binding_capacity": 3728.969266988231,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0997563138281066,
+            "railway_access": 0.4995938563801776,
+            "market_access": 0.7711588481746843,
+            "disruption": 1.0,
+            "logistics_access": 0.49989327846131837,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7711588481746843,
+            "construction_demand": 1,
+            "harvest": 1.0,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 242.6019464129843,
+            "depreciation_amount": 39.10025911030563,
+            "input_supply": 0.0,
+            "energy_supply": 0.0,
+            "raw_material_supply": 1
+          },
+          "mining": {
+            "labour_capacity": 759.9748205651342,
+            "capital_capacity": 14876.145490865201,
+            "binding_capacity": 759.9748205651342,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0997563138281066,
+            "railway_access": 0.4995938563801776,
+            "market_access": 0.7711588481746843,
+            "disruption": 1.0,
+            "logistics_access": 0.49989327846131837,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7711588481746843,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1.0,
+            "unit_multiplier": 3,
+            "elapsed_days": 28,
+            "unconstrained_output": 148.3289543248536,
+            "depreciation_amount": 39.10025911030563,
+            "input_supply": 0.0,
+            "energy_supply": 0.0,
+            "raw_material_supply": 1
+          },
+          "light_industry": {
+            "labour_capacity": 1085.678315093049,
+            "capital_capacity": 14876.145490865201,
+            "binding_capacity": 1085.678315093049,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0997563138281066,
+            "railway_access": 0.4995938563801776,
+            "market_access": 0.7711588481746843,
+            "disruption": 1.0,
+            "logistics_access": 0.49989327846131837,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7711588481746843,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 70.63283539278743,
+            "depreciation_amount": 39.10025911030563,
+            "input_supply": 0.0,
+            "energy_supply": 0.0,
+            "raw_material_supply": 1
+          },
+          "heavy_industry": {
+            "labour_capacity": 651.4069890558292,
+            "capital_capacity": 14876.145490865201,
+            "binding_capacity": 651.4069890558292,
+            "skilled_labour": 0.792158500469131,
+            "technology": 1.0,
+            "infrastructure": 1.0997563138281066,
+            "railway_access": 0.4995938563801776,
+            "market_access": 0.7711588481746843,
+            "disruption": 1.0,
+            "logistics_access": 0.49989327846131837,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7711588481746843,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1.0,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 33.57144058118006,
+            "depreciation_amount": 39.10025911030563,
+            "input_supply": 0.0,
+            "energy_supply": 0.0,
+            "raw_material_supply": 1
+          },
+          "machinery": {
+            "labour_capacity": 434.2713260372195,
+            "capital_capacity": 14876.145490865201,
+            "binding_capacity": 434.2713260372195,
+            "skilled_labour": 0.5956436113717395,
+            "technology": 1.0,
+            "infrastructure": 1.0997563138281066,
+            "railway_access": 0.4995938563801776,
+            "market_access": 0.7711588481746843,
+            "disruption": 1.0,
+            "logistics_access": 0.49989327846131837,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7711588481746843,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1.0,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 16.828798861914205,
+            "depreciation_amount": 39.10025911030563,
+            "input_supply": 0.0,
+            "energy_supply": 0.0,
+            "raw_material_supply": 1
+          },
+          "chemicals": {
+            "labour_capacity": 325.7034945279146,
+            "capital_capacity": 14876.145490865201,
+            "binding_capacity": 325.7034945279146,
+            "skilled_labour": 0.6447723336460873,
+            "technology": 1.0,
+            "infrastructure": 1.0997563138281066,
+            "railway_access": 0.4995938563801776,
+            "market_access": 0.7711588481746843,
+            "disruption": 1.0,
+            "logistics_access": 0.49989327846131837,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7711588481746843,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 13.662629432474247,
+            "depreciation_amount": 39.10025911030563,
+            "input_supply": 0.0,
+            "energy_supply": 0.0,
+            "raw_material_supply": 1
+          },
+          "energy": {
+            "labour_capacity": 542.8391575465245,
+            "capital_capacity": 0.0,
+            "binding_capacity": 0.0,
+            "skilled_labour": 0.792158500469131,
+            "technology": 1.0,
+            "infrastructure": 1.0997563138281066,
+            "railway_access": 0.4995938563801776,
+            "market_access": 0.7711588481746843,
+            "disruption": 1.0,
+            "logistics_access": 0.49989327846131837,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7711588481746843,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 4,
+            "elapsed_days": 28,
+            "unconstrained_output": 0.0,
+            "depreciation_amount": 0.0,
+            "input_supply": 1,
+            "energy_supply": 1,
+            "raw_material_supply": 1
+          },
+          "construction": {
+            "labour_capacity": 542.8391575465245,
+            "capital_capacity": 14876.145490865201,
+            "binding_capacity": 542.8391575465245,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0997563138281066,
+            "railway_access": 0.4995938563801776,
+            "market_access": 0.7711588481746843,
+            "disruption": 1.0,
+            "logistics_access": 0.49989327846131837,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7711588481746843,
+            "construction_demand": 1.0,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 35.316417696393714,
+            "depreciation_amount": 39.10025911030563,
+            "input_supply": 0.0,
+            "energy_supply": 0.0,
+            "raw_material_supply": 1
+          },
+          "transport": {
+            "labour_capacity": 542.8391575465245,
+            "capital_capacity": 14876.145490865201,
+            "binding_capacity": 542.8391575465245,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0997563138281066,
+            "railway_access": 0.4995938563801776,
+            "market_access": 0.7711588481746843,
+            "disruption": 1.0,
+            "logistics_access": 0.49989327846131837,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7711588481746843,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 35.316417696393714,
+            "depreciation_amount": 39.10025911030563,
+            "input_supply": 0.0,
+            "energy_supply": 0.0,
+            "raw_material_supply": 1
+          },
+          "shipping": {
+            "labour_capacity": 217.13566301860976,
+            "capital_capacity": 14876.145490865201,
+            "binding_capacity": 217.13566301860976,
+            "skilled_labour": 0.9026981255864138,
+            "technology": 1.0,
+            "infrastructure": 1.0997563138281066,
+            "railway_access": 0.4995938563801776,
+            "market_access": 0.7711588481746843,
+            "disruption": 1.0,
+            "logistics_access": 0.49989327846131837,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7711588481746843,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 12.752025622784581,
+            "depreciation_amount": 39.10025911030563,
+            "input_supply": 0.0,
+            "energy_supply": 0.0,
+            "raw_material_supply": 1
+          },
+          "services": {
+            "labour_capacity": 868.542652074439,
+            "capital_capacity": 14876.145490865201,
+            "binding_capacity": 868.542652074439,
+            "skilled_labour": 1.0,
+            "technology": 1.0,
+            "infrastructure": 1.0997563138281066,
+            "railway_access": 0.4995938563801776,
+            "market_access": 0.7711588481746843,
+            "disruption": 1.0,
+            "logistics_access": 0.49989327846131837,
+            "debt_ratio": 0.0,
+            "tax_multiplier": 0.964,
+            "capacity_utilization": 0.7711588481746843,
+            "construction_demand": 1,
+            "harvest": 1,
+            "military_demand": 1,
+            "resource_endowment": 1,
+            "unit_multiplier": 1,
+            "elapsed_days": 28,
+            "unconstrained_output": 56.50626831422993,
+            "depreciation_amount": 39.10025911030563,
+            "input_supply": 0.0,
+            "energy_supply": 0.0,
+            "raw_material_supply": 1
+          }
+        }
+      },
+      "bottlenecks": {
+        "ra": {
+          "agriculture": [
+            "labour",
+            "energy"
+          ],
+          "mining": [
+            "labour",
+            "energy"
+          ],
+          "light_industry": [
+            "labour",
+            "energy"
+          ],
+          "heavy_industry": [
+            "labour",
+            "skills",
+            "energy"
+          ],
+          "machinery": [
+            "labour",
+            "skills",
+            "energy"
+          ],
+          "chemicals": [
+            "labour",
+            "skills",
+            "energy"
+          ],
+          "energy": [
+            "capital",
+            "skills"
+          ],
+          "construction": [
+            "labour",
+            "energy"
+          ],
+          "transport": [
+            "labour",
+            "energy"
+          ],
+          "shipping": [
+            "labour",
+            "skills",
+            "energy"
+          ],
+          "services": [
+            "labour",
+            "energy"
+          ]
+        }
+      },
+      "trade_routes": {
+        "a-export": {
+          "diplomacy": 1,
+          "disruption": 1.0,
+          "tariff": 0.05,
+          "transport_capacity": 0.0,
+          "requested": 87.67123287671232,
+          "base_transport_capacity": 0.0,
+          "port_access": 0.4995938563801776,
+          "available": 0.0,
+          "value": 0.0
+        },
+        "a-import": {
+          "diplomacy": 1,
+          "disruption": 1.0,
+          "tariff": 0.05,
+          "transport_capacity": 0.0,
+          "requested": 87.67123287671232,
+          "base_transport_capacity": 0.0,
+          "port_access": 0.4995938563801776,
+          "available": 372.9886005134158,
+          "value": 0.0
+        }
+      },
+      "shock_ids": [],
+      "new_projects": [],
+      "warnings": [
+        "food shortage: ra"
+      ],
+      "explanation_kind": "sector value-added differences and production constraints; not an additive causal decomposition"
+    },
+    "projects": {
+      "planned": 0,
+      "funded": 0,
+      "under_construction": 0,
+      "in_progress": 0,
+      "commissioning": 0,
+      "training": 0,
+      "completed": 0,
+      "cancelled": 0,
+      "disrupted": 0
+    }
+  }
+}

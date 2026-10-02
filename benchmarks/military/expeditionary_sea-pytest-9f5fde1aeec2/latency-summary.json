@@ -1,0 +1,320 @@
+{
+  "harness_version": 2,
+  "scenario": "expeditionary_sea",
+  "months": 36,
+  "seed": 1731,
+  "mode": "runtime",
+  "full_wall_seconds": 2948.0903808000003,
+  "benchmark_total_seconds": 2929.7455752999995,
+  "simulation_seconds": 2715.8164899000003,
+  "seconds_per_month": 75.43934694166667,
+  "worst_month_seconds": 129.43474419999984,
+  "setup_seconds": 0.36255590000018856,
+  "milestone_io_wall_seconds": 175.88897740000039,
+  "evidence_finalization_seconds": 18.344805500000803,
+  "final_logical_sha256": "6ea4978699a8168341ff1bcccacf8a961cc41153e566818987ac80d36637e56d",
+  "month_timings": [
+    {
+      "month": 1,
+      "seconds": 1.810156200000165
+    },
+    {
+      "month": 2,
+      "seconds": 7.669952600000215
+    },
+    {
+      "month": 3,
+      "seconds": 11.173862099999951
+    },
+    {
+      "month": 4,
+      "seconds": 13.913636499999939
+    },
+    {
+      "month": 5,
+      "seconds": 15.859808799999882
+    },
+    {
+      "month": 6,
+      "seconds": 24.342034700000113
+    },
+    {
+      "month": 7,
+      "seconds": 33.55025690000002
+    },
+    {
+      "month": 8,
+      "seconds": 35.04542620000029
+    },
+    {
+      "month": 9,
+      "seconds": 39.19597120000026
+    },
+    {
+      "month": 10,
+      "seconds": 40.11949340000001
+    },
+    {
+      "month": 11,
+      "seconds": 60.68000140000004
+    },
+    {
+      "month": 12,
+      "seconds": 74.13395500000024
+    },
+    {
+      "month": 13,
+      "seconds": 67.09080640000002
+    },
+    {
+      "month": 14,
+      "seconds": 62.389478399999916
+    },
+    {
+      "month": 15,
+      "seconds": 68.50363460000017
+    },
+    {
+      "month": 16,
+      "seconds": 78.59043410000004
+    },
+    {
+      "month": 17,
+      "seconds": 72.07312269999966
+    },
+    {
+      "month": 18,
+      "seconds": 66.18563220000033
+    },
+    {
+      "month": 19,
+      "seconds": 74.42640990000018
+    },
+    {
+      "month": 20,
+      "seconds": 79.03524889999971
+    },
+    {
+      "month": 21,
+      "seconds": 100.79304320000028
+    },
+    {
+      "month": 22,
+      "seconds": 101.2169498000003
+    },
+    {
+      "month": 23,
+      "seconds": 98.39874349999991
+    },
+    {
+      "month": 24,
+      "seconds": 95.67477770000005
+    },
+    {
+      "month": 25,
+      "seconds": 92.4559150999994
+    },
+    {
+      "month": 26,
+      "seconds": 107.56259909999972
+    },
+    {
+      "month": 27,
+      "seconds": 110.51902339999924
+    },
+    {
+      "month": 28,
+      "seconds": 107.99732510000013
+    },
+    {
+      "month": 29,
+      "seconds": 107.51830090000021
+    },
+    {
+      "month": 30,
+      "seconds": 114.51368309999998
+    },
+    {
+      "month": 31,
+      "seconds": 120.98510499999975
+    },
+    {
+      "month": 32,
+      "seconds": 126.27216769999995
+    },
+    {
+      "month": 33,
+      "seconds": 124.14593409999998
+    },
+    {
+      "month": 34,
+      "seconds": 129.43474419999984
+    },
+    {
+      "month": 35,
+      "seconds": 125.4898745999999
+    },
+    {
+      "month": 36,
+      "seconds": 127.04898120000053
+    }
+  ],
+  "milestones": [
+    {
+      "month": 3,
+      "date": "1897-04-01",
+      "seconds": 11.173862099999951,
+      "elapsed_seconds": 21.780001399999946,
+      "simulation_seconds": 20.65397090000033,
+      "seconds_per_month": 6.884656966666777,
+      "worst_month_seconds": 11.173862099999951,
+      "prior_milestone_io_seconds": 0.0,
+      "rss_bytes": 134053888,
+      "peak_rss_bytes": 151494656,
+      "memory_method": "Windows GetProcessMemoryInfo WorkingSet/PeakWorkingSet",
+      "peak_observed_rss_bytes": 143642624,
+      "database_bytes": 9097216,
+      "sqlite_total_bytes": 9097216,
+      "sqlite_files_bytes": {
+        "main": 9097216,
+        "wal": 0,
+        "shm": 0,
+        "journal": 0
+      },
+      "setup_seconds": 0.36255590000018856,
+      "boundary_wall_excluding_prior_io_seconds": 21.780001399999946,
+      "io": {
+        "month": 3,
+        "save_seconds": 3.2523670000000493,
+        "load_seconds": 5.029985799999849,
+        "equality_seconds": 1.9087008999999853,
+        "save_load_equal": true,
+        "logical_sha256": "4bd8a924644741b57122d9a40480d82062b8aa7f358ba9197b1d337608c127e9",
+        "save_bytes": 29864732,
+        "resumed_database": {
+          "database_bytes": 12275712,
+          "sqlite_total_bytes": 12275712,
+          "sqlite_files_bytes": {
+            "main": 12275712,
+            "wal": 0,
+            "shm": 0,
+            "journal": 0
+          }
+        },
+        "rss_bytes": 240549888,
+        "peak_rss_bytes": 395108352,
+        "memory_method": "Windows GetProcessMemoryInfo WorkingSet/PeakWorkingSet",
+        "peak_observed_rss_bytes": 309936128,
+        "io_wall_seconds": 10.194704900000033
+      }
+    },
+    {
+      "month": 12,
+      "date": "1898-01-01",
+      "seconds": 74.13395500000024,
+      "elapsed_seconds": 373.6260508999999,
+      "simulation_seconds": 357.4945550000011,
+      "seconds_per_month": 29.791212916666762,
+      "worst_month_seconds": 74.13395500000024,
+      "prior_milestone_io_seconds": 10.194704900000033,
+      "rss_bytes": 299704320,
+      "peak_rss_bytes": 395108352,
+      "memory_method": "Windows GetProcessMemoryInfo WorkingSet/PeakWorkingSet",
+      "peak_observed_rss_bytes": 324345856,
+      "database_bytes": 35921920,
+      "sqlite_total_bytes": 35921920,
+      "sqlite_files_bytes": {
+        "main": 35921920,
+        "wal": 0,
+        "shm": 0,
+        "journal": 0
+      },
+      "setup_seconds": 0.36255590000018856,
+      "boundary_wall_excluding_prior_io_seconds": 363.43134599999985,
+      "io": {
+        "month": 12,
+        "save_seconds": 16.0357755,
+        "load_seconds": 21.747311799999807,
+        "equality_seconds": 8.426006700000016,
+        "save_load_equal": true,
+        "logical_sha256": "cab400a6798a0737b86d858620d8746cdc36a17a1f48d8e1592efdff561c6fb0",
+        "save_bytes": 110194691,
+        "resumed_database": {
+          "database_bytes": 42934272,
+          "sqlite_total_bytes": 42934272,
+          "sqlite_files_bytes": {
+            "main": 42934272,
+            "wal": 0,
+            "shm": 0,
+            "journal": 0
+          }
+        },
+        "rss_bytes": 571805696,
+        "peak_rss_bytes": 1244782592,
+        "memory_method": "Windows GetProcessMemoryInfo WorkingSet/PeakWorkingSet",
+        "peak_observed_rss_bytes": 1024716800,
+        "io_wall_seconds": 46.22389789999988
+      }
+    },
+    {
+      "month": 36,
+      "date": "1900-01-01",
+      "seconds": 127.04898120000053,
+      "elapsed_seconds": 2805.5075753,
+      "simulation_seconds": 2715.8164899000003,
+      "seconds_per_month": 75.43934694166667,
+      "worst_month_seconds": 129.43474419999984,
+      "prior_milestone_io_seconds": 56.41860279999992,
+      "rss_bytes": 758284288,
+      "peak_rss_bytes": 1244782592,
+      "memory_method": "Windows GetProcessMemoryInfo WorkingSet/PeakWorkingSet",
+      "peak_observed_rss_bytes": 1024716800,
+      "database_bytes": 138117120,
+      "sqlite_total_bytes": 138117120,
+      "sqlite_files_bytes": {
+        "main": 138117120,
+        "wal": 0,
+        "shm": 0,
+        "journal": 0
+      },
+      "setup_seconds": 0.36255590000018856,
+      "boundary_wall_excluding_prior_io_seconds": 2749.0889725,
+      "io": {
+        "month": 36,
+        "save_seconds": 48.013654000000315,
+        "load_seconds": 54.147961300000134,
+        "equality_seconds": 17.3049474999998,
+        "save_load_equal": true,
+        "logical_sha256": "6ea4978699a8168341ff1bcccacf8a961cc41153e566818987ac80d36637e56d",
+        "save_bytes": 433055591,
+        "resumed_database": {
+          "database_bytes": 155893760,
+          "sqlite_total_bytes": 155893760,
+          "sqlite_files_bytes": {
+            "main": 155893760,
+            "wal": 0,
+            "shm": 0,
+            "journal": 0
+          }
+        },
+        "rss_bytes": 1646731264,
+        "peak_rss_bytes": 4536016896,
+        "memory_method": "Windows GetProcessMemoryInfo WorkingSet/PeakWorkingSet",
+        "peak_observed_rss_bytes": 3661479936,
+        "io_wall_seconds": 119.47037460000047
+      }
+    }
+  ],
+  "database_bytes": 138117120,
+  "sqlite_total_bytes": 138117120,
+  "sqlite_files_bytes": {
+    "main": 138117120,
+    "wal": 0,
+    "shm": 0,
+    "journal": 0
+  },
+  "rss_bytes": 1582137344,
+  "peak_rss_bytes": 4536016896,
+  "memory_method": "Windows GetProcessMemoryInfo WorkingSet/PeakWorkingSet",
+  "peak_observed_rss_bytes": 3661479936
+}

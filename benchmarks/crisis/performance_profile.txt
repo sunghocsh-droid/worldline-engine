@@ -1,0 +1,171 @@
+{
+  "method": "One genuine production month after restoring validated month-180 checkpoint; unchanged monthly Auditor; no SQLite IO; cProfile overhead included; no monkeypatching",
+  "profiled_months": 1,
+  "restore_seconds": 4.359759999992093,
+  "profiled_month_seconds": 24.496766600001138,
+  "checkpoint_path": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\benchmarks\\crisis\\replay_checkpoint.json.gz",
+  "checkpoint_bytes": 5559513,
+  "opening_history": {
+    "date": "1912-01-01",
+    "countries": 4,
+    "regions": 4,
+    "persons": 20,
+    "events": 75,
+    "active_events": 2,
+    "effects": 565,
+    "pending_effects": 0,
+    "messages": 1376,
+    "pending_messages": 0,
+    "pending_decisions": 0,
+    "streams": 668,
+    "npc_records": 937,
+    "npc_reports": 5212,
+    "npc_memories": 5172,
+    "npc_actions": 128,
+    "retained_crisis_trace_entries": 3654,
+    "full_system_event_count": 17256
+  },
+  "closing_history": {
+    "date": "1912-02-01",
+    "countries": 4,
+    "regions": 4,
+    "persons": 20,
+    "events": 75,
+    "active_events": 2,
+    "effects": 565,
+    "pending_effects": 0,
+    "messages": 1376,
+    "pending_messages": 0,
+    "pending_decisions": 0,
+    "streams": 668,
+    "npc_records": 941,
+    "npc_reports": 5232,
+    "npc_memories": 5192,
+    "npc_actions": 128,
+    "retained_crisis_trace_entries": 3658,
+    "full_system_event_count": 17323
+  },
+  "total_calls": 50976860,
+  "primitive_calls": 41755077,
+  "interpretation_note": "Cumulative times overlap across parent/child functions and cannot be added. This instrumented one-month time is not the campaign runtime or actual SQLite game speed."
+}
+
+Top cumulative (overlapping inclusive times):
+         50976860 function calls (41755077 primitive calls) in 24.490 seconds
+
+   Ordered by: cumulative time
+   List reduced from 525 to 60 due to restriction <60>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.010    0.010   24.497   24.497 crisis_benchmark.py:165(month)
+7708364/71167    8.308    0.000   16.889    0.000 copy.py:118(deepcopy)
+568721/74187    2.762    0.000   16.526    0.000 copy.py:217(_deepcopy_dict)
+       31    0.039    0.001   15.015    0.484 npc.py:465(tick)
+      110    0.079    0.001    9.759    0.089 npc_state.py:490(actor_view)
+109305/92939    0.208    0.000    8.040    0.000 copy.py:191(_deepcopy_list)
+      174    0.131    0.001    6.873    0.040 npc_state.py:277(effective_memory)
+       31    0.007    0.000    6.646    0.214 crisis.py:525(tick)
+       31    0.040    0.001    5.988    0.193 crisis_response.py:639(process_due)
+       62    0.015    0.000    5.734    0.092 crisis_response.py:572(_local)
+       64    0.022    0.000    4.911    0.077 npc_state.py:412(evaluate_ruler)
+       32    0.010    0.000    4.279    0.134 npc.py:243(options_for)
+        4    0.008    0.002    3.829    0.957 npc.py:408(_run_council)
+       64    0.082    0.001    3.276    0.051 npc_state.py:452(_evaluate_known)
+ 17453015    3.217    0.000    3.217    0.000 {method 'get' of 'dict' objects}
+     1551    0.017    0.000    2.684    0.002 npc_state.py:43(_json)
+        4    0.000    0.000    2.336    0.584 npc.py:351(execute_intent)
+        4    0.017    0.004    2.336    0.584 order_execution.py:28(execute)
+        4    0.000    0.000    2.318    0.579 order_execution.py:41(validate_order)
+        4    0.006    0.002    2.318    0.579 order_execution.py:24(economic_candidate)
+  600/536    0.001    0.000    2.314    0.004 copy.py:247(_reconstruct)
+        1    0.000    0.000    1.744    1.744 audit.py:26(check)
+        1    0.002    0.002    1.744    1.744 audit.py:40(core_validator)
+      168    0.010    0.000    1.701    0.010 credit.py:288(assess)
+      160    0.007    0.000    1.626    0.010 guardrails.py:55(estimated_fiscal_risk)
+     2752    0.005    0.000    1.547    0.001 __init__.py:183(dumps)
+     2752    0.005    0.000    1.542    0.001 encoder.py:183(encode)
+     2752    1.534    0.001    1.534    0.001 encoder.py:205(iterencode)
+       32    0.004    0.000    1.530    0.048 npc_decision.py:384(decide)
+     1739    0.002    0.000    1.288    0.001 __init__.py:299(loads)
+     1739    0.004    0.000    1.285    0.001 decoder.py:333(decode)
+     1739    1.276    0.001    1.276    0.001 decoder.py:344(raw_decode)
+  9135707    1.234    0.000    1.234    0.000 {built-in method builtins.id}
+      224    0.305    0.001    1.215    0.005 npc_decision.py:174(_evaluate)
+        1    0.060    0.060    0.998    0.998 npc_state.py:533(validate)
+  7030094    0.784    0.000    0.784    0.000 copy.py:172(_deepcopy_atomic)
+   678094    0.544    0.000    0.774    0.000 copy.py:231(_keep_alive)
+   294306    0.305    0.000    0.718    0.000 npc_state.py:33(_day)
+        1    0.000    0.000    0.657    0.657 crisis_state.py:477(validate)
+        1    0.009    0.009    0.657    0.657 crisis_state.py:241(_validate_state)
+   119896    0.228    0.000    0.608    0.000 npc_decision.py:163(_memory_value)
+       67    0.005    0.000    0.586    0.009 crisis_benchmark.py:113(observe)
+538424/856    0.207    0.000    0.445    0.001 crisis_state.py:45(_tuples)
+539280/3424    0.164    0.000    0.443    0.000 crisis_state.py:46(<genexpr>)
+       62    0.137    0.002    0.435    0.007 crisis_response.py:160(deliver_due)
+    49746    0.103    0.000    0.413    0.000 npc_state.py:269(_memory_weight)
+       31    0.001    0.000    0.389    0.013 economy.py:659(tick)
+       32    0.001    0.000    0.348    0.011 guardrails.py:117(can_fund_war)
+   349935    0.308    0.000    0.308    0.000 {method 'isoformat' of 'datetime.date' objects}
+        4    0.040    0.010    0.302    0.076 crisis_risk.py:263(detect)
+   173114    0.162    0.000    0.272    0.000 npc_decision.py:36(_number)
+   170624    0.157    0.000    0.230    0.000 crisis_response.py:152(_observation_order)
+  1440286    0.206    0.000    0.206    0.000 {built-in method builtins.isinstance}
+        1    0.050    0.050    0.194    0.194 crisis_response.py:721(validation_issues)
+   900096    0.180    0.000    0.180    0.000 {method 'append' of 'list' objects}
+        4    0.003    0.001    0.164    0.041 economy.py:526(finance_and_investment)
+        4    0.001    0.000    0.160    0.040 credit.py:478(settle)
+      244    0.001    0.000    0.152    0.001 crisis_risk.py:268(emit)
+      244    0.001    0.000    0.151    0.001 crisis_risk.py:246(_sample)
+      399    0.000    0.000    0.145    0.000 {built-in method builtins.next}
+
+
+
+Top self (exclusive times):
+         50976860 function calls (41755077 primitive calls) in 24.490 seconds
+
+   Ordered by: internal time
+   List reduced from 525 to 40 due to restriction <40>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+7708364/71167    8.308    0.000   16.889    0.000 copy.py:118(deepcopy)
+ 17453015    3.217    0.000    3.217    0.000 {method 'get' of 'dict' objects}
+568721/74187    2.762    0.000   16.526    0.000 copy.py:217(_deepcopy_dict)
+     2752    1.534    0.001    1.534    0.001 encoder.py:205(iterencode)
+     1739    1.276    0.001    1.276    0.001 decoder.py:344(raw_decode)
+  9135707    1.234    0.000    1.234    0.000 {built-in method builtins.id}
+  7030094    0.784    0.000    0.784    0.000 copy.py:172(_deepcopy_atomic)
+   678094    0.544    0.000    0.774    0.000 copy.py:231(_keep_alive)
+   349935    0.308    0.000    0.308    0.000 {method 'isoformat' of 'datetime.date' objects}
+      224    0.305    0.001    1.215    0.005 npc_decision.py:174(_evaluate)
+   294306    0.305    0.000    0.718    0.000 npc_state.py:33(_day)
+   119896    0.228    0.000    0.608    0.000 npc_decision.py:163(_memory_value)
+109305/92939    0.208    0.000    8.040    0.000 copy.py:191(_deepcopy_list)
+538424/856    0.207    0.000    0.445    0.001 crisis_state.py:45(_tuples)
+  1440286    0.206    0.000    0.206    0.000 {built-in method builtins.isinstance}
+   900096    0.180    0.000    0.180    0.000 {method 'append' of 'list' objects}
+539280/3424    0.164    0.000    0.443    0.000 crisis_state.py:46(<genexpr>)
+   173114    0.162    0.000    0.272    0.000 npc_decision.py:36(_number)
+   170624    0.157    0.000    0.230    0.000 crisis_response.py:152(_observation_order)
+       62    0.137    0.002    0.435    0.007 crisis_response.py:160(deliver_due)
+      174    0.131    0.001    6.873    0.040 npc_state.py:277(effective_memory)
+   617768    0.129    0.000    0.129    0.000 {method 'items' of 'dict' objects}
+   642274    0.123    0.000    0.123    0.000 {built-in method fromisoformat}
+412406/412294    0.110    0.000    0.111    0.000 {built-in method builtins.max}
+    49746    0.103    0.000    0.413    0.000 npc_state.py:269(_memory_weight)
+       64    0.082    0.001    3.276    0.051 npc_state.py:452(_evaluate_known)
+      110    0.079    0.001    9.759    0.089 npc_state.py:490(actor_view)
+    14836    0.065    0.000    0.133    0.000 npc_state.py:340(_event_effect)
+       31    0.063    0.002    0.100    0.003 projects.py:126(tick)
+        1    0.060    0.060    0.998    0.998 npc_state.py:533(validate)
+   214194    0.055    0.000    0.055    0.000 {built-in method builtins.min}
+   240692    0.055    0.000    0.055    0.000 {method 'rsplit' of 'str' objects}
+   303413    0.051    0.000    0.051    0.000 {built-in method math.isfinite}
+        1    0.050    0.050    0.194    0.194 crisis_response.py:721(validation_issues)
+    86990    0.049    0.000    0.061    0.000 npc_state.py:39(_number)
+     2508    0.047    0.000    0.105    0.000 {built-in method builtins.sorted}
+    70060    0.044    0.000    0.058    0.000 crisis_effects.py:233(<lambda>)
+    53662    0.041    0.000    0.106    0.000 models.py:8(canonical_date)
+        4    0.040    0.010    0.302    0.076 crisis_risk.py:263(detect)
+        1    0.040    0.040    0.071    0.071 economy.py:179(shocks_for_period)
+
+

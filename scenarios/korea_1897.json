@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "scenario_id": "korea_1897",
+  "date": "1897-10-12",
+  "countries": {},
+  "regions": {},
+  "armies": {},
+  "relations": {},
+  "factions": {},
+  "pressures": {},
+  "canon": {},
+  "note": "빈 골격. 시작 날짜만 지정하며 역사적 국가·인구·경제 데이터는 아직 없음."
+}

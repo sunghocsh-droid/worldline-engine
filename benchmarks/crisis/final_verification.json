@@ -1,0 +1,377 @@
+{
+  "tests": {
+    "tests": 642,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "existing_tests": 413,
+  "new_crisis_tests": 229,
+  "duration_seconds": 551.7090000000001,
+  "tests_by_file": {
+    "test_calibration": 35,
+    "test_credit_stabilization": 50,
+    "test_crisis_benchmark": 17,
+    "test_crisis_core": 37,
+    "test_crisis_integration": 25,
+    "test_crisis_query_isolation": 10,
+    "test_crisis_response": 47,
+    "test_crisis_risk": 28,
+    "test_crisis_state_effects": 65,
+    "test_economy": 29,
+    "test_economy_edges": 28,
+    "test_engine": 24,
+    "test_foundations": 11,
+    "test_labour_stabilization": 28,
+    "test_npc_campaign": 18,
+    "test_npc_decision": 46,
+    "test_npc_extensions": 18,
+    "test_npc_integration": 27,
+    "test_npc_required_scenarios": 3,
+    "test_npc_state": 33,
+    "test_stabilization_benchmark": 10,
+    "test_stabilization_integration": 22,
+    "test_structure": 31
+  },
+  "test_source_sha256": {
+    "tests/conftest.py": "172c659fdadd36944d607a0f9cb1febd3a4dc25d95e0dfc0828a7acc629ed7f9",
+    "tests/test_calibration.py": "e53074ed73587e6fe49766f74b54819ea34556260257987cd383e0bed0d86b56",
+    "tests/test_credit_stabilization.py": "1531b3ab5dc4008bd5ef4b5f86639e4db975aa31eab3bac2cc96e6d4bd75bbc2",
+    "tests/test_crisis_benchmark.py": "3fc3de49f783b38e1bedb8ed3f51340efeb46b51b8e83c69b7a95a6164b4e332",
+    "tests/test_crisis_core.py": "d357a18454a17eba4db968988482c6e10ce096a34dfb60c03a34f8215c679334",
+    "tests/test_crisis_integration.py": "7c9796e73ebe607326f5f7c90beec9b5a04d2273924d3be6316ebae7010f1503",
+    "tests/test_crisis_query_isolation.py": "70a0c4596d5099b7e4ed42c19c736ba8ce178cd63be4d93e98419c1ab3834b7f",
+    "tests/test_crisis_response.py": "19a41e4e34595bfd8b0ec7c3db4c6037167e394b83e691caddea9973acef0e86",
+    "tests/test_crisis_risk.py": "ec71d4925657d1cc4e98a6dba9b24e4899bd1af374b8042df2b3a67d6573f925",
+    "tests/test_crisis_state_effects.py": "521dde0165339a174d5a5f3d5139142d60a059a2b213b960c802d81a7774508b",
+    "tests/test_economy.py": "8051d7346a2ef0cef286edff04b751379d41f26f2f8baa8f07eaa921353d5e3f",
+    "tests/test_economy_edges.py": "a423f283acac2f19f74c9dfdd4c2c9e72c85f02763048e3005ad2e85cd07cca6",
+    "tests/test_engine.py": "6eba79cc01f5f587e75b8a0515ef5a1f46ea3f39ff388cd9e3d3434383779554",
+    "tests/test_foundations.py": "5bfbafcaf1f75aaef78557709361fa51d8db4c9b383b3f552cdec7b55fa190d6",
+    "tests/test_labour_stabilization.py": "401ce6e8e13cd3b2567fb9cff4904c6533b68d341dd613576587d126f86d08fd",
+    "tests/test_npc_campaign.py": "a816e30512ee4c6106eb4fbfa182541157e7cd66501ee74caf5fd5f18a7c4371",
+    "tests/test_npc_decision.py": "03d7a75e4ee5a74875dcce02918ae15dd5df49bc503c22512385bacbc777ba4f",
+    "tests/test_npc_extensions.py": "ef57756a7a5a94b31bacff7565b85a18b1e1b6a5e5089f6cf1723239c37003f8",
+    "tests/test_npc_integration.py": "66e66f9087d1da0a5aa1a7a72db2a0d3fc18d3f45e5360c780a91dc67372d859",
+    "tests/test_npc_required_scenarios.py": "6c93d6b25c945abf7e9e8c77df29f44d015654fd537844eca3b21b3a000b59a6",
+    "tests/test_npc_state.py": "dea9404f31b27dcb16fcd321da3f2aeffa006c24411c779a6fd0ccf042b23c7b",
+    "tests/test_stabilization_benchmark.py": "5122859155aa643155e61d978898757c2d4ec44d07fb763b1251546d5c8b820a",
+    "tests/test_stabilization_integration.py": "5a21c3ce357ceb857c8079717482f195b285f962ea8ffbbffb6ea4106db35ed3",
+    "tests/test_structure.py": "22a9fc8aa364f7e5d85d0fc6df8d9ad8d83e72bc1be4542a9dc960f4788de41e"
+  },
+  "source_sha256": {
+    "__init__.py": "becd7c5217666290ce7b6ab5f0b8e4f9515dfbffbf306f2777fb037e162e2f78",
+    "__main__.py": "b71170e9a95954c9091eb11fb0c5c7eca996d02d8b326c93b820be22bb053ad8",
+    "audit.py": "be92dc1fde298a55ffadfb40314b405c7c34c4acda13f2408a1479dff6df18ac",
+    "benchmark.py": "b56ad7ae7c26306cf53591c4f0f3a53027e6e11aeb240452c282499b3405c02a",
+    "calibration.py": "d164971ea2e4a21a52a401c97044cd66d8ad0af8d8777318dc8a5de90b04e68f",
+    "calibration_report.py": "ec3ec783d40e2cd369c951d0d72ef8020f7c411c196e06a478741443a677ccbb",
+    "credit.py": "0696c89c853bfa1683c67b69f6a0bd6554adaaa00851b1022bf9f75cfcdaa51c",
+    "crisis.py": "184aace25d0ef9e53c8f67b4f098aa5798c3fdaedc3de8f9692cead952146b14",
+    "crisis_benchmark.py": "77e733f8853422eca25c23371f918503e87de874ea6cac8af6ebee23bf01c734",
+    "crisis_effects.py": "e30138d6a494678d7f11ec535ac4e6e92fd19ca350c8ee7b79998995eb2bba74",
+    "crisis_response.py": "13d4f37ff39ed2e75059eae2eb243cb1137b21de5d385f171a63d28da1f5c69e",
+    "crisis_risk.py": "2ce9050ebee40c8a40390195be58817938021ee8104fc58335c935ee55b33d5c",
+    "crisis_state.py": "21d365674f53a94bbd55f87858eb7f1350307dd1318812983560a6b3c4b4c694",
+    "demography.py": "f7c4ee52c141347657056de76d9f4c2d65caa6b215e398b9e4d950a957b2a220",
+    "economy.py": "d570fa881cba02832342315f99e3a902c6cb57da3b767b387ddfd07eb2898261",
+    "engine.py": "c5f26243306edb873348c91b3a837a90690ca03febad4efa68db009c656cb297",
+    "guardrails.py": "ba89f34996f6815aec2be7562ad0a8b4ea362eb2b5637b8866001521c3a41242",
+    "labour.py": "667a36b48b75410b23f34f60e21a5f4eab493e0884de3e31f4727cebbe701541",
+    "models.py": "fac43f04005cf7455781dfc9681a84ce6072ad84020371157e179c9783710b70",
+    "npc.py": "e797b560d8482508f16744eac6b592358221f1fb2ff82d537e0d8d5e60f4da11",
+    "npc_benchmark.py": "7772bad51654eba5461160a073086a8416cc92ec6c687b3f45b19ba372038ad9",
+    "npc_decision.py": "7061517ea254e5a28f1629be1d7d419082f69d255a9455fd216d97fe522f0fe3",
+    "npc_state.py": "5ab90b976b691d125c823761aebac4f0a95145df569fef8988231405d227d549",
+    "order_execution.py": "1096dfe3a57259b1ec8e04e33a3428c1f767920f619b0fa5a1b9789694ff2fe6",
+    "persistence.py": "160d1021f535f50eb49ca8372bd48b52672d31d15e9c9f42f25acafae2f2da54",
+    "projects.py": "4e102ea361db9f97219ae09f0686e2a040c5e7849902f86da89ecc41830f76a3",
+    "stabilization_benchmark.py": "af5d447ce6d4f65146a4e08ce1dba9a46a2aa6f6ad1d7a5c6106f9affa65254c"
+  },
+  "original_checkpoint_sha256": "7daff1e976d1f6a4b4964106df56648906422a8566616a2b4d69582bb10025c6",
+  "original_calibrated_test_files_unchanged": {
+    "tests/conftest.py": true,
+    "tests/test_calibration.py": true,
+    "tests/test_economy.py": true,
+    "tests/test_economy_edges.py": true,
+    "tests/test_engine.py": true,
+    "tests/test_foundations.py": true,
+    "tests/test_structure.py": true
+  },
+  "existing_economy_npc_logic_unchanged": {
+    "economy.py": true,
+    "credit.py": true,
+    "labour.py": true,
+    "projects.py": true,
+    "calibration.py": true,
+    "npc.py": true,
+    "npc_state.py": true,
+    "npc_decision.py": true
+  },
+  "versions": {
+    "save": 5,
+    "world": 4,
+    "economy": 3,
+    "npc": 1,
+    "crisis": 1
+  },
+  "crisis_campaign": {
+    "countries": 4,
+    "persons": 20,
+    "months": 360,
+    "checkpoint_month": 180,
+    "seed": 941,
+    "runtime_seconds": 2853.7898592999845,
+    "trace": "d511429915855767333fe0884e651dd43b2ca9aa27c7c510aba12f660cb787ab",
+    "exact_replay": true,
+    "summary": {
+      "event_count": 120,
+      "event_types": {
+        "drought": 12,
+        "storm": 9,
+        "flood": 12,
+        "bad_harvest": 25,
+        "epidemic_introduction": 8,
+        "border_incident": 22,
+        "diplomatic_crisis": 7,
+        "ultimatum": 6,
+        "payment_failure": 1,
+        "financial_crisis": 1,
+        "earthquake": 2,
+        "extreme_heat": 6,
+        "fire": 4,
+        "extreme_cold": 3,
+        "recession": 1,
+        "epidemic": 1
+      },
+      "active_events": 3,
+      "crisis_count": 39,
+      "escalations": 15,
+      "deescalations": 24,
+      "escalation_share": 0.38461538461538464,
+      "country_war_entries": {
+        "a": 0,
+        "b": 0,
+        "c": 0,
+        "d": 0
+      },
+      "response_types": {
+        "relief": 73,
+        "ultimatum": 17,
+        "withdraw": 22,
+        "negotiate": 2,
+        "ignore": 26,
+        "mediate": 2
+      },
+      "country_responses": {
+        "c:relief": 25,
+        "d:relief": 12,
+        "a:relief": 25,
+        "b:relief": 11,
+        "b:ultimatum": 17,
+        "a:withdraw": 12,
+        "c:withdraw": 10,
+        "b:negotiate": 2,
+        "b:ignore": 26,
+        "b:mediate": 1,
+        "a:mediate": 1
+      },
+      "local_unilateral_actions": 61,
+      "local_triggered_events": 2,
+      "misinformation_triggered_events": 3,
+      "mediated_resolutions": 1,
+      "realized_losses": {
+        "a": {
+          "epidemic_losses": 5,
+          "disaster_losses": 0,
+          "war_losses": 0,
+          "capital_destruction": 800.3096190712422,
+          "paid_response_cost": 416
+        },
+        "b": {
+          "epidemic_losses": 0,
+          "disaster_losses": 2,
+          "war_losses": 0,
+          "capital_destruction": 315.47429274924303,
+          "paid_response_cost": 301
+        },
+        "c": {
+          "epidemic_losses": 0,
+          "disaster_losses": 10,
+          "war_losses": 0,
+          "capital_destruction": 1032.8340831524158,
+          "paid_response_cost": 254
+        },
+        "d": {
+          "epidemic_losses": 0,
+          "disaster_losses": 2,
+          "war_losses": 0,
+          "capital_destruction": 725.029012446425,
+          "paid_response_cost": 200
+        }
+      },
+      "system_log_count": 34185,
+      "system_log_kinds": {
+        "npc_decision": 11364,
+        "npc_action": 1444,
+        "ruler_record": 1767,
+        "pressure_review": 1566,
+        "effect_applied": 944,
+        "report_delivered": 2255,
+        "event_started": 120,
+        "effect_queued": 944,
+        "economy_settlement": 1440,
+        "crisis_npc_decision": 568,
+        "crisis_response": 142,
+        "response_outcome_measured": 140,
+        "event_resolved": 117,
+        "unknown": 11300,
+        "local_action": 61,
+        "crisis_escalated": 13
+      },
+      "npc_choices": {
+        "development": 1845,
+        "fiscal_consolidation": 2258,
+        "industrialization": 2570,
+        "military_expansion": 3542,
+        "war_preparation": 924,
+        "diplomatic_engagement": 225
+      },
+      "combat_resolutions": 0
+    }
+  },
+  "actual_sqlite_smoke": {
+    "method": "actual SQLite Engine save/load then 40 more days",
+    "source_sha256": {
+      "__init__.py": "becd7c5217666290ce7b6ab5f0b8e4f9515dfbffbf306f2777fb037e162e2f78",
+      "__main__.py": "b71170e9a95954c9091eb11fb0c5c7eca996d02d8b326c93b820be22bb053ad8",
+      "audit.py": "be92dc1fde298a55ffadfb40314b405c7c34c4acda13f2408a1479dff6df18ac",
+      "benchmark.py": "b56ad7ae7c26306cf53591c4f0f3a53027e6e11aeb240452c282499b3405c02a",
+      "calibration.py": "d164971ea2e4a21a52a401c97044cd66d8ad0af8d8777318dc8a5de90b04e68f",
+      "calibration_report.py": "ec3ec783d40e2cd369c951d0d72ef8020f7c411c196e06a478741443a677ccbb",
+      "credit.py": "0696c89c853bfa1683c67b69f6a0bd6554adaaa00851b1022bf9f75cfcdaa51c",
+      "crisis.py": "184aace25d0ef9e53c8f67b4f098aa5798c3fdaedc3de8f9692cead952146b14",
+      "crisis_benchmark.py": "77e733f8853422eca25c23371f918503e87de874ea6cac8af6ebee23bf01c734",
+      "crisis_effects.py": "e30138d6a494678d7f11ec535ac4e6e92fd19ca350c8ee7b79998995eb2bba74",
+      "crisis_response.py": "13d4f37ff39ed2e75059eae2eb243cb1137b21de5d385f171a63d28da1f5c69e",
+      "crisis_risk.py": "2ce9050ebee40c8a40390195be58817938021ee8104fc58335c935ee55b33d5c",
+      "crisis_state.py": "21d365674f53a94bbd55f87858eb7f1350307dd1318812983560a6b3c4b4c694",
+      "demography.py": "f7c4ee52c141347657056de76d9f4c2d65caa6b215e398b9e4d950a957b2a220",
+      "economy.py": "d570fa881cba02832342315f99e3a902c6cb57da3b767b387ddfd07eb2898261",
+      "engine.py": "c5f26243306edb873348c91b3a837a90690ca03febad4efa68db009c656cb297",
+      "guardrails.py": "ba89f34996f6815aec2be7562ad0a8b4ea362eb2b5637b8866001521c3a41242",
+      "labour.py": "667a36b48b75410b23f34f60e21a5f4eab493e0884de3e31f4727cebbe701541",
+      "models.py": "fac43f04005cf7455781dfc9681a84ce6072ad84020371157e179c9783710b70",
+      "npc.py": "e797b560d8482508f16744eac6b592358221f1fb2ff82d537e0d8d5e60f4da11",
+      "npc_benchmark.py": "7772bad51654eba5461160a073086a8416cc92ec6c687b3f45b19ba372038ad9",
+      "npc_decision.py": "7061517ea254e5a28f1629be1d7d419082f69d255a9455fd216d97fe522f0fe3",
+      "npc_state.py": "5ab90b976b691d125c823761aebac4f0a95145df569fef8988231405d227d549",
+      "order_execution.py": "1096dfe3a57259b1ec8e04e33a3428c1f767920f619b0fa5a1b9789694ff2fe6",
+      "persistence.py": "160d1021f535f50eb49ca8372bd48b52672d31d15e9c9f42f25acafae2f2da54",
+      "projects.py": "4e102ea361db9f97219ae09f0686e2a040c5e7849902f86da89ecc41830f76a3",
+      "stabilization_benchmark.py": "af5d447ce6d4f65146a4e08ce1dba9a46a2aa6f6ad1d7a5c6106f9affa65254c"
+    },
+    "save_schema": 5,
+    "world_schema": 4,
+    "economy_version": 3,
+    "npc_version": 1,
+    "crisis_version": 1,
+    "snapshot_date": "1897-01-09",
+    "final_date": "1897-02-18",
+    "active_event_id": "crisis-event-1",
+    "pending_decisions_at_save": [
+      {
+        "announced": true,
+        "available_responses": [
+          "relief",
+          "ignore"
+        ],
+        "consequences_if_ignored": [
+          {
+            "kind": "ignore_response",
+            "meaning": "underlying risk persists and the counterpart can escalate"
+          }
+        ],
+        "country": "a",
+        "created_at": "1897-01-05",
+        "deadline": "1897-01-19",
+        "event_id": "crisis-event-1",
+        "pending_id": "crisis-pending-1",
+        "requires_player_decision": true,
+        "resolution": null,
+        "status": "pending"
+      }
+    ],
+    "world_rng_ledger_equal": true,
+    "realized_population_account": {
+      "after": 10007,
+      "before": 10000,
+      "births": 24,
+      "deaths": 17,
+      "disaster_losses": 0,
+      "elapsed_days": 31,
+      "epidemic_losses": 0,
+      "migration": 0,
+      "period_end": "1897-02-01",
+      "period_start": "1897-01-01",
+      "sources": [
+        "crisis-shock:crisis-effect-1",
+        "crisis-shock:crisis-effect-2",
+        "explicit monthly migration",
+        "v1 monthly birth/death model"
+      ],
+      "war_losses": 0
+    },
+    "measured_response_outcomes": {
+      "a": {
+        "date": "1897-02-01",
+        "facts": {
+          "actual_loss_realized": true,
+          "basis": "actual losses matched to monthly accounting; prevention is the model's unmitigated counterfactual",
+          "event_id": "crisis-event-1",
+          "loss_effects": [
+            "crisis-effect-4"
+          ],
+          "measured_aftermath": true,
+          "performance": 0.01,
+          "population_account": {
+            "after": 10007,
+            "before": 10000,
+            "births": 24,
+            "deaths": 17,
+            "disaster_losses": 0,
+            "elapsed_days": 31,
+            "epidemic_losses": 0,
+            "migration": 0,
+            "period_end": "1897-02-01",
+            "period_start": "1897-01-01",
+            "sources": [
+              "crisis-shock:crisis-effect-1",
+              "crisis-shock:crisis-effect-2",
+              "explicit monthly migration",
+              "v1 monthly birth/death model"
+            ],
+            "war_losses": 0
+          },
+          "prevented_population_loss": 1,
+          "prevention_is_model_estimate": true,
+          "realized_population_loss": 0,
+          "unmitigated_loss_plan": 1
+        },
+        "record_id": "record-8"
+      }
+    }
+  },
+  "pytest_invocations": {
+    "commands": [
+      ".\\.venv\\Scripts\\python.exe -m pytest -q --ignore=tests/test_crisis_benchmark.py --junitxml=benchmarks/crisis/pytest_core.xml",
+      ".\\.venv\\Scripts\\python.exe -m pytest -q tests/test_crisis_benchmark.py --junitxml=benchmarks/crisis/pytest_benchmark.xml"
+    ],
+    "tests": {
+      "tests": 642,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  }
+}

@@ -1,0 +1,2193 @@
+{
+  "verified_utc": "2026-10-02T00:36:08.046402+00:00",
+  "tests": {
+    "total": 1136,
+    "passed": 1136,
+    "original_preserved": 751,
+    "new": 385,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "junit_seconds": 1248.667,
+    "by_classname": {
+      "tests.test_calibration": 35,
+      "tests.test_credit_stabilization": 50,
+      "tests.test_crisis_benchmark": 17,
+      "tests.test_crisis_core": 37,
+      "tests.test_crisis_integration": 25,
+      "tests.test_crisis_query_isolation": 10,
+      "tests.test_crisis_response": 47,
+      "tests.test_crisis_risk": 28,
+      "tests.test_crisis_state_effects": 65,
+      "tests.test_economy": 29,
+      "tests.test_economy_edges": 28,
+      "tests.test_engine": 24,
+      "tests.test_foundations": 11,
+      "tests.test_labour_stabilization": 28,
+      "tests.test_npc_campaign": 18,
+      "tests.test_npc_decision": 46,
+      "tests.test_npc_extensions": 18,
+      "tests.test_npc_integration": 27,
+      "tests.test_npc_required_scenarios": 3,
+      "tests.test_npc_state": 33,
+      "tests.test_performance_benchmark": 23,
+      "tests.test_performance_decisions": 21,
+      "tests.test_performance_npc_state": 34,
+      "tests.test_performance_storage": 31,
+      "tests.test_stabilization_benchmark": 10,
+      "tests.test_stabilization_integration": 22,
+      "tests.test_structure": 31,
+      "tests.test_military_cargo_capacity": 14,
+      "tests.test_military_command_doctrine": 8,
+      "tests.test_military_innovation": 68,
+      "tests.test_military_integration": 30,
+      "tests.test_military_logistics": 67,
+      "tests.test_military_movement_receipts": 15,
+      "tests.test_military_operations": 82,
+      "tests.test_military_persistence_cost": 3,
+      "tests.test_military_physical_receipts": 4,
+      "tests.test_military_politics": 67,
+      "tests.test_military_politics_storage": 3,
+      "tests.test_military_supply_comparisons": 3,
+      "tests.test_military_training_trials": 2,
+      "tests.test_military_benchmark": 19
+    },
+    "method": "Three actual, disjoint pytest batches: original 751, new focused tests, and new campaign tests. Combined XML is their union, not a fourth execution."
+  },
+  "source_sha256": {
+    "__init__.py": "becd7c5217666290ce7b6ab5f0b8e4f9515dfbffbf306f2777fb037e162e2f78",
+    "__main__.py": "b71170e9a95954c9091eb11fb0c5c7eca996d02d8b326c93b820be22bb053ad8",
+    "audit.py": "ccbe7f7c28da8e37d325082701817c47c3f32502fe1757676c65d1a5c79467f4",
+    "benchmark.py": "b56ad7ae7c26306cf53591c4f0f3a53027e6e11aeb240452c282499b3405c02a",
+    "calibration.py": "d164971ea2e4a21a52a401c97044cd66d8ad0af8d8777318dc8a5de90b04e68f",
+    "calibration_report.py": "ec3ec783d40e2cd369c951d0d72ef8020f7c411c196e06a478741443a677ccbb",
+    "credit.py": "0696c89c853bfa1683c67b69f6a0bd6554adaaa00851b1022bf9f75cfcdaa51c",
+    "crisis.py": "184aace25d0ef9e53c8f67b4f098aa5798c3fdaedc3de8f9692cead952146b14",
+    "crisis_benchmark.py": "77e733f8853422eca25c23371f918503e87de874ea6cac8af6ebee23bf01c734",
+    "crisis_effects.py": "e30138d6a494678d7f11ec535ac4e6e92fd19ca350c8ee7b79998995eb2bba74",
+    "crisis_response.py": "ef00d4a72b7f4e901462547ee8941fcb594007e9fd549e94409fa6bed18136d0",
+    "crisis_risk.py": "2ce9050ebee40c8a40390195be58817938021ee8104fc58335c935ee55b33d5c",
+    "crisis_state.py": "21d365674f53a94bbd55f87858eb7f1350307dd1318812983560a6b3c4b4c694",
+    "demography.py": "f7c4ee52c141347657056de76d9f4c2d65caa6b215e398b9e4d950a957b2a220",
+    "economy.py": "df0be6370d9f156eef4da0dfc65466fa29d185a7201e1b55634c05ad6406d41a",
+    "engine.py": "4ab30ff52968879c0a8f786e5f65171fe0e477ead2549a3f14a3180e38325815",
+    "guardrails.py": "ba89f34996f6815aec2be7562ad0a8b4ea362eb2b5637b8866001521c3a41242",
+    "labour.py": "667a36b48b75410b23f34f60e21a5f4eab493e0884de3e31f4727cebbe701541",
+    "military.py": "09b2382452a940e04c6137d9cb293e1f93c5a7241605a95a00a593da168ee6a5",
+    "military_benchmark.py": "5887c34cafd2c594251ad5bcbf6dd941eeeec2d55ca5234620b9f368fc39b073",
+    "military_bridge.py": "f8a1be0d2eb1f4ab6c90a5b396bdca7c762bc84412fafcce0e0380cb57fd6d4a",
+    "military_combat.py": "7e0b7484877c8966ed7a7a6cc9e68410df4257be9a5e20afb86885c9bb94ff79",
+    "military_innovation.py": "07831bbf9960ab649554fabd2b924035bb36d575bf047a46d06572ebc810f580",
+    "military_innovation_benchmark.py": "b1d32a62d41e45ed2c20749898e4b2d24cd64366ca2feafc10aa6e633b07b20e",
+    "military_logistics.py": "7fb438763a5c8a0f1fcc9b62facafbb4f6da1423647f3694750d11318ca720d4",
+    "military_operations.py": "02df9673c7637e8fffaf4202102127e5414679f534054d5214ebf3c6ea934a51",
+    "military_politics.py": "5f460f0448d83b005d15005ac427304568cd58ac4043b31710ec784c85c14e4c",
+    "military_state.py": "fbbb7677f3e8e2551ed4ae783ba308bdae084259e5c8bacf3dd34b396e446e3e",
+    "models.py": "ea73b82a03e221255af543a7d004b5d9ee2bec305ddd69a13bf11f13bd8224d4",
+    "npc.py": "4ae0e0b77ba47be69832a56d54279ea51a58709611b3a286469bd96664979a0b",
+    "npc_benchmark.py": "30a05c336d3182476a8f8e6a74a6b8c8c52f885ec7040601fda8d49e988245d1",
+    "npc_decision.py": "d7ece4636aac80394235ac6b9b6b133559826abadac3dd7dc032b9d2bc99804b",
+    "npc_runtime.py": "4ff7273f86b1814ae6ceeb8c6a3983a1cfa7fbf838cec7e28fb7520bd2b3503c",
+    "npc_state.py": "e46dbf85530a510c906d5b8d3a823e0d213d6987f73150debeee2cc76ea80c3a",
+    "order_execution.py": "902f39901d3ab4ad0747e462699242b9dd4ca832d09f84dfa4bafca6aa4a499f",
+    "performance_benchmark.py": "48c303f855b627e4c9367692c4a81bcbcc98b26b3ae08cd2abea895b2c65d4cd",
+    "persistence.py": "953de44b524fef4f112b0ab8bbfd662ba9b6a40cd2353d05b46a690029b23a3a",
+    "projects.py": "f13f5554c506d55fd21753515a75712b3ee4e296295b13e21c6dafe5dda33dfd",
+    "stabilization_benchmark.py": "af5d447ce6d4f65146a4e08ce1dba9a46a2aa6f6ad1d7a5c6106f9affa65254c",
+    "state_storage.py": "3f565549442eceffb8ead97e5ef3cd1f31d9292d04fae1807cdf0a0e6dafecf0"
+  },
+  "preserved_original_test_files": {
+    "tests/test_calibration.py": "e53074ed73587e6fe49766f74b54819ea34556260257987cd383e0bed0d86b56",
+    "tests/test_credit_stabilization.py": "1531b3ab5dc4008bd5ef4b5f86639e4db975aa31eab3bac2cc96e6d4bd75bbc2",
+    "tests/test_crisis_benchmark.py": "3fc3de49f783b38e1bedb8ed3f51340efeb46b51b8e83c69b7a95a6164b4e332",
+    "tests/test_crisis_core.py": "d357a18454a17eba4db968988482c6e10ce096a34dfb60c03a34f8215c679334",
+    "tests/test_crisis_integration.py": "7c9796e73ebe607326f5f7c90beec9b5a04d2273924d3be6316ebae7010f1503",
+    "tests/test_crisis_query_isolation.py": "70a0c4596d5099b7e4ed42c19c736ba8ce178cd63be4d93e98419c1ab3834b7f",
+    "tests/test_crisis_response.py": "19a41e4e34595bfd8b0ec7c3db4c6037167e394b83e691caddea9973acef0e86",
+    "tests/test_crisis_risk.py": "ec71d4925657d1cc4e98a6dba9b24e4899bd1af374b8042df2b3a67d6573f925",
+    "tests/test_crisis_state_effects.py": "521dde0165339a174d5a5f3d5139142d60a059a2b213b960c802d81a7774508b",
+    "tests/test_economy.py": "8051d7346a2ef0cef286edff04b751379d41f26f2f8baa8f07eaa921353d5e3f",
+    "tests/test_economy_edges.py": "a423f283acac2f19f74c9dfdd4c2c9e72c85f02763048e3005ad2e85cd07cca6",
+    "tests/test_engine.py": "6eba79cc01f5f587e75b8a0515ef5a1f46ea3f39ff388cd9e3d3434383779554",
+    "tests/test_foundations.py": "5bfbafcaf1f75aaef78557709361fa51d8db4c9b383b3f552cdec7b55fa190d6",
+    "tests/test_labour_stabilization.py": "401ce6e8e13cd3b2567fb9cff4904c6533b68d341dd613576587d126f86d08fd",
+    "tests/test_npc_campaign.py": "a816e30512ee4c6106eb4fbfa182541157e7cd66501ee74caf5fd5f18a7c4371",
+    "tests/test_npc_decision.py": "03d7a75e4ee5a74875dcce02918ae15dd5df49bc503c22512385bacbc777ba4f",
+    "tests/test_npc_extensions.py": "ef57756a7a5a94b31bacff7565b85a18b1e1b6a5e5089f6cf1723239c37003f8",
+    "tests/test_npc_integration.py": "66e66f9087d1da0a5aa1a7a72db2a0d3fc18d3f45e5360c780a91dc67372d859",
+    "tests/test_npc_required_scenarios.py": "6c93d6b25c945abf7e9e8c77df29f44d015654fd537844eca3b21b3a000b59a6",
+    "tests/test_npc_state.py": "dea9404f31b27dcb16fcd321da3f2aeffa006c24411c779a6fd0ccf042b23c7b",
+    "tests/test_performance_benchmark.py": "60fd474358def385136bbf05681eccd400660987af84d5752de3ad88d920918f",
+    "tests/test_performance_decisions.py": "3b55843f61d3acb1dd09d860f76bcb974379b55c52558382fb58bcd487500856",
+    "tests/test_performance_npc_state.py": "139faaa9b3cdb55cfd8cc71efea7403c6afa901350e64e6a886cfc13a61d4b45",
+    "tests/test_performance_storage.py": "0e085c0278809b8964b4093c34dd3f11474caee2591880aa87b0640c75fbdb78",
+    "tests/test_stabilization_benchmark.py": "5122859155aa643155e61d978898757c2d4ec44d07fb763b1251546d5c8b820a",
+    "tests/test_stabilization_integration.py": "5a21c3ce357ceb857c8079717482f195b285f962ea8ffbbffb6ea4106db35ed3",
+    "tests/test_structure.py": "22a9fc8aa364f7e5d85d0fc6df8d9ad8d83e72bc1be4542a9dc960f4788de41e"
+  },
+  "preserved_original_calibration_fixture": {
+    "benchmarks/calibrated_final.json": "a0ce517588176a9c71016777fa0470f0e13890a69f2c2016f55e80ae59ae997c"
+  },
+  "checkpoint": {
+    "name": "performance-v1-stable",
+    "archive_sha256": "447a0b01987ddaa3016ba06c84908a9fed14bcf1ed267f50ab10cd59d6284abc"
+  },
+  "prior_checkpoints_sha256": {
+    "crisis-v1-stable": {
+      "crisis-v1-stable.zip": "0fd728b7ba2d1ce3c82494ddad74aff5a1ba615b98d44f6aea350b7c5f042ae8",
+      "manifest.json": "a9d6f2af409ef6d19b3a6c06a501d85891aa0dabf9a8ea080dc2a14b2708e127",
+      "RESTORE.md": "165067d040624f0cc05b72c79da4cdbacc2396be9d231bd2dd8f75bfe785da1e"
+    },
+    "economy-v1-calibrated": {
+      "economy-v1-calibrated.zip": "7daff1e976d1f6a4b4964106df56648906422a8566616a2b4d69582bb10025c6",
+      "environment.txt": "0831a067f8cf7b76a088dc606110e488c0546dce745e66be1fd908223751e26b",
+      "manifest.json": "c95ed64288cd326d57b6e459ee01668967eb64d097bcc323472a577ad673ce0c",
+      "README.md": "5ed17b5010744b02b372db9c19e1663d323cf9935644b54fcedbace68d03c3d3",
+      "TEST_RESULTS.txt": "041d35d6e146de2c741b20652f26ed29455cf264c3c5931f4784b88eddcecf0f"
+    }
+  },
+  "unchanged_legacy_policy_modules": {
+    "calibration.py": "d164971ea2e4a21a52a401c97044cd66d8ad0af8d8777318dc8a5de90b04e68f",
+    "credit.py": "0696c89c853bfa1683c67b69f6a0bd6554adaaa00851b1022bf9f75cfcdaa51c",
+    "labour.py": "667a36b48b75410b23f34f60e21a5f4eab493e0884de3e31f4727cebbe701541",
+    "demography.py": "f7c4ee52c141347657056de76d9f4c2d65caa6b215e398b9e4d950a957b2a220",
+    "npc_decision.py": "d7ece4636aac80394235ac6b9b6b133559826abadac3dd7dc032b9d2bc99804b",
+    "npc_runtime.py": "4ff7273f86b1814ae6ceeb8c6a3983a1cfa7fbf838cec7e28fb7520bd2b3503c",
+    "npc_state.py": "e46dbf85530a510c906d5b8d3a823e0d213d6987f73150debeee2cc76ea80c3a",
+    "crisis.py": "184aace25d0ef9e53c8f67b4f098aa5798c3fdaedc3de8f9692cead952146b14",
+    "crisis_effects.py": "e30138d6a494678d7f11ec535ac4e6e92fd19ca350c8ee7b79998995eb2bba74",
+    "crisis_response.py": "ef00d4a72b7f4e901462547ee8941fcb594007e9fd549e94409fa6bed18136d0",
+    "crisis_risk.py": "2ce9050ebee40c8a40390195be58817938021ee8104fc58335c935ee55b33d5c",
+    "crisis_state.py": "21d365674f53a94bbd55f87858eb7f1350307dd1318812983560a6b3c4b4c694"
+  },
+  "economy_ast_identical_except_military_food_adapter": true,
+  "only_economy_adapter": "if getattr(world, 'military_state', None) is not None:\n    from .military_bridge import civilian_food_need\n    food_need = civilian_food_need(world, key, food_need)",
+  "game_versions": {
+    "save": 6,
+    "world": 5,
+    "economy": 3,
+    "npc": 1,
+    "crisis": 1,
+    "military": 1,
+    "military_politics_optional_namespace": 1,
+    "physical_storage": 1,
+    "compatible_previous_saves": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "compatible_earlier_military_save_6_without_politics": true
+  },
+  "campaigns": {
+    "preindustrial_border": {
+      "months": 36,
+      "seed": 1731,
+      "total_seconds": 10871.12019050002,
+      "database_bytes": 144138240,
+      "final_logical_sha256": "5543e904477614289500b8dcc9c550b783f5156b08e59f7f32984ab1fc3986a2",
+      "final": {
+        "month": 36,
+        "date": "1900-01-01",
+        "countries": {
+          "a": {
+            "population": 10236,
+            "gdp": 2547,
+            "treasury": 939,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 93.71861615853662,
+            "distress_state": "normal",
+            "military_labour": 502.4,
+            "exports": 0.5364148148625858,
+            "imports": 1.6662068819180786,
+            "war_losses": 0
+          },
+          "b": {
+            "population": 10019,
+            "gdp": 2272,
+            "treasury": 0,
+            "debt": 1496,
+            "arrears": 0,
+            "creditworthiness": 68.39928439683267,
+            "distress_state": "stressed",
+            "military_labour": 554.0,
+            "exports": 1.384654605831667,
+            "imports": 0.5364148148625858,
+            "war_losses": 214
+          },
+          "c": {
+            "population": 10172,
+            "gdp": 2064,
+            "treasury": 1456,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 94.55895383286474,
+            "distress_state": "normal",
+            "military_labour": 439.6,
+            "exports": 0.5376420202581158,
+            "imports": 1.384654605831667,
+            "war_losses": 62
+          },
+          "d": {
+            "population": 10235,
+            "gdp": 2537,
+            "treasury": 948,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 91.92868747298789,
+            "distress_state": "normal",
+            "military_labour": 502.4,
+            "exports": 1.6662068819180786,
+            "imports": 0.5376420202581158,
+            "war_losses": 0
+          }
+        },
+        "ledger_entries": 17316,
+        "npc_memories": 1901,
+        "npc_received_reports": 1941,
+        "crisis_events": 113,
+        "military": {
+          "formations": 20,
+          "surviving_manpower": 1867,
+          "supply_ratios": {
+            "army-a": 1.0,
+            "army-b": 0.9698275862068457,
+            "army-c": 1.0,
+            "army-d": 1.0,
+            "b-cavalry": 0.0,
+            "b-transport": 1.0,
+            "replacement-cohort:benchmark-replacement:12:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:12:b-cavalry": 1.0,
+            "replacement-cohort:benchmark-replacement:17:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:19:b-cavalry": 1.0,
+            "replacement-cohort:benchmark-replacement:22:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:24:b-cavalry": 1.0,
+            "replacement-cohort:benchmark-replacement:27:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:29:b-cavalry": 1.0,
+            "replacement-cohort:benchmark-replacement:2:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:2:b-cavalry": 1.0,
+            "replacement-cohort:benchmark-replacement:32:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:34:b-cavalry": 1.0,
+            "replacement-cohort:benchmark-replacement:7:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:7:b-cavalry": 1.0
+          },
+          "losses_by_cause": {
+            "battle_casualties": 220,
+            "capture_missing": 29,
+            "desertion": 11,
+            "disease": 12,
+            "exposure": 3,
+            "hunger": 41,
+            "march_attrition": 0,
+            "naval_loss": 0
+          },
+          "loss_receipts": 95,
+          "operations": 65,
+          "active_operations": 0,
+          "shipments": 52,
+          "delivered_shipments": 52,
+          "procurement_cost": 725,
+          "replacements": {
+            "benchmark-replacement:12:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:12:army-b",
+              "completed_at": "1898-03-31",
+              "id": "benchmark-replacement:12:army-b",
+              "incorporated_at": "1898-05-01",
+              "manpower": 15,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:12:army-b",
+              "project": "replacement-training:benchmark-replacement:12:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:12:army-b",
+                "date": "1898-03-31",
+                "trained_manpower": 15
+              },
+              "recipient": "army-b",
+              "started_at": "1897-12-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:12:b-cavalry": {
+              "cohort": "replacement-cohort:benchmark-replacement:12:b-cavalry",
+              "completed_at": "1898-03-31",
+              "id": "benchmark-replacement:12:b-cavalry",
+              "incorporated_at": "1898-07-01",
+              "manpower": 10,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:12:b-cavalry",
+              "project": "replacement-training:benchmark-replacement:12:b-cavalry",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:12:b-cavalry",
+                "date": "1898-03-31",
+                "trained_manpower": 10
+              },
+              "recipient": "b-cavalry",
+              "started_at": "1897-12-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:17:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:17:army-b",
+              "completed_at": "1898-08-29",
+              "id": "benchmark-replacement:17:army-b",
+              "incorporated_at": "1898-10-01",
+              "manpower": 15,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:17:army-b",
+              "project": "replacement-training:benchmark-replacement:17:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:17:army-b",
+                "date": "1898-08-29",
+                "trained_manpower": 15
+              },
+              "recipient": "army-b",
+              "started_at": "1898-05-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:19:b-cavalry": {
+              "cohort": "replacement-cohort:benchmark-replacement:19:b-cavalry",
+              "completed_at": "1898-10-29",
+              "id": "benchmark-replacement:19:b-cavalry",
+              "incorporated_at": "1898-12-01",
+              "manpower": 10,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:19:b-cavalry",
+              "project": "replacement-training:benchmark-replacement:19:b-cavalry",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:19:b-cavalry",
+                "date": "1898-10-29",
+                "trained_manpower": 10
+              },
+              "recipient": "b-cavalry",
+              "started_at": "1898-07-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:22:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:22:army-b",
+              "completed_at": "1899-01-29",
+              "id": "benchmark-replacement:22:army-b",
+              "incorporated_at": "1899-03-01",
+              "manpower": 15,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:22:army-b",
+              "project": "replacement-training:benchmark-replacement:22:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:22:army-b",
+                "date": "1899-01-29",
+                "trained_manpower": 15
+              },
+              "recipient": "army-b",
+              "started_at": "1898-10-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:24:b-cavalry": {
+              "cohort": "replacement-cohort:benchmark-replacement:24:b-cavalry",
+              "completed_at": "1899-03-31",
+              "id": "benchmark-replacement:24:b-cavalry",
+              "incorporated_at": "1899-05-01",
+              "manpower": 10,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:24:b-cavalry",
+              "project": "replacement-training:benchmark-replacement:24:b-cavalry",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:24:b-cavalry",
+                "date": "1899-03-31",
+                "trained_manpower": 10
+              },
+              "recipient": "b-cavalry",
+              "started_at": "1898-12-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:27:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:27:army-b",
+              "completed_at": "1899-06-29",
+              "id": "benchmark-replacement:27:army-b",
+              "incorporated_at": "1899-08-01",
+              "manpower": 15,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:27:army-b",
+              "project": "replacement-training:benchmark-replacement:27:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:27:army-b",
+                "date": "1899-06-29",
+                "trained_manpower": 15
+              },
+              "recipient": "army-b",
+              "started_at": "1899-03-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:29:b-cavalry": {
+              "cohort": "replacement-cohort:benchmark-replacement:29:b-cavalry",
+              "completed_at": "1899-08-29",
+              "id": "benchmark-replacement:29:b-cavalry",
+              "incorporated_at": "1899-10-01",
+              "manpower": 10,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:29:b-cavalry",
+              "project": "replacement-training:benchmark-replacement:29:b-cavalry",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:29:b-cavalry",
+                "date": "1899-08-29",
+                "trained_manpower": 10
+              },
+              "recipient": "b-cavalry",
+              "started_at": "1899-05-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:2:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:2:army-b",
+              "completed_at": "1897-06-01",
+              "id": "benchmark-replacement:2:army-b",
+              "incorporated_at": "1897-07-01",
+              "manpower": 2,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:2:army-b",
+              "project": "replacement-training:benchmark-replacement:2:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:2:army-b",
+                "date": "1897-06-01",
+                "trained_manpower": 2
+              },
+              "recipient": "army-b",
+              "started_at": "1897-02-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:2:b-cavalry": {
+              "cohort": "replacement-cohort:benchmark-replacement:2:b-cavalry",
+              "completed_at": "1897-06-01",
+              "id": "benchmark-replacement:2:b-cavalry",
+              "incorporated_at": "1897-07-01",
+              "manpower": 1,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:2:b-cavalry",
+              "project": "replacement-training:benchmark-replacement:2:b-cavalry",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:2:b-cavalry",
+                "date": "1897-06-01",
+                "trained_manpower": 1
+              },
+              "recipient": "b-cavalry",
+              "started_at": "1897-02-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:32:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:32:army-b",
+              "completed_at": "1899-11-29",
+              "id": "benchmark-replacement:32:army-b",
+              "manpower": 15,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:32:army-b",
+              "project": "replacement-training:benchmark-replacement:32:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:32:army-b",
+                "date": "1899-11-29",
+                "trained_manpower": 15
+              },
+              "recipient": "army-b",
+              "started_at": "1899-08-01",
+              "status": "ready"
+            },
+            "benchmark-replacement:34:b-cavalry": {
+              "cohort": "replacement-cohort:benchmark-replacement:34:b-cavalry",
+              "completed_at": null,
+              "id": "benchmark-replacement:34:b-cavalry",
+              "manpower": 10,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:34:b-cavalry",
+              "project": "replacement-training:benchmark-replacement:34:b-cavalry",
+              "receipt": null,
+              "recipient": "b-cavalry",
+              "started_at": "1899-10-01",
+              "status": "training"
+            },
+            "benchmark-replacement:7:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:7:army-b",
+              "completed_at": "1897-10-29",
+              "id": "benchmark-replacement:7:army-b",
+              "incorporated_at": "1897-12-01",
+              "manpower": 15,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:7:army-b",
+              "project": "replacement-training:benchmark-replacement:7:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:7:army-b",
+                "date": "1897-10-29",
+                "trained_manpower": 15
+              },
+              "recipient": "army-b",
+              "started_at": "1897-07-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:7:b-cavalry": {
+              "cohort": "replacement-cohort:benchmark-replacement:7:b-cavalry",
+              "completed_at": "1897-10-29",
+              "id": "benchmark-replacement:7:b-cavalry",
+              "incorporated_at": "1897-12-01",
+              "manpower": 10,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:7:b-cavalry",
+              "project": "replacement-training:benchmark-replacement:7:b-cavalry",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:7:b-cavalry",
+                "date": "1897-10-29",
+                "trained_manpower": 10
+              },
+              "recipient": "b-cavalry",
+              "started_at": "1897-07-01",
+              "status": "incorporated"
+            }
+          },
+          "diplomatic_hooks": 38,
+          "politics": {
+            "a": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            },
+            "b": {
+              "casualty_burden": 254,
+              "defeat_grievance": 33.908877970369865,
+              "fiscal_strain": 0,
+              "mobilization_burden": 153,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 1.2233352208922303,
+              "will_to_continue": null
+            },
+            "c": {
+              "casualty_burden": 62,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0.1321205808628209,
+              "will_to_continue": null
+            },
+            "d": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            }
+          }
+        }
+      },
+      "initial": {
+        "month": 0,
+        "date": "1897-01-01",
+        "countries": {
+          "a": {
+            "population": 10000,
+            "gdp": 0,
+            "treasury": 1000,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 95.23346357503057,
+            "distress_state": "normal",
+            "military_labour": 500.0,
+            "exports": 0.0,
+            "imports": 0.0,
+            "war_losses": 0
+          },
+          "b": {
+            "population": 10000,
+            "gdp": 0,
+            "treasury": 1000,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 92.48330201677645,
+            "distress_state": "normal",
+            "military_labour": 530.0,
+            "exports": 0.0,
+            "imports": 0.0,
+            "war_losses": 0
+          },
+          "c": {
+            "population": 10000,
+            "gdp": 0,
+            "treasury": 1000,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 94.30777431547362,
+            "distress_state": "normal",
+            "military_labour": 500.0,
+            "exports": 0.0,
+            "imports": 0.0,
+            "war_losses": 0
+          },
+          "d": {
+            "population": 10000,
+            "gdp": 0,
+            "treasury": 1000,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 93.39108294986164,
+            "distress_state": "normal",
+            "military_labour": 500.0,
+            "exports": 0.0,
+            "imports": 0.0,
+            "war_losses": 0
+          }
+        },
+        "ledger_entries": 21,
+        "npc_memories": 16,
+        "npc_received_reports": 36,
+        "crisis_events": 0,
+        "military": {
+          "formations": 6,
+          "surviving_manpower": 2030,
+          "supply_ratios": {
+            "army-a": 1.0,
+            "army-b": 1.0,
+            "army-c": 1.0,
+            "army-d": 1.0,
+            "b-cavalry": 1.0,
+            "b-transport": 1.0
+          },
+          "losses_by_cause": {},
+          "loss_receipts": 0,
+          "operations": 0,
+          "active_operations": 0,
+          "shipments": 0,
+          "delivered_shipments": 0,
+          "procurement_cost": 0,
+          "replacements": {},
+          "diplomatic_hooks": 0,
+          "politics": {
+            "a": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            },
+            "b": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            },
+            "c": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            },
+            "d": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            }
+          }
+        }
+      },
+      "first_month": {
+        "month": 1,
+        "date": "1897-02-01",
+        "countries": {
+          "a": {
+            "population": 10007,
+            "gdp": 2378,
+            "treasury": 976,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 92.58145956084942,
+            "distress_state": "normal",
+            "military_labour": 504.8,
+            "exports": 0.5218824150434571,
+            "imports": 1.4404890363978051,
+            "war_losses": 0
+          },
+          "b": {
+            "population": 10007,
+            "gdp": 2292,
+            "treasury": 759,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 92.49639014735111,
+            "distress_state": "normal",
+            "military_labour": 677.0,
+            "exports": 1.3523920727574412,
+            "imports": 0.5218824150434571,
+            "war_losses": 0
+          },
+          "c": {
+            "population": 10007,
+            "gdp": 2368,
+            "treasury": 1008,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 94.31777565656772,
+            "distress_state": "normal",
+            "military_labour": 501.0,
+            "exports": 0.4900490017766546,
+            "imports": 1.3523920727574412,
+            "war_losses": 0
+          },
+          "d": {
+            "population": 10007,
+            "gdp": 2379,
+            "treasury": 975,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 90.71074013527314,
+            "distress_state": "normal",
+            "military_labour": 504.8,
+            "exports": 1.4404890363978051,
+            "imports": 0.4900490017766546,
+            "war_losses": 0
+          }
+        },
+        "ledger_entries": 384,
+        "npc_memories": 51,
+        "npc_received_reports": 91,
+        "crisis_events": 2,
+        "military": {
+          "formations": 6,
+          "surviving_manpower": 2024,
+          "supply_ratios": {
+            "army-a": 1.0,
+            "army-b": 1.0,
+            "army-c": 1.0,
+            "army-d": 1.0,
+            "b-cavalry": 1.0,
+            "b-transport": 1.0
+          },
+          "losses_by_cause": {
+            "battle_casualties": 6,
+            "capture_missing": 0,
+            "desertion": 0,
+            "disease": 0,
+            "exposure": 0,
+            "hunger": 0,
+            "march_attrition": 0,
+            "naval_loss": 0
+          },
+          "loss_receipts": 1,
+          "operations": 1,
+          "active_operations": 1,
+          "shipments": 0,
+          "delivered_shipments": 0,
+          "procurement_cost": 0,
+          "replacements": {},
+          "diplomatic_hooks": 1,
+          "politics": {
+            "a": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            },
+            "b": {
+              "casualty_burden": 3,
+              "defeat_grievance": 0.5416709829257503,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0.011666666666666667,
+              "will_to_continue": null
+            },
+            "c": {
+              "casualty_burden": 3,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0.006,
+              "will_to_continue": null
+            },
+            "d": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            }
+          }
+        }
+      },
+      "operation_outcomes": {
+        "statuses": {
+          "completed": 65
+        },
+        "recorded_assessments": {
+          "setback": 35
+        },
+        "objective_completion_range": [
+          0.05143265955213577,
+          0.3393730354338321
+        ],
+        "final_control_records": {},
+        "scope": "These are aggregate operation assessments, not a count of individual battles or automatic fulfillment of political war aims."
+      },
+      "political_replacement_receipts": {
+        "total": 14,
+        "by_mode": {
+          "explicit_player_approval": 14
+        },
+        "by_choice": {
+          "replenish": 14
+        },
+        "consumed_by_paid_cohort": 14,
+        "scope": "The fixed campaign controller explicitly authorizes its replacement orders. Independent NPC replenishment/defer/reduce decisions are covered by separate genuine unit/API tests, not silently claimed as autonomous national war planning."
+      }
+    },
+    "industrial_front": {
+      "months": 36,
+      "seed": 1731,
+      "total_seconds": 8577.239490500011,
+      "database_bytes": 159346688,
+      "final_logical_sha256": "c694317c63a456239d1a5f1f88a4e13825c177ce85b540e1c797167b8e07e92b",
+      "final": {
+        "month": 36,
+        "date": "1900-01-01",
+        "countries": {
+          "a": {
+            "population": 10236,
+            "gdp": 6807,
+            "treasury": 7,
+            "debt": 16,
+            "arrears": 0,
+            "creditworthiness": 93.8099902982338,
+            "distress_state": "normal",
+            "military_labour": 1006.4,
+            "exports": 10.22667461255519,
+            "imports": 22.559167590072345,
+            "war_losses": 0
+          },
+          "b": {
+            "population": 10108,
+            "gdp": 6006,
+            "treasury": 0,
+            "debt": 5414,
+            "arrears": 380,
+            "creditworthiness": 55.19569158190476,
+            "distress_state": "restructuring",
+            "military_labour": 1129.0,
+            "exports": 14.244167999676545,
+            "imports": 10.22667461255519,
+            "war_losses": 126
+          },
+          "c": {
+            "population": 9729,
+            "gdp": 5661,
+            "treasury": 2576,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 94.23171365165155,
+            "distress_state": "normal",
+            "military_labour": 458.0,
+            "exports": 9.113800261695111,
+            "imports": 14.244167999676545,
+            "war_losses": 500
+          },
+          "d": {
+            "population": 10236,
+            "gdp": 6672,
+            "treasury": 396,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 91.96759075718523,
+            "distress_state": "normal",
+            "military_labour": 1006.4,
+            "exports": 22.559167590072345,
+            "imports": 9.113800261695111,
+            "war_losses": 0
+          }
+        },
+        "ledger_entries": 15342,
+        "npc_memories": 2481,
+        "npc_received_reports": 2521,
+        "crisis_events": 205,
+        "military": {
+          "formations": 11,
+          "surviving_manpower": 3443,
+          "supply_ratios": {
+            "army-a": 1.0,
+            "army-b": 1.0,
+            "army-c": 0.0,
+            "army-d": 1.0,
+            "replacement-cohort:benchmark-replacement:12:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:17:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:22:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:27:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:2:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:32:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:7:army-b": 1.0
+          },
+          "losses_by_cause": {
+            "battle_casualties": 408,
+            "capture_missing": 0,
+            "desertion": 46,
+            "disease": 22,
+            "exposure": 19,
+            "hunger": 177,
+            "march_attrition": 0,
+            "naval_loss": 0
+          },
+          "loss_receipts": 184,
+          "operations": 41,
+          "active_operations": 0,
+          "shipments": 35,
+          "delivered_shipments": 35,
+          "procurement_cost": 2384,
+          "replacements": {
+            "benchmark-replacement:12:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:12:army-b",
+              "completed_at": "1898-03-31",
+              "id": "benchmark-replacement:12:army-b",
+              "incorporated_at": "1898-05-01",
+              "manpower": 10,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:12:army-b",
+              "project": "replacement-training:benchmark-replacement:12:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:12:army-b",
+                "date": "1898-03-31",
+                "trained_manpower": 10
+              },
+              "recipient": "army-b",
+              "started_at": "1897-12-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:17:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:17:army-b",
+              "completed_at": "1898-08-29",
+              "id": "benchmark-replacement:17:army-b",
+              "incorporated_at": "1898-10-01",
+              "manpower": 14,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:17:army-b",
+              "project": "replacement-training:benchmark-replacement:17:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:17:army-b",
+                "date": "1898-08-29",
+                "trained_manpower": 14
+              },
+              "recipient": "army-b",
+              "started_at": "1898-05-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:22:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:22:army-b",
+              "completed_at": "1899-01-29",
+              "id": "benchmark-replacement:22:army-b",
+              "incorporated_at": "1899-03-01",
+              "manpower": 12,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:22:army-b",
+              "project": "replacement-training:benchmark-replacement:22:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:22:army-b",
+                "date": "1899-01-29",
+                "trained_manpower": 12
+              },
+              "recipient": "army-b",
+              "started_at": "1898-10-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:27:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:27:army-b",
+              "completed_at": "1899-06-29",
+              "id": "benchmark-replacement:27:army-b",
+              "incorporated_at": "1899-08-01",
+              "manpower": 12,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:27:army-b",
+              "project": "replacement-training:benchmark-replacement:27:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:27:army-b",
+                "date": "1899-06-29",
+                "trained_manpower": 12
+              },
+              "recipient": "army-b",
+              "started_at": "1899-03-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:2:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:2:army-b",
+              "completed_at": "1897-06-01",
+              "id": "benchmark-replacement:2:army-b",
+              "incorporated_at": "1897-07-01",
+              "manpower": 18,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:2:army-b",
+              "project": "replacement-training:benchmark-replacement:2:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:2:army-b",
+                "date": "1897-06-01",
+                "trained_manpower": 18
+              },
+              "recipient": "army-b",
+              "started_at": "1897-02-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:32:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:32:army-b",
+              "completed_at": "1899-11-29",
+              "id": "benchmark-replacement:32:army-b",
+              "manpower": 12,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:32:army-b",
+              "project": "replacement-training:benchmark-replacement:32:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:32:army-b",
+                "date": "1899-11-29",
+                "trained_manpower": 12
+              },
+              "recipient": "army-b",
+              "started_at": "1899-08-01",
+              "status": "ready"
+            },
+            "benchmark-replacement:7:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:7:army-b",
+              "completed_at": "1897-10-29",
+              "id": "benchmark-replacement:7:army-b",
+              "incorporated_at": "1897-12-01",
+              "manpower": 37,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:7:army-b",
+              "project": "replacement-training:benchmark-replacement:7:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:7:army-b",
+                "date": "1897-10-29",
+                "trained_manpower": 37
+              },
+              "recipient": "army-b",
+              "started_at": "1897-07-01",
+              "status": "incorporated"
+            }
+          },
+          "diplomatic_hooks": 41,
+          "politics": {
+            "a": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            },
+            "b": {
+              "casualty_burden": 126,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 115,
+              "requisition_burden": 0,
+              "victory_prestige": 37.17924535349878,
+              "war_exhaustion": 0.1289115941522353,
+              "will_to_continue": null
+            },
+            "c": {
+              "casualty_burden": 546,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0.7869753126943034,
+              "will_to_continue": null
+            },
+            "d": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            }
+          }
+        }
+      },
+      "initial": {
+        "month": 0,
+        "date": "1897-01-01",
+        "countries": {
+          "a": {
+            "population": 10000,
+            "gdp": 0,
+            "treasury": 1000,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 94.73432291786196,
+            "distress_state": "normal",
+            "military_labour": 1000.0,
+            "exports": 0.0,
+            "imports": 0.0,
+            "war_losses": 0
+          },
+          "b": {
+            "population": 10000,
+            "gdp": 0,
+            "treasury": 1000,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 91.70896006429425,
+            "distress_state": "normal",
+            "military_labour": 1000.0,
+            "exports": 0.0,
+            "imports": 0.0,
+            "war_losses": 0
+          },
+          "c": {
+            "population": 10000,
+            "gdp": 0,
+            "treasury": 1000,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 93.71493894670854,
+            "distress_state": "normal",
+            "military_labour": 1000.0,
+            "exports": 0.0,
+            "imports": 0.0,
+            "war_losses": 0
+          },
+          "d": {
+            "population": 10000,
+            "gdp": 0,
+            "treasury": 1000,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 92.70652400608853,
+            "distress_state": "normal",
+            "military_labour": 1000.0,
+            "exports": 0.0,
+            "imports": 0.0,
+            "war_losses": 0
+          }
+        },
+        "ledger_entries": 17,
+        "npc_memories": 16,
+        "npc_received_reports": 36,
+        "crisis_events": 0,
+        "military": {
+          "formations": 4,
+          "surviving_manpower": 4000,
+          "supply_ratios": {
+            "army-a": 1.0,
+            "army-b": 1.0,
+            "army-c": 1.0,
+            "army-d": 1.0
+          },
+          "losses_by_cause": {},
+          "loss_receipts": 0,
+          "operations": 0,
+          "active_operations": 0,
+          "shipments": 0,
+          "delivered_shipments": 0,
+          "procurement_cost": 0,
+          "replacements": {},
+          "diplomatic_hooks": 0,
+          "politics": {
+            "a": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            },
+            "b": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            },
+            "c": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            },
+            "d": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            }
+          }
+        }
+      },
+      "first_month": {
+        "month": 1,
+        "date": "1897-02-01",
+        "countries": {
+          "a": {
+            "population": 10007,
+            "gdp": 6120,
+            "treasury": 931,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 93.54722121442231,
+            "distress_state": "normal",
+            "military_labour": 1008.8,
+            "exports": 11.227994663519052,
+            "imports": 16.228620276320946,
+            "war_losses": 0
+          },
+          "b": {
+            "population": 9995,
+            "gdp": 5854,
+            "treasury": 521,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 91.71338388224699,
+            "distress_state": "normal",
+            "military_labour": 1132.0,
+            "exports": 15.417269176116065,
+            "imports": 11.227994663519052,
+            "war_losses": 12
+          },
+          "c": {
+            "population": 9994,
+            "gdp": 6057,
+            "treasury": 1036,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 93.72546418321042,
+            "distress_state": "normal",
+            "military_labour": 988.2,
+            "exports": 8.72947229868101,
+            "imports": 15.417269176116065,
+            "war_losses": 13
+          },
+          "d": {
+            "population": 10007,
+            "gdp": 6126,
+            "treasury": 975,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 91.52239534721342,
+            "distress_state": "normal",
+            "military_labour": 1008.8,
+            "exports": 16.228620276320946,
+            "imports": 8.72947229868101,
+            "war_losses": 0
+          }
+        },
+        "ledger_entries": 406,
+        "npc_memories": 97,
+        "npc_received_reports": 137,
+        "crisis_events": 5,
+        "military": {
+          "formations": 4,
+          "surviving_manpower": 3963,
+          "supply_ratios": {
+            "army-a": 1.0,
+            "army-b": 1.0,
+            "army-c": 1.0,
+            "army-d": 1.0
+          },
+          "losses_by_cause": {
+            "battle_casualties": 37,
+            "capture_missing": 0,
+            "desertion": 0,
+            "disease": 0,
+            "exposure": 0,
+            "hunger": 0,
+            "march_attrition": 0,
+            "naval_loss": 0
+          },
+          "loss_receipts": 3,
+          "operations": 1,
+          "active_operations": 1,
+          "shipments": 0,
+          "delivered_shipments": 0,
+          "procurement_cost": 0,
+          "replacements": {},
+          "diplomatic_hooks": 3,
+          "politics": {
+            "a": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            },
+            "b": {
+              "casualty_burden": 18,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 1.5987928571889314,
+              "war_exhaustion": 0.01810909179775006,
+              "will_to_continue": null
+            },
+            "c": {
+              "casualty_burden": 19,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0.01912128087674986,
+              "will_to_continue": null
+            },
+            "d": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            }
+          }
+        }
+      },
+      "operation_outcomes": {
+        "statuses": {
+          "completed": 41
+        },
+        "recorded_assessments": {
+          "success": 34
+        },
+        "objective_completion_range": [
+          0.6776852940368637,
+          0.9996769310111282
+        ],
+        "final_control_records": {
+          "rc": {
+            "besieged": false,
+            "contested": false,
+            "controller": "b",
+            "legal_owner": "c",
+            "occupied": true
+          }
+        },
+        "scope": "These are aggregate operation assessments, not a count of individual battles or automatic fulfillment of political war aims."
+      },
+      "political_replacement_receipts": {
+        "total": 7,
+        "by_mode": {
+          "explicit_player_approval": 7
+        },
+        "by_choice": {
+          "replenish": 7
+        },
+        "consumed_by_paid_cohort": 7,
+        "scope": "The fixed campaign controller explicitly authorizes its replacement orders. Independent NPC replenishment/defer/reduce decisions are covered by separate genuine unit/API tests, not silently claimed as autonomous national war planning."
+      }
+    },
+    "expeditionary_sea": {
+      "months": 36,
+      "seed": 1731,
+      "total_seconds": 10653.797329299996,
+      "database_bytes": 142180352,
+      "final_logical_sha256": "6ea4978699a8168341ff1bcccacf8a961cc41153e566818987ac80d36637e56d",
+      "final": {
+        "month": 36,
+        "date": "1900-01-01",
+        "countries": {
+          "a": {
+            "population": 10256,
+            "gdp": 4456,
+            "treasury": 961,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 94.26673418579995,
+            "distress_state": "normal",
+            "military_labour": 604.0,
+            "exports": 3.321205794239174,
+            "imports": 9.477596667965123,
+            "war_losses": 0
+          },
+          "b": {
+            "population": 9770,
+            "gdp": 3728,
+            "treasury": 0,
+            "debt": 3009,
+            "arrears": 0,
+            "creditworthiness": 62.77189613850732,
+            "distress_state": "stressed",
+            "military_labour": 527.0,
+            "exports": 6.714609750562029,
+            "imports": 3.321205794239174,
+            "war_losses": 479
+          },
+          "c": {
+            "population": 10030,
+            "gdp": 3624,
+            "treasury": 1875,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 94.42023757436236,
+            "distress_state": "normal",
+            "military_labour": 459.4,
+            "exports": 3.120178221314943,
+            "imports": 6.714609750562029,
+            "war_losses": 223
+          },
+          "d": {
+            "population": 10256,
+            "gdp": 4399,
+            "treasury": 983,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 92.5675164157601,
+            "distress_state": "normal",
+            "military_labour": 604.0,
+            "exports": 9.477596667965123,
+            "imports": 3.120178221314943,
+            "war_losses": 0
+          }
+        },
+        "ledger_entries": 19261,
+        "npc_memories": 2361,
+        "npc_received_reports": 2401,
+        "crisis_events": 109,
+        "military": {
+          "formations": 15,
+          "surviving_manpower": 2067,
+          "supply_ratios": {
+            "army-a": 1.0,
+            "army-b": 1.0,
+            "army-c": 1.0,
+            "army-d": 1.0,
+            "b-invasion-fleet": 1.0,
+            "b-transport": 1.0,
+            "b-transport-navy": 1.0,
+            "c-fleet": 1.0,
+            "replacement-cohort:benchmark-replacement:12:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:17:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:22:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:27:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:2:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:32:army-b": 1.0,
+            "replacement-cohort:benchmark-replacement:7:army-b": 1.0
+          },
+          "losses_by_cause": {
+            "battle_casualties": 611,
+            "capture_missing": 37,
+            "desertion": 5,
+            "disease": 4,
+            "exposure": 0,
+            "hunger": 23,
+            "march_attrition": 0,
+            "naval_loss": 64
+          },
+          "loss_receipts": 98,
+          "operations": 110,
+          "active_operations": 0,
+          "shipments": 36,
+          "delivered_shipments": 36,
+          "procurement_cost": 690,
+          "replacements": {
+            "benchmark-replacement:12:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:12:army-b",
+              "completed_at": "1898-03-31",
+              "id": "benchmark-replacement:12:army-b",
+              "incorporated_at": "1898-05-01",
+              "manpower": 30,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:12:army-b",
+              "project": "replacement-training:benchmark-replacement:12:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:12:army-b",
+                "date": "1898-03-31",
+                "trained_manpower": 30
+              },
+              "recipient": "army-b",
+              "started_at": "1897-12-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:17:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:17:army-b",
+              "completed_at": "1898-08-29",
+              "id": "benchmark-replacement:17:army-b",
+              "incorporated_at": "1898-10-01",
+              "manpower": 30,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:17:army-b",
+              "project": "replacement-training:benchmark-replacement:17:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:17:army-b",
+                "date": "1898-08-29",
+                "trained_manpower": 30
+              },
+              "recipient": "army-b",
+              "started_at": "1898-05-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:22:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:22:army-b",
+              "completed_at": "1899-01-29",
+              "id": "benchmark-replacement:22:army-b",
+              "incorporated_at": "1899-03-01",
+              "manpower": 30,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:22:army-b",
+              "project": "replacement-training:benchmark-replacement:22:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:22:army-b",
+                "date": "1899-01-29",
+                "trained_manpower": 30
+              },
+              "recipient": "army-b",
+              "started_at": "1898-10-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:27:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:27:army-b",
+              "completed_at": "1899-06-29",
+              "id": "benchmark-replacement:27:army-b",
+              "incorporated_at": "1899-08-01",
+              "manpower": 30,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:27:army-b",
+              "project": "replacement-training:benchmark-replacement:27:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:27:army-b",
+                "date": "1899-06-29",
+                "trained_manpower": 30
+              },
+              "recipient": "army-b",
+              "started_at": "1899-03-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:2:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:2:army-b",
+              "completed_at": "1897-06-01",
+              "id": "benchmark-replacement:2:army-b",
+              "incorporated_at": "1897-07-01",
+              "manpower": 11,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:2:army-b",
+              "project": "replacement-training:benchmark-replacement:2:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:2:army-b",
+                "date": "1897-06-01",
+                "trained_manpower": 11
+              },
+              "recipient": "army-b",
+              "started_at": "1897-02-01",
+              "status": "incorporated"
+            },
+            "benchmark-replacement:32:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:32:army-b",
+              "completed_at": "1899-11-29",
+              "id": "benchmark-replacement:32:army-b",
+              "manpower": 30,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:32:army-b",
+              "project": "replacement-training:benchmark-replacement:32:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:32:army-b",
+                "date": "1899-11-29",
+                "trained_manpower": 30
+              },
+              "recipient": "army-b",
+              "started_at": "1899-08-01",
+              "status": "ready"
+            },
+            "benchmark-replacement:7:army-b": {
+              "cohort": "replacement-cohort:benchmark-replacement:7:army-b",
+              "completed_at": "1897-10-29",
+              "id": "benchmark-replacement:7:army-b",
+              "incorporated_at": "1897-12-01",
+              "manpower": 30,
+              "minimum_duration": 90,
+              "political_decision_id": "replacement-approval:benchmark-replacement:7:army-b",
+              "project": "replacement-training:benchmark-replacement:7:army-b",
+              "receipt": {
+                "cohort": "replacement-cohort:benchmark-replacement:7:army-b",
+                "date": "1897-10-29",
+                "trained_manpower": 30
+              },
+              "recipient": "army-b",
+              "started_at": "1897-07-01",
+              "status": "incorporated"
+            }
+          },
+          "diplomatic_hooks": 71,
+          "politics": {
+            "a": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            },
+            "b": {
+              "casualty_burden": 521,
+              "defeat_grievance": 58.69154422089821,
+              "fiscal_strain": 0,
+              "mobilization_burden": 191,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 2.030877154709244,
+              "will_to_continue": null
+            },
+            "c": {
+              "casualty_burden": 223,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 1.07122780323606,
+              "will_to_continue": null
+            },
+            "d": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            }
+          }
+        }
+      },
+      "initial": {
+        "month": 0,
+        "date": "1897-01-01",
+        "countries": {
+          "a": {
+            "population": 10000,
+            "gdp": 0,
+            "treasury": 1000,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 94.98671405087366,
+            "distress_state": "normal",
+            "military_labour": 600.0,
+            "exports": 0.0,
+            "imports": 0.0,
+            "war_losses": 0
+          },
+          "b": {
+            "population": 10000,
+            "gdp": 0,
+            "treasury": 1000,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 92.10020194832396,
+            "distress_state": "normal",
+            "military_labour": 740.0,
+            "exports": 0.0,
+            "imports": 0.0,
+            "war_losses": 0
+          },
+          "c": {
+            "population": 10000,
+            "gdp": 0,
+            "treasury": 1000,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 94.01462906116974,
+            "distress_state": "normal",
+            "military_labour": 680.0,
+            "exports": 0.0,
+            "imports": 0.0,
+            "war_losses": 0
+          },
+          "d": {
+            "population": 10000,
+            "gdp": 0,
+            "treasury": 1000,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 93.05249229671658,
+            "distress_state": "normal",
+            "military_labour": 600.0,
+            "exports": 0.0,
+            "imports": 0.0,
+            "war_losses": 0
+          }
+        },
+        "ledger_entries": 21,
+        "npc_memories": 16,
+        "npc_received_reports": 36,
+        "crisis_events": 0,
+        "military": {
+          "formations": 8,
+          "surviving_manpower": 2620,
+          "supply_ratios": {
+            "army-a": 1.0,
+            "army-b": 1.0,
+            "army-c": 1.0,
+            "army-d": 1.0,
+            "b-invasion-fleet": 1.0,
+            "b-transport": 1.0,
+            "b-transport-navy": 1.0,
+            "c-fleet": 1.0
+          },
+          "losses_by_cause": {},
+          "loss_receipts": 0,
+          "operations": 0,
+          "active_operations": 0,
+          "shipments": 0,
+          "delivered_shipments": 0,
+          "procurement_cost": 0,
+          "replacements": {},
+          "diplomatic_hooks": 0,
+          "politics": {
+            "a": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            },
+            "b": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            },
+            "c": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            },
+            "d": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            }
+          }
+        }
+      },
+      "first_month": {
+        "month": 1,
+        "date": "1897-02-01",
+        "countries": {
+          "a": {
+            "population": 10007,
+            "gdp": 4062,
+            "treasury": 978,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 93.5182825373756,
+            "distress_state": "normal",
+            "military_labour": 606.4,
+            "exports": 3.1671848127362585,
+            "imports": 7.111480616709556,
+            "war_losses": 0
+          },
+          "b": {
+            "population": 9996,
+            "gdp": 3860,
+            "treasury": 666,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 92.11310461923156,
+            "distress_state": "normal",
+            "military_labour": 879.0,
+            "exports": 6.361748747529111,
+            "imports": 3.1671848127362585,
+            "war_losses": 11
+          },
+          "c": {
+            "population": 9997,
+            "gdp": 4007,
+            "treasury": 1019,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 94.03028290028661,
+            "distress_state": "normal",
+            "military_labour": 675.6,
+            "exports": 2.66375467047631,
+            "imports": 6.361748747529111,
+            "war_losses": 10
+          },
+          "d": {
+            "population": 10007,
+            "gdp": 4065,
+            "treasury": 978,
+            "debt": 0,
+            "arrears": 0,
+            "creditworthiness": 91.64621614811898,
+            "distress_state": "normal",
+            "military_labour": 606.4,
+            "exports": 7.111480616709556,
+            "imports": 2.66375467047631,
+            "war_losses": 0
+          }
+        },
+        "ledger_entries": 499,
+        "npc_memories": 72,
+        "npc_received_reports": 112,
+        "crisis_events": 2,
+        "military": {
+          "formations": 8,
+          "surviving_manpower": 2599,
+          "supply_ratios": {
+            "army-a": 1.0,
+            "army-b": 1.0,
+            "army-c": 1.0,
+            "army-d": 1.0,
+            "b-invasion-fleet": 1.0,
+            "b-transport": 1.0,
+            "b-transport-navy": 1.0,
+            "c-fleet": 1.0
+          },
+          "losses_by_cause": {
+            "battle_casualties": 21,
+            "capture_missing": 0,
+            "desertion": 0,
+            "disease": 0,
+            "exposure": 0,
+            "hunger": 0,
+            "march_attrition": 0,
+            "naval_loss": 0
+          },
+          "loss_receipts": 1,
+          "operations": 2,
+          "active_operations": 1,
+          "shipments": 0,
+          "delivered_shipments": 0,
+          "procurement_cost": 0,
+          "replacements": {},
+          "diplomatic_hooks": 1,
+          "politics": {
+            "a": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            },
+            "b": {
+              "casualty_burden": 11,
+              "defeat_grievance": 0.5057765143757333,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0.018333333333333333,
+              "will_to_continue": null
+            },
+            "c": {
+              "casualty_burden": 10,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0.016666666666666666,
+              "will_to_continue": null
+            },
+            "d": {
+              "casualty_burden": 0,
+              "defeat_grievance": 0,
+              "fiscal_strain": 0,
+              "mobilization_burden": 0,
+              "requisition_burden": 0,
+              "victory_prestige": 0,
+              "war_exhaustion": 0,
+              "will_to_continue": null
+            }
+          }
+        }
+      },
+      "operation_outcomes": {
+        "statuses": {
+          "completed": 110
+        },
+        "recorded_assessments": {
+          "setback": 71
+        },
+        "objective_completion_range": [
+          0.0,
+          0.49422348562426666
+        ],
+        "final_control_records": {},
+        "scope": "These are aggregate operation assessments, not a count of individual battles or automatic fulfillment of political war aims."
+      },
+      "political_replacement_receipts": {
+        "total": 7,
+        "by_mode": {
+          "explicit_player_approval": 7
+        },
+        "by_choice": {
+          "replenish": 7
+        },
+        "consumed_by_paid_cohort": 7,
+        "scope": "The fixed campaign controller explicitly authorizes its replacement orders. Independent NPC replenishment/defer/reduce decisions are covered by separate genuine unit/API tests, not silently claimed as autonomous national war planning."
+      }
+    }
+  },
+  "save_load_comparison": {
+    "equal": true,
+    "differences": [],
+    "reference_sha256": "c694317c63a456239d1a5f1f88a4e13825c177ce85b540e1c797167b8e07e92b",
+    "replay_sha256": "c694317c63a456239d1a5f1f88a4e13825c177ce85b540e1c797167b8e07e92b",
+    "reference_months": 36,
+    "replay_months": 36,
+    "restored_at_month": 18,
+    "actual_restored_run_seconds": 8652.497981699998,
+    "monthly_statistics_equal": true,
+    "dated_actions_equal": true,
+    "actual_database_dates": {
+      "game.sqlite": "1898-07-01",
+      "continued.sqlite": "1900-01-01"
+    }
+  },
+  "performance": {
+    "months": 3,
+    "elapsed_ratio": 3.871657201194031,
+    "method": "Sequential actual SQLite Engine, daily full auditing; same initial economies and actors. Military activation, supplies, combat, training and resulting NPC/Crisis responses have real costs; this is feature overhead, not an identical-outcome optimization comparison."
+  },
+  "normalization_equality": true,
+  "immutable_archive_integrity": {
+    "source_sha256": {
+      "__init__.py": "becd7c5217666290ce7b6ab5f0b8e4f9515dfbffbf306f2777fb037e162e2f78",
+      "__main__.py": "b71170e9a95954c9091eb11fb0c5c7eca996d02d8b326c93b820be22bb053ad8",
+      "audit.py": "ccbe7f7c28da8e37d325082701817c47c3f32502fe1757676c65d1a5c79467f4",
+      "benchmark.py": "b56ad7ae7c26306cf53591c4f0f3a53027e6e11aeb240452c282499b3405c02a",
+      "calibration.py": "d164971ea2e4a21a52a401c97044cd66d8ad0af8d8777318dc8a5de90b04e68f",
+      "calibration_report.py": "ec3ec783d40e2cd369c951d0d72ef8020f7c411c196e06a478741443a677ccbb",
+      "credit.py": "0696c89c853bfa1683c67b69f6a0bd6554adaaa00851b1022bf9f75cfcdaa51c",
+      "crisis.py": "184aace25d0ef9e53c8f67b4f098aa5798c3fdaedc3de8f9692cead952146b14",
+      "crisis_benchmark.py": "77e733f8853422eca25c23371f918503e87de874ea6cac8af6ebee23bf01c734",
+      "crisis_effects.py": "e30138d6a494678d7f11ec535ac4e6e92fd19ca350c8ee7b79998995eb2bba74",
+      "crisis_response.py": "ef00d4a72b7f4e901462547ee8941fcb594007e9fd549e94409fa6bed18136d0",
+      "crisis_risk.py": "2ce9050ebee40c8a40390195be58817938021ee8104fc58335c935ee55b33d5c",
+      "crisis_state.py": "21d365674f53a94bbd55f87858eb7f1350307dd1318812983560a6b3c4b4c694",
+      "demography.py": "f7c4ee52c141347657056de76d9f4c2d65caa6b215e398b9e4d950a957b2a220",
+      "economy.py": "df0be6370d9f156eef4da0dfc65466fa29d185a7201e1b55634c05ad6406d41a",
+      "engine.py": "4ab30ff52968879c0a8f786e5f65171fe0e477ead2549a3f14a3180e38325815",
+      "guardrails.py": "ba89f34996f6815aec2be7562ad0a8b4ea362eb2b5637b8866001521c3a41242",
+      "labour.py": "667a36b48b75410b23f34f60e21a5f4eab493e0884de3e31f4727cebbe701541",
+      "military.py": "09b2382452a940e04c6137d9cb293e1f93c5a7241605a95a00a593da168ee6a5",
+      "military_benchmark.py": "5887c34cafd2c594251ad5bcbf6dd941eeeec2d55ca5234620b9f368fc39b073",
+      "military_bridge.py": "f8a1be0d2eb1f4ab6c90a5b396bdca7c762bc84412fafcce0e0380cb57fd6d4a",
+      "military_combat.py": "7e0b7484877c8966ed7a7a6cc9e68410df4257be9a5e20afb86885c9bb94ff79",
+      "military_innovation.py": "07831bbf9960ab649554fabd2b924035bb36d575bf047a46d06572ebc810f580",
+      "military_innovation_benchmark.py": "b1d32a62d41e45ed2c20749898e4b2d24cd64366ca2feafc10aa6e633b07b20e",
+      "military_logistics.py": "7fb438763a5c8a0f1fcc9b62facafbb4f6da1423647f3694750d11318ca720d4",
+      "military_operations.py": "02df9673c7637e8fffaf4202102127e5414679f534054d5214ebf3c6ea934a51",
+      "military_politics.py": "5f460f0448d83b005d15005ac427304568cd58ac4043b31710ec784c85c14e4c",
+      "military_state.py": "fbbb7677f3e8e2551ed4ae783ba308bdae084259e5c8bacf3dd34b396e446e3e",
+      "models.py": "ea73b82a03e221255af543a7d004b5d9ee2bec305ddd69a13bf11f13bd8224d4",
+      "npc.py": "4ae0e0b77ba47be69832a56d54279ea51a58709611b3a286469bd96664979a0b",
+      "npc_benchmark.py": "30a05c336d3182476a8f8e6a74a6b8c8c52f885ec7040601fda8d49e988245d1",
+      "npc_decision.py": "d7ece4636aac80394235ac6b9b6b133559826abadac3dd7dc032b9d2bc99804b",
+      "npc_runtime.py": "4ff7273f86b1814ae6ceeb8c6a3983a1cfa7fbf838cec7e28fb7520bd2b3503c",
+      "npc_state.py": "e46dbf85530a510c906d5b8d3a823e0d213d6987f73150debeee2cc76ea80c3a",
+      "order_execution.py": "902f39901d3ab4ad0747e462699242b9dd4ca832d09f84dfa4bafca6aa4a499f",
+      "performance_benchmark.py": "48c303f855b627e4c9367692c4a81bcbcc98b26b3ae08cd2abea895b2c65d4cd",
+      "persistence.py": "953de44b524fef4f112b0ab8bbfd662ba9b6a40cd2353d05b46a690029b23a3a",
+      "projects.py": "f13f5554c506d55fd21753515a75712b3ee4e296295b13e21c6dafe5dda33dfd",
+      "stabilization_benchmark.py": "af5d447ce6d4f65146a4e08ce1dba9a46a2aa6f6ad1d7a5c6106f9affa65254c",
+      "state_storage.py": "3f565549442eceffb8ead97e5ef3cd1f31d9292d04fae1807cdf0a0e6dafecf0"
+    },
+    "source_files": 40,
+    "months": 36,
+    "all_passed": true,
+    "created_at_utc": "2026-10-02T00:27:13.285392+00:00",
+    "method": "Read-only all-blob decompression/length/SHA/canonical JSON, catalog/head and political metadata identity, SQLite integrity/foreign keys; no simulation.",
+    "databases": {
+      "preindustrial_border": {
+        "objects": 17285,
+        "raw_object_bytes": 101313987,
+        "compressed_payload_bytes": 16934360,
+        "object_sha256_checks": 17285,
+        "object_length_checks": 17285,
+        "object_json_checks": 17285,
+        "canonical_json_checks": 17285,
+        "catalog_reference_checks": 20248,
+        "head_reference_checks": 16198,
+        "political_catalog_body_identity_checks": 14,
+        "missing_head_catalog_entries": 0,
+        "foreign_key_error_count": 0,
+        "sqlite_integrity_check": "ok",
+        "all_object_digests_valid": true,
+        "all_head_catalog_references_valid": true,
+        "all_passed": true,
+        "path": "benchmarks/military/preindustrial_border/game.sqlite",
+        "database_bytes": 144138240,
+        "database_file_sha256": "f3c2aee812f9a728113a4edf59d5c56619459daff2df2e2df8937f28e006855d",
+        "months": 36,
+        "raw_world_rng_ledger_equal": true
+      },
+      "industrial_front": {
+        "objects": 15153,
+        "raw_object_bytes": 117912321,
+        "compressed_payload_bytes": 18348239,
+        "object_sha256_checks": 15153,
+        "object_length_checks": 15153,
+        "object_json_checks": 15153,
+        "canonical_json_checks": 15153,
+        "catalog_reference_checks": 18724,
+        "head_reference_checks": 15066,
+        "political_catalog_body_identity_checks": 7,
+        "missing_head_catalog_entries": 0,
+        "foreign_key_error_count": 0,
+        "sqlite_integrity_check": "ok",
+        "all_object_digests_valid": true,
+        "all_head_catalog_references_valid": true,
+        "all_passed": true,
+        "path": "benchmarks/military/industrial_front/game.sqlite",
+        "database_bytes": 159346688,
+        "database_file_sha256": "be696d336698a219e45e79f603952bc82a6aedb4d064390154ac8e967ad9d22d",
+        "months": 36,
+        "raw_world_rng_ledger_equal": true
+      },
+      "expeditionary_sea": {
+        "objects": 18368,
+        "raw_object_bytes": 99605174,
+        "compressed_payload_bytes": 16238414,
+        "object_sha256_checks": 18368,
+        "object_length_checks": 18368,
+        "object_json_checks": 18368,
+        "canonical_json_checks": 18368,
+        "catalog_reference_checks": 21863,
+        "head_reference_checks": 18641,
+        "political_catalog_body_identity_checks": 7,
+        "missing_head_catalog_entries": 0,
+        "foreign_key_error_count": 0,
+        "sqlite_integrity_check": "ok",
+        "all_object_digests_valid": true,
+        "all_head_catalog_references_valid": true,
+        "all_passed": true,
+        "path": "benchmarks/military/expeditionary_sea/game.sqlite",
+        "database_bytes": 142180352,
+        "database_file_sha256": "c172115fa603308cbb156517dcd6b6fa85c5f55505d6d67d025762aa287541b7",
+        "months": 36,
+        "raw_world_rng_ledger_equal": true
+      },
+      "industrial_restore": {
+        "objects": 15153,
+        "raw_object_bytes": 117912321,
+        "compressed_payload_bytes": 18348239,
+        "object_sha256_checks": 15153,
+        "object_length_checks": 15153,
+        "object_json_checks": 15153,
+        "canonical_json_checks": 15153,
+        "catalog_reference_checks": 18724,
+        "head_reference_checks": 15066,
+        "political_catalog_body_identity_checks": 7,
+        "missing_head_catalog_entries": 0,
+        "foreign_key_error_count": 0,
+        "sqlite_integrity_check": "ok",
+        "all_object_digests_valid": true,
+        "all_head_catalog_references_valid": true,
+        "all_passed": true,
+        "path": "benchmarks/military/industrial_restore/continued.sqlite",
+        "database_bytes": 159748096,
+        "database_file_sha256": "cfbb0dc402ec300db20ae6c61168ea6f88eceedcdceb7a11549c15ab54b3e755",
+        "months": 36,
+        "raw_world_rng_ledger_equal": true
+      }
+    }
+  },
+  "independent_qa_file": "independent_qa.json",
+  "final_collected_testcases": 1136,
+  "evidence_files_sha256": {
+    "pytest-original-751.xml": "6942cffe242fdca2e5b2358f1cd127f90a8e9c6a6ff6f5b3b9431ff3536463a1",
+    "pytest-new-fast.xml": "070e6c537446ac89b431c9c63cc7096d59fde3f8dcf76438690694212b9d434b",
+    "pytest-new-campaign.xml": "a72272f0f3ad979a9616d64391a80cf2c6023ad399c42c82f84c770bbb58faa1",
+    "pytest-new.xml": "b25fb076838b809b99e1ff881357cd72f9e0240dfedf53e711322d4de1e2b065",
+    "pytest-combined.xml": "17af1a030a326ae3447d46e67a9881e30d101813b45f7029dc9f9e97361b93d7",
+    "pytest-original-751.run.json": "0f20462f15ee153cf25f79db3845efe5f266455a148c21259ac4a57eb920cdf9",
+    "pytest-new-fast.run.json": "a18a5820237ff134f1c24bbc42a0f3b3ab47d2a5de0193a3200ab1d031e49366",
+    "pytest-new-campaign.run.json": "c48737dd75d7431482454949b542d457cd2b3dfe38c932a6503f6d39eee283ca",
+    "innovation_results.json": "2abe14672fc0e3cb0dd2fc7b12a974e0fc02ea6073ef28e73be907d0eebe329c",
+    "volley_training_followup.json": "776744d973dd124b6d046ec8bf586b17ff3fd87f1c8a0c90399be996a8d893cd",
+    "final_profile.json": "3975cb12c2633d9bf5a250b32a39d661aa85206748953389664f7a8191bc36c0",
+    "final_profile.txt": "d49a7d75171b755d8f1fad09872d56ce105ae9eba4dec5b87c004831ebdb43dd",
+    "archive_integrity.json": "de04ae2857da26861c969ffcdac77f8becd3c3d7461629327e84cbfca842e5f8",
+    "preflight_six_months.json": "cfb6deeaf716636aa455be79ca18120d3b3283d01bb2351f6dfa13fe6915d228",
+    "independent_qa.json": "3c59b7f0435d91f1c2744223d471fb75c08620c265bceca5a7994da26f4e60cd",
+    "performance/performance.json": "98d70e7dfae47a0423548745e80adfffa139cf6fd7d4dcbd965fb84b22c3db09",
+    "normalization_cost.json": "bcbb73b96ca40b961f06773511fa2132b08494082633bd9c3e2031494761db45",
+    "preindustrial_border/result.json.gz": "a161714a5896dd083b43af95b166f8532521905c6955cb21a3d48dc76d4d9f92",
+    "industrial_front/result.json.gz": "7d9dfcee561fa4caee26d94306686c3ab1865a74e253c9b2f3fc4741f54c6e82",
+    "expeditionary_sea/result.json.gz": "c1109ac130ab38869c94fb2a8184cd6481fb350aa1cd7a3cdcdc68a49f0b9e3d",
+    "industrial_restore/result.json.gz": "1f87e0add3dde3dc568d82cc42243b95608e8a8d2b2ef1d388aea0ede765d5fe",
+    "preindustrial_border/midpoint.json": "f9a78991198ad94a6d9bf8aa7b2ed9fbd8235bdfd598120e2929fea183f9150b",
+    "industrial_front/midpoint.json": "407ec4b2ece8403bd454c4c91b3428f6810d4aaa4d5cb4b2d3560b46d50c3224",
+    "expeditionary_sea/midpoint.json": "5db3687c969856438d867e8c156022f3baa04843ee7cc94dc5190241450c72fd",
+    "industrial_restore/midpoint.json": "407ec4b2ece8403bd454c4c91b3428f6810d4aaa4d5cb4b2d3560b46d50c3224",
+    "preindustrial_border/run_metadata.json": "848597f6d31c405e81cc2451feddb5e633530621321a761283c06db1fe34e6ec",
+    "industrial_front/run_metadata.json": "d708b2747e675e05e76dceebe229335206479c6386d63ee57c7eead81e6f2cf4",
+    "expeditionary_sea/run_metadata.json": "01c95f7f4792c851afac3603973bfd988451e388142cf6a0ee4c99ee47d9a87e",
+    "industrial_restore/run_metadata.json": "75f387f6b179be7009eb721fb91092ae6fd055c986b4bfcc2d5093781d02314d"
+  }
+}

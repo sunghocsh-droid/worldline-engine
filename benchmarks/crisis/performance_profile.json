@@ -1,0 +1,1042 @@
+{
+  "method": "One genuine production month after restoring validated month-180 checkpoint; unchanged monthly Auditor; no SQLite IO; cProfile overhead included; no monkeypatching",
+  "profiled_months": 1,
+  "restore_seconds": 4.359759999992093,
+  "profiled_month_seconds": 24.496766600001138,
+  "checkpoint_path": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\benchmarks\\crisis\\replay_checkpoint.json.gz",
+  "checkpoint_bytes": 5559513,
+  "source_sha256": {
+    "__init__.py": "becd7c5217666290ce7b6ab5f0b8e4f9515dfbffbf306f2777fb037e162e2f78",
+    "__main__.py": "b71170e9a95954c9091eb11fb0c5c7eca996d02d8b326c93b820be22bb053ad8",
+    "audit.py": "be92dc1fde298a55ffadfb40314b405c7c34c4acda13f2408a1479dff6df18ac",
+    "benchmark.py": "b56ad7ae7c26306cf53591c4f0f3a53027e6e11aeb240452c282499b3405c02a",
+    "calibration.py": "d164971ea2e4a21a52a401c97044cd66d8ad0af8d8777318dc8a5de90b04e68f",
+    "calibration_report.py": "ec3ec783d40e2cd369c951d0d72ef8020f7c411c196e06a478741443a677ccbb",
+    "credit.py": "0696c89c853bfa1683c67b69f6a0bd6554adaaa00851b1022bf9f75cfcdaa51c",
+    "crisis.py": "184aace25d0ef9e53c8f67b4f098aa5798c3fdaedc3de8f9692cead952146b14",
+    "crisis_benchmark.py": "77e733f8853422eca25c23371f918503e87de874ea6cac8af6ebee23bf01c734",
+    "crisis_effects.py": "e30138d6a494678d7f11ec535ac4e6e92fd19ca350c8ee7b79998995eb2bba74",
+    "crisis_response.py": "13d4f37ff39ed2e75059eae2eb243cb1137b21de5d385f171a63d28da1f5c69e",
+    "crisis_risk.py": "2ce9050ebee40c8a40390195be58817938021ee8104fc58335c935ee55b33d5c",
+    "crisis_state.py": "21d365674f53a94bbd55f87858eb7f1350307dd1318812983560a6b3c4b4c694",
+    "demography.py": "f7c4ee52c141347657056de76d9f4c2d65caa6b215e398b9e4d950a957b2a220",
+    "economy.py": "d570fa881cba02832342315f99e3a902c6cb57da3b767b387ddfd07eb2898261",
+    "engine.py": "c5f26243306edb873348c91b3a837a90690ca03febad4efa68db009c656cb297",
+    "guardrails.py": "ba89f34996f6815aec2be7562ad0a8b4ea362eb2b5637b8866001521c3a41242",
+    "labour.py": "667a36b48b75410b23f34f60e21a5f4eab493e0884de3e31f4727cebbe701541",
+    "models.py": "fac43f04005cf7455781dfc9681a84ce6072ad84020371157e179c9783710b70",
+    "npc.py": "e797b560d8482508f16744eac6b592358221f1fb2ff82d537e0d8d5e60f4da11",
+    "npc_benchmark.py": "7772bad51654eba5461160a073086a8416cc92ec6c687b3f45b19ba372038ad9",
+    "npc_decision.py": "7061517ea254e5a28f1629be1d7d419082f69d255a9455fd216d97fe522f0fe3",
+    "npc_state.py": "5ab90b976b691d125c823761aebac4f0a95145df569fef8988231405d227d549",
+    "order_execution.py": "1096dfe3a57259b1ec8e04e33a3428c1f767920f619b0fa5a1b9789694ff2fe6",
+    "persistence.py": "160d1021f535f50eb49ca8372bd48b52672d31d15e9c9f42f25acafae2f2da54",
+    "projects.py": "4e102ea361db9f97219ae09f0686e2a040c5e7849902f86da89ecc41830f76a3",
+    "stabilization_benchmark.py": "af5d447ce6d4f65146a4e08ce1dba9a46a2aa6f6ad1d7a5c6106f9affa65254c"
+  },
+  "opening_history": {
+    "date": "1912-01-01",
+    "countries": 4,
+    "regions": 4,
+    "persons": 20,
+    "events": 75,
+    "active_events": 2,
+    "effects": 565,
+    "pending_effects": 0,
+    "messages": 1376,
+    "pending_messages": 0,
+    "pending_decisions": 0,
+    "streams": 668,
+    "npc_records": 937,
+    "npc_reports": 5212,
+    "npc_memories": 5172,
+    "npc_actions": 128,
+    "retained_crisis_trace_entries": 3654,
+    "full_system_event_count": 17256
+  },
+  "closing_history": {
+    "date": "1912-02-01",
+    "countries": 4,
+    "regions": 4,
+    "persons": 20,
+    "events": 75,
+    "active_events": 2,
+    "effects": 565,
+    "pending_effects": 0,
+    "messages": 1376,
+    "pending_messages": 0,
+    "pending_decisions": 0,
+    "streams": 668,
+    "npc_records": 941,
+    "npc_reports": 5232,
+    "npc_memories": 5192,
+    "npc_actions": 128,
+    "retained_crisis_trace_entries": 3658,
+    "full_system_event_count": 17323
+  },
+  "total_calls": 50976860,
+  "primitive_calls": 41755077,
+  "top_cumulative": [
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_benchmark.py",
+      "line": 165,
+      "function": "month",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 0.0097234,
+      "cumulative_seconds": 24.496639100000003
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+      "line": 118,
+      "function": "deepcopy",
+      "primitive_calls": 71167,
+      "calls": 7708364,
+      "self_seconds": 8.307746700000001,
+      "cumulative_seconds": 16.8889079
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+      "line": 217,
+      "function": "_deepcopy_dict",
+      "primitive_calls": 74187,
+      "calls": 568721,
+      "self_seconds": 2.7624922,
+      "cumulative_seconds": 16.5263382
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc.py",
+      "line": 465,
+      "function": "tick",
+      "primitive_calls": 31,
+      "calls": 31,
+      "self_seconds": 0.0385271,
+      "cumulative_seconds": 15.0145549
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_state.py",
+      "line": 490,
+      "function": "actor_view",
+      "primitive_calls": 110,
+      "calls": 110,
+      "self_seconds": 0.0794339,
+      "cumulative_seconds": 9.7593142
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+      "line": 191,
+      "function": "_deepcopy_list",
+      "primitive_calls": 92939,
+      "calls": 109305,
+      "self_seconds": 0.2078471,
+      "cumulative_seconds": 8.0402655
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_state.py",
+      "line": 277,
+      "function": "effective_memory",
+      "primitive_calls": 174,
+      "calls": 174,
+      "self_seconds": 0.1307265,
+      "cumulative_seconds": 6.873380200000001
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis.py",
+      "line": 525,
+      "function": "tick",
+      "primitive_calls": 31,
+      "calls": 31,
+      "self_seconds": 0.006771900000000001,
+      "cumulative_seconds": 6.6459985
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_response.py",
+      "line": 639,
+      "function": "process_due",
+      "primitive_calls": 31,
+      "calls": 31,
+      "self_seconds": 0.0397828,
+      "cumulative_seconds": 5.9883085000000005
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_response.py",
+      "line": 572,
+      "function": "_local",
+      "primitive_calls": 62,
+      "calls": 62,
+      "self_seconds": 0.0150135,
+      "cumulative_seconds": 5.734369200000001
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_state.py",
+      "line": 412,
+      "function": "evaluate_ruler",
+      "primitive_calls": 64,
+      "calls": 64,
+      "self_seconds": 0.022328,
+      "cumulative_seconds": 4.9105438
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc.py",
+      "line": 243,
+      "function": "options_for",
+      "primitive_calls": 32,
+      "calls": 32,
+      "self_seconds": 0.0104176,
+      "cumulative_seconds": 4.279336300000001
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc.py",
+      "line": 408,
+      "function": "_run_council",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 0.0084559,
+      "cumulative_seconds": 3.8290301
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_state.py",
+      "line": 452,
+      "function": "_evaluate_known",
+      "primitive_calls": 64,
+      "calls": 64,
+      "self_seconds": 0.08182740000000001,
+      "cumulative_seconds": 3.2756927
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'get' of 'dict' objects>",
+      "primitive_calls": 17453015,
+      "calls": 17453015,
+      "self_seconds": 3.2168404,
+      "cumulative_seconds": 3.2168404
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_state.py",
+      "line": 43,
+      "function": "_json",
+      "primitive_calls": 1551,
+      "calls": 1551,
+      "self_seconds": 0.017022000000000002,
+      "cumulative_seconds": 2.6836046000000002
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc.py",
+      "line": 351,
+      "function": "execute_intent",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 0.0001061,
+      "cumulative_seconds": 2.3360558
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\order_execution.py",
+      "line": 28,
+      "function": "execute",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 0.0173876,
+      "cumulative_seconds": 2.3357841
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\order_execution.py",
+      "line": 41,
+      "function": "validate_order",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 6.64e-05,
+      "cumulative_seconds": 2.3179064
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\order_execution.py",
+      "line": 24,
+      "function": "economic_candidate",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 0.006393200000000001,
+      "cumulative_seconds": 2.3176233
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+      "line": 247,
+      "function": "_reconstruct",
+      "primitive_calls": 536,
+      "calls": 600,
+      "self_seconds": 0.0012669,
+      "cumulative_seconds": 2.3137333
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\audit.py",
+      "line": 26,
+      "function": "check",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 2.44e-05,
+      "cumulative_seconds": 1.7437876
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\audit.py",
+      "line": 40,
+      "function": "core_validator",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 0.0016056,
+      "cumulative_seconds": 1.7437632
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\credit.py",
+      "line": 288,
+      "function": "assess",
+      "primitive_calls": 168,
+      "calls": 168,
+      "self_seconds": 0.009956300000000001,
+      "cumulative_seconds": 1.7014418
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\guardrails.py",
+      "line": 55,
+      "function": "estimated_fiscal_risk",
+      "primitive_calls": 160,
+      "calls": 160,
+      "self_seconds": 0.0067371,
+      "cumulative_seconds": 1.6264031
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\__init__.py",
+      "line": 183,
+      "function": "dumps",
+      "primitive_calls": 2752,
+      "calls": 2752,
+      "self_seconds": 0.0050707,
+      "cumulative_seconds": 1.5473593
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+      "line": 183,
+      "function": "encode",
+      "primitive_calls": 2752,
+      "calls": 2752,
+      "self_seconds": 0.005289,
+      "cumulative_seconds": 1.5416249000000002
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+      "line": 205,
+      "function": "iterencode",
+      "primitive_calls": 2752,
+      "calls": 2752,
+      "self_seconds": 1.5338182,
+      "cumulative_seconds": 1.5338182
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_decision.py",
+      "line": 384,
+      "function": "decide",
+      "primitive_calls": 32,
+      "calls": 32,
+      "self_seconds": 0.004165,
+      "cumulative_seconds": 1.5297416000000001
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\__init__.py",
+      "line": 299,
+      "function": "loads",
+      "primitive_calls": 1739,
+      "calls": 1739,
+      "self_seconds": 0.0022662000000000003,
+      "cumulative_seconds": 1.2879109
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\decoder.py",
+      "line": 333,
+      "function": "decode",
+      "primitive_calls": 1739,
+      "calls": 1739,
+      "self_seconds": 0.0039709,
+      "cumulative_seconds": 1.2845728
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\decoder.py",
+      "line": 344,
+      "function": "raw_decode",
+      "primitive_calls": 1739,
+      "calls": 1739,
+      "self_seconds": 1.2763606,
+      "cumulative_seconds": 1.2763606
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.id>",
+      "primitive_calls": 9135707,
+      "calls": 9135707,
+      "self_seconds": 1.2344964,
+      "cumulative_seconds": 1.2344964
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_decision.py",
+      "line": 174,
+      "function": "_evaluate",
+      "primitive_calls": 224,
+      "calls": 224,
+      "self_seconds": 0.3053359,
+      "cumulative_seconds": 1.2153677
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_state.py",
+      "line": 533,
+      "function": "validate",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 0.060292700000000005,
+      "cumulative_seconds": 0.9981136
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+      "line": 172,
+      "function": "_deepcopy_atomic",
+      "primitive_calls": 7030094,
+      "calls": 7030094,
+      "self_seconds": 0.7844244,
+      "cumulative_seconds": 0.7844244
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+      "line": 231,
+      "function": "_keep_alive",
+      "primitive_calls": 678094,
+      "calls": 678094,
+      "self_seconds": 0.54371,
+      "cumulative_seconds": 0.7741197000000001
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_state.py",
+      "line": 33,
+      "function": "_day",
+      "primitive_calls": 294306,
+      "calls": 294306,
+      "self_seconds": 0.3045261,
+      "cumulative_seconds": 0.7176201000000001
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_state.py",
+      "line": 477,
+      "function": "validate",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 4.71e-05,
+      "cumulative_seconds": 0.6574067
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_state.py",
+      "line": 241,
+      "function": "_validate_state",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 0.009389900000000001,
+      "cumulative_seconds": 0.6573596
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_decision.py",
+      "line": 163,
+      "function": "_memory_value",
+      "primitive_calls": 119896,
+      "calls": 119896,
+      "self_seconds": 0.22848510000000002,
+      "cumulative_seconds": 0.6084827
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_benchmark.py",
+      "line": 113,
+      "function": "observe",
+      "primitive_calls": 67,
+      "calls": 67,
+      "self_seconds": 0.0052458,
+      "cumulative_seconds": 0.5855101
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_state.py",
+      "line": 45,
+      "function": "_tuples",
+      "primitive_calls": 856,
+      "calls": 538424,
+      "self_seconds": 0.2067282,
+      "cumulative_seconds": 0.44491430000000004
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_state.py",
+      "line": 46,
+      "function": "<genexpr>",
+      "primitive_calls": 3424,
+      "calls": 539280,
+      "self_seconds": 0.1643167,
+      "cumulative_seconds": 0.44303000000000003
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_response.py",
+      "line": 160,
+      "function": "deliver_due",
+      "primitive_calls": 62,
+      "calls": 62,
+      "self_seconds": 0.1374623,
+      "cumulative_seconds": 0.43468510000000005
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_state.py",
+      "line": 269,
+      "function": "_memory_weight",
+      "primitive_calls": 49746,
+      "calls": 49746,
+      "self_seconds": 0.10254920000000001,
+      "cumulative_seconds": 0.4129393
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\economy.py",
+      "line": 659,
+      "function": "tick",
+      "primitive_calls": 31,
+      "calls": 31,
+      "self_seconds": 0.0010293000000000001,
+      "cumulative_seconds": 0.38903190000000004
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\guardrails.py",
+      "line": 117,
+      "function": "can_fund_war",
+      "primitive_calls": 32,
+      "calls": 32,
+      "self_seconds": 0.0005798,
+      "cumulative_seconds": 0.34778820000000005
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'isoformat' of 'datetime.date' objects>",
+      "primitive_calls": 349935,
+      "calls": 349935,
+      "self_seconds": 0.3080118,
+      "cumulative_seconds": 0.3080118
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_risk.py",
+      "line": 263,
+      "function": "detect",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 0.0400338,
+      "cumulative_seconds": 0.302429
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_decision.py",
+      "line": 36,
+      "function": "_number",
+      "primitive_calls": 173114,
+      "calls": 173114,
+      "self_seconds": 0.16247,
+      "cumulative_seconds": 0.2719265
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_response.py",
+      "line": 152,
+      "function": "_observation_order",
+      "primitive_calls": 170624,
+      "calls": 170624,
+      "self_seconds": 0.157197,
+      "cumulative_seconds": 0.2301881
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.isinstance>",
+      "primitive_calls": 1440286,
+      "calls": 1440286,
+      "self_seconds": 0.20560630000000002,
+      "cumulative_seconds": 0.20560630000000002
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_response.py",
+      "line": 721,
+      "function": "validation_issues",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 0.049681800000000005,
+      "cumulative_seconds": 0.19376900000000002
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'append' of 'list' objects>",
+      "primitive_calls": 900096,
+      "calls": 900096,
+      "self_seconds": 0.1804453,
+      "cumulative_seconds": 0.1804453
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\economy.py",
+      "line": 526,
+      "function": "finance_and_investment",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 0.0033862000000000002,
+      "cumulative_seconds": 0.1637295
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\credit.py",
+      "line": 478,
+      "function": "settle",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 0.0005197,
+      "cumulative_seconds": 0.15965700000000002
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_risk.py",
+      "line": 268,
+      "function": "emit",
+      "primitive_calls": 244,
+      "calls": 244,
+      "self_seconds": 0.0006655000000000001,
+      "cumulative_seconds": 0.15172870000000002
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_risk.py",
+      "line": 246,
+      "function": "_sample",
+      "primitive_calls": 244,
+      "calls": 244,
+      "self_seconds": 0.0009168000000000001,
+      "cumulative_seconds": 0.1510632
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.next>",
+      "primitive_calls": 399,
+      "calls": 399,
+      "self_seconds": 0.0003039,
+      "cumulative_seconds": 0.1452795
+    }
+  ],
+  "top_self": [
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+      "line": 118,
+      "function": "deepcopy",
+      "primitive_calls": 71167,
+      "calls": 7708364,
+      "self_seconds": 8.307746700000001,
+      "cumulative_seconds": 16.8889079
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'get' of 'dict' objects>",
+      "primitive_calls": 17453015,
+      "calls": 17453015,
+      "self_seconds": 3.2168404,
+      "cumulative_seconds": 3.2168404
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+      "line": 217,
+      "function": "_deepcopy_dict",
+      "primitive_calls": 74187,
+      "calls": 568721,
+      "self_seconds": 2.7624922,
+      "cumulative_seconds": 16.5263382
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\encoder.py",
+      "line": 205,
+      "function": "iterencode",
+      "primitive_calls": 2752,
+      "calls": 2752,
+      "self_seconds": 1.5338182,
+      "cumulative_seconds": 1.5338182
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\json\\decoder.py",
+      "line": 344,
+      "function": "raw_decode",
+      "primitive_calls": 1739,
+      "calls": 1739,
+      "self_seconds": 1.2763606,
+      "cumulative_seconds": 1.2763606
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.id>",
+      "primitive_calls": 9135707,
+      "calls": 9135707,
+      "self_seconds": 1.2344964,
+      "cumulative_seconds": 1.2344964
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+      "line": 172,
+      "function": "_deepcopy_atomic",
+      "primitive_calls": 7030094,
+      "calls": 7030094,
+      "self_seconds": 0.7844244,
+      "cumulative_seconds": 0.7844244
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+      "line": 231,
+      "function": "_keep_alive",
+      "primitive_calls": 678094,
+      "calls": 678094,
+      "self_seconds": 0.54371,
+      "cumulative_seconds": 0.7741197000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'isoformat' of 'datetime.date' objects>",
+      "primitive_calls": 349935,
+      "calls": 349935,
+      "self_seconds": 0.3080118,
+      "cumulative_seconds": 0.3080118
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_decision.py",
+      "line": 174,
+      "function": "_evaluate",
+      "primitive_calls": 224,
+      "calls": 224,
+      "self_seconds": 0.3053359,
+      "cumulative_seconds": 1.2153677
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_state.py",
+      "line": 33,
+      "function": "_day",
+      "primitive_calls": 294306,
+      "calls": 294306,
+      "self_seconds": 0.3045261,
+      "cumulative_seconds": 0.7176201000000001
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_decision.py",
+      "line": 163,
+      "function": "_memory_value",
+      "primitive_calls": 119896,
+      "calls": 119896,
+      "self_seconds": 0.22848510000000002,
+      "cumulative_seconds": 0.6084827
+    },
+    {
+      "file": "C:\\Users\\c\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\copy.py",
+      "line": 191,
+      "function": "_deepcopy_list",
+      "primitive_calls": 92939,
+      "calls": 109305,
+      "self_seconds": 0.2078471,
+      "cumulative_seconds": 8.0402655
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_state.py",
+      "line": 45,
+      "function": "_tuples",
+      "primitive_calls": 856,
+      "calls": 538424,
+      "self_seconds": 0.2067282,
+      "cumulative_seconds": 0.44491430000000004
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.isinstance>",
+      "primitive_calls": 1440286,
+      "calls": 1440286,
+      "self_seconds": 0.20560630000000002,
+      "cumulative_seconds": 0.20560630000000002
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'append' of 'list' objects>",
+      "primitive_calls": 900096,
+      "calls": 900096,
+      "self_seconds": 0.1804453,
+      "cumulative_seconds": 0.1804453
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_state.py",
+      "line": 46,
+      "function": "<genexpr>",
+      "primitive_calls": 3424,
+      "calls": 539280,
+      "self_seconds": 0.1643167,
+      "cumulative_seconds": 0.44303000000000003
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_decision.py",
+      "line": 36,
+      "function": "_number",
+      "primitive_calls": 173114,
+      "calls": 173114,
+      "self_seconds": 0.16247,
+      "cumulative_seconds": 0.2719265
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_response.py",
+      "line": 152,
+      "function": "_observation_order",
+      "primitive_calls": 170624,
+      "calls": 170624,
+      "self_seconds": 0.157197,
+      "cumulative_seconds": 0.2301881
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_response.py",
+      "line": 160,
+      "function": "deliver_due",
+      "primitive_calls": 62,
+      "calls": 62,
+      "self_seconds": 0.1374623,
+      "cumulative_seconds": 0.43468510000000005
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_state.py",
+      "line": 277,
+      "function": "effective_memory",
+      "primitive_calls": 174,
+      "calls": 174,
+      "self_seconds": 0.1307265,
+      "cumulative_seconds": 6.873380200000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'items' of 'dict' objects>",
+      "primitive_calls": 617768,
+      "calls": 617768,
+      "self_seconds": 0.1294564,
+      "cumulative_seconds": 0.1294564
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method fromisoformat>",
+      "primitive_calls": 642274,
+      "calls": 642274,
+      "self_seconds": 0.12278800000000001,
+      "cumulative_seconds": 0.12278800000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.max>",
+      "primitive_calls": 412294,
+      "calls": 412406,
+      "self_seconds": 0.1097381,
+      "cumulative_seconds": 0.1111965
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_state.py",
+      "line": 269,
+      "function": "_memory_weight",
+      "primitive_calls": 49746,
+      "calls": 49746,
+      "self_seconds": 0.10254920000000001,
+      "cumulative_seconds": 0.4129393
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_state.py",
+      "line": 452,
+      "function": "_evaluate_known",
+      "primitive_calls": 64,
+      "calls": 64,
+      "self_seconds": 0.08182740000000001,
+      "cumulative_seconds": 3.2756927
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_state.py",
+      "line": 490,
+      "function": "actor_view",
+      "primitive_calls": 110,
+      "calls": 110,
+      "self_seconds": 0.0794339,
+      "cumulative_seconds": 9.7593142
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_state.py",
+      "line": 340,
+      "function": "_event_effect",
+      "primitive_calls": 14836,
+      "calls": 14836,
+      "self_seconds": 0.06539110000000001,
+      "cumulative_seconds": 0.1332116
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\projects.py",
+      "line": 126,
+      "function": "tick",
+      "primitive_calls": 31,
+      "calls": 31,
+      "self_seconds": 0.06314850000000001,
+      "cumulative_seconds": 0.10012560000000001
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_state.py",
+      "line": 533,
+      "function": "validate",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 0.060292700000000005,
+      "cumulative_seconds": 0.9981136
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.min>",
+      "primitive_calls": 214194,
+      "calls": 214194,
+      "self_seconds": 0.055007900000000005,
+      "cumulative_seconds": 0.0550457
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'rsplit' of 'str' objects>",
+      "primitive_calls": 240692,
+      "calls": 240692,
+      "self_seconds": 0.054527500000000007,
+      "cumulative_seconds": 0.054527500000000007
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method math.isfinite>",
+      "primitive_calls": 303413,
+      "calls": 303413,
+      "self_seconds": 0.051470600000000005,
+      "cumulative_seconds": 0.051470600000000005
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_response.py",
+      "line": 721,
+      "function": "validation_issues",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 0.049681800000000005,
+      "cumulative_seconds": 0.19376900000000002
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\npc_state.py",
+      "line": 39,
+      "function": "_number",
+      "primitive_calls": 86990,
+      "calls": 86990,
+      "self_seconds": 0.048630900000000005,
+      "cumulative_seconds": 0.060719
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.sorted>",
+      "primitive_calls": 2508,
+      "calls": 2508,
+      "self_seconds": 0.0468881,
+      "cumulative_seconds": 0.1054848
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_effects.py",
+      "line": 233,
+      "function": "<lambda>",
+      "primitive_calls": 70060,
+      "calls": 70060,
+      "self_seconds": 0.043736300000000006,
+      "cumulative_seconds": 0.0582328
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\models.py",
+      "line": 8,
+      "function": "canonical_date",
+      "primitive_calls": 53662,
+      "calls": 53662,
+      "self_seconds": 0.041345,
+      "cumulative_seconds": 0.1060112
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\crisis_risk.py",
+      "line": 263,
+      "function": "detect",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 0.0400338,
+      "cumulative_seconds": 0.302429
+    },
+    {
+      "file": "C:\\Users\\c\\Documents\\Codex\\2026-09-30\\worldline-engine-chatgpt-llm-gdp-python\\outputs\\worldline-engine\\worldline\\economy.py",
+      "line": 179,
+      "function": "shocks_for_period",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 0.0398303,
+      "cumulative_seconds": 0.07088130000000001
+    }
+  ],
+  "interpretation_note": "Cumulative times overlap across parent/child functions and cannot be added. This instrumented one-month time is not the campaign runtime or actual SQLite game speed.",
+  "checkpoint_world_json_bytes": 30263816,
+  "opening_active_events": [
+    {
+      "event_id": "crisis-event-29",
+      "event_type": "financial_crisis",
+      "start_date": "1901-04-13",
+      "countries": [
+        "b"
+      ],
+      "region": "rb"
+    },
+    {
+      "event_id": "crisis-event-75",
+      "event_type": "bad_harvest",
+      "start_date": "1911-11-25",
+      "countries": [
+        "b"
+      ],
+      "region": "rb"
+    }
+  ],
+  "opening_memories_by_actor": {
+    "a:ruler": 246,
+    "a:finance": 246,
+    "a:military": 246,
+    "a:education": 246,
+    "b:ruler": 341,
+    "b:finance": 341,
+    "b:military": 341,
+    "b:education": 341,
+    "c:ruler": 246,
+    "c:finance": 246,
+    "c:military": 246,
+    "c:education": 246,
+    "d:ruler": 202,
+    "d:finance": 202,
+    "d:military": 202,
+    "d:education": 202,
+    "a:local": 260,
+    "b:local": 318,
+    "c:local": 253,
+    "d:local": 201
+  },
+  "opening_world_components_json_bytes": {
+    "population_accounts": 1122,
+    "economy": 634604,
+    "npc_state": 20733479,
+    "crisis_state": 6981027
+  },
+  "opening_npc_components_json_bytes": {
+    "reports": 2501619,
+    "memories": 3507284,
+    "relationships": 3302248,
+    "records": 422209,
+    "decisions": 8660192,
+    "actions": 2238455,
+    "adapter": 100
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "commands": [
+    ".\\.venv\\Scripts\\python.exe -m pytest -q --ignore=tests/test_crisis_benchmark.py --junitxml=benchmarks/crisis/pytest_core.xml",
+    ".\\.venv\\Scripts\\python.exe -m pytest -q tests/test_crisis_benchmark.py --junitxml=benchmarks/crisis/pytest_benchmark.xml"
+  ],
+  "tests": {
+    "tests": 642,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}

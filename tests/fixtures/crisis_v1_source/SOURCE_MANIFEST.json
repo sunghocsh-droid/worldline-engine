@@ -1,0 +1,32 @@
+{
+  "purpose": "Immutable original Crisis v1 Python package for isolated exact behavioral comparisons, never imported as production worldline",
+  "source_sha256": {
+    "__init__.py": "becd7c5217666290ce7b6ab5f0b8e4f9515dfbffbf306f2777fb037e162e2f78",
+    "__main__.py": "b71170e9a95954c9091eb11fb0c5c7eca996d02d8b326c93b820be22bb053ad8",
+    "audit.py": "be92dc1fde298a55ffadfb40314b405c7c34c4acda13f2408a1479dff6df18ac",
+    "benchmark.py": "b56ad7ae7c26306cf53591c4f0f3a53027e6e11aeb240452c282499b3405c02a",
+    "calibration.py": "d164971ea2e4a21a52a401c97044cd66d8ad0af8d8777318dc8a5de90b04e68f",
+    "calibration_report.py": "ec3ec783d40e2cd369c951d0d72ef8020f7c411c196e06a478741443a677ccbb",
+    "credit.py": "0696c89c853bfa1683c67b69f6a0bd6554adaaa00851b1022bf9f75cfcdaa51c",
+    "crisis.py": "184aace25d0ef9e53c8f67b4f098aa5798c3fdaedc3de8f9692cead952146b14",
+    "crisis_benchmark.py": "77e733f8853422eca25c23371f918503e87de874ea6cac8af6ebee23bf01c734",
+    "crisis_effects.py": "e30138d6a494678d7f11ec535ac4e6e92fd19ca350c8ee7b79998995eb2bba74",
+    "crisis_response.py": "13d4f37ff39ed2e75059eae2eb243cb1137b21de5d385f171a63d28da1f5c69e",
+    "crisis_risk.py": "2ce9050ebee40c8a40390195be58817938021ee8104fc58335c935ee55b33d5c",
+    "crisis_state.py": "21d365674f53a94bbd55f87858eb7f1350307dd1318812983560a6b3c4b4c694",
+    "demography.py": "f7c4ee52c141347657056de76d9f4c2d65caa6b215e398b9e4d950a957b2a220",
+    "economy.py": "d570fa881cba02832342315f99e3a902c6cb57da3b767b387ddfd07eb2898261",
+    "engine.py": "c5f26243306edb873348c91b3a837a90690ca03febad4efa68db009c656cb297",
+    "guardrails.py": "ba89f34996f6815aec2be7562ad0a8b4ea362eb2b5637b8866001521c3a41242",
+    "labour.py": "667a36b48b75410b23f34f60e21a5f4eab493e0884de3e31f4727cebbe701541",
+    "models.py": "fac43f04005cf7455781dfc9681a84ce6072ad84020371157e179c9783710b70",
+    "npc.py": "e797b560d8482508f16744eac6b592358221f1fb2ff82d537e0d8d5e60f4da11",
+    "npc_benchmark.py": "7772bad51654eba5461160a073086a8416cc92ec6c687b3f45b19ba372038ad9",
+    "npc_decision.py": "7061517ea254e5a28f1629be1d7d419082f69d255a9455fd216d97fe522f0fe3",
+    "npc_state.py": "5ab90b976b691d125c823761aebac4f0a95145df569fef8988231405d227d549",
+    "order_execution.py": "1096dfe3a57259b1ec8e04e33a3428c1f767920f619b0fa5a1b9789694ff2fe6",
+    "persistence.py": "160d1021f535f50eb49ca8372bd48b52672d31d15e9c9f42f25acafae2f2da54",
+    "projects.py": "4e102ea361db9f97219ae09f0686e2a040c5e7849902f86da89ecc41830f76a3",
+    "stabilization_benchmark.py": "af5d447ce6d4f65146a4e08ce1dba9a46a2aa6f6ad1d7a5c6106f9affa65254c"
+  }
+}

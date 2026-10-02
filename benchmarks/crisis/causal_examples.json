@@ -1,0 +1,208 @@
+[
+  {
+    "event_id": "crisis-event-21",
+    "event_type": "border_incident",
+    "start_date": "1900-06-23",
+    "end_date": "1900-06-24",
+    "parent_event": null,
+    "child_events": [
+      "crisis-event-22"
+    ],
+    "causes": [
+      {
+        "factor": "border_tension",
+        "value": 84.26895408073264
+      },
+      {
+        "factor": "actual_border_mobilization",
+        "value": 0.02728561304039688
+      },
+      {
+        "factor": "local_observed_threat",
+        "value": 0.10639314145744028
+      }
+    ],
+    "actual_facts": {
+      "border_id": "bc",
+      "military_outcomes_unresolved": true,
+      "mobilization_share": 0.02728561304039688,
+      "local_threat_reports": 0.10639314145744028
+    },
+    "resolution_state": "escalated",
+    "responses": [
+      {
+        "actor": "b:ruler",
+        "response": "ultimatum",
+        "date": "1900-06-24",
+        "actual_cost": 3,
+        "actual_risk": 0.5376840281791868,
+        "financing_sources": {
+          "reserves": 0,
+          "normal_borrowing": 0,
+          "forced_loans": 3
+        }
+      }
+    ]
+  },
+  {
+    "event_id": "crisis-event-22",
+    "event_type": "diplomatic_crisis",
+    "start_date": "1900-06-24",
+    "end_date": "1900-06-25",
+    "parent_event": "crisis-event-21",
+    "child_events": [
+      "crisis-event-23"
+    ],
+    "causes": [
+      {
+        "event_id": "crisis-event-21",
+        "trigger_kind": "local_unilateral_action",
+        "actor": "c:local",
+        "response": "limited_patrol",
+        "date": "1900-06-24"
+      },
+      {
+        "event_id": "crisis-event-21",
+        "trigger_kind": "response_escalation",
+        "actor": "b:ruler",
+        "response": "ultimatum",
+        "date": "1900-06-24"
+      }
+    ],
+    "actual_facts": {
+      "border_id": "bc",
+      "military_outcomes_unresolved": true,
+      "mobilization_share": 0.02728561304039688,
+      "local_threat_reports": 0.10639314145744028,
+      "political_demand": true,
+      "local_unilateral": true,
+      "misinformation": true
+    },
+    "resolution_state": "escalated",
+    "responses": [
+      {
+        "actor": "b:ruler",
+        "response": "ultimatum",
+        "date": "1900-06-25",
+        "actual_cost": 3,
+        "actual_risk": 0.5380094030373783,
+        "financing_sources": {
+          "reserves": 0,
+          "normal_borrowing": 0,
+          "forced_loans": 3
+        }
+      }
+    ]
+  },
+  {
+    "event_id": "crisis-event-23",
+    "event_type": "ultimatum",
+    "start_date": "1900-06-25",
+    "end_date": "1900-06-30",
+    "parent_event": "crisis-event-22",
+    "child_events": [],
+    "causes": [
+      {
+        "event_id": "crisis-event-22",
+        "trigger_kind": "local_unilateral_action",
+        "actor": "c:local",
+        "response": "limited_patrol",
+        "date": "1900-06-25"
+      },
+      {
+        "event_id": "crisis-event-22",
+        "trigger_kind": "response_escalation",
+        "actor": "b:ruler",
+        "response": "ultimatum",
+        "date": "1900-06-25"
+      }
+    ],
+    "actual_facts": {
+      "border_id": "bc",
+      "military_outcomes_unresolved": true,
+      "mobilization_share": 0.02728561304039688,
+      "local_threat_reports": 0.10639314145744028,
+      "political_demand": true,
+      "local_unilateral": true,
+      "misinformation": true
+    },
+    "resolution_state": "contained",
+    "responses": [
+      {
+        "actor": "b:ruler",
+        "response": "ultimatum",
+        "date": "1900-06-26",
+        "actual_cost": 3,
+        "actual_risk": 0.5383345896737344,
+        "financing_sources": {
+          "reserves": 0,
+          "normal_borrowing": 0,
+          "forced_loans": 3
+        }
+      },
+      {
+        "actor": "c:ruler",
+        "response": "withdraw",
+        "date": "1900-06-30",
+        "actual_cost": 1,
+        "actual_risk": 0.05216176414534159,
+        "financing_sources": {
+          "reserves": 1,
+          "normal_borrowing": 0
+        }
+      }
+    ]
+  },
+  {
+    "event_id": "crisis-event-60",
+    "event_type": "ultimatum",
+    "start_date": "1908-04-15",
+    "end_date": "1908-04-19",
+    "parent_event": "crisis-event-59",
+    "child_events": [],
+    "causes": [
+      {
+        "event_id": "crisis-event-59",
+        "trigger_kind": "response_escalation",
+        "actor": "b:ruler",
+        "response": "ultimatum",
+        "date": "1908-04-15"
+      }
+    ],
+    "actual_facts": {
+      "border_id": "ab",
+      "military_outcomes_unresolved": true,
+      "mobilization_share": 0.025585645456055822,
+      "local_threat_reports": 0.02768853190539938,
+      "political_demand": true,
+      "local_unilateral": false,
+      "misinformation": false
+    },
+    "resolution_state": "contained",
+    "responses": [
+      {
+        "actor": "b:ruler",
+        "response": "mediate",
+        "date": "1908-04-17",
+        "actual_cost": 3,
+        "actual_risk": 0.5696735681352652,
+        "financing_sources": {
+          "reserves": 0,
+          "normal_borrowing": 0,
+          "asset_sales": 3
+        }
+      },
+      {
+        "actor": "a:ruler",
+        "response": "withdraw",
+        "date": "1908-04-19",
+        "actual_cost": 2,
+        "actual_risk": 0.04366102951833079,
+        "financing_sources": {
+          "reserves": 2,
+          "normal_borrowing": 0
+        }
+      }
+    ]
+  }
+]
