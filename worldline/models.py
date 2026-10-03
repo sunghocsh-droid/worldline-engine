@@ -105,6 +105,8 @@ class World(Record):
     npc_state: dict | None = None
     crisis_state: dict | None = None
     military_state: dict | None = None
+    diplomacy_state: dict | None = None
+    intelligence_state: dict | None = None
 
     def to_dict(self):
         raw = detached(self)
@@ -115,6 +117,10 @@ class World(Record):
             raw.pop("crisis_state")
         if self.military_state is None:
             raw.pop("military_state")
+        if self.diplomacy_state is None:
+            raw.pop("diplomacy_state")
+        if self.intelligence_state is None:
+            raw.pop("intelligence_state")
         return raw
 
     @classmethod
@@ -122,14 +128,19 @@ class World(Record):
         raw = dict(raw)
         raw.pop("note", None)
         version = raw.get("schema_version", 1)
-        if version not in (1, 2, 3, 4, 5):
+        if version not in (1, 2, 3, 4, 5, 6):
             raise ValueError("Unsupported world schema")
-        if (version in (3, 4, 5)) != (raw.get("npc_state") is not None):
+        if (version in (3, 4, 5, 6)) != (raw.get("npc_state") is not None):
             raise ValueError("World schema does not match NPC decision rules")
-        if (version in (4, 5)) != (raw.get("crisis_state") is not None):
+        if (version in (4, 5, 6)) != (raw.get("crisis_state") is not None):
             raise ValueError("World schema does not match crisis/event rules")
-        if (version == 5) != (raw.get("military_state") is not None):
+        if (version in (5, 6)) != (raw.get("military_state") is not None):
             raise ValueError("World schema does not match military/logistics rules")
+        if version == 6:
+            if raw.get("diplomacy_state") is None or raw.get("intelligence_state") is None:
+                raise ValueError("World schema requires Diplomacy & Intelligence state")
+        elif "diplomacy_state" in raw or "intelligence_state" in raw:
+            raise ValueError("Legacy world cannot contain Diplomacy & Intelligence state")
         raw["schema_version"] = version if version >= 3 else 2
         canonical_date(raw["date"])
         raw["countries"] = {k: Country(**{**v, "npc": NPC(**v.get("npc", {}))})
@@ -138,4 +149,10 @@ class World(Record):
         raw["armies"] = {k: Army(**v) for k, v in raw.get("armies", {}).items()}
         raw["factions"] = {k: Faction(**{**v, "npc": NPC(**v.get("npc", {}))})
                            for k, v in raw.get("factions", {}).items()}
-        return cls(**raw)
+        world = cls(**raw)
+        if version == 6:
+            from .diplomacy_intelligence import validate
+            issues = validate(world)
+            if issues:
+                raise ValueError("; ".join(issues))
+        return world

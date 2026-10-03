@@ -204,7 +204,7 @@ def projection(world):
         c['npc'] = record(c['npc'])
     for f in raw['factions'].values():
         f['npc'] = record(f['npc'])
-    for field in ('npc_state', 'crisis_state', 'military_state'):
+    for field in ('npc_state', 'crisis_state', 'military_state', 'diplomacy_state', 'intelligence_state'):
         if raw[field] is None:
             raw.pop(field)
     return raw

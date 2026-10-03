@@ -19,6 +19,7 @@ def economic_view(world):
     view = copy.copy(world)
     view.npc_state, view.crisis_state, view.schema_version = None, None, 2
     view.military_state = None
+    view.diplomacy_state, view.intelligence_state = None, None
     return view
 
 

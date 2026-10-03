@@ -42,10 +42,16 @@ class Auditor:
 def core_validator(w, old, *, history_previous=None):
     issues = []
     canonical_date(w.date)
-    if (w.schema_version not in (2, 3, 4, 5) or (w.schema_version in (3, 4, 5)) != (w.npc_state is not None)
-        or (w.schema_version in (4, 5)) != (w.crisis_state is not None)
-        or (w.schema_version == 5) != (w.military_state is not None)):
+    if (w.schema_version not in (2, 3, 4, 5, 6) or (w.schema_version in (3, 4, 5, 6)) != (w.npc_state is not None)
+        or (w.schema_version in (4, 5, 6)) != (w.crisis_state is not None)
+        or (w.schema_version in (5, 6)) != (w.military_state is not None)
+        or (w.schema_version == 6) != (w.diplomacy_state is not None)
+        or (w.schema_version == 6) != (w.intelligence_state is not None)):
         issues.append("world: unsupported schema")
+    prior = history_previous if history_previous is not None else old
+    if w.schema_version == 6 or w.diplomacy_state is not None or w.intelligence_state is not None or prior is not None and prior.diplomacy_state is not None:
+        from .diplomacy_intelligence import validate as validate_diplomacy_intelligence
+        issues.extend(validate_diplomacy_intelligence(w, prior))
     if w.crisis_state is not None:
         from .crisis_state import validate as validate_crisis
         issues.extend(validate_crisis(w, history_previous if history_previous is not None else old))

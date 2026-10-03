@@ -14,7 +14,7 @@ from pathlib import Path
 
 from .audit import Auditor, numeric
 from .models import Order, Report, World, RISKS, canonical_date
-from .persistence import tuples, validate_engine, validate_snapshot, normalize_engine, SAVE_SCHEMA_VERSION, STABILIZED_SAVE_SCHEMA_VERSION, NPC_SAVE_SCHEMA_VERSION, CRISIS_SAVE_SCHEMA_VERSION, MILITARY_SAVE_SCHEMA_VERSION
+from .persistence import tuples, validate_engine, validate_snapshot, normalize_engine, validate_diplomacy_intelligence_ledger, SAVE_SCHEMA_VERSION, STABILIZED_SAVE_SCHEMA_VERSION, NPC_SAVE_SCHEMA_VERSION, CRISIS_SAVE_SCHEMA_VERSION, MILITARY_SAVE_SCHEMA_VERSION, DIPLOMACY_INTELLIGENCE_SAVE_SCHEMA_VERSION
 from . import state_storage
 from .state_runtime import Journal, detached, projection
 from .incremental_audit import changed as changed_audit
@@ -69,11 +69,19 @@ class Engine:
         try:
             self._restore(payload)
             self._register_builtins()
-            if self._world.crisis_state is not None and self.db.execute("SELECT 1 FROM ledger LIMIT 1").fetchone():
+            if self._world.diplomacy_state is not None:
+                self._ensure_diplomacy_intelligence_ledger_guard()
+            if (self._world.diplomacy_state is not None
+                    or self._world.crisis_state is not None and self.db.execute("SELECT 1 FROM ledger LIMIT 1").fetchone()):
                 # Opening SQLite must check its permanent facts too, even when no
                 # JSON save is requested. This is a startup check, not a daily scan.
-                validate_snapshot({"schema_version": MILITARY_SAVE_SCHEMA_VERSION if self._world.military_state is not None else CRISIS_SAVE_SCHEMA_VERSION,
-                    "engine": payload, "ledger": self.ledger()})
+                snapshot = {"schema_version": DIPLOMACY_INTELLIGENCE_SAVE_SCHEMA_VERSION if self._world.diplomacy_state is not None else (MILITARY_SAVE_SCHEMA_VERSION if self._world.military_state is not None else CRISIS_SAVE_SCHEMA_VERSION),
+                            "engine": payload, "ledger": self.ledger()}
+                if self._world.diplomacy_state is not None:
+                    archive = state_storage.export_archive(self.db)
+                    if archive is not None:
+                        snapshot['state_archive'] = archive
+                validate_snapshot(snapshot)
         except BaseException:
             self.db.close()
             raise
@@ -82,6 +90,8 @@ class Engine:
     def create(cls, path, world, seed=0, *, validation_mode='runtime'):
         if type(seed) is not int:
             raise ValueError("Seed must be an integer")
+        if world.schema_version == 6 or world.diplomacy_state is not None or world.intelligence_state is not None:
+            raise ValueError("Create a legacy full-stack world first, then explicitly enable Diplomacy & Intelligence")
         path = Path(path)
         path.parent.mkdir(parents=True, exist_ok=True)
         with path.open("xb"):
@@ -213,7 +223,7 @@ class Engine:
         if self.db.in_transaction:
             raise ValueError("Cannot refresh during a transaction")
         external = [(fn, spec) for fn, spec in zip(self._systems, self._system_specs)
-                    if spec["name"] not in ("worldline.projects", "worldline.economy", "worldline.npc", "worldline.crisis", "worldline.military")]
+                    if spec["name"] not in ("worldline.projects", "worldline.economy", "worldline.npc", "worldline.crisis", "worldline.military", "worldline.intelligence", "worldline.diplomacy")]
         self._restore(self._stored_payload())
         self._systems, self._system_specs = [], []
         self._register_builtins()
@@ -236,6 +246,50 @@ class Engine:
         if self._world.military_state is not None:
             from .military import tick, VERSION
             self.register_system(tick, name='worldline.military', version=VERSION)
+        if self._world.diplomacy_state is not None:
+            from .diplomacy_intelligence import tick_intelligence, tick_diplomacy, VERSION
+            self.register_system(tick_intelligence, name='worldline.intelligence', version=VERSION)
+            self.register_system(tick_diplomacy, name='worldline.diplomacy', version=VERSION)
+
+    def _ensure_diplomacy_intelligence_ledger_guard(self):
+        # The opt-in guard is absent from legacy databases and participates in
+        # activation's SQLite transaction, including rollback of its DDL.
+        self.db.execute("CREATE UNIQUE INDEX IF NOT EXISTS diplomacy_intelligence_activation_once ON ledger(kind) "
+                        "WHERE kind='diplomacy_intelligence_enabled'")
+
+    def enable_diplomacy_intelligence(self, config=None):
+        """Trusted host's explicit Stage 1 activation; no contacts or delivery."""
+        from .diplomacy_intelligence import (initialize, builtin_manifest, enabled_manifest,
+                                             tick_intelligence, tick_diplomacy, VERSION, ACTIVATION_ID)
+        from .projects import tick as project_tick
+        from .economy import tick as economy_tick
+        from .npc import tick as npc_tick
+        from .crisis import tick as crisis_tick
+        from .military import tick as military_tick
+        callbacks_before = list(self._systems)
+        specs_before = copy.deepcopy(self._system_specs)
+        try:
+            with self._transaction():
+                prefix = builtin_manifest()
+                if (self._system_specs != prefix or self._required_systems != prefix
+                        or self._systems != [project_tick, economy_tick, npc_tick, crisis_tick, military_tick]):
+                    raise ValueError('D&I activation requires the exact full-stack builtin system profile')
+                receipt = initialize(self._world, config)
+                self._required_systems = enabled_manifest()
+                self.register_system(tick_intelligence, name='worldline.intelligence', version=VERSION)
+                self.register_system(tick_diplomacy, name='worldline.diplomacy', version=VERSION)
+                self._ensure_diplomacy_intelligence_ledger_guard()
+                self._event('diplomacy_intelligence_enabled',
+                            {'receipt': receipt, 'systems': self._required_systems})
+        except BaseException:
+            self._systems, self._system_specs = callbacks_before, specs_before
+            # A same-connection external component edit can leave the physical
+            # manifest text unchanged. Failed new-feature activation must not
+            # certify the old in-memory projection as committed again.
+            self._journal.external_dirty = True
+            raise
+        return {'version': 1, 'save_schema_version': DIPLOMACY_INTELLIGENCE_SAVE_SCHEMA_VERSION,
+                'receipt_id': ACTIVATION_ID}
 
     def enable_military(self, config=None):
         from .military_state import initialize
@@ -664,6 +718,10 @@ class Engine:
             # The candidate World has just passed the existing invariants;
             # validate resumable metadata without auditing that World again.
             validate_engine(after, audit=False)
+            if self._world.diplomacy_state is not None:
+                activations = [(day, json.loads(body)) for day, body in self.db.execute(
+                    "SELECT day,payload FROM ledger WHERE kind='diplomacy_intelligence_enabled' ORDER BY id")]
+                validate_diplomacy_intelligence_ledger(self._world, activations)
             physical = state_storage.compact(self.db, after, self._storage_cache)
             physical = state_storage.write_components(self.db, physical, after, self._component_cache, self._revision + 1)
             text = encode(physical)
@@ -687,6 +745,10 @@ class Engine:
             self.seed = seed_before
             self._required_systems = systems_before
             self._committed_changes = self.db.total_changes
+            if self._world.diplomacy_state is not None:
+                # D&I failure invalidates the committed-read gate as well as
+                # archive/component caches, including stale same-connection SQL.
+                self._journal.external_dirty = True
             raise
         finally:
             del self._transaction_frame
@@ -844,7 +906,8 @@ class Engine:
             npc_enabled = current["world"].get("npc_state") is not None
             crisis_enabled = current["world"].get("crisis_state") is not None
             military_enabled = current['world'].get('military_state') is not None
-            payload = {"schema_version": MILITARY_SAVE_SCHEMA_VERSION if military_enabled else (CRISIS_SAVE_SCHEMA_VERSION if crisis_enabled else (NPC_SAVE_SCHEMA_VERSION if npc_enabled else (STABILIZED_SAVE_SCHEMA_VERSION if stabilized else SAVE_SCHEMA_VERSION))),
+            diplomacy_enabled = current['world'].get('diplomacy_state') is not None
+            payload = {"schema_version": DIPLOMACY_INTELLIGENCE_SAVE_SCHEMA_VERSION if diplomacy_enabled else (MILITARY_SAVE_SCHEMA_VERSION if military_enabled else (CRISIS_SAVE_SCHEMA_VERSION if crisis_enabled else (NPC_SAVE_SCHEMA_VERSION if npc_enabled else (STABILIZED_SAVE_SCHEMA_VERSION if stabilized else SAVE_SCHEMA_VERSION)))),
                        "engine": current, "ledger": self.ledger()}
             archive = state_storage.export_archive(self.db)
             if archive is not None:
