@@ -414,15 +414,29 @@ def configure_legacy(state, successor, predecessor, actor, expectation=0, gratit
     return copy.deepcopy(entry["inherited_by"][actor])
 
 
-def evaluate_ruler(state, actor, ruler, today):
+def _relationship_context(state, actor, today):
+    """Actor-local observations; never retain them across a state operation."""
+    observations = _observer_events(state, actor, today)
+    memories = {m["event_id"]: m for m in _effective_entries(state["memories"].get(actor, []), today)}
+    subjects = {}
+    for event_id, event in sorted(observations.items()):
+        try:
+            subjects.setdefault(event["subject"], []).append((event_id, event))
+        except TypeError:
+            # Raw public dictionaries can contain unhashable subjects. The
+            # original evaluator equality-compared them and skipped them.
+            return observations, memories
+    return observations, memories, subjects
+
+
+def evaluate_ruler(state, actor, ruler, today, *, _context=None):
     """Recompute nine independent axes from known events; never stack tick effects."""
     person = _actor(state, actor)
     _actor(state, ruler)
     _day(today)
     # Reuse observation and memory indexes only inside this evaluation. Building
     # a fresh context on each public call also observes arbitrary raw dict edits.
-    context = (_observer_events(state, actor, today),
-               {m["event_id"]: m for m in _effective_entries(state["memories"].get(actor, []), today)})
+    context = _relationship_context(state, actor, today) if _context is None else _context
     axes = dict(BASE_RELATION)
     causes = []
     inherited = state["legacy"].get(ruler, {}).get("inherited_by", {}).get(actor)
@@ -462,10 +476,10 @@ def _evaluate_known(state, person, actor, ruler, today, expectation, predecessor
     axes = dict(BASE_RELATION)
     causes = []
     if context is None:
-        context = (_observer_events(state, actor, today),
-                   {m["event_id"]: m for m in _effective_entries(state["memories"].get(actor, []), today)})
-    observations, memories = context
-    for event_id, event in sorted(observations.items()):
+        context = _relationship_context(state, actor, today)
+    observations, memories = context[:2]
+    events = context[2].get(ruler, ()) if len(context) > 2 else sorted(observations.items())
+    for event_id, event in events:
         if event["subject"] != ruler or event["report_as_of"] > today:
             continue
         memory = memories.get(event_id, event.get("institutional_memory"))

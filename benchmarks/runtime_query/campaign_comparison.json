@@ -1,0 +1,514 @@
+{
+  "runtime_query_campaign_schema": 1,
+  "baseline_commit": "0779cebcc4aa8e17f30c4ee0bb3cf5fa134157b9",
+  "baseline_source_sha256": {
+    "__init__.py": "becd7c5217666290ce7b6ab5f0b8e4f9515dfbffbf306f2777fb037e162e2f78",
+    "__main__.py": "b71170e9a95954c9091eb11fb0c5c7eca996d02d8b326c93b820be22bb053ad8",
+    "audit.py": "1a2dab70c9dcf9bd5846568e853c815e0361a3d92fef93dafb65309a620579c7",
+    "benchmark.py": "b56ad7ae7c26306cf53591c4f0f3a53027e6e11aeb240452c282499b3405c02a",
+    "calibration.py": "d164971ea2e4a21a52a401c97044cd66d8ad0af8d8777318dc8a5de90b04e68f",
+    "calibration_report.py": "ec3ec783d40e2cd369c951d0d72ef8020f7c411c196e06a478741443a677ccbb",
+    "credit.py": "0696c89c853bfa1683c67b69f6a0bd6554adaaa00851b1022bf9f75cfcdaa51c",
+    "crisis.py": "184aace25d0ef9e53c8f67b4f098aa5798c3fdaedc3de8f9692cead952146b14",
+    "crisis_benchmark.py": "77e733f8853422eca25c23371f918503e87de874ea6cac8af6ebee23bf01c734",
+    "crisis_effects.py": "e30138d6a494678d7f11ec535ac4e6e92fd19ca350c8ee7b79998995eb2bba74",
+    "crisis_response.py": "4acf1a5204fee86f6593da2a635c49fb5fec470371b27824dde822c8f1a5b980",
+    "crisis_risk.py": "2ce9050ebee40c8a40390195be58817938021ee8104fc58335c935ee55b33d5c",
+    "crisis_state.py": "fff0ab30351258ff165c7c3f46c3ad8383313fc63e7981cc3d18e286922df6ac",
+    "demography.py": "f7c4ee52c141347657056de76d9f4c2d65caa6b215e398b9e4d950a957b2a220",
+    "economy.py": "df0be6370d9f156eef4da0dfc65466fa29d185a7201e1b55634c05ad6406d41a",
+    "engine.py": "47ad76f2a9a4a94eb7f655340e731f9a1b0d8f9c959d5c8d6961f9322d418a0b",
+    "guardrails.py": "ba89f34996f6815aec2be7562ad0a8b4ea362eb2b5637b8866001521c3a41242",
+    "incremental_audit.py": "ed634c18ae903f0f2d9d951d182d18ce5d179af15260aa977355625cf784a0fb",
+    "labour.py": "667a36b48b75410b23f34f60e21a5f4eab493e0884de3e31f4727cebbe701541",
+    "military.py": "18db0ccfa8fe2e9597b57cab9f42630dc966ceeaf83f7335550e71a33db38079",
+    "military_active.py": "613562ece58dae7c951c3dfb1b765c6277021b518ce2a4ee3ee2734eaa34011a",
+    "military_benchmark.py": "b8dd2442fed79c66c7e6b635e9cf94ec1664bab3eb3dc880ee0608cfb99c7481",
+    "military_bridge.py": "f8a1be0d2eb1f4ab6c90a5b396bdca7c762bc84412fafcce0e0380cb57fd6d4a",
+    "military_combat.py": "7e0b7484877c8966ed7a7a6cc9e68410df4257be9a5e20afb86885c9bb94ff79",
+    "military_innovation.py": "08212c6e8357396887703cb59a68cdde4a673e1fb8c6985e01844b92a43db98e",
+    "military_innovation_benchmark.py": "b1d32a62d41e45ed2c20749898e4b2d24cd64366ca2feafc10aa6e633b07b20e",
+    "military_logistics.py": "b2c29803d08f1db48b95711aef785138da4d6bf4eb2a74947219950ce290859a",
+    "military_operations.py": "ed4bbe27df685220a21b4da942de38cd5986b1c7791ebc61bd58380903238041",
+    "military_politics.py": "9dceec50d681c086c4e8b239eefcd5059434591dd2f963652d4c3c56db7e7c32",
+    "military_state.py": "3224af5ce62ff78d9c131b209f9020029d5ba82376d5c63e9cab94a0d5b08f67",
+    "models.py": "8c26689f74413fceb5086f00db3011286f7571a3889e277417742968aa9d0a01",
+    "npc.py": "4ae0e0b77ba47be69832a56d54279ea51a58709611b3a286469bd96664979a0b",
+    "npc_benchmark.py": "30a05c336d3182476a8f8e6a74a6b8c8c52f885ec7040601fda8d49e988245d1",
+    "npc_decision.py": "d7ece4636aac80394235ac6b9b6b133559826abadac3dd7dc032b9d2bc99804b",
+    "npc_runtime.py": "4ff7273f86b1814ae6ceeb8c6a3983a1cfa7fbf838cec7e28fb7520bd2b3503c",
+    "npc_state.py": "3ce33b6f248101785433de4c74840736f251544c4e96fa28f412369c88c264b9",
+    "order_execution.py": "902f39901d3ab4ad0747e462699242b9dd4ca832d09f84dfa4bafca6aa4a499f",
+    "performance_benchmark.py": "48c303f855b627e4c9367692c4a81bcbcc98b26b3ae08cd2abea895b2c65d4cd",
+    "persistence.py": "a109662882d504bc890b5127a41fab115a0e5c75f8e94212be29694e772db33e",
+    "projects.py": "f13f5554c506d55fd21753515a75712b3ee4e296295b13e21c6dafe5dda33dfd",
+    "stabilization_benchmark.py": "af5d447ce6d4f65146a4e08ce1dba9a46a2aa6f6ad1d7a5c6106f9affa65254c",
+    "state_runtime.py": "84fb8484c73016892f3b72d530ac05c2fe4502906a2499e7d5d467ac49509fde",
+    "state_storage.py": "6150c21c97037410dd1bcf20a23e86ad380a90e52626055db41b281f619948c3"
+  },
+  "optimized_source_sha256": {
+    "__init__.py": "becd7c5217666290ce7b6ab5f0b8e4f9515dfbffbf306f2777fb037e162e2f78",
+    "__main__.py": "b71170e9a95954c9091eb11fb0c5c7eca996d02d8b326c93b820be22bb053ad8",
+    "audit.py": "1a2dab70c9dcf9bd5846568e853c815e0361a3d92fef93dafb65309a620579c7",
+    "benchmark.py": "b56ad7ae7c26306cf53591c4f0f3a53027e6e11aeb240452c282499b3405c02a",
+    "calibration.py": "d164971ea2e4a21a52a401c97044cd66d8ad0af8d8777318dc8a5de90b04e68f",
+    "calibration_report.py": "ec3ec783d40e2cd369c951d0d72ef8020f7c411c196e06a478741443a677ccbb",
+    "credit.py": "0696c89c853bfa1683c67b69f6a0bd6554adaaa00851b1022bf9f75cfcdaa51c",
+    "crisis.py": "184aace25d0ef9e53c8f67b4f098aa5798c3fdaedc3de8f9692cead952146b14",
+    "crisis_benchmark.py": "77e733f8853422eca25c23371f918503e87de874ea6cac8af6ebee23bf01c734",
+    "crisis_effects.py": "beaf5542d2d3d78e06207efab5450e948ff6dfe0c283f5f12a910ab2e68bb7b8",
+    "crisis_response.py": "4cc7308c8cac419369eb5e5cbec52b7ac8cc40645c693217bfb22fa88bc44ddc",
+    "crisis_risk.py": "6b08386eda69d2e87b421af4f433c2d88371df90e88e7be0a9d6217d0aa904ac",
+    "crisis_state.py": "a8d56d6f7ff480e06dd7d15d319c65917d51803c1aa94cc0bf65dba0008af727",
+    "demography.py": "f7c4ee52c141347657056de76d9f4c2d65caa6b215e398b9e4d950a957b2a220",
+    "economy.py": "f3ff5f07e3e70e2242e1645ea0975d90612859ce7651936a1a3b17a9c28c7b74",
+    "engine.py": "0acf946fa16c626426022b6bba2fbb2a18ddb4d05d35bff2b713894a2b0ba821",
+    "guardrails.py": "ba89f34996f6815aec2be7562ad0a8b4ea362eb2b5637b8866001521c3a41242",
+    "incremental_audit.py": "ed634c18ae903f0f2d9d951d182d18ce5d179af15260aa977355625cf784a0fb",
+    "labour.py": "667a36b48b75410b23f34f60e21a5f4eab493e0884de3e31f4727cebbe701541",
+    "military.py": "18db0ccfa8fe2e9597b57cab9f42630dc966ceeaf83f7335550e71a33db38079",
+    "military_active.py": "4f5d9af309b5d4329b1c392d5ff561bbc48b7e9074e2ea7213fe03c331fc1bea",
+    "military_benchmark.py": "b8dd2442fed79c66c7e6b635e9cf94ec1664bab3eb3dc880ee0608cfb99c7481",
+    "military_bridge.py": "f8a1be0d2eb1f4ab6c90a5b396bdca7c762bc84412fafcce0e0380cb57fd6d4a",
+    "military_combat.py": "7e0b7484877c8966ed7a7a6cc9e68410df4257be9a5e20afb86885c9bb94ff79",
+    "military_innovation.py": "08212c6e8357396887703cb59a68cdde4a673e1fb8c6985e01844b92a43db98e",
+    "military_innovation_benchmark.py": "b1d32a62d41e45ed2c20749898e4b2d24cd64366ca2feafc10aa6e633b07b20e",
+    "military_logistics.py": "b2c29803d08f1db48b95711aef785138da4d6bf4eb2a74947219950ce290859a",
+    "military_operations.py": "ed4bbe27df685220a21b4da942de38cd5986b1c7791ebc61bd58380903238041",
+    "military_politics.py": "9dceec50d681c086c4e8b239eefcd5059434591dd2f963652d4c3c56db7e7c32",
+    "military_state.py": "3224af5ce62ff78d9c131b209f9020029d5ba82376d5c63e9cab94a0d5b08f67",
+    "models.py": "8c26689f74413fceb5086f00db3011286f7571a3889e277417742968aa9d0a01",
+    "npc.py": "55c8b86c799ff656e3094c8336435c6860f49dd1068a5f18098d23f44ec17e35",
+    "npc_benchmark.py": "30a05c336d3182476a8f8e6a74a6b8c8c52f885ec7040601fda8d49e988245d1",
+    "npc_decision.py": "d7ece4636aac80394235ac6b9b6b133559826abadac3dd7dc032b9d2bc99804b",
+    "npc_runtime.py": "4ff7273f86b1814ae6ceeb8c6a3983a1cfa7fbf838cec7e28fb7520bd2b3503c",
+    "npc_state.py": "d5057a906e9b811299847d108ec430c2fbe854d73b2fb91ca9f75dd762a12eb8",
+    "order_execution.py": "902f39901d3ab4ad0747e462699242b9dd4ca832d09f84dfa4bafca6aa4a499f",
+    "performance_benchmark.py": "48c303f855b627e4c9367692c4a81bcbcc98b26b3ae08cd2abea895b2c65d4cd",
+    "persistence.py": "a109662882d504bc890b5127a41fab115a0e5c75f8e94212be29694e772db33e",
+    "projects.py": "f13f5554c506d55fd21753515a75712b3ee4e296295b13e21c6dafe5dda33dfd",
+    "runtime_queries.py": "c9d0353570bafc379b8bcd09ac7c970a55e0b8fed9d9498e23780799b3a948a6",
+    "runtime_query_benchmark.py": "424db193923620aad90d999a06b3dbdd07bcd2bd10efe8d6bb7df0dc3c325d45",
+    "stabilization_benchmark.py": "af5d447ce6d4f65146a4e08ce1dba9a46a2aa6f6ad1d7a5c6106f9affa65254c",
+    "state_runtime.py": "84fb8484c73016892f3b72d530ac05c2fe4502906a2499e7d5d467ac49509fde",
+    "state_storage.py": "ee0a1b56a481089f89c687a047b8614137b8103667eec803152dff5d8ce539d2"
+  },
+  "months": 2,
+  "repetitions": 3,
+  "seed": 941,
+  "validation_mode": "runtime",
+  "python": "3.14.8 (tags/v3.14.8:8e6e75d, Sep 30 2026, 18:19:33) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "method": "Sequential actual SQLite military Engine; same scenarios, orders, seed and runtime audits; midpoint save in every timed run; additional genuine save/load/continue outside repeated median",
+  "equal": true,
+  "scenarios": {
+    "preindustrial_border": {
+      "runs": {
+        "baseline": {
+          "seconds": [
+            10.044173700000101,
+            9.798972500000673,
+            9.838133600002038
+          ],
+          "median_seconds": 9.838133600002038,
+          "simulation_seconds": [
+            7.884889500001009,
+            7.992683199998282,
+            8.117644000001746
+          ],
+          "median_simulation_seconds": 7.992683199998282,
+          "fingerprints": [
+            {
+              "world": "a6bcda4aca53bb0a3672cdb1f16852cee547cf35c90645b9bcd43797ae96ba4f",
+              "rng": "4c454684b962a3c4a1d233feb4fba09221a7cd6212c2a575deda9c90eebe10bf",
+              "ledger": "291afdb4aa2a2e62da28b0330300aaf0488dd7b789d7f248074cf58674aaaacf",
+              "rows": "9cc369ddbbc490925bada088c4901cafd1dbb47ab495c82640218a22e1e8e458",
+              "actions": "230f2e03555f585c5e97812461c8848060686caaff7993ab7374c20939d44f99"
+            },
+            {
+              "world": "a6bcda4aca53bb0a3672cdb1f16852cee547cf35c90645b9bcd43797ae96ba4f",
+              "rng": "4c454684b962a3c4a1d233feb4fba09221a7cd6212c2a575deda9c90eebe10bf",
+              "ledger": "291afdb4aa2a2e62da28b0330300aaf0488dd7b789d7f248074cf58674aaaacf",
+              "rows": "9cc369ddbbc490925bada088c4901cafd1dbb47ab495c82640218a22e1e8e458",
+              "actions": "230f2e03555f585c5e97812461c8848060686caaff7993ab7374c20939d44f99"
+            },
+            {
+              "world": "a6bcda4aca53bb0a3672cdb1f16852cee547cf35c90645b9bcd43797ae96ba4f",
+              "rng": "4c454684b962a3c4a1d233feb4fba09221a7cd6212c2a575deda9c90eebe10bf",
+              "ledger": "291afdb4aa2a2e62da28b0330300aaf0488dd7b789d7f248074cf58674aaaacf",
+              "rows": "9cc369ddbbc490925bada088c4901cafd1dbb47ab495c82640218a22e1e8e458",
+              "actions": "230f2e03555f585c5e97812461c8848060686caaff7993ab7374c20939d44f99"
+            }
+          ],
+          "midpoint_save_sha256": [
+            "6fae497aadae9b05d62dad83eac2f3a0bda3c17811ef3c0503bbde77575ee712",
+            "6fae497aadae9b05d62dad83eac2f3a0bda3c17811ef3c0503bbde77575ee712",
+            "6fae497aadae9b05d62dad83eac2f3a0bda3c17811ef3c0503bbde77575ee712"
+          ]
+        },
+        "optimized": {
+          "seconds": [
+            9.967945000000327,
+            9.72942089999924,
+            10.102524900001299
+          ],
+          "median_seconds": 9.967945000000327,
+          "simulation_seconds": [
+            8.10860949999551,
+            8.043513599997823,
+            8.247667499999807
+          ],
+          "median_simulation_seconds": 8.10860949999551,
+          "fingerprints": [
+            {
+              "world": "a6bcda4aca53bb0a3672cdb1f16852cee547cf35c90645b9bcd43797ae96ba4f",
+              "rng": "4c454684b962a3c4a1d233feb4fba09221a7cd6212c2a575deda9c90eebe10bf",
+              "ledger": "291afdb4aa2a2e62da28b0330300aaf0488dd7b789d7f248074cf58674aaaacf",
+              "rows": "9cc369ddbbc490925bada088c4901cafd1dbb47ab495c82640218a22e1e8e458",
+              "actions": "230f2e03555f585c5e97812461c8848060686caaff7993ab7374c20939d44f99"
+            },
+            {
+              "world": "a6bcda4aca53bb0a3672cdb1f16852cee547cf35c90645b9bcd43797ae96ba4f",
+              "rng": "4c454684b962a3c4a1d233feb4fba09221a7cd6212c2a575deda9c90eebe10bf",
+              "ledger": "291afdb4aa2a2e62da28b0330300aaf0488dd7b789d7f248074cf58674aaaacf",
+              "rows": "9cc369ddbbc490925bada088c4901cafd1dbb47ab495c82640218a22e1e8e458",
+              "actions": "230f2e03555f585c5e97812461c8848060686caaff7993ab7374c20939d44f99"
+            },
+            {
+              "world": "a6bcda4aca53bb0a3672cdb1f16852cee547cf35c90645b9bcd43797ae96ba4f",
+              "rng": "4c454684b962a3c4a1d233feb4fba09221a7cd6212c2a575deda9c90eebe10bf",
+              "ledger": "291afdb4aa2a2e62da28b0330300aaf0488dd7b789d7f248074cf58674aaaacf",
+              "rows": "9cc369ddbbc490925bada088c4901cafd1dbb47ab495c82640218a22e1e8e458",
+              "actions": "230f2e03555f585c5e97812461c8848060686caaff7993ab7374c20939d44f99"
+            }
+          ],
+          "midpoint_save_sha256": [
+            "6fae497aadae9b05d62dad83eac2f3a0bda3c17811ef3c0503bbde77575ee712",
+            "6fae497aadae9b05d62dad83eac2f3a0bda3c17811ef3c0503bbde77575ee712",
+            "6fae497aadae9b05d62dad83eac2f3a0bda3c17811ef3c0503bbde77575ee712"
+          ]
+        },
+        "resume": {
+          "seconds": 11.676243999998405,
+          "fingerprints": {
+            "world": "a6bcda4aca53bb0a3672cdb1f16852cee547cf35c90645b9bcd43797ae96ba4f",
+            "rng": "4c454684b962a3c4a1d233feb4fba09221a7cd6212c2a575deda9c90eebe10bf",
+            "ledger": "291afdb4aa2a2e62da28b0330300aaf0488dd7b789d7f248074cf58674aaaacf",
+            "rows": "9cc369ddbbc490925bada088c4901cafd1dbb47ab495c82640218a22e1e8e458",
+            "actions": "230f2e03555f585c5e97812461c8848060686caaff7993ab7374c20939d44f99"
+          },
+          "logical_equal": true,
+          "save_bytes_equal": true,
+          "actually_restored": true
+        }
+      },
+      "checks": [
+        {
+          "sample": "baseline:1",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        },
+        {
+          "sample": "baseline:2",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        },
+        {
+          "sample": "baseline:3",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        },
+        {
+          "sample": "optimized:1",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        },
+        {
+          "sample": "optimized:2",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        },
+        {
+          "sample": "optimized:3",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        }
+      ],
+      "equal": true,
+      "speedup": 0.9869771151427617,
+      "simulation_speedup": 0.9857033070839962
+    },
+    "industrial_front": {
+      "runs": {
+        "baseline": {
+          "seconds": [
+            11.48358189999999,
+            11.829613099998824,
+            11.773815500000637
+          ],
+          "median_seconds": 11.773815500000637,
+          "simulation_seconds": [
+            9.04742299999998,
+            9.525089900002058,
+            9.610389999998006
+          ],
+          "median_simulation_seconds": 9.525089900002058,
+          "fingerprints": [
+            {
+              "world": "a5581216f454c8ed363d1313d5589c58c2ad57b6923ce91673c8cc1512e5a13d",
+              "rng": "967b171d3b100bf0058bcb160e7e53a5e976d4d6a0c089f3f1219a3124c09a06",
+              "ledger": "f31e4bb32db34d5f9e097696a6906dc7454afabce58d54258218b0fed918c03e",
+              "rows": "a9c4ada2f83cb3d32e23af501f01200a0a08f67ea5ce82864bb90a89c1331086",
+              "actions": "8ec945783ec8bca4b2424bebb900f5849fbdd66395a00bc5c4108086142dd5fa"
+            },
+            {
+              "world": "a5581216f454c8ed363d1313d5589c58c2ad57b6923ce91673c8cc1512e5a13d",
+              "rng": "967b171d3b100bf0058bcb160e7e53a5e976d4d6a0c089f3f1219a3124c09a06",
+              "ledger": "f31e4bb32db34d5f9e097696a6906dc7454afabce58d54258218b0fed918c03e",
+              "rows": "a9c4ada2f83cb3d32e23af501f01200a0a08f67ea5ce82864bb90a89c1331086",
+              "actions": "8ec945783ec8bca4b2424bebb900f5849fbdd66395a00bc5c4108086142dd5fa"
+            },
+            {
+              "world": "a5581216f454c8ed363d1313d5589c58c2ad57b6923ce91673c8cc1512e5a13d",
+              "rng": "967b171d3b100bf0058bcb160e7e53a5e976d4d6a0c089f3f1219a3124c09a06",
+              "ledger": "f31e4bb32db34d5f9e097696a6906dc7454afabce58d54258218b0fed918c03e",
+              "rows": "a9c4ada2f83cb3d32e23af501f01200a0a08f67ea5ce82864bb90a89c1331086",
+              "actions": "8ec945783ec8bca4b2424bebb900f5849fbdd66395a00bc5c4108086142dd5fa"
+            }
+          ],
+          "midpoint_save_sha256": [
+            "6a392e051a9b8d945cae7374a08c97c3c71cf35b7f53f44e527ed59ffb3892c5",
+            "6a392e051a9b8d945cae7374a08c97c3c71cf35b7f53f44e527ed59ffb3892c5",
+            "6a392e051a9b8d945cae7374a08c97c3c71cf35b7f53f44e527ed59ffb3892c5"
+          ]
+        },
+        "optimized": {
+          "seconds": [
+            11.784126200000173,
+            11.685176799997862,
+            11.946046000000933
+          ],
+          "median_seconds": 11.784126200000173,
+          "simulation_seconds": [
+            9.829600500001106,
+            9.563600499997847,
+            9.499903600000835
+          ],
+          "median_simulation_seconds": 9.563600499997847,
+          "fingerprints": [
+            {
+              "world": "a5581216f454c8ed363d1313d5589c58c2ad57b6923ce91673c8cc1512e5a13d",
+              "rng": "967b171d3b100bf0058bcb160e7e53a5e976d4d6a0c089f3f1219a3124c09a06",
+              "ledger": "f31e4bb32db34d5f9e097696a6906dc7454afabce58d54258218b0fed918c03e",
+              "rows": "a9c4ada2f83cb3d32e23af501f01200a0a08f67ea5ce82864bb90a89c1331086",
+              "actions": "8ec945783ec8bca4b2424bebb900f5849fbdd66395a00bc5c4108086142dd5fa"
+            },
+            {
+              "world": "a5581216f454c8ed363d1313d5589c58c2ad57b6923ce91673c8cc1512e5a13d",
+              "rng": "967b171d3b100bf0058bcb160e7e53a5e976d4d6a0c089f3f1219a3124c09a06",
+              "ledger": "f31e4bb32db34d5f9e097696a6906dc7454afabce58d54258218b0fed918c03e",
+              "rows": "a9c4ada2f83cb3d32e23af501f01200a0a08f67ea5ce82864bb90a89c1331086",
+              "actions": "8ec945783ec8bca4b2424bebb900f5849fbdd66395a00bc5c4108086142dd5fa"
+            },
+            {
+              "world": "a5581216f454c8ed363d1313d5589c58c2ad57b6923ce91673c8cc1512e5a13d",
+              "rng": "967b171d3b100bf0058bcb160e7e53a5e976d4d6a0c089f3f1219a3124c09a06",
+              "ledger": "f31e4bb32db34d5f9e097696a6906dc7454afabce58d54258218b0fed918c03e",
+              "rows": "a9c4ada2f83cb3d32e23af501f01200a0a08f67ea5ce82864bb90a89c1331086",
+              "actions": "8ec945783ec8bca4b2424bebb900f5849fbdd66395a00bc5c4108086142dd5fa"
+            }
+          ],
+          "midpoint_save_sha256": [
+            "6a392e051a9b8d945cae7374a08c97c3c71cf35b7f53f44e527ed59ffb3892c5",
+            "6a392e051a9b8d945cae7374a08c97c3c71cf35b7f53f44e527ed59ffb3892c5",
+            "6a392e051a9b8d945cae7374a08c97c3c71cf35b7f53f44e527ed59ffb3892c5"
+          ]
+        },
+        "resume": {
+          "seconds": 13.498897900000884,
+          "fingerprints": {
+            "world": "a5581216f454c8ed363d1313d5589c58c2ad57b6923ce91673c8cc1512e5a13d",
+            "rng": "967b171d3b100bf0058bcb160e7e53a5e976d4d6a0c089f3f1219a3124c09a06",
+            "ledger": "f31e4bb32db34d5f9e097696a6906dc7454afabce58d54258218b0fed918c03e",
+            "rows": "a9c4ada2f83cb3d32e23af501f01200a0a08f67ea5ce82864bb90a89c1331086",
+            "actions": "8ec945783ec8bca4b2424bebb900f5849fbdd66395a00bc5c4108086142dd5fa"
+          },
+          "logical_equal": true,
+          "save_bytes_equal": true,
+          "actually_restored": true
+        }
+      },
+      "checks": [
+        {
+          "sample": "baseline:1",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        },
+        {
+          "sample": "baseline:2",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        },
+        {
+          "sample": "baseline:3",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        },
+        {
+          "sample": "optimized:1",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        },
+        {
+          "sample": "optimized:2",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        },
+        {
+          "sample": "optimized:3",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        }
+      ],
+      "equal": true,
+      "speedup": 0.9991250348286718,
+      "simulation_speedup": 0.9959732111357227
+    },
+    "expeditionary_sea": {
+      "runs": {
+        "baseline": {
+          "seconds": [
+            11.27594560000216,
+            11.234427599996707,
+            11.310679700000037
+          ],
+          "median_seconds": 11.27594560000216,
+          "simulation_seconds": [
+            9.093359000002238,
+            9.318090900000243,
+            9.22582329999932
+          ],
+          "median_simulation_seconds": 9.22582329999932,
+          "fingerprints": [
+            {
+              "world": "2ff99ad9c86cd40eae48b8ece2de6e26006d44c0c33a117ed962d499031d7669",
+              "rng": "3d67d0823d6ce6651deedfde6d56bc72943822fbc134441ab3190c99174d829c",
+              "ledger": "7a6bcceef2038f1e9b00d3846cc807d3a2f3643eb20e4d1ab48997052b6c7b49",
+              "rows": "2698548321bbcdd9347e483405555ebeb1e7b291a68d51188be61dd5b48c0f41",
+              "actions": "4bfdbf90832553eeb72409965ff81a01cdf2eb2c54cba1e34e7e2801b489a131"
+            },
+            {
+              "world": "2ff99ad9c86cd40eae48b8ece2de6e26006d44c0c33a117ed962d499031d7669",
+              "rng": "3d67d0823d6ce6651deedfde6d56bc72943822fbc134441ab3190c99174d829c",
+              "ledger": "7a6bcceef2038f1e9b00d3846cc807d3a2f3643eb20e4d1ab48997052b6c7b49",
+              "rows": "2698548321bbcdd9347e483405555ebeb1e7b291a68d51188be61dd5b48c0f41",
+              "actions": "4bfdbf90832553eeb72409965ff81a01cdf2eb2c54cba1e34e7e2801b489a131"
+            },
+            {
+              "world": "2ff99ad9c86cd40eae48b8ece2de6e26006d44c0c33a117ed962d499031d7669",
+              "rng": "3d67d0823d6ce6651deedfde6d56bc72943822fbc134441ab3190c99174d829c",
+              "ledger": "7a6bcceef2038f1e9b00d3846cc807d3a2f3643eb20e4d1ab48997052b6c7b49",
+              "rows": "2698548321bbcdd9347e483405555ebeb1e7b291a68d51188be61dd5b48c0f41",
+              "actions": "4bfdbf90832553eeb72409965ff81a01cdf2eb2c54cba1e34e7e2801b489a131"
+            }
+          ],
+          "midpoint_save_sha256": [
+            "61209904d4067ef7a86eeaf221e64bc521fe497630b27057695cd8c179b8ffc9",
+            "61209904d4067ef7a86eeaf221e64bc521fe497630b27057695cd8c179b8ffc9",
+            "61209904d4067ef7a86eeaf221e64bc521fe497630b27057695cd8c179b8ffc9"
+          ]
+        },
+        "optimized": {
+          "seconds": [
+            11.086382499997853,
+            10.992597799999203,
+            11.302979399999458
+          ],
+          "median_seconds": 11.086382499997853,
+          "simulation_seconds": [
+            9.110902899999928,
+            9.262299199999688,
+            9.422330900000816
+          ],
+          "median_simulation_seconds": 9.262299199999688,
+          "fingerprints": [
+            {
+              "world": "2ff99ad9c86cd40eae48b8ece2de6e26006d44c0c33a117ed962d499031d7669",
+              "rng": "3d67d0823d6ce6651deedfde6d56bc72943822fbc134441ab3190c99174d829c",
+              "ledger": "7a6bcceef2038f1e9b00d3846cc807d3a2f3643eb20e4d1ab48997052b6c7b49",
+              "rows": "2698548321bbcdd9347e483405555ebeb1e7b291a68d51188be61dd5b48c0f41",
+              "actions": "4bfdbf90832553eeb72409965ff81a01cdf2eb2c54cba1e34e7e2801b489a131"
+            },
+            {
+              "world": "2ff99ad9c86cd40eae48b8ece2de6e26006d44c0c33a117ed962d499031d7669",
+              "rng": "3d67d0823d6ce6651deedfde6d56bc72943822fbc134441ab3190c99174d829c",
+              "ledger": "7a6bcceef2038f1e9b00d3846cc807d3a2f3643eb20e4d1ab48997052b6c7b49",
+              "rows": "2698548321bbcdd9347e483405555ebeb1e7b291a68d51188be61dd5b48c0f41",
+              "actions": "4bfdbf90832553eeb72409965ff81a01cdf2eb2c54cba1e34e7e2801b489a131"
+            },
+            {
+              "world": "2ff99ad9c86cd40eae48b8ece2de6e26006d44c0c33a117ed962d499031d7669",
+              "rng": "3d67d0823d6ce6651deedfde6d56bc72943822fbc134441ab3190c99174d829c",
+              "ledger": "7a6bcceef2038f1e9b00d3846cc807d3a2f3643eb20e4d1ab48997052b6c7b49",
+              "rows": "2698548321bbcdd9347e483405555ebeb1e7b291a68d51188be61dd5b48c0f41",
+              "actions": "4bfdbf90832553eeb72409965ff81a01cdf2eb2c54cba1e34e7e2801b489a131"
+            }
+          ],
+          "midpoint_save_sha256": [
+            "61209904d4067ef7a86eeaf221e64bc521fe497630b27057695cd8c179b8ffc9",
+            "61209904d4067ef7a86eeaf221e64bc521fe497630b27057695cd8c179b8ffc9",
+            "61209904d4067ef7a86eeaf221e64bc521fe497630b27057695cd8c179b8ffc9"
+          ]
+        },
+        "resume": {
+          "seconds": 12.83306420000008,
+          "fingerprints": {
+            "world": "2ff99ad9c86cd40eae48b8ece2de6e26006d44c0c33a117ed962d499031d7669",
+            "rng": "3d67d0823d6ce6651deedfde6d56bc72943822fbc134441ab3190c99174d829c",
+            "ledger": "7a6bcceef2038f1e9b00d3846cc807d3a2f3643eb20e4d1ab48997052b6c7b49",
+            "rows": "2698548321bbcdd9347e483405555ebeb1e7b291a68d51188be61dd5b48c0f41",
+            "actions": "4bfdbf90832553eeb72409965ff81a01cdf2eb2c54cba1e34e7e2801b489a131"
+          },
+          "logical_equal": true,
+          "save_bytes_equal": true,
+          "actually_restored": true
+        }
+      },
+      "checks": [
+        {
+          "sample": "baseline:1",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        },
+        {
+          "sample": "baseline:2",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        },
+        {
+          "sample": "baseline:3",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        },
+        {
+          "sample": "optimized:1",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        },
+        {
+          "sample": "optimized:2",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        },
+        {
+          "sample": "optimized:3",
+          "logical_equal": true,
+          "save_bytes_equal": true
+        }
+      ],
+      "equal": true,
+      "speedup": 1.0170987335142319,
+      "simulation_speedup": 0.9960618957331491
+    }
+  }
+}

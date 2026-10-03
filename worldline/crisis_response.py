@@ -11,6 +11,7 @@ from datetime import timedelta
 
 from .models import canonical_date
 from . import credit, guardrails, npc, npc_decision, npc_state, order_execution
+from .runtime_queries import items as query_items, latest_by_group, values as query_values
 
 VERSION = "1"
 DISASTERS = {"drought", "flood", "storm", "typhoon", "earthquake", "fire", "extreme_cold", "extreme_heat", "bad_harvest", "food_shortage", "famine"}
@@ -159,15 +160,25 @@ def _observation_order(message):
 
 
 def deliver_due(world):
-    state, events, latest, due = _state(world), [], {}, []
-    # A single pass over retained communication history also works after load;
-    # no separate index can drift away from the saved messages.
-    for message in state["messages"].values():
-        key = (message["actor"], message["data"]["event_id"])
-        if message["status"] == "delivered" and message.get("belief_accepted") is not False:
-            latest[key] = max(latest.get(key, _observation_order(message)), _observation_order(message))
-        elif message["status"] == "queued" and message["delivery_date"] <= world.date:
-            due.append(message)
+    state, events = _state(world), []
+    queued = query_values(state["messages"], "crisis-queued-messages", lambda m: m["status"] == "queued")
+    due = [message for message in queued if message["delivery_date"] <= world.date]
+    seen = set()
+    for message in due:
+        order = (message["delivery_date"], _observation_order(message))
+        if order in seen:
+            # Stable delivery order on equal imported observation keys follows
+            # original insertion order, rather than index key order.
+            due = [m for m in state["messages"].values()
+                   if m["status"] == "queued" and m["delivery_date"] <= world.date]
+            break
+        seen.add(order)
+    def group(message):
+        return message["actor"], message["data"]["event_id"]
+    accepted_history = latest_by_group(state["messages"], "crisis-accepted-observations", group,
+        _observation_order, lambda m: m["status"] == "delivered" and m.get("belief_accepted") is not False,
+        [group(message) for message in due])
+    latest = {key: _observation_order(message) for key, message in accepted_history.items()}
     for message in sorted(due, key=lambda m: (m["delivery_date"], _observation_order(m))):
         message_id, actor, data = message["message_id"], message["actor"], message["data"]
         key, order = (actor, data["event_id"]), _observation_order(message)
@@ -667,7 +678,7 @@ def process_due(world, rng=None):
             result = respond(world, pending["event_id"], pending["country"], "ignore", timeout=True)
             if result["status"] == "accepted":
                 events.extend(result["events"])
-    for event_id, event in list(sorted(state["events"].items())):
+    for event_id, event in query_items(state["events"], "crisis-ongoing-events", lambda e: e["ongoing"]):
         if not event["ongoing"]:
             continue
         for actor, person in sorted(world.npc_state["persons"].items()):

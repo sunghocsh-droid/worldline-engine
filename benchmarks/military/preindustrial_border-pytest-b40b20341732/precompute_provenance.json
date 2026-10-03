@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "method": "Untouched military_benchmark.run_campaign genuine independent precompute; all monthly source guards and daily full verification",
+  "scenario": "preindustrial_border",
+  "months": 36,
+  "seed": 1731,
+  "validation_mode": "verification",
+  "checkpoint": null,
+  "source_manifest_current_equal": true,
+  "source_digest": "b40b2034173299934a0683f52cab624180af2409adb0d9b3dc58d7cf9b0eace9",
+  "final_logical_sha256": "5543e904477614289500b8dcc9c550b783f5156b08e59f7f32984ab1fc3986a2",
+  "rows": 37,
+  "actions": 798,
+  "ledger_entries": 17316,
+  "benchmark_total_seconds": 3193.618323400002,
+  "script_elapsed_seconds": 3209.7794947999973,
+  "script_cpu_seconds": 2757.03125,
+  "files": {
+    "countries.csv": 15877,
+    "game.sqlite": 139902976,
+    "result.json.gz": 10726379
+  },
+  "installed_into_fixture_cache": false
+}

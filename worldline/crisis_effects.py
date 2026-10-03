@@ -9,6 +9,7 @@ import hashlib
 
 from .models import canonical_date
 from . import crisis_state as cs
+from .runtime_queries import first_grouped, ordered_values
 
 KINDS = ("economic_shock", "population_loss", "infrastructure_damage", "pressure_delta",
          "diplomacy", "funded_payment", "social_stability", "mitigation", "event_resolution", "trigger", "food_stock_loss")
@@ -96,11 +97,12 @@ def enqueue(world, event_id, kind, payload, due_date=None, idempotency_key=None)
     fingerprint = idempotency_key or hashlib.sha256(cs._json([event_id, kind, payload, due_date]).encode()).hexdigest()
     if not isinstance(fingerprint, str) or not fingerprint:
         raise ValueError("Invalid consequence idempotency key")
-    for prior in state["effects"].values():
-        if prior.get("idempotency_key") == fingerprint:
-            if prior["event_id"] != event_id or prior["kind"] != kind or prior["payload"] != payload or prior["due_date"] != due_date:
-                raise ValueError("Consequence idempotency key conflicts with existing history")
-            return prior
+    prior = first_grouped(state["effects"], "crisis-effect-idempotency",
+                          lambda effect: effect.get("idempotency_key"), fingerprint)
+    if prior is not None:
+        if prior["event_id"] != event_id or prior["kind"] != kind or prior["payload"] != payload or prior["due_date"] != due_date:
+            raise ValueError("Consequence idempotency key conflicts with existing history")
+        return prior
     event = state["events"][event_id]
     if not event["ongoing"] and kind in HARMFUL:
         raise ValueError("Cannot add repeated damage to a resolved event")
@@ -230,7 +232,8 @@ def apply_due(world):
     state = cs._state(world)
     result = []
     # Preserve creation order numerically rather than lexical 1,10,2 sorting.
-    effects = sorted(state["effects"].values(), key=lambda e: (e["due_date"], e["created_at"], int(e["effect_id"].rsplit("-", 1)[-1])))
+    effects = ordered_values(state["effects"], "crisis-unapplied-effects", lambda e: not e["applied"],
+        lambda e: (e["due_date"], e["created_at"], int(e["effect_id"].rsplit("-", 1)[-1])))
     for effect in effects:
         if effect["applied"] or effect["due_date"] > world.date:
             continue

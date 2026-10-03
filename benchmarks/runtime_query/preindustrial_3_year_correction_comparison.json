@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "kind": "correction_regression_between_genuine_current_code_trials",
+  "claims_0779ceb_baseline_equality": false,
+  "method": "Two genuine 36-month military_benchmark.run_campaign executions; exact World/RNG/ledger/rows/actions comparison; wall timing and source hashes are provenance, excluded from game results",
+  "scenario": "preindustrial_border",
+  "months": 36,
+  "seed": 1731,
+  "validation_mode": "verification",
+  "checkpoint": null,
+  "prior_source_digest": "1b1156479808a6bce17721402ef687889ac89bb6a2fcd07cbbbaaf7a20b7c224",
+  "final_source_digest": "b40b2034173299934a0683f52cab624180af2409adb0d9b3dc58d7cf9b0eace9",
+  "final_source_manifest_current_equal": true,
+  "prior_result": "work\\runtime_query\\precompute\\preindustrial_border\\result.json.gz",
+  "final_result": "work\\runtime_query\\final_precompute\\preindustrial_border\\result.json.gz",
+  "components": {
+    "world": {
+      "exact_values_equal": true,
+      "canonical_json_equal": true,
+      "prior_sha256": "8cf8f4be483bb198c68ab529b93c4672cafe9c15386227d424f2ada03a284d57",
+      "final_sha256": "8cf8f4be483bb198c68ab529b93c4672cafe9c15386227d424f2ada03a284d57"
+    },
+    "rng": {
+      "exact_values_equal": true,
+      "canonical_json_equal": true,
+      "prior_sha256": "52033f05ac032ab250da653b0202ddf220b47d1e4de5632182a1cf76a6d90915",
+      "final_sha256": "52033f05ac032ab250da653b0202ddf220b47d1e4de5632182a1cf76a6d90915"
+    },
+    "ledger": {
+      "exact_values_equal": true,
+      "canonical_json_equal": true,
+      "prior_sha256": "c16d9b73f65da9c49a7827a04c6f615f42762ca3eb806cf2f46c10e5c389d1d4",
+      "final_sha256": "c16d9b73f65da9c49a7827a04c6f615f42762ca3eb806cf2f46c10e5c389d1d4"
+    },
+    "rows": {
+      "exact_values_equal": true,
+      "canonical_json_equal": true,
+      "prior_sha256": "5f6fa818cbec601f5788b1db4010efa6963cd0a270acc431a3e4037f0c36a497",
+      "final_sha256": "5f6fa818cbec601f5788b1db4010efa6963cd0a270acc431a3e4037f0c36a497"
+    },
+    "actions": {
+      "exact_values_equal": true,
+      "canonical_json_equal": true,
+      "prior_sha256": "7da287375d81d6c27eea42cc583fbf0b5b6b59ff1fbd816e12c3c32f7ff42b0f",
+      "final_sha256": "7da287375d81d6c27eea42cc583fbf0b5b6b59ff1fbd816e12c3c32f7ff42b0f"
+    }
+  },
+  "all_equal": true,
+  "prior_final_logical_sha256": "5543e904477614289500b8dcc9c550b783f5156b08e59f7f32984ab1fc3986a2",
+  "final_final_logical_sha256": "5543e904477614289500b8dcc9c550b783f5156b08e59f7f32984ab1fc3986a2"
+}

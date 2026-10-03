@@ -1,0 +1,21 @@
+Final NPC primary 12 /240
+Final NPC primary 24 /240
+Final NPC primary 36 /240
+Final NPC primary 48 /240
+Final NPC primary 60 /240
+Final NPC primary 72 /240
+Final NPC primary 84 /240
+Final NPC primary 96 /240
+Final NPC primary 108 /240
+Final NPC primary 120 /240
+Final NPC primary 132 /240
+Final NPC primary 144 /240
+Final NPC primary 156 /240
+Final NPC primary 168 /240
+Final NPC primary 180 /240
+Final NPC primary 192 /240
+Final NPC primary 204 /240
+Final NPC primary 216 /240
+Final NPC primary 228 /240
+Final NPC primary 240 /240
+Final NPC primary complete

@@ -486,11 +486,16 @@ def tick(world, tick_event, rng):
         if not person.get("active", True):
             schedule["next_due"] = (today + timedelta(days=365)).isoformat()
             continue
-        for target in list(state["relationships"].get(actor, {})):
-            npc_state.evaluate_ruler(state, actor, target, world.date)
+        targets = list(state["relationships"].get(actor, {}))
         ruler = state["governments"].get(person["country"], {}).get("ruler")
+        # Relationship writes do not change delivered reports or memories.
+        # Share their read context for this actor only, preserving every
+        # evaluation (including a ruler already present among the targets).
+        context = npc_state._relationship_context(state, actor, world.date) if targets or ruler else None
+        for target in targets:
+            npc_state.evaluate_ruler(state, actor, target, world.date, _context=context)
         if ruler:
-            npc_state.evaluate_ruler(state, actor, ruler, world.date)
+            npc_state.evaluate_ruler(state, actor, ruler, world.date, _context=context)
         view = npc_state._actor_read_view(state, actor, world.date)
         view, options, actual = options_for(world, actor, _view=view)
         decision = npc_decision.decide(view, options, rng)

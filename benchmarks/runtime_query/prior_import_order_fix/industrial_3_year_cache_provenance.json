@@ -1,0 +1,23 @@
+{
+  "runtime_query_cache_provenance_schema": 1,
+  "scenario": "industrial_front",
+  "cache_path": "benchmarks\\military\\industrial_front-pytest-1b1156479808",
+  "method": "Actual SQLite Engine; daily full Auditor; ordinary dated orders and finite paid procurement",
+  "months": 36,
+  "seed": 1731,
+  "validation_mode": "verification",
+  "checkpoint_used": false,
+  "source_provenance_retagged": false,
+  "source_sha256_matches_opening_current_and_frozen": true,
+  "source_digest": "1b1156479808a6bce17721402ef687889ac89bb6a2fcd07cbbbaaf7a20b7c224",
+  "source_file_count": 45,
+  "final_logical_sha256": "c694317c63a456239d1a5f1f88a4e13825c177ce85b540e1c797167b8e07e92b",
+  "final_logical_digest_verified": true,
+  "row_count": 37,
+  "action_count": 692,
+  "final_date": "1900-01-01",
+  "result_file_sha256": "cd00f7f2bf6aa5543cfb0c57baf21a5c3ff7f5085a0aeae9fecde904a88c58f9",
+  "frozen_manifest_path": "benchmarks\\runtime_query\\final_source_manifest.json",
+  "complete_folder_moved_after_root_stage_confirmation": true,
+  "concurrent_timing_is_controlled_speedup_measurement": false
+}

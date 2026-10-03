@@ -13,6 +13,7 @@ import random
 from contextlib import contextmanager
 
 from .models import canonical_date
+from .runtime_queries import grouped_count
 
 VERSION = 1
 CATEGORIES = ("interstate_war", "diplomatic_crisis", "border_tension", "civil_unrest",
@@ -197,7 +198,9 @@ def add_event(world, event_type, region=None, countries=(), *, causes=None, actu
     # Stable local numbering avoids shifting event decision streams when an
     # unrelated event is inserted elsewhere in the world.
     scope = [event_type, region, sorted(countries)]
-    sequence = 1 + sum([e["event_type"], e["region"], sorted(e["countries"])] == scope for e in state["events"].values())
+    sequence = 1 + grouped_count(state["events"], "crisis-event-scope",
+        lambda e: (e["event_type"], e["region"], tuple(sorted(e["countries"]))),
+        (event_type, region, tuple(sorted(countries))))
     rng_key = "event:" + hashlib.sha256(_json([scope, sequence]).encode()).hexdigest()
     event = {"event_id": event_id, "event_type": event_type, "start_date": world.date,
         "end_date": None, "ongoing": True, "region": region, "countries": countries,

@@ -1,0 +1,41 @@
+........................................................................ [  5%]
+........................................................................ [ 10%]
+........................................................................ [ 16%]
+........................................................................ [ 21%]
+........................................................................ [ 26%]
+........................................................................ [ 32%]
+........................................................................ [ 37%]
+........................................................................ [ 42%]
+........................................................................ [ 48%]
+........................................................................ [ 53%]
+........................................................................ [ 58%]
+........................................................................ [ 64%]
+........................................................................ [ 69%]
+........................................................................ [ 74%]
+........................................................................ [ 80%]
+........................................................................ [ 85%]
+........................................................................ [ 90%]
+........................................................................ [ 96%]
+......................................................                   [100%]
+============================ slowest 20 durations =============================
+83.77s call     tests/test_calibration.py::test_ten_year_sqlite_save_resume_world_rng_and_ledger
+54.86s call     tests/test_economy.py::test_ten_year_investment_beats_identical_no_investment_country
+30.23s call     tests/test_incremental_persistence.py::test_runtime_full_audit_save_and_resume_preserve_all_results[industrial_front]
+29.37s setup    tests/test_crisis_benchmark.py::test_all_eight_synthetic_extremes_have_real_conditions_and_audited_paths
+27.49s call     tests/test_incremental_persistence.py::test_runtime_full_audit_save_and_resume_preserve_all_results[expeditionary_sea]
+25.18s call     tests/test_incremental_persistence.py::test_runtime_full_audit_save_and_resume_preserve_all_results[preindustrial_border]
+25.14s call     tests/test_military_benchmark.py::test_actual_sqlite_save_load_reproduces_world_rng_ledger_and_pending_cohorts
+24.40s call     tests/test_economy.py::test_ten_year_baseline_does_not_explode_or_collapse
+23.43s call     tests/test_calibration.py::test_thirty_year_research_checkpoint_resume
+22.42s setup    tests/test_npc_campaign.py::test_long_campaign_same_seed_and_midpoint_save_reproduce_twenty_years
+16.04s setup    tests/test_military_benchmark.py::test_actual_three_year_campaigns_keep_consistent_cohorts_finance_and_history[preindustrial_border]
+11.21s call     tests/test_npc_campaign.py::test_long_campaign_same_seed_and_midpoint_save_reproduce_twenty_years
+8.13s setup    tests/test_crisis_benchmark.py::test_crisis_thirty_year_same_seed_and_midpoint_save_reproduce_all_state
+6.31s call     tests/test_calibration.py::test_thirty_year_baseline_stability[industrial]
+6.30s call     tests/test_calibration.py::test_thirty_year_baseline_stability[early_industrial]
+6.12s call     tests/test_calibration.py::test_thirty_year_baseline_stability[preindustrial]
+5.56s call     tests/test_runtime_query_equivalence.py::test_baseline_daily_world_rng_ledger_save_bytes_and_cross_version_continue[1731-expeditionary_sea]
+5.50s call     tests/test_runtime_query_equivalence.py::test_baseline_daily_world_rng_ledger_save_bytes_and_cross_version_continue[941-expeditionary_sea]
+5.46s call     tests/test_runtime_query_equivalence.py::test_baseline_daily_world_rng_ledger_save_bytes_and_cross_version_continue[941-industrial_front]
+5.45s call     tests/test_runtime_query_equivalence.py::test_baseline_daily_world_rng_ledger_save_bytes_and_cross_version_continue[1731-industrial_front]
+1350 passed in 620.15s (0:10:20)

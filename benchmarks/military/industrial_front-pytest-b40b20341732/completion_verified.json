@@ -1,0 +1,21 @@
+{
+  "actions": 692,
+  "actual_execution": true,
+  "cache_installed": false,
+  "checkpoint_month": null,
+  "compressed_result_sha256": "b5453b9f1c77a3919d7f60c381092bbb62fac96821f496f8697e90c78770d8f8",
+  "concurrent_timing_is_speedup_evidence": false,
+  "database_bytes": 155361280,
+  "final_date": "1900-01-01",
+  "final_logical_sha256": "c694317c63a456239d1a5f1f88a4e13825c177ce85b540e1c797167b8e07e92b",
+  "months": 36,
+  "progress_months": 36,
+  "restore": false,
+  "rows": 37,
+  "scenario": "industrial_front",
+  "seed": 1731,
+  "source_digest": "b40b2034173299934a0683f52cab624180af2409adb0d9b3dc58d7cf9b0eace9",
+  "source_file_count": 45,
+  "source_matches_current_opening_frozen_and_result": true,
+  "validation_mode": "verification"
+}

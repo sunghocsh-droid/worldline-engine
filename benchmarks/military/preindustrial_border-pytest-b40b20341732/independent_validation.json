@@ -1,0 +1,20 @@
+{
+  "kind": "independent_final_campaign_validation",
+  "source_file_count": 45,
+  "source_digest": "b40b2034173299934a0683f52cab624180af2409adb0d9b3dc58d7cf9b0eace9",
+  "gzip_json_read_success": true,
+  "matches_current_frozen_sources": true,
+  "final_logical_sha256_recomputed": "5543e904477614289500b8dcc9c550b783f5156b08e59f7f32984ab1fc3986a2",
+  "final_logical_sha256_matches": true,
+  "full_auditor_errors": [],
+  "full_auditor_seconds": 0.49670049999986077,
+  "scenario": "preindustrial_border",
+  "months": 36,
+  "seed": 1731,
+  "validation_mode": "verification",
+  "rows": 37,
+  "actions": 798,
+  "month_timings_count": 36,
+  "installed_into_fixture_cache": false,
+  "claims_0779ceb_baseline_equality": false
+}

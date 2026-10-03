@@ -1,0 +1,15 @@
+{
+  "actions": 692,
+  "checkpoint_month": null,
+  "database_bytes": 155361280,
+  "date": "1900-01-01",
+  "final_logical_sha256": "c694317c63a456239d1a5f1f88a4e13825c177ce85b540e1c797167b8e07e92b",
+  "months": 36,
+  "restore": false,
+  "rows": 37,
+  "scenario": "industrial_front",
+  "seed": 1731,
+  "source_digest": "b40b2034173299934a0683f52cab624180af2409adb0d9b3dc58d7cf9b0eace9",
+  "total_seconds": 2737.7102271000003,
+  "validation_mode": "verification"
+}

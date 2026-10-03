@@ -170,6 +170,18 @@ def compact(db, payload, cache=None):
     return {**payload, "world": physical_world, MARKER: VERSION}
 
 
+def _archive_raw(digest, row):
+    """Verify one immutable archive body shared by detached query decoders."""
+    if not isinstance(digest, str) or len(digest) != 64:
+        raise ValueError("Malformed archive reference")
+    if row is None or row[0] != "zlib-json-v1":
+        raise ValueError("Missing or unsupported state archive object")
+    raw = zlib.decompress(row[1])
+    if len(raw) != row[2] or hashlib.sha256(raw).hexdigest() != digest:
+        raise ValueError("State archive checksum mismatch")
+    return raw
+
+
 def _expand(db, value, blobs):
     if isinstance(value, dict):
         if set(value) == {REFERENCE}:
@@ -178,12 +190,7 @@ def _expand(db, value, blobs):
                 raise ValueError("Malformed archive reference")
             if digest not in blobs:
                 row = db.execute("SELECT codec,payload,raw_bytes FROM state_archive WHERE digest=?", (digest,)).fetchone()
-                if row is None or row[0] != "zlib-json-v1":
-                    raise ValueError("Missing or unsupported state archive object")
-                raw = zlib.decompress(row[1])
-                if len(raw) != row[2] or hashlib.sha256(raw).hexdigest() != digest:
-                    raise ValueError("State archive checksum mismatch")
-                blobs[digest] = raw
+                blobs[digest] = _archive_raw(digest, row)
             # Separate decode per reference preserves public inspection isolation.
             return json.loads(blobs[digest])
         return {key: _expand(db, item, blobs) for key, item in value.items()}
@@ -301,15 +308,25 @@ def write_components(db, physical, logical, cache, revision):
 
 def history(db, *, kind, owner=None, item=None):
     """Detached immutable past versions; never used to broadcast truth to NPCs."""
-    clauses, values = ["kind=?"], [kind]
+    clauses, values = ["c.kind=?"], [kind]
     for name, value in (("owner", owner), ("item", item)):
         if value is not None:
-            clauses.append(name + "=?")
+            clauses.append("c." + name + "=?")
             values.append(value)
-    query = "SELECT digest,owner,item,day FROM archive_catalog WHERE " + " AND ".join(clauses) + " ORDER BY day,owner,item,digest"
-    return [{"digest": digest, "owner": actor, "item": key, "day": day,
-             "value": _expand(db, {REFERENCE: digest}, {})}
-            for digest, actor, key, day in db.execute(query, values)]
+    # Keep missing blobs visible: an inner join would silently omit corrupted
+    # catalog references. Query-local raw bytes are never retained across calls.
+    query = ("SELECT c.digest,c.owner,c.item,c.day,a.codec,a.payload,a.raw_bytes "
+             "FROM archive_catalog AS c LEFT JOIN state_archive AS a ON a.digest=c.digest WHERE "
+             + " AND ".join(clauses) + " ORDER BY c.day,c.owner,c.item,c.digest")
+    result, blobs = [], {}
+    for digest, actor, key, day, codec, payload, raw_bytes in db.execute(query, values):
+        if digest not in blobs:
+            blobs[digest] = _archive_raw(digest, (codec, payload, raw_bytes))
+        # Separate decoding preserves isolation even when catalog rows share a
+        # content-addressed digest, just as public inspection did before batching.
+        result.append({"digest": digest, "owner": actor, "item": key, "day": day,
+                       "value": json.loads(blobs[digest])})
+    return result
 
 
 CATALOG_FIELDS = ("kind", "owner", "item", "digest", "country", "region", "day", "active", "parent")
@@ -317,8 +334,9 @@ CATALOG_FIELDS = ("kind", "owner", "item", "digest", "country", "region", "day",
 
 def export_archive(db):
     """Self-contained human-readable cold history for occasional JSON saves."""
-    objects = {digest: _expand(db, {REFERENCE: digest}, {})
-               for digest, in db.execute("SELECT digest FROM state_archive ORDER BY digest")}
+    objects = {digest: json.loads(_archive_raw(digest, (codec, payload, raw_bytes)))
+               for digest, codec, payload, raw_bytes in db.execute(
+                   "SELECT digest,codec,payload,raw_bytes FROM state_archive ORDER BY digest")}
     if not objects:
         return None
     catalog = [dict(zip(CATALOG_FIELDS, row)) for row in db.execute(

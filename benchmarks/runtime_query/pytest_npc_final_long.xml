@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="359.312" timestamp="2026-10-02T18:00:40.075881+09:00" hostname="sung"><testcase classname="tests.test_npc_campaign" name="test_long_campaign_same_seed_and_midpoint_save_reproduce_twenty_years" time="358.307" /></testsuite></testsuites>

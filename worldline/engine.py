@@ -141,16 +141,31 @@ class Engine:
 
     @property
     def true_state(self):
-        return World.from_dict(self._stored_payload()["world"])
+        return World.from_dict(self._stored_payload(field="world"))
 
-    def _stored_payload(self):
+    def _stored_payload(self, *, field=None):
         row = self.db.execute("SELECT payload FROM current_state WHERE id=1").fetchone()
         if row is None:
             raise ValueError("Missing committed state")
         journal = getattr(self, '_journal', None)
         if journal is not None and not journal.external_dirty and self._database_unchanged(row[0]):
-            world = journal.view(self._world, self._transaction_frame) if self.db.in_transaction and hasattr(self, '_transaction_frame') else self._world
-            meta = journal.view(journal.root, self._transaction_frame) if self.db.in_transaction and hasattr(self, '_transaction_frame') else journal.root
+            frame = self._transaction_frame if self.db.in_transaction and hasattr(self, '_transaction_frame') else None
+            if field in ('observed', 'orders', 'journeys'):
+                # Select the committed root reference before reconstructing its
+                # changed children. A metadata read never projects the World.
+                root = journal.root if frame is None else frame.states.get(id(journal.root), (None, journal.root))[1]
+                value = root[field] if frame is None else journal.view(root[field], frame)
+                return json.loads(encode(value))
+            if field in ('seed', 'rng', 'systems'):
+                value = {'seed': self._committed_seed, 'rng': self._committed_rng,
+                         'systems': self._committed_systems}[field]
+                if field == 'systems' and not value:
+                    raise KeyError(field)
+                return json.loads(encode(value))
+            world = journal.view(self._world, frame) if frame is not None else self._world
+            if field == 'world':
+                return json.loads(encode(projection(world)))
+            meta = journal.view(journal.root, frame) if frame is not None else journal.root
             # JSON's C encoder/decoder preserves the original committed-read
             # representation (sorted string keys, tuple arrays, independent
             # dictionaries) without a Python recursive copy of every leaf.
@@ -159,8 +174,11 @@ class Engine:
                        **{k: meta[k] for k in ('observed', 'orders', 'journeys')}}
             if self._committed_systems:
                 payload['systems'] = self._committed_systems
-            return json.loads(encode(payload))
-        return state_storage.read(self.db, row[0])
+            payload = json.loads(encode(payload))
+        else:
+            # Preserve the full physical validation on stale/private/SQL edits.
+            payload = state_storage.read(self.db, row[0])
+        return payload if field is None else payload[field]
 
     def _database_unchanged(self, text):
         return (text == self._committed_text
@@ -170,21 +188,21 @@ class Engine:
 
     @property
     def orders(self):
-        return self._stored_payload()["orders"]
+        return self._stored_payload(field="orders")
 
     @property
     def observed(self):
-        return self._stored_payload()["observed"]
+        return self._stored_payload(field="observed")
 
     @property
     def journeys(self):
-        return self._stored_payload()["journeys"]
+        return self._stored_payload(field="journeys")
 
     @property
     def rng(self):
         """Detached inspection copy. Actual draws occur inside engine transactions."""
         rng = random.Random()
-        rng.setstate(tuples(self._stored_payload()["rng"]))
+        rng.setstate(tuples(self._stored_payload(field="rng")))
         return rng
 
     @property

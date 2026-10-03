@@ -6,6 +6,7 @@ from datetime import timedelta
 from .calibration import SECTORS, PROFILES, RANGES, PROFILE_RANGES, MODEL_PARAMETERS, MODEL_PARAMETER_RANGES
 from .models import canonical_date
 from .projects import INFRA, plan, fund
+from .state_runtime import changes_since, version
 
 VERSION = "1"
 SHOCKS = ("good_harvest", "bad_harvest", "drought", "flood", "epidemic", "war_disruption",
@@ -172,8 +173,72 @@ def add_trade(world, trade_id, exporter, importer, sector, monthly_quantity, mod
         "sector": sector, "monthly_quantity": monthly_quantity, "mode": mode, "exported": 0.0, "imported": 0.0, "factors": {}}
 
 
+class _OwnedRegions:
+    """Private owner index, dependent on both regional maps.
+
+    Economic membership and Region.owner remain authoritative. Nested journal
+    changes refresh only their regional keys; rollback or a log gap rebuilds.
+    Newly inserted uninstrumented Region records are rechecked until a barrier.
+    """
+    def __init__(self):
+        self.economy_token = self.world_token = None
+        self.owners, self.groups, self.untracked = {}, {}, set()
+
+    def refresh(self, economic_regions, regions):
+        economic_token, economic_changes = changes_since(economic_regions, self.economy_token)
+        world_token, world_changes = changes_since(regions, self.world_token)
+        if economic_changes is None or world_changes is None:
+            self.owners.clear()
+            self.groups.clear()
+            self.untracked.clear()
+            changed = set(economic_regions)
+        else:
+            changed = economic_changes | world_changes | self.untracked
+        tracker = regions._tracker
+        try:
+            for key in sorted(changed):
+                if key in self.owners:
+                    previous = self.owners.pop(key)
+                    self.groups[previous].discard(key)
+                    if not self.groups[previous]:
+                        del self.groups[previous]
+                self.untracked.discard(key)
+                if key not in economic_regions:
+                    continue
+                region = regions[key]  # Preserve missing-world-region errors.
+                owner = region.owner
+                self.groups.setdefault(owner, set()).add(key)
+                self.owners[key] = owner
+                if getattr(region, '_tracker', None) is not tracker:
+                    self.untracked.add(key)
+        except Exception:
+            # A failed query may leave a partial index; retry from authoritative
+            # maps even when the caller has not performed another mutation.
+            self.economy_token = self.world_token = None
+            raise
+        self.economy_token, self.world_token = economic_token, world_token
+
+
 def owned_regions(world, country):
-    return [key for key in sorted(world.economy["regions"]) if world.regions[key].owner == country]
+    economic_regions, regions = world.economy["regions"], world.regions
+    if version(economic_regions) is None or version(regions) is None:
+        return [key for key in sorted(economic_regions) if regions[key].owner == country]
+    try:
+        hash(country)
+    except TypeError:
+        return [key for key in sorted(economic_regions) if regions[key].owner == country]
+    caches = getattr(economic_regions, '_active_indexes', None)
+    if caches is None:
+        caches = economic_regions._active_indexes = {}
+    index = caches.get('economic-region-owners')
+    if index is None:
+        index = caches['economic-region-owners'] = _OwnedRegions()
+    try:
+        index.refresh(economic_regions, regions)
+    except TypeError:
+        # Raw invalid/unhashable owners retain the original equality behavior.
+        return [key for key in sorted(economic_regions) if regions[key].owner == country]
+    return sorted(index.groups.get(country, ()))
 
 
 def shocks_for_period(world, start, end):
@@ -274,7 +339,8 @@ def labour_and_technology(world, country, days):
     e = world.economy["countries"][country]
     totals = dict.fromkeys((*SECTORS, "military", "military_service", "military_support", "skilled", "professionals"), 0.0)
     fraction = days / 365
-    for key in owned_regions(world, country):
+    regions = owned_regions(world, country)
+    for key in regions:
         r = world.economy["regions"][key]
         d, education = r["demography"], r["education"]
         infra = world.regions[key].infrastructure
@@ -289,7 +355,7 @@ def labour_and_technology(world, country, days):
         actual_army = sum(a.personnel for a in world.armies.values() if a.owner == country and a.region == key)
         if world.economy.get("stabilization_version") == 1:
             actual_army = sum(a.personnel for name, a in world.armies.items() if a.owner == country and
-                world.economy["labour_army_origins"].get(name, owned_regions(world, country)[0]) == key)
+                world.economy["labour_army_origins"].get(name, regions[0]) == key)
         if actual_army > productive: raise ValueError("Military personnel exceed productive population")
         burden = e["policy"]["military"] / max(1, productive * .05)
         military = actual_army + min(productive - actual_army, productive * min(.2, burden * .04))

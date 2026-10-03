@@ -8,6 +8,7 @@ from datetime import timedelta
 
 from . import crisis_state as cs
 from .models import canonical_date
+from .runtime_queries import values as query_values
 
 VERSION = "1"
 LEGACY = {"interstate_war": "war", "diplomatic_crisis": "diplomatic_crisis", "civil_unrest": "regional_rebellion",
@@ -222,9 +223,7 @@ def _eligible(world, family, scope, types):
     family_key = f"{family}:{scope}"
     if state["cooldowns"].get(family_key, "") > world.date:
         return False
-    for event in state["events"].values():
-        if not event["ongoing"]:
-            continue
+    for event in query_values(state["events"], "crisis-ongoing-events", lambda e: e["ongoing"]):
         if event.get("risk_family_key") == family_key:
             return False
         if scope in state["borders"] and event["event_type"] in types and set(event["countries"]) == set(state["borders"][scope]["countries"]):

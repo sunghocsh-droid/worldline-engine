@@ -1,0 +1,77 @@
+{
+  "equal": true,
+  "workload_dimensions_equal": {
+    "archive": true,
+    "metadata": true,
+    "owned_regions": true,
+    "cold_crisis": true
+  },
+  "queries": {
+    "archive.history": {
+      "equal": true,
+      "before_seconds": 0.005596999999397667,
+      "after_seconds": 0.0046820999996270984,
+      "speedup": 1.1954037717783548,
+      "before_sql": {
+        "total": 501,
+        "select": 501
+      },
+      "after_sql": {
+        "total": 1,
+        "select": 1
+      }
+    },
+    "archive.export": {
+      "equal": true,
+      "before_seconds": 0.006276899999647867,
+      "after_seconds": 0.004618400002073031,
+      "speedup": 1.3591070493743278,
+      "before_sql": {
+        "total": 502,
+        "select": 502
+      },
+      "after_sql": {
+        "total": 2,
+        "select": 2
+      }
+    },
+    "metadata": {
+      "equal": true,
+      "before_seconds": 0.0336608099998557,
+      "after_seconds": 0.001226239999959944,
+      "speedup": 27.450425692323897,
+      "before_sql": {
+        "total": 80,
+        "select": 40
+      },
+      "after_sql": {
+        "total": 80,
+        "select": 40
+      }
+    },
+    "owned_regions": {
+      "equal": true,
+      "before_seconds": 0.005379569999968225,
+      "after_seconds": 0.000230704999921727,
+      "speedup": 23.317960173352947,
+      "before_sql": [],
+      "after_sql": []
+    },
+    "cold_crisis.effects": {
+      "equal": true,
+      "before_seconds": 0.0004417350000949227,
+      "after_seconds": 2.345000029890798e-06,
+      "speedup": 188.37313196771834,
+      "before_sql": [],
+      "after_sql": []
+    },
+    "cold_crisis.messages": {
+      "equal": true,
+      "before_seconds": 0.0012747149999995599,
+      "after_seconds": 3.045000084966887e-06,
+      "speedup": 418.62560408218246,
+      "before_sql": [],
+      "after_sql": []
+    }
+  }
+}

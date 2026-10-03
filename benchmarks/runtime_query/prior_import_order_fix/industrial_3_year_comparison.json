@@ -1,0 +1,109 @@
+{
+  "runtime_query_comparison_schema": 1,
+  "scenario": "industrial_front",
+  "reference_path": "work\\runtime_query\\original_benchmarks\\benchmarks\\military\\industrial_front\\result.json.gz",
+  "optimized_path": "benchmarks\\military\\industrial_front-pytest-1b1156479808\\result.json.gz",
+  "baseline_manifest_path": "benchmarks\\runtime_query\\baseline_manifest.json",
+  "baseline_provenance_equal": false,
+  "reference_source_digest": "6e804030b77bfd53745f9943ca9b867e6942c92e9e833d0f355219f7fc33936f",
+  "baseline_manifest_source_digest": "9f5fde1aeec209ee5a92d85d69a77944eeac4274b580e34c2701268cbdaacb33",
+  "optimized_source_digest": "1b1156479808a6bce17721402ef687889ac89bb6a2fcd07cbbbaaf7a20b7c224",
+  "optimized_validation_mode": "verification",
+  "optimized_months": 36,
+  "optimized_seed": 1731,
+  "optimized_final_logical_sha256": "c694317c63a456239d1a5f1f88a4e13825c177ce85b540e1c797167b8e07e92b",
+  "baseline_claim": false,
+  "source_differences": [
+    {
+      "file": "audit.py",
+      "reference_sha256": "ccbe7f7c28da8e37d325082701817c47c3f32502fe1757676c65d1a5c79467f4",
+      "expected_baseline_sha256": "1a2dab70c9dcf9bd5846568e853c815e0361a3d92fef93dafb65309a620579c7"
+    },
+    {
+      "file": "crisis_response.py",
+      "reference_sha256": "ef00d4a72b7f4e901462547ee8941fcb594007e9fd549e94409fa6bed18136d0",
+      "expected_baseline_sha256": "4acf1a5204fee86f6593da2a635c49fb5fec470371b27824dde822c8f1a5b980"
+    },
+    {
+      "file": "crisis_state.py",
+      "reference_sha256": "21d365674f53a94bbd55f87858eb7f1350307dd1318812983560a6b3c4b4c694",
+      "expected_baseline_sha256": "fff0ab30351258ff165c7c3f46c3ad8383313fc63e7981cc3d18e286922df6ac"
+    },
+    {
+      "file": "engine.py",
+      "reference_sha256": "4ab30ff52968879c0a8f786e5f65171fe0e477ead2549a3f14a3180e38325815",
+      "expected_baseline_sha256": "47ad76f2a9a4a94eb7f655340e731f9a1b0d8f9c959d5c8d6961f9322d418a0b"
+    },
+    {
+      "file": "incremental_audit.py",
+      "reference_sha256": null,
+      "expected_baseline_sha256": "ed634c18ae903f0f2d9d951d182d18ce5d179af15260aa977355625cf784a0fb"
+    },
+    {
+      "file": "military.py",
+      "reference_sha256": "09b2382452a940e04c6137d9cb293e1f93c5a7241605a95a00a593da168ee6a5",
+      "expected_baseline_sha256": "18db0ccfa8fe2e9597b57cab9f42630dc966ceeaf83f7335550e71a33db38079"
+    },
+    {
+      "file": "military_active.py",
+      "reference_sha256": null,
+      "expected_baseline_sha256": "613562ece58dae7c951c3dfb1b765c6277021b518ce2a4ee3ee2734eaa34011a"
+    },
+    {
+      "file": "military_benchmark.py",
+      "reference_sha256": "5887c34cafd2c594251ad5bcbf6dd941eeeec2d55ca5234620b9f368fc39b073",
+      "expected_baseline_sha256": "b8dd2442fed79c66c7e6b635e9cf94ec1664bab3eb3dc880ee0608cfb99c7481"
+    },
+    {
+      "file": "military_innovation.py",
+      "reference_sha256": "07831bbf9960ab649554fabd2b924035bb36d575bf047a46d06572ebc810f580",
+      "expected_baseline_sha256": "08212c6e8357396887703cb59a68cdde4a673e1fb8c6985e01844b92a43db98e"
+    },
+    {
+      "file": "military_logistics.py",
+      "reference_sha256": "7fb438763a5c8a0f1fcc9b62facafbb4f6da1423647f3694750d11318ca720d4",
+      "expected_baseline_sha256": "b2c29803d08f1db48b95711aef785138da4d6bf4eb2a74947219950ce290859a"
+    },
+    {
+      "file": "military_operations.py",
+      "reference_sha256": "02df9673c7637e8fffaf4202102127e5414679f534054d5214ebf3c6ea934a51",
+      "expected_baseline_sha256": "ed4bbe27df685220a21b4da942de38cd5986b1c7791ebc61bd58380903238041"
+    },
+    {
+      "file": "military_politics.py",
+      "reference_sha256": "5f460f0448d83b005d15005ac427304568cd58ac4043b31710ec784c85c14e4c",
+      "expected_baseline_sha256": "9dceec50d681c086c4e8b239eefcd5059434591dd2f963652d4c3c56db7e7c32"
+    },
+    {
+      "file": "military_state.py",
+      "reference_sha256": "fbbb7677f3e8e2551ed4ae783ba308bdae084259e5c8bacf3dd34b396e446e3e",
+      "expected_baseline_sha256": "3224af5ce62ff78d9c131b209f9020029d5ba82376d5c63e9cab94a0d5b08f67"
+    },
+    {
+      "file": "models.py",
+      "reference_sha256": "ea73b82a03e221255af543a7d004b5d9ee2bec305ddd69a13bf11f13bd8224d4",
+      "expected_baseline_sha256": "8c26689f74413fceb5086f00db3011286f7571a3889e277417742968aa9d0a01"
+    },
+    {
+      "file": "npc_state.py",
+      "reference_sha256": "e46dbf85530a510c906d5b8d3a823e0d213d6987f73150debeee2cc76ea80c3a",
+      "expected_baseline_sha256": "3ce33b6f248101785433de4c74840736f251544c4e96fa28f412369c88c264b9"
+    },
+    {
+      "file": "persistence.py",
+      "reference_sha256": "953de44b524fef4f112b0ab8bbfd662ba9b6a40cd2353d05b46a690029b23a3a",
+      "expected_baseline_sha256": "a109662882d504bc890b5127a41fab115a0e5c75f8e94212be29694e772db33e"
+    },
+    {
+      "file": "state_runtime.py",
+      "reference_sha256": null,
+      "expected_baseline_sha256": "84fb8484c73016892f3b72d530ac05c2fe4502906a2499e7d5d467ac49509fde"
+    },
+    {
+      "file": "state_storage.py",
+      "reference_sha256": "3f565549442eceffb8ead97e5ef3cd1f31d9292d04fae1807cdf0a0e6dafecf0",
+      "expected_baseline_sha256": "6150c21c97037410dd1bcf20a23e86ad380a90e52626055db41b281f619948c3"
+    }
+  ],
+  "reason": "Original artifact source manifest differs from exact requested baseline; no historical baseline equivalence claim is made."
+}
