@@ -149,6 +149,7 @@ def validate_snapshot(payload):
         crisis_records = {kind: {} for kind in
             ("event_started", "event_resolved", "effect_applied", "effect_queued", "response_outcome_measured")}
         diplomacy_activations = []
+        intelligence_events = []
         for index, event in enumerate(events, 1):
             day = canonical_date(event["day"])
             if (type(event["id"]) is not int or event["id"] != index or day > canonical_date(world.date)
@@ -158,6 +159,8 @@ def validate_snapshot(payload):
             previous_day = day
             if event['kind'] == 'diplomacy_intelligence_enabled':
                 diplomacy_activations.append((event['day'], event['payload']))
+            if event['kind'] == 'system_event' and event['payload'].get('system') == 'intelligence':
+                intelligence_events.append((event['day'], event['payload']))
             if event["kind"] == "order_decided":
                 order_id = event["payload"]["order"]["id"]
                 if order_id in decisions:
@@ -177,7 +180,7 @@ def validate_snapshot(payload):
         if decisions != payload["engine"]["orders"]:
             raise ValueError("Order state differs from immutable ledger")
         _validate_crisis_ledger(world, crisis_records)
-        validate_diplomacy_intelligence_ledger(world, diplomacy_activations)
+        validate_diplomacy_intelligence_ledger(world, diplomacy_activations, intelligence_events)
         if world.diplomacy_state is not None and 'state_archive' not in payload:
             raise ValueError('Diplomacy & Intelligence save requires its activation archive')
         if "state_archive" in payload:
@@ -189,10 +192,10 @@ def validate_snapshot(payload):
         raise ValueError("Malformed snapshot") from exc
 
 
-def validate_diplomacy_intelligence_ledger(world, activations):
+def validate_diplomacy_intelligence_ledger(world, activations, intelligence_events=None):
     """One explicit activation must match its permanent domain receipt."""
     if world.diplomacy_state is None:
-        if activations:
+        if activations or intelligence_events:
             raise ValueError('Diplomacy & Intelligence state missing from recorded world')
         return
     from .diplomacy_intelligence import ACTIVATION_ID, enabled_manifest
@@ -204,21 +207,151 @@ def validate_diplomacy_intelligence_ledger(world, activations):
     if (not isinstance(record, dict) or json.dumps(record, sort_keys=True, allow_nan=False)
             != json.dumps(expected, sort_keys=True, allow_nan=False) or day != receipt['date']):
         raise ValueError('Diplomacy & Intelligence activation conflicts with immutable ledger')
+    _validate_intelligence_ledger(world, intelligence_events or [])
+
+
+def _intelligence_queued_snapshot(dispatch):
+    queued = copy.deepcopy(dispatch)
+    queued.update(status='queued', received_at=None, delivery_receipt_id=None,
+                  application_receipt_id=None, belief_accepted=False)
+    return queued
+
+
+def _intelligence_payload(observation):
+    return {('observation_id' if key == 'id' else key): copy.deepcopy(value)
+            for key, value in observation.items() if key != 'audit'}
+
+
+def _validate_intelligence_ledger(world, events):
+    """Replay only immutable delivery evidence, never objective source truth."""
+    from .intelligence import (validate_observation_record, validate_dispatch_record,
+                               validate_receipt_record, same_json)
+    observations, dispatches, receipts, applications, latest = {}, {}, {}, {}, {}
+    sequences = set()
+    for entry in events:
+        if isinstance(entry, tuple) and len(entry) == 2:
+            ledger_day, event = entry
+            canonical_date(ledger_day)
+        else:
+            ledger_day, event = None, entry
+        if not isinstance(event, dict) or event.get('system') != 'intelligence':
+            raise ValueError('Invalid intelligence immutable ledger event')
+        kind = event.get('kind')
+        if kind == 'observation_ingested':
+            if set(event) != {'system', 'kind', 'observation'}:
+                raise ValueError('Invalid intelligence ingestion ledger schema')
+            observation = event['observation']
+            validate_observation_record(observation)
+            key = observation['id']
+            if key in observations or ledger_day is not None and observation['collected_at'] > ledger_day:
+                raise ValueError('Repeated or future intelligence ingestion ledger record')
+            observations[key] = observation
+        elif kind == 'report_queued':
+            if set(event) != {'system', 'kind', 'dispatch'}:
+                raise ValueError('Invalid intelligence dispatch ledger schema')
+            dispatch = event['dispatch']
+            validate_dispatch_record(dispatch)
+            key = dispatch['id']
+            if (dispatch['status'] != 'queued' or key in dispatches
+                    or dispatch['sequence'] in sequences
+                    or dispatch['observation_id'] not in observations
+                    or ledger_day is not None and dispatch['sent_at'] != ledger_day):
+                raise ValueError('Repeated or invalid intelligence dispatch ledger record')
+            if not same_json(dispatch['payload'], _intelligence_payload(observations[dispatch['observation_id']])):
+                raise ValueError('Intelligence dispatch differs from frozen observation')
+            dispatches[key] = dispatch
+            sequences.add(dispatch['sequence'])
+        elif kind == 'report_delivered':
+            if set(event) != {'system', 'kind', 'dispatch', 'delivery_receipt', 'application_receipt'}:
+                raise ValueError('Invalid intelligence delivery ledger schema')
+            dispatch, delivery, application = (event[name] for name in
+                                                ('dispatch', 'delivery_receipt', 'application_receipt'))
+            validate_dispatch_record(dispatch)
+            validate_receipt_record(delivery)
+            key = dispatch['id']
+            old = dispatches.get(key)
+            if (old is None or old['status'] != 'queued' or dispatch['status'] != 'delivered'
+                    or not same_json(old, _intelligence_queued_snapshot(dispatch))
+                    or ledger_day is not None and dispatch['received_at'] != ledger_day):
+                raise ValueError('Intelligence delivery conflicts with queued immutable ledger record')
+            recipient = dispatch['recipient']
+            application_key = recipient['kind'], recipient['id'], dispatch['observation_id']
+            latest_key = recipient['kind'], recipient['id'], dispatch['payload']['subject'], dispatch['payload']['topic']
+            order = dispatch['payload']['as_of'], dispatch['sent_at'], dispatch['sequence'], key
+            if application_key in applications:
+                if application is not None or dispatch['belief_accepted'] is not False:
+                    raise ValueError('Intelligence perception application repeated in immutable ledger')
+                application = applications[application_key]
+            else:
+                validate_receipt_record(application)
+                accepted = latest_key not in latest or order > latest[latest_key]
+                if (application['kind'] != 'application' or application['id'] in receipts
+                        or application['dispatch_id'] != key
+                        or application['observation_id'] != dispatch['observation_id']
+                        or not same_json(application['recipient'], recipient)
+                        or application['date'] != dispatch['received_at']
+                        or application['applied'] is not accepted
+                        or application['reason'] != ('applied' if accepted else 'stale')
+                        or dispatch['belief_accepted'] is not accepted):
+                    raise ValueError('Intelligence perception receipt conflicts with immutable ledger freshness')
+                applications[application_key] = application
+                receipts[application['id']] = application
+                if accepted:
+                    latest[latest_key] = order
+            if (delivery['kind'] != 'delivery' or delivery['id'] in receipts
+                    or delivery['dispatch_id'] != key
+                    or delivery['observation_id'] != dispatch['observation_id']
+                    or not same_json(delivery['recipient'], recipient)
+                    or delivery['date'] != dispatch['received_at']
+                    or delivery['id'] != dispatch['delivery_receipt_id']
+                    or application['id'] != dispatch['application_receipt_id']
+                    or delivery['application_receipt_id'] != application['id']
+                    or delivery['belief_accepted'] is not dispatch['belief_accepted']):
+                raise ValueError('Intelligence delivery receipt conflicts with immutable ledger')
+            receipts[delivery['id']] = delivery
+            dispatches[key] = dispatch
+        else:
+            raise ValueError('Unsupported intelligence immutable ledger event')
+    state = world.intelligence_state
+    for bucket, recorded in (('observations', observations), ('dispatches', dispatches), ('receipts', receipts)):
+        if not same_json(state[bucket], recorded):
+            raise ValueError('Intelligence ' + bucket + ' differ from immutable ledger')
 
 
 def validate_diplomacy_intelligence_archive(world, archive):
-    """Historical activation identity and body must match its live receipt."""
+    """All Stage 2 records retain complete immutable archival evidence."""
+    from .state_storage import DIPLOMACY_INTELLIGENCE_ARCHIVE_KINDS
     rows = [row for row in archive['catalog']
-            if row['kind'] in ('diplomacy_receipts', 'intelligence_receipts')]
+            if row['kind'] in DIPLOMACY_INTELLIGENCE_ARCHIVE_KINDS]
     if world.diplomacy_state is None:
         if rows:
             raise ValueError('Diplomacy & Intelligence archive requires activated state')
         return
     from .diplomacy_intelligence import ACTIVATION_ID
+    from .intelligence import same_json
     receipt = world.diplomacy_state['receipts'][ACTIVATION_ID]
-    if (len(rows) != 1 or json.dumps(archive['objects'][rows[0]['digest']], sort_keys=True, allow_nan=False)
-            != json.dumps(receipt, sort_keys=True, allow_nan=False)):
+    activation_rows = [row for row in rows if row['kind'] == 'diplomacy_receipts']
+    if (len(activation_rows) != 1 or not same_json(
+            archive['objects'][activation_rows[0]['digest']], receipt)):
         raise ValueError('Diplomacy & Intelligence archive differs from its immutable activation receipt')
+    state = world.intelligence_state
+    for bucket in ('observations', 'dispatches', 'receipts'):
+        kind = 'intelligence_' + bucket
+        records = state[bucket]
+        matching = [row for row in rows if row['kind'] == kind]
+        if {row['item'] for row in matching} != set(records):
+            raise ValueError('Intelligence archive identity differs from ' + bucket)
+        grouped = {}
+        for row in matching:
+            grouped.setdefault(row['item'], []).append(archive['objects'][row['digest']])
+        for key, current in records.items():
+            versions = grouped[key]
+            expected = [current]
+            if bucket == 'dispatches' and current['status'] == 'delivered':
+                expected.append(_intelligence_queued_snapshot(current))
+            if (len(versions) != len(expected)
+                    or any(not any(same_json(body, saved) for saved in versions) for body in expected)):
+                raise ValueError('Intelligence archive differs from complete ' + bucket + ' history')
 
 
 def _validate_crisis_ledger(world, records):

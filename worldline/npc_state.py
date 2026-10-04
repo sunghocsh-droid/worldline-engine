@@ -37,7 +37,11 @@ def _day(value):
 
 
 def _number(value, low=0, high=1):
-    return type(value) in (int, float) and math.isfinite(value) and low <= value <= high
+    try:
+        return type(value) in (int, float) and math.isfinite(value) and low <= value <= high
+    except OverflowError:
+        # JSON integers may exceed the numeric range used for NPC signals.
+        return False
 
 
 def _json(value):
@@ -338,7 +342,12 @@ def _signal(facts):
     if type(facts.get("success")) is bool:
         return 1.0 if facts["success"] else -1.0
     if _number(facts.get("gdp_before"), 0, float("inf")) and _number(facts.get("gdp_after"), 0, float("inf")):
-        return max(-1, min(1, 2 * (facts["gdp_after"] - facts["gdp_before"]) / max(1, facts["gdp_before"])))
+        try:
+            change = 2 * (facts["gdp_after"] - facts["gdp_before"]) / max(1, facts["gdp_before"])
+        except OverflowError:
+            # The mathematical ratio exceeds float range and saturates here.
+            return 1.0 if facts["gdp_after"] > facts["gdp_before"] else -1.0
+        return max(-1, min(1, change))
     return 0.0
 
 

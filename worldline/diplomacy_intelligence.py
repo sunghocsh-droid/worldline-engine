@@ -1,8 +1,7 @@
 """Explicit opt-in storage scaffold for Diplomacy & Intelligence v1.
 
-Stage 1 supports activation and empty domain state only. The scheduler stages
-are deliberate no-ops: contact, NPC choice, observations and delivery are not
-implemented here. Activation is a trusted-host operation, not authentication.
+Activation is a trusted-host operation, not authentication. Intelligence delivery
+is implemented by the narrow trusted snapshot domain; contact remains reserved.
 """
 import copy
 import json
@@ -143,8 +142,12 @@ def normalize_config(world, config=None, *, activation=False):
     for player_id, refs in replies.items():
         _recipients(world, refs, bindings, activation=activation,
                     country=bindings[player_id]["country_id"], player=player_id, nonempty=True)
-    if not isinstance(intelligence["sources"], dict) or intelligence["sources"]:
-        raise ValueError("D&I Stage 1 does not support intelligence source workloads")
+    if not isinstance(intelligence["sources"], dict):
+        raise ValueError("D&I intelligence sources must be an object")
+    from .intelligence import source_reference, _id
+    for source_id, reference in intelligence["sources"].items():
+        _id(source_id)
+        source_reference(reference)
     _recipients(world, intelligence["audience"], bindings, activation=activation)
     _json(result)
     return result
@@ -212,9 +215,9 @@ def _validate(world, previous=None):
         if type(state["version"]) is not int or state["version"] != STATE_VERSION:
             raise ValueError("Unsupported D&I state version")
         for field in workload:
-            if not isinstance(state[field], dict) or state[field]:
+            if not isinstance(state[field], dict) or state is diplomacy and state[field]:
                 raise ValueError("D&I Stage 1 does not support nonempty " + field)
-        if not isinstance(state["outbox"], list) or state["outbox"]:
+        if not isinstance(state["outbox"], list) or state is diplomacy and state["outbox"]:
             raise ValueError("D&I Stage 1 does not support outbox workloads")
         _object(state["next_ids"], id_keys, "D&I next_ids")
         if any(type(value) is not int or value < 1 for value in state["next_ids"].values()):
@@ -222,7 +225,6 @@ def _validate(world, previous=None):
     if diplomacy["next_ids"]["receipt"] < 2:
         raise ValueError("D&I activation has already consumed receipt 1")
     _object(diplomacy["receipts"], {ACTIVATION_ID}, "D&I activation receipts")
-    _object(intelligence["receipts"], set(), "D&I intelligence receipts")
     receipt = diplomacy["receipts"][ACTIVATION_ID]
     validate_activation_receipt(receipt)
     if canonical_date(receipt["date"]) > canonical_date(world.date):
@@ -239,11 +241,13 @@ def _validate(world, previous=None):
             old_ids = getattr(previous, field)["next_ids"]
             if any(value < old_ids[key] for key, value in state["next_ids"].items()):
                 raise ValueError("D&I next_ids cannot move backwards")
+    from .intelligence import validate_state
+    validate_state(world, previous)
     return []
 
 
 def validate(world, previous=None):
-    """Fail closed on unsupported Stage 1 state and malformed saved settings."""
+    """Validate frozen intelligence records while keeping contact workloads reserved."""
     try:
         return _validate(world, previous)
     except (KeyError, TypeError, ValueError, AttributeError, OverflowError) as exc:
@@ -255,8 +259,9 @@ def audit(world, previous=None):
 
 
 def tick_intelligence(world, tick_event, rng):
-    """Reserved scheduler slot; Stage 1 does not ingest or deliver information."""
-    return []
+    """Deliver due explicit recipients on simulation time, without RNG draws."""
+    from .intelligence import deliver_due
+    return deliver_due(world)
 
 
 def tick_diplomacy(world, tick_event, rng):

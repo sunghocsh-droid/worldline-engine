@@ -291,6 +291,61 @@ class Engine:
         return {'version': 1, 'save_schema_version': DIPLOMACY_INTELLIGENCE_SAVE_SCHEMA_VERSION,
                 'receipt_id': ACTIVATION_ID}
 
+    def ingest_observation(self, source_ref, observed_data, **metadata):
+        """Trusted runtime snapshot hook; never an NPC/LLM write capability."""
+        from .intelligence import ingest
+        observation_id = metadata.get('observation_id')
+        if isinstance(observation_id, str):
+            committed = self.true_state
+            if committed.intelligence_state is not None and observation_id in committed.intelligence_state['observations']:
+                return ingest(committed, source_ref, observed_data, **metadata)[0]
+        with self._transaction():
+            result, events = ingest(self._world, source_ref, observed_data, **metadata)
+            for event in events:
+                self._event('system_event', event)
+        return result
+
+    def queue_intelligence_report(self, observation_id, recipient_ref, **metadata):
+        """Queue one frozen snapshot for one explicit typed recipient."""
+        from .intelligence import queue
+        message_id = metadata.get('message_id')
+        if isinstance(message_id, str):
+            committed = self.true_state
+            if committed.intelligence_state is not None and message_id in committed.intelligence_state['dispatches']:
+                return queue(committed, observation_id, recipient_ref, **metadata)[0]
+        with self._transaction():
+            result, events = queue(self._world, observation_id, recipient_ref, **metadata)
+            for event in events:
+                self._event('system_event', event)
+        return result
+
+    def _apply_intelligence_event(self, event):
+        if (self._world.intelligence_state is not None and isinstance(event, dict)
+                and event.get('system') == 'intelligence'
+                and event.get('kind') == 'report_delivered'):
+            dispatch = event['dispatch']
+            if dispatch['belief_accepted'] and dispatch['recipient']['kind'] == 'player':
+                from .intelligence_perception import perception_key, player_report
+                self._apply_observation(dispatch['recipient']['id'], perception_key(dispatch['payload']),
+                                        player_report(dispatch['payload']))
+
+    def tick_intelligence(self):
+        """Process due reports at the current simulation date; empty calls do nothing."""
+        from .intelligence import due, deliver_due
+        if not due(self.true_state):
+            return []
+        with self._transaction():
+            events = deliver_due(self._world)
+            for event in events:
+                self._apply_intelligence_event(event)
+                self._event('system_event', event)
+        return copy.deepcopy(events)
+
+    def intelligence_view(self, subject_ref, subject_or_topic=None):
+        """Detached committed knowledge for one person/player, after actual receipt."""
+        from .intelligence import view
+        return view(self.true_state, subject_ref, subject_or_topic)
+
     def enable_military(self, config=None):
         from .military_state import initialize
         if self._required_systems and self._required_systems != self._system_specs:
@@ -721,7 +776,10 @@ class Engine:
             if self._world.diplomacy_state is not None:
                 activations = [(day, json.loads(body)) for day, body in self.db.execute(
                     "SELECT day,payload FROM ledger WHERE kind='diplomacy_intelligence_enabled' ORDER BY id")]
-                validate_diplomacy_intelligence_ledger(self._world, activations)
+                intelligence_events = [(day, json.loads(body)) for day, body in self.db.execute(
+                    "SELECT day,payload FROM ledger WHERE kind='system_event' "
+                    "AND json_extract(payload,'$.system')='intelligence' ORDER BY id")]
+                validate_diplomacy_intelligence_ledger(self._world, activations, intelligence_events)
             physical = state_storage.compact(self.db, after, self._storage_cache)
             physical = state_storage.write_components(self.db, physical, after, self._component_cache, self._revision + 1)
             text = encode(physical)
@@ -816,6 +874,7 @@ class Engine:
                 tick = {"previous_date": previous_date, "date": self._world.date, "days": 1}
                 for system in self._systems:
                     for event in system(self._world, copy.deepcopy(tick), self._rng) or []:
+                        self._apply_intelligence_event(event)
                         self._event("system_event", event)
                     if self._world.date != tick["date"]:
                         raise ValueError("Only the game clock may change the world date")
@@ -856,9 +915,16 @@ class Engine:
         if report.as_of > self._world.date or not numeric(report.confidence, 0, 1):
             raise ValueError("Invalid report date/confidence")
         with self._transaction():
-            from dataclasses import asdict
-            self._observed.setdefault(player, {})[key] = asdict(report)
-            self._event("report_received", {"player": player, "key": key, "report": asdict(report)})
+            self._apply_observation(player, key, report)
+
+    def _apply_observation(self, player, key, report):
+        """Shared application inside an existing transaction (including delivery)."""
+        canonical_date(report.as_of)
+        if report.as_of > self._world.date or not numeric(report.confidence, 0, 1):
+            raise ValueError("Invalid report date/confidence")
+        from dataclasses import asdict
+        self._observed.setdefault(player, {})[key] = asdict(report)
+        self._event("report_received", {"player": player, "key": key, "report": asdict(report)})
 
     def observed_state(self, player):
         return self._stored_payload()["observed"].get(player, {})

@@ -13,6 +13,9 @@ VERSION = 1
 MARKER = "__worldline_storage__"
 REFERENCE = "__worldline_archive_ref__"
 COMPONENTS = '__worldline_components__'
+INTELLIGENCE_ARCHIVE_KINDS = ('intelligence_observations', 'intelligence_dispatches',
+                              'intelligence_receipts')
+DIPLOMACY_INTELLIGENCE_ARCHIVE_KINDS = ('diplomacy_receipts',) + INTELLIGENCE_ARCHIVE_KINDS
 
 
 def _encode(value):
@@ -111,6 +114,12 @@ def _store(db, value, kind, owner, item, cache):
         day = body['date']
     active = int(value.get("ongoing", False)) if kind == "event" else None
     parent = value.get("parent_event") if isinstance(value, dict) else None
+    if kind in DIPLOMACY_INTELLIGENCE_ARCHIVE_KINDS:
+        identity = _di_archive_identity(kind, value)
+        if identity['owner'] != owner or identity['item'] != str(item):
+            raise ValueError('D&I archive key conflicts with record identity')
+        country, region, day, active, parent = (identity[name] for name in
+                                               ('country', 'region', 'day', 'active', 'parent'))
     db.execute("INSERT OR IGNORE INTO archive_catalog VALUES(?,?,?,?,?,?,?,?,?)",
                (kind, owner, str(item), digest, country, region, day, active, parent))
     db.execute("INSERT INTO state_heads VALUES(?,?,?,?,?,?,?,?,?) ON CONFLICT(kind,owner,item) DO UPDATE SET "
@@ -164,8 +173,15 @@ def compact(db, payload, cache=None):
         domain = world.get(field)
         if domain is not None:
             out = dict(domain)
-            out['receipts'] = {item: _store(db, value, kind, '', item, cache)
+            out['receipts'] = {item: _store(db, value, kind,
+                               _di_archive_identity(kind, value)['owner'], item, cache)
                                for item, value in domain['receipts'].items()}
+            if field == 'intelligence_state':
+                for bucket in ('observations', 'dispatches'):
+                    archive_kind = 'intelligence_' + bucket
+                    out[bucket] = {item: _store(db, value, archive_kind,
+                                   _di_archive_identity(archive_kind, value)['owner'], item, cache)
+                                   for item, value in domain[bucket].items()}
             physical_world[field] = out
     used = cache.pop(None)
     # Only current references expire. Historical objects and their catalog never
@@ -270,6 +286,10 @@ def read(db, text):
             if domain is not None:
                 domain['receipts'] = {key: _expand(db, value, blobs)
                                       for key, value in domain['receipts'].items()}
+                if field == 'intelligence_state':
+                    for bucket in ('observations', 'dispatches'):
+                        domain[bucket] = {key: _expand(db, value, blobs)
+                                          for key, value in domain[bucket].items()}
         return payload
     except (zlib.error, json.JSONDecodeError) as exc:
         raise ValueError("Corrupt state archive object") from exc
@@ -339,8 +359,8 @@ def history(db, *, kind, owner=None, item=None):
         # Separate decoding preserves isolation even when catalog rows share a
         # content-addressed digest, just as public inspection did before batching.
         value = json.loads(blobs[digest])
-        if kind in ('diplomacy_receipts', 'intelligence_receipts'):
-            expected = _di_receipt_identity(kind, value)
+        if kind in DIPLOMACY_INTELLIGENCE_ARCHIVE_KINDS:
+            expected = _di_archive_identity(kind, value)
             if any(current != expected[name] for name, current in
                    (("owner", actor), ("item", key), ("day", day))):
                 raise ValueError("D&I historical archive conflicts with receipt identity")
@@ -353,14 +373,33 @@ CATALOG_FIELDS = ("kind", "owner", "item", "digest", "country", "region", "day",
 
 
 def _di_receipt_identity(kind, value):
-    # Stage 1 stores one feature activation receipt in the Diplomacy domain.
-    # Intelligence's namespace is reserved, but no receipt workload is supported.
-    if kind != 'diplomacy_receipts':
-        raise ValueError("D&I Stage 1 does not support intelligence archive receipts")
-    from .diplomacy_intelligence import validate_activation_receipt
-    validate_activation_receipt(value)
-    return {"owner": "", "item": value["id"], "country": None, "region": None,
-            "day": value["date"], "active": None, "parent": None}
+    return _di_archive_identity(kind, value)
+
+
+def _di_archive_identity(kind, value):
+    """Validate namespaced identity independently of a current World."""
+    if kind == 'diplomacy_receipts':
+        from .diplomacy_intelligence import validate_activation_receipt
+        validate_activation_receipt(value)
+        owner, day, active, parent = '', value['date'], None, None
+    else:
+        from .intelligence import (validate_observation_record, validate_dispatch_record,
+                                   validate_receipt_record)
+        if kind == 'intelligence_observations':
+            validate_observation_record(value)
+            owner, day, active, parent = '', value['collected_at'], None, None
+        elif kind == 'intelligence_dispatches':
+            validate_dispatch_record(value)
+            owner = value['recipient']['kind'] + ':' + value['recipient']['id']
+            day, active, parent = value['sent_at'], int(value['status'] == 'queued'), value['observation_id']
+        elif kind == 'intelligence_receipts':
+            validate_receipt_record(value)
+            owner = value['recipient']['kind'] + ':' + value['recipient']['id']
+            day, active, parent = value['date'], None, value['observation_id']
+        else:
+            raise ValueError('Unsupported D&I archive kind')
+    return {'owner': owner, 'item': value['id'], 'country': None, 'region': None,
+            'day': day, 'active': active, 'parent': parent}
 
 
 def export_archive(db):
@@ -395,8 +434,8 @@ def validate_archive(archive):
         if key in seen:
             raise ValueError("Repeated historical archive catalog item")
         seen.add(key)
-        if row['kind'] in ('diplomacy_receipts', 'intelligence_receipts'):
-            expected = _di_receipt_identity(row['kind'], archive['objects'][row['digest']])
+        if row['kind'] in DIPLOMACY_INTELLIGENCE_ARCHIVE_KINDS:
+            expected = _di_archive_identity(row['kind'], archive['objects'][row['digest']])
             if any(row[name] != value for name, value in expected.items()):
                 raise ValueError("D&I archive catalog conflicts with receipt identity")
         if row["kind"] == "military_political_decisions":
