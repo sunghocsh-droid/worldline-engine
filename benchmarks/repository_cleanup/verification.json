@@ -1,0 +1,309 @@
+{
+  "full_suite": {
+    "rc": 0,
+    "args": [
+      "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine\\worldline-engine.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp=work/cleanup-fulltest-temp",
+      "--junitxml=work/cleanup-validation/full.xml"
+    ],
+    "elapsed_seconds": 3722.179,
+    "junit": {
+      "tests": 1830,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "source_hashes_unchanged": true
+  },
+  "selector_suite": {
+    "tests": 24,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "new_diplomacy_testcase_counts": {
+    "test_diplomacy_contact": 106,
+    "test_diplomacy_contact_persistence": 90,
+    "test_diplomacy_npc_contact": 41
+  },
+  "military_fixtures": {
+    "source_sha256": {
+      "__init__.py": "becd7c5217666290ce7b6ab5f0b8e4f9515dfbffbf306f2777fb037e162e2f78",
+      "__main__.py": "b71170e9a95954c9091eb11fb0c5c7eca996d02d8b326c93b820be22bb053ad8",
+      "audit.py": "109546f91ed4e1fc48ecd20e2bbd841e8ac8a93dfae42ddbd375da36f1abe88b",
+      "benchmark.py": "b56ad7ae7c26306cf53591c4f0f3a53027e6e11aeb240452c282499b3405c02a",
+      "calibration.py": "d164971ea2e4a21a52a401c97044cd66d8ad0af8d8777318dc8a5de90b04e68f",
+      "calibration_report.py": "ec3ec783d40e2cd369c951d0d72ef8020f7c411c196e06a478741443a677ccbb",
+      "credit.py": "0696c89c853bfa1683c67b69f6a0bd6554adaaa00851b1022bf9f75cfcdaa51c",
+      "crisis.py": "184aace25d0ef9e53c8f67b4f098aa5798c3fdaedc3de8f9692cead952146b14",
+      "crisis_benchmark.py": "77e733f8853422eca25c23371f918503e87de874ea6cac8af6ebee23bf01c734",
+      "crisis_effects.py": "beaf5542d2d3d78e06207efab5450e948ff6dfe0c283f5f12a910ab2e68bb7b8",
+      "crisis_response.py": "4cc7308c8cac419369eb5e5cbec52b7ac8cc40645c693217bfb22fa88bc44ddc",
+      "crisis_risk.py": "6b08386eda69d2e87b421af4f433c2d88371df90e88e7be0a9d6217d0aa904ac",
+      "crisis_state.py": "a8d56d6f7ff480e06dd7d15d319c65917d51803c1aa94cc0bf65dba0008af727",
+      "demography.py": "f7c4ee52c141347657056de76d9f4c2d65caa6b215e398b9e4d950a957b2a220",
+      "diplomacy.py": "28ee5e9979986be498969fbe7433c4edf5a822598888a085af55d16f0848d7d1",
+      "diplomacy_intelligence.py": "6a308c4a69e1eaaefb8b1c3afddd3a1c67b91f4c5961186d609e73343d56d925",
+      "diplomacy_perception.py": "6489d25635d0dc8a88ffde9adaefd882d8648a011e2c2948a815e4c61e02bc2c",
+      "diplomacy_validation.py": "0a5c4e799bab079c2f0e5329af7f02c9bbf1365a977f40289a7840c69aee860b",
+      "economy.py": "f3ff5f07e3e70e2242e1645ea0975d90612859ce7651936a1a3b17a9c28c7b74",
+      "engine.py": "ea74632e01fd8e3ed3a48c6ffadf6aaefa12e2d721691e81ec3e35d0d7c61cd4",
+      "guardrails.py": "ba89f34996f6815aec2be7562ad0a8b4ea362eb2b5637b8866001521c3a41242",
+      "incremental_audit.py": "ed634c18ae903f0f2d9d951d182d18ce5d179af15260aa977355625cf784a0fb",
+      "intelligence.py": "ce62269f89f1bf3ef1fcd9750c849763dbbd6f432759702d5a7075e649d4fb55",
+      "intelligence_perception.py": "dc851308cca8139672fcb29bb43ff873fe76dce1a0d8f42b71e5f510607636bf",
+      "labour.py": "667a36b48b75410b23f34f60e21a5f4eab493e0884de3e31f4727cebbe701541",
+      "military.py": "18db0ccfa8fe2e9597b57cab9f42630dc966ceeaf83f7335550e71a33db38079",
+      "military_active.py": "4f5d9af309b5d4329b1c392d5ff561bbc48b7e9074e2ea7213fe03c331fc1bea",
+      "military_benchmark.py": "b8dd2442fed79c66c7e6b635e9cf94ec1664bab3eb3dc880ee0608cfb99c7481",
+      "military_bridge.py": "f8a1be0d2eb1f4ab6c90a5b396bdca7c762bc84412fafcce0e0380cb57fd6d4a",
+      "military_combat.py": "7e0b7484877c8966ed7a7a6cc9e68410df4257be9a5e20afb86885c9bb94ff79",
+      "military_innovation.py": "08212c6e8357396887703cb59a68cdde4a673e1fb8c6985e01844b92a43db98e",
+      "military_innovation_benchmark.py": "b1d32a62d41e45ed2c20749898e4b2d24cd64366ca2feafc10aa6e633b07b20e",
+      "military_logistics.py": "b2c29803d08f1db48b95711aef785138da4d6bf4eb2a74947219950ce290859a",
+      "military_operations.py": "ed4bbe27df685220a21b4da942de38cd5986b1c7791ebc61bd58380903238041",
+      "military_politics.py": "9dceec50d681c086c4e8b239eefcd5059434591dd2f963652d4c3c56db7e7c32",
+      "military_state.py": "3224af5ce62ff78d9c131b209f9020029d5ba82376d5c63e9cab94a0d5b08f67",
+      "models.py": "a1ec35b461a0f07fff2a8772a1a529b42dbd98e0bdafe80d4cecd42f6355f459",
+      "npc.py": "54f37dd29fb61fe452f7cf0058f43289c61510d5d1df301e08d5456a91e92bdd",
+      "npc_benchmark.py": "30a05c336d3182476a8f8e6a74a6b8c8c52f885ec7040601fda8d49e988245d1",
+      "npc_contact.py": "c8db7d27c10d6323894c54b905726adaa45f3c68cf386f437c5c86f8c3f8f82e",
+      "npc_decision.py": "987a845bd99d4c7cde3c3c55588c83d13ec37cc98641b68912588d27f1f5accd",
+      "npc_runtime.py": "4ff7273f86b1814ae6ceeb8c6a3983a1cfa7fbf838cec7e28fb7520bd2b3503c",
+      "npc_state.py": "627951282b3d9fcdd0e62d05354edc75fd692259f14ae78329a46b3ec1cd01ac",
+      "order_execution.py": "b40263103976c2ad751ec5b0a7244537bd8cf809da75a9e212f158fef1899926",
+      "performance_benchmark.py": "48c303f855b627e4c9367692c4a81bcbcc98b26b3ae08cd2abea895b2c65d4cd",
+      "persistence.py": "62f48c82f0a99ca276c87062dfb5de2f983e546bcda0d00d82c2c75e6b7a4d5e",
+      "projects.py": "f13f5554c506d55fd21753515a75712b3ee4e296295b13e21c6dafe5dda33dfd",
+      "runtime_queries.py": "c9d0353570bafc379b8bcd09ac7c970a55e0b8fed9d9498e23780799b3a948a6",
+      "runtime_query_benchmark.py": "c1dcc3135a301bbef91c6ac48b8c319cbe5de4a25515aa6cc1d2d8b6b7c90aff",
+      "stabilization_benchmark.py": "af5d447ce6d4f65146a4e08ce1dba9a46a2aa6f6ad1d7a5c6106f9affa65254c",
+      "state_runtime.py": "ffb8e45be625f631983cb3945e4e654d2f150570a672990f88d5d4fee09133c1",
+      "state_storage.py": "49e74d21342b0bdfaa842bfd69b9ba894d041f400ed7ef2b48e5e8a5255e8ad9"
+    },
+    "campaigns": [
+      {
+        "scenario": "industrial_front",
+        "result": "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine\\worldline-engine\\benchmarks\\military\\industrial_front-pytest-e31826a2f635\\result.json.gz",
+        "months": 36,
+        "seed": 1731,
+        "source_sha256_exact": true,
+        "final_logical_sha256_verified": true,
+        "elapsed_seconds": 2239.4210089999997,
+        "args": [
+          "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine\\worldline-engine.venv\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "worldline.military_benchmark",
+          "--directory",
+          "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine\\worldline-engine\\benchmarks\\military\\industrial_front-pytest-e31826a2f635",
+          "--scenario",
+          "industrial_front",
+          "--months",
+          "36",
+          "--seed",
+          "1731",
+          "--validation-mode",
+          "verification"
+        ]
+      },
+      {
+        "scenario": "expeditionary_sea",
+        "result": "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine\\worldline-engine\\benchmarks\\military\\expeditionary_sea-pytest-e31826a2f635\\result.json.gz",
+        "months": 36,
+        "seed": 1731,
+        "source_sha256_exact": true,
+        "final_logical_sha256_verified": true,
+        "elapsed_seconds": 2538.2293596,
+        "args": [
+          "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine\\worldline-engine.venv\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "worldline.military_benchmark",
+          "--directory",
+          "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine\\worldline-engine\\benchmarks\\military\\expeditionary_sea-pytest-e31826a2f635",
+          "--scenario",
+          "expeditionary_sea",
+          "--months",
+          "36",
+          "--seed",
+          "1731",
+          "--validation-mode",
+          "verification"
+        ]
+      },
+      {
+        "scenario": "preindustrial_border",
+        "result": "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine\\worldline-engine\\benchmarks\\military\\preindustrial_border-pytest-e31826a2f635\\result.json.gz",
+        "months": 36,
+        "seed": 1731,
+        "source_sha256_exact": true,
+        "final_logical_sha256_verified": true,
+        "elapsed_seconds": 2479.5496355000005,
+        "args": [
+          "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine\\worldline-engine.venv\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "worldline.military_benchmark",
+          "--directory",
+          "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine\\worldline-engine\\benchmarks\\military\\preindustrial_border-pytest-e31826a2f635",
+          "--scenario",
+          "preindustrial_border",
+          "--months",
+          "36",
+          "--seed",
+          "1731",
+          "--validation-mode",
+          "verification"
+        ]
+      }
+    ],
+    "all_complete": true
+  },
+  "fresh_vs_original_campaigns": {
+    "new_source_digest": "e31826a2f635",
+    "original_source_digest": "fb045bdabe91b310d6f45144cade1e4dba307ca02cc888314e872c405395ba0e",
+    "completed_comparisons": [
+      {
+        "domain": "military",
+        "label": "preindustrial_border",
+        "source_hashes_are_new_exact_source": true,
+        "months": 36,
+        "seed": 1731,
+        "path": "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine\\worldline-engine\\benchmarks\\military\\preindustrial_border-pytest-e31826a2f635\\result.json.gz",
+        "final_logical_sha256": "5543e904477614289500b8dcc9c550b783f5156b08e59f7f32984ab1fc3986a2",
+        "world_rng_ledger_exact": true,
+        "component_sha256": {
+          "world": "8cf8f4be483bb198c68ab529b93c4672cafe9c15386227d424f2ada03a284d57",
+          "rng": "52033f05ac032ab250da653b0202ddf220b47d1e4de5632182a1cf76a6d90915",
+          "ledger": "c16d9b73f65da9c49a7827a04c6f615f42762ca3eb806cf2f46c10e5c389d1d4"
+        }
+      },
+      {
+        "domain": "military",
+        "label": "industrial_front",
+        "source_hashes_are_new_exact_source": true,
+        "months": 36,
+        "seed": 1731,
+        "path": "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine\\worldline-engine\\benchmarks\\military\\industrial_front-pytest-e31826a2f635\\result.json.gz",
+        "final_logical_sha256": "c694317c63a456239d1a5f1f88a4e13825c177ce85b540e1c797167b8e07e92b",
+        "world_rng_ledger_exact": true,
+        "component_sha256": {
+          "world": "05430dadf289a4e0be6d1d071d693d94184f3a586b2220fb1e964737a826528d",
+          "rng": "d5390e1da5697531440919d243ec18d298b5a96c5b2d1fb613fb6d5a3adcf204",
+          "ledger": "849b00c84d3b4e273f1824d3554fd7640093cac5ae41fe303e512954c3272e46"
+        }
+      },
+      {
+        "domain": "military",
+        "label": "expeditionary_sea",
+        "source_hashes_are_new_exact_source": true,
+        "months": 36,
+        "seed": 1731,
+        "path": "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine\\worldline-engine\\benchmarks\\military\\expeditionary_sea-pytest-e31826a2f635\\result.json.gz",
+        "final_logical_sha256": "6ea4978699a8168341ff1bcccacf8a961cc41153e566818987ac80d36637e56d",
+        "world_rng_ledger_exact": true,
+        "component_sha256": {
+          "world": "78dfe102e7fd5ad4bb9bc857105295e5508abacc1c3735a1fc59fad91de327dd",
+          "rng": "dad6a5c511c94788305ef5ad803d71a77dc16bd5ee419360f4601a3b3663dfdd",
+          "ledger": "d31fb2db6e072b1857c320ea180f4f6d1848751fdfd0c2d83dbd0577341a18ce"
+        }
+      },
+      {
+        "domain": "npc",
+        "label": "replay",
+        "source_hashes_are_new_exact_source": true,
+        "months": 240,
+        "seed": 731,
+        "path": "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine\\worldline-engine\\benchmarks\\npc\\replayed.json.gz",
+        "world_rng_records_summary_exact": true,
+        "component_sha256": {
+          "final_world": "168d64822ed7a991d1030142bb68829b8585b9af6c228384be90c3c2ad3686dd",
+          "final_rng": "c42639b87fd570092ee272f824c1e0bcef9dcfbf2324cd1eca9d87246d40552c"
+        },
+        "logical_campaign_payload_sha256": "27630073acde21ede801195cc6caebb2b5e2cb2ba88e5ab5e634d4b36483dd4a",
+        "excluded_metadata_only": [
+          "source_sha256",
+          "runtime_seconds"
+        ]
+      },
+      {
+        "domain": "crisis",
+        "label": "primary",
+        "source_hashes_are_new_exact_source": true,
+        "months": 360,
+        "seed": 941,
+        "path": "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine\\worldline-engine\\benchmarks\\crisis\\campaign.json.gz",
+        "world_rng_records_summary_exact": true,
+        "component_sha256": {
+          "final_world": "849224532c88cff1e22610f0ab3dbac569d85e6b1cb075d0c0a9feffd41d4500",
+          "final_rng": "777a42c05bb2bcddae92de645bb82dc10d9e3f09b26d69275b30bc864449741c"
+        },
+        "logical_campaign_payload_sha256": "3e30adc0602f4f076f6fa3337a3ed6edbd587869cc0ccb3e7b215e31dba57b8f",
+        "excluded_metadata_only": [
+          "source_sha256",
+          "runtime_seconds"
+        ]
+      },
+      {
+        "domain": "crisis",
+        "label": "replay",
+        "source_hashes_are_new_exact_source": true,
+        "months": 360,
+        "seed": 941,
+        "path": "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine\\worldline-engine\\benchmarks\\crisis\\replayed.json.gz",
+        "world_rng_records_summary_exact": true,
+        "component_sha256": {
+          "final_world": "849224532c88cff1e22610f0ab3dbac569d85e6b1cb075d0c0a9feffd41d4500",
+          "final_rng": "777a42c05bb2bcddae92de645bb82dc10d9e3f09b26d69275b30bc864449741c"
+        },
+        "logical_campaign_payload_sha256": "3e30adc0602f4f076f6fa3337a3ed6edbd587869cc0ccb3e7b215e31dba57b8f",
+        "excluded_metadata_only": [
+          "source_sha256",
+          "runtime_seconds"
+        ]
+      }
+    ],
+    "all_six_compared": true,
+    "all_available_logical_results_exact": true,
+    "note": "All results were genuinely rerun. Historical source hashes were not edited or reused as new-source caches."
+  },
+  "physical_python_files_preserved": 141,
+  "only_two_exact_git_commit_selectors_changed": {
+    "worldline/runtime_query_benchmark.py": [
+      "0779cebcc4aa8e17f30c4ee0bb3cf5fa134157b9",
+      "66dcf5371b3aa321522ae858eae5f9b234838bd2"
+    ],
+    "tests/test_diplomacy_intelligence_legacy_equivalence.py": [
+      "f492d755ff30abe79943c3f73d134263adf92f8c",
+      "c3fa97517721fd6fe71552179c317cc0cfc28f4d"
+    ]
+  },
+  "immutable_fixture_physical_and_index_bytes_exact": true,
+  "required_calibrated_final_sha256": "a0ce517588176a9c71016777fa0470f0e13890a69f2c2016f55e80ae59ae997c",
+  "generated_history_paths_removed": 47,
+  "original_commits_retained_path_mode_blob_identity_verified": 5,
+  "original_full_backup": {
+    "backup": "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine-safe-backups\\worldline-engine-before-cleanup-2026-10-04",
+    "files": 13431,
+    "bytes": 16571899045,
+    "sha256_all_match": true,
+    "backup_fsck_rc": 0,
+    "backup_fsck_stdout": "",
+    "backup_fsck_stderr": ""
+  },
+  "fresh_raw_artifact_archive_after_validation": "C:\\Users\\c\\Documents\\Codex\\WorldlineEngine-local-artifacts\\cleanup-2026-10-04\\post-validation",
+  "fresh_metadata_exact_source_and_replay_file_sha256_verified": {
+    "benchmarks/crisis/summary.json": "5bcdd26f96b09efd72d941b0d2d3f78ec46ec22644c0fc91d88497b2be71c23c",
+    "benchmarks/crisis/stress_cases.json": "a1981a2228eba5aa9f9e00a56181610f44b9f53d77d4077f555fb2a5a60d4982",
+    "benchmarks/crisis/replay_verification.json": "f248c033b5a3fe9ae85c88291bdd2457d1213d327f7631c77584d984dc1beaaa",
+    "benchmarks/npc/replay_verification.json": "81e1e832ad254891b104790884c0a6c4d9f1ac5202a94ab3024fbd0276968c3b"
+  },
+  "push_executed": false
+}

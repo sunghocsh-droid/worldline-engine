@@ -1,7 +1,7 @@
 """Explicit opt-in storage scaffold for Diplomacy & Intelligence v1.
 
 Activation is a trusted-host operation, not authentication. Intelligence delivery
-is implemented by the narrow trusted snapshot domain; contact remains reserved.
+and contact records share the existing World/save/transaction foundation.
 """
 import copy
 import json
@@ -215,16 +215,17 @@ def _validate(world, previous=None):
         if type(state["version"]) is not int or state["version"] != STATE_VERSION:
             raise ValueError("Unsupported D&I state version")
         for field in workload:
-            if not isinstance(state[field], dict) or state is diplomacy and state[field]:
-                raise ValueError("D&I Stage 1 does not support nonempty " + field)
-        if not isinstance(state["outbox"], list) or state is diplomacy and state["outbox"]:
-            raise ValueError("D&I Stage 1 does not support outbox workloads")
+            if not isinstance(state[field], dict):
+                raise ValueError("Malformed D&I " + field)
+        if not isinstance(state["outbox"], list):
+            raise ValueError("Malformed D&I outbox")
         _object(state["next_ids"], id_keys, "D&I next_ids")
         if any(type(value) is not int or value < 1 for value in state["next_ids"].values()):
             raise ValueError("D&I next_ids must be positive integers")
     if diplomacy["next_ids"]["receipt"] < 2:
         raise ValueError("D&I activation has already consumed receipt 1")
-    _object(diplomacy["receipts"], {ACTIVATION_ID}, "D&I activation receipts")
+    if not isinstance(diplomacy["receipts"], dict) or ACTIVATION_ID not in diplomacy["receipts"]:
+        raise ValueError("Missing D&I activation receipt")
     receipt = diplomacy["receipts"][ACTIVATION_ID]
     validate_activation_receipt(receipt)
     if canonical_date(receipt["date"]) > canonical_date(world.date):
@@ -243,11 +244,13 @@ def _validate(world, previous=None):
                 raise ValueError("D&I next_ids cannot move backwards")
     from .intelligence import validate_state
     validate_state(world, previous)
+    from .diplomacy_validation import validate_state as validate_diplomacy_state
+    validate_diplomacy_state(world, previous)
     return []
 
 
 def validate(world, previous=None):
-    """Validate frozen intelligence records while keeping contact workloads reserved."""
+    """Validate activation, frozen intelligence and narrow contact lifecycles."""
     try:
         return _validate(world, previous)
     except (KeyError, TypeError, ValueError, AttributeError, OverflowError) as exc:
@@ -265,5 +268,6 @@ def tick_intelligence(world, tick_event, rng):
 
 
 def tick_diplomacy(world, tick_event, rng):
-    """Reserved scheduler slot; Stage 1 does not submit or judge contacts."""
-    return []
+    """Deliver contact messages and process delivered NPC contact evidence."""
+    from .diplomacy import tick
+    return tick(world)

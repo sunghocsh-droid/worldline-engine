@@ -14,7 +14,7 @@ import zipfile
 
 import pytest
 
-STABLE_COMMIT = "f492d755ff30abe79943c3f73d134263adf92f8c"
+STABLE_COMMIT = "c3fa97517721fd6fe71552179c317cc0cfc28f4d"
 CASES = ("mvp_save2", "economy_save2", "stabilized_save3", "npc_save4",
          "crisis_save5", "military_save6", "legacy_save1")
 

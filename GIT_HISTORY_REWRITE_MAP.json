@@ -1,0 +1,96 @@
+{
+  "original_to_cleaned": {
+    "0779cebcc4aa8e17f30c4ee0bb3cf5fa134157b9": "66dcf5371b3aa321522ae858eae5f9b234838bd2",
+    "50216e7fce8329a091115577d6567152bd96986b": "5a4e8a8220209cf53630cd0a128203c195b4abdf",
+    "c670c644fb9dcb8c8d9207c7d6ee86ecac892f88": "30438c0d7915ee953509a115b031b3307fe93eaa",
+    "e00ecb22b30f7e9d8c84c8ac63f1d076b2ea6542": "585b3cad07a1e7bc8d2117089b6fda4763952da6",
+    "f492d755ff30abe79943c3f73d134263adf92f8c": "c3fa97517721fd6fe71552179c317cc0cfc28f4d"
+  },
+  "removed_paths": [
+    "benchmarks/before_full.json",
+    "benchmarks/crisis/campaign.json.gz",
+    "benchmarks/crisis/replay_checkpoint.json.gz",
+    "benchmarks/crisis/replayed.json.gz",
+    "benchmarks/crisis/system_events.jsonl.gz",
+    "benchmarks/military/expeditionary_sea-pytest-9f5fde1aeec2/result.json.gz",
+    "benchmarks/military/expeditionary_sea-pytest-b40b20341732/result.json.gz",
+    "benchmarks/military/expeditionary_sea/midpoint.json",
+    "benchmarks/military/expeditionary_sea/result.json.gz",
+    "benchmarks/military/industrial_front-pytest-9f5fde1aeec2/result.json.gz",
+    "benchmarks/military/industrial_front-pytest-b40b20341732/result.json.gz",
+    "benchmarks/military/industrial_front/midpoint.json",
+    "benchmarks/military/industrial_front/result.json.gz",
+    "benchmarks/military/industrial_restore/midpoint.json",
+    "benchmarks/military/industrial_restore/result.json.gz",
+    "benchmarks/military/innovation_results.json",
+    "benchmarks/military/preindustrial_border-pytest-9f5fde1aeec2/result.json.gz",
+    "benchmarks/military/preindustrial_border-pytest-b40b20341732/result.json.gz",
+    "benchmarks/military/preindustrial_border/midpoint.json",
+    "benchmarks/military/preindustrial_border/result.json.gz",
+    "benchmarks/npc/after_fix_short/campaign.json",
+    "benchmarks/npc/before_fix/campaign.json",
+    "benchmarks/npc/campaign.json",
+    "benchmarks/npc/performance/campaign.json",
+    "benchmarks/npc/replay_checkpoint.json",
+    "benchmarks/npc/replayed.json.gz",
+    "benchmarks/npc/smoke/campaign.json",
+    "benchmarks/performance/baseline_campaign.json.gz",
+    "benchmarks/performance/baseline_checkpoint.json.gz",
+    "benchmarks/performance/baseline_npc_campaign.json.gz",
+    "benchmarks/performance/optimized_campaign.json.gz",
+    "benchmarks/performance/optimized_checkpoint.json.gz",
+    "benchmarks/performance/optimized_npc_checkpoint.json",
+    "benchmarks/performance/optimized_replay_suffix.json.gz",
+    "benchmarks/performance/optimized_replayed.json.gz",
+    "benchmarks/performance/optimized_resume_events.jsonl.gz",
+    "benchmarks/performance/optimized_system_events.jsonl.gz",
+    "benchmarks/runtime_query/before/expeditionary_sea/midpoint.json",
+    "benchmarks/runtime_query/before/industrial_front/midpoint.json",
+    "benchmarks/runtime_query/before/preindustrial_border/midpoint.json",
+    "benchmarks/runtime_query/long/crisis/campaign.json.gz",
+    "benchmarks/runtime_query/long/crisis/replay_checkpoint.json.gz",
+    "benchmarks/runtime_query/long/crisis/replayed.json.gz",
+    "benchmarks/runtime_query/long/npc/campaign.json.gz",
+    "benchmarks/runtime_query/long/npc/replay_checkpoint.json.gz",
+    "benchmarks/runtime_query/long/npc/replayed.json.gz",
+    "benchmarks/stabilization/stabilized.json"
+  ],
+  "source_preservation": [
+    {
+      "old": "0779cebcc4aa8e17f30c4ee0bb3cf5fa134157b9",
+      "new": "66dcf5371b3aa321522ae858eae5f9b234838bd2",
+      "all_retained_blob_ids_and_modes_equal": true,
+      "retained_paths": 299,
+      "removed_paths": 35
+    },
+    {
+      "old": "50216e7fce8329a091115577d6567152bd96986b",
+      "new": "5a4e8a8220209cf53630cd0a128203c195b4abdf",
+      "all_retained_blob_ids_and_modes_equal": true,
+      "retained_paths": 374,
+      "removed_paths": 47
+    },
+    {
+      "old": "c670c644fb9dcb8c8d9207c7d6ee86ecac892f88",
+      "new": "30438c0d7915ee953509a115b031b3307fe93eaa",
+      "all_retained_blob_ids_and_modes_equal": true,
+      "retained_paths": 367,
+      "removed_paths": 47
+    },
+    {
+      "old": "e00ecb22b30f7e9d8c84c8ac63f1d076b2ea6542",
+      "new": "585b3cad07a1e7bc8d2117089b6fda4763952da6",
+      "all_retained_blob_ids_and_modes_equal": true,
+      "retained_paths": 370,
+      "removed_paths": 47
+    },
+    {
+      "old": "f492d755ff30abe79943c3f73d134263adf92f8c",
+      "new": "c3fa97517721fd6fe71552179c317cc0cfc28f4d",
+      "all_retained_blob_ids_and_modes_equal": true,
+      "retained_paths": 364,
+      "removed_paths": 47
+    }
+  ],
+  "explanation": "Generated benchmark blobs removed before first GitHub push. All retained paths have identical modes and blob IDs in each of the five historical commits. Original history and uncommitted files are preserved in the independently verified full local backup. Historical evidence keeps its original SHA identifiers."
+}

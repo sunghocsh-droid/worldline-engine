@@ -1,0 +1,3 @@
+# Preserve the immutable fixture's exact original (including mixed) line endings.
+# Its SHA256 manifest verifies bytes, so Git must not convert them at checkout.
+tests/fixtures/crisis_v1_source/*.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

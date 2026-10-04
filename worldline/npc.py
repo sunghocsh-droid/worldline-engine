@@ -408,12 +408,12 @@ def _remember_interpretation(state, actor, event_id, action):
     npc_state.remember(state, actor, event_id, interpretation=interpretation, salience=.45, group_impact=.2)
 
 
-def _run_council(world, country, recommendations, options_by_actor, actual_by_actor):
-    state = _state(world)
+def government_choice(state, country, recommendations):
+    """Choose among supplied member advice using the existing government rule."""
     gov = state["governments"][country]
     members = [a for a in dict.fromkeys([gov["ruler"], *gov.get("cabinet", [])]) if a in recommendations]
     if not members:
-        return []
+        return None
     rule = gov.get("decision_rule", "cabinet")
     ruler = gov["ruler"]
     if rule == "executive" and ruler in recommendations:
@@ -426,9 +426,21 @@ def _run_council(world, country, recommendations, options_by_actor, actual_by_ac
             if selection is not None:
                 votes[selection] = votes.get(selection, 0) + _vote_weight(state, actor)
         if not votes:
-            return []
+            return None
         chosen = max(sorted(votes), key=lambda key: votes[key])
         proposer = next(a for a in members if recommendations[a]["selected"] == chosen)
+    return {"members": members, "chosen": chosen, "proposer": proposer,
+            "coalition": {a: recommendations[a]["selected"] for a in members}}
+
+
+def _run_council(world, country, recommendations, options_by_actor, actual_by_actor):
+    state = _state(world)
+    gov = state["governments"][country]
+    choice = government_choice(state, country, recommendations)
+    if choice is None:
+        return []
+    members, chosen, proposer = (choice[key] for key in ("members", "chosen", "proposer"))
+    ruler = gov["ruler"]
     option = next((o for o in options_by_actor[proposer] if o["id"] == chosen), None)
     if option is None:
         return []

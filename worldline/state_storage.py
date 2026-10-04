@@ -15,7 +15,8 @@ REFERENCE = "__worldline_archive_ref__"
 COMPONENTS = '__worldline_components__'
 INTELLIGENCE_ARCHIVE_KINDS = ('intelligence_observations', 'intelligence_dispatches',
                               'intelligence_receipts')
-DIPLOMACY_INTELLIGENCE_ARCHIVE_KINDS = ('diplomacy_receipts',) + INTELLIGENCE_ARCHIVE_KINDS
+DIPLOMACY_ARCHIVE_KINDS = ('diplomacy_proposals', 'diplomacy_dispatches', 'diplomacy_receipts')
+DIPLOMACY_INTELLIGENCE_ARCHIVE_KINDS = DIPLOMACY_ARCHIVE_KINDS + INTELLIGENCE_ARCHIVE_KINDS
 
 
 def _encode(value):
@@ -176,12 +177,12 @@ def compact(db, payload, cache=None):
             out['receipts'] = {item: _store(db, value, kind,
                                _di_archive_identity(kind, value)['owner'], item, cache)
                                for item, value in domain['receipts'].items()}
-            if field == 'intelligence_state':
-                for bucket in ('observations', 'dispatches'):
-                    archive_kind = 'intelligence_' + bucket
-                    out[bucket] = {item: _store(db, value, archive_kind,
-                                   _di_archive_identity(archive_kind, value)['owner'], item, cache)
-                                   for item, value in domain[bucket].items()}
+            prefix = 'intelligence' if field == 'intelligence_state' else 'diplomacy'
+            for bucket in (('observations', 'dispatches') if prefix == 'intelligence' else ('proposals', 'dispatches')):
+                archive_kind = prefix + '_' + bucket
+                out[bucket] = {item: _store(db, value, archive_kind,
+                               _di_archive_identity(archive_kind, value)['owner'], item, cache)
+                               for item, value in domain[bucket].items()}
             physical_world[field] = out
     used = cache.pop(None)
     # Only current references expire. Historical objects and their catalog never
@@ -204,6 +205,54 @@ def _archive_raw(digest, row):
     if len(raw) != row[2] or hashlib.sha256(raw).hexdigest() != digest:
         raise ValueError("State archive checksum mismatch")
     return raw
+
+
+def archive_diplomacy_traces(db, event, cache):
+    """Preserve contact event snapshots before another same-tick transition.
+
+    The Engine calls this inside its one Ledger transaction. This also archives
+    NPC traces before the recent window trims them. Current heads expire normally.
+    """
+    if event.get('system') != 'diplomacy':
+        return
+    cache.setdefault(None, set())
+    kind = event.get('kind')
+    if kind == 'proposal_submitted':
+        records = [('diplomacy_proposals', event['proposal']),
+                   ('diplomacy_receipts', event['submission_receipt'])]
+        records.extend(('diplomacy_dispatches', value) for value in event['dispatches'])
+    elif kind == 'contact_responded':
+        records = [('diplomacy_receipts', event['response_receipt'])]
+        records.extend(('diplomacy_dispatches', value) for value in event['dispatches'])
+        for decision in event['decisions']:
+            _guard_contact_trace_identity(db, 'decision', decision)
+            _store(db, decision, 'decision', decision['actor'], decision['id'], cache)
+        action = event['action']
+        if action is not None:
+            _guard_contact_trace_identity(db, 'action', action)
+            _store(db, action, 'action', action['actor'], action['id'], cache)
+    elif kind == 'dispatch_delivered':
+        records = [('diplomacy_dispatches', event['dispatch']),
+                   ('diplomacy_receipts', event['delivery_receipt'])]
+        if event['application_receipt'] is not None:
+            records.append(('diplomacy_receipts', event['application_receipt']))
+    else:
+        raise ValueError('Unsupported diplomacy archive event')
+    for archive_kind, value in records:
+        identity = _di_archive_identity(archive_kind, value)
+        _store(db, value, archive_kind, identity['owner'], identity['item'], cache)
+
+
+archive_diplomacy_event = archive_diplomacy_traces
+
+
+def _guard_contact_trace_identity(db, kind, trace):
+    """New contact traces cannot reuse another immutable NPC history identity."""
+    digest = hashlib.sha256(_encode(trace).encode('utf-8')).hexdigest()
+    for owner, archived_digest in db.execute(
+            'SELECT owner,digest FROM archive_catalog WHERE kind=? AND item=?', (kind, trace['id'])):
+        if owner != trace['actor'] or archived_digest != digest:
+            raise ValueError('Contact NPC trace identity conflicts with archived history')
 
 
 def _expand(db, value, blobs):
@@ -286,10 +335,9 @@ def read(db, text):
             if domain is not None:
                 domain['receipts'] = {key: _expand(db, value, blobs)
                                       for key, value in domain['receipts'].items()}
-                if field == 'intelligence_state':
-                    for bucket in ('observations', 'dispatches'):
-                        domain[bucket] = {key: _expand(db, value, blobs)
-                                          for key, value in domain[bucket].items()}
+                for bucket in (('observations', 'dispatches') if field == 'intelligence_state' else ('proposals', 'dispatches')):
+                    domain[bucket] = {key: _expand(db, value, blobs)
+                                      for key, value in domain[bucket].items()}
         return payload
     except (zlib.error, json.JSONDecodeError) as exc:
         raise ValueError("Corrupt state archive object") from exc
@@ -378,10 +426,31 @@ def _di_receipt_identity(kind, value):
 
 def _di_archive_identity(kind, value):
     """Validate namespaced identity independently of a current World."""
-    if kind == 'diplomacy_receipts':
+    country = None
+    if kind == 'diplomacy_receipts' and isinstance(value, dict) and value.get('kind') == 'activation':
         from .diplomacy_intelligence import validate_activation_receipt
         validate_activation_receipt(value)
         owner, day, active, parent = '', value['date'], None, None
+    elif kind in DIPLOMACY_ARCHIVE_KINDS:
+        from .diplomacy_validation import (validate_proposal_record, validate_dispatch_record,
+                                           validate_receipt_record)
+        if kind == 'diplomacy_proposals':
+            validate_proposal_record(value)
+            principal = value['body']['principal_ref']
+            owner = principal['kind'] + ':' + principal['id']
+            country, day = value['body']['proposer_country_id'], value['body']['created_at']
+            active, parent = int(value['status'] == 'pending'), None
+        elif kind == 'diplomacy_dispatches':
+            validate_dispatch_record(value)
+            owner = value['recipient']['kind'] + ':' + value['recipient']['id']
+            day, active, parent = value['sent_at'], int(value['status'] == 'queued'), value['proposal_id']
+        else:
+            validate_receipt_record(value)
+            reference = value['principal_ref'] if value['kind'] in ('submission', 'response') else value['recipient']
+            owner = reference['kind'] + ':' + reference['id']
+            day, active, parent = value['date'], None, value['proposal_id']
+            if value['kind'] in ('submission', 'response'):
+                country = value['authorization']['country_id']
     else:
         from .intelligence import (validate_observation_record, validate_dispatch_record,
                                    validate_receipt_record)
@@ -398,7 +467,7 @@ def _di_archive_identity(kind, value):
             day, active, parent = value['date'], None, value['observation_id']
         else:
             raise ValueError('Unsupported D&I archive kind')
-    return {'owner': owner, 'item': value['id'], 'country': None, 'region': None,
+    return {'owner': owner, 'item': value['id'], 'country': country, 'region': None,
             'day': day, 'active': active, 'parent': parent}
 
 

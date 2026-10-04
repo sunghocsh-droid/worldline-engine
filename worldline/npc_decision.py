@@ -416,6 +416,27 @@ def decide(view, options, rng):
                       "decision_version": VERSION, "report_metadata": copy.deepcopy(view.get("report_metadata", {}))}}
 
 
+def decide_deterministic(view, options):
+    """Rank delivered perceptions with the existing evaluator and no RNG draws."""
+    person = _person(view)
+    if not isinstance(options, (list, tuple)):
+        raise ValueError("Decision requires ordered detached options")
+    ids = [o.get("id") for o in options if isinstance(o, dict)]
+    if len(ids) != len(options) or len(set(ids)) != len(ids) or not all(isinstance(i, str) for i in ids):
+        raise ValueError("Options must have unique string ids")
+    context = _evaluation_context(view) if options else None
+    evaluations = [_evaluate(view, option, 0.0, context)
+                   for option in sorted(options, key=lambda o: o["id"])]
+    eligible = [evaluation for evaluation in evaluations if evaluation["eligible"]]
+    selected = max(eligible, key=lambda e: (e["score"], e["option"])) if eligible else None
+    return {"actor": person["id"], "selected": selected["option"] if selected else None,
+            "evaluations": evaluations,
+            "reason_trace": copy.deepcopy(selected["reason_trace"]) if selected else [],
+            "perceived": copy.deepcopy(selected["perceived"]) if selected else None,
+            "basis": {"date": view.get("date"), "information": "detached delivered reports and actor interpretations",
+                      "decision_version": VERSION, "report_metadata": copy.deepcopy(view.get("report_metadata", {}))}}
+
+
 def reaction(view, option, decision=None):
     """Return proposals/reactions within authority; execute no policy or coup."""
     person = _person(view)

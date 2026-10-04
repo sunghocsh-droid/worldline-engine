@@ -158,8 +158,11 @@ class Engine:
         if row is None:
             raise ValueError("Missing committed state")
         journal = getattr(self, '_journal', None)
-        if journal is not None and not journal.external_dirty and self._database_unchanged(row[0]):
-            frame = self._transaction_frame if self.db.in_transaction and hasattr(self, '_transaction_frame') else None
+        frame = self._transaction_frame if self.db.in_transaction and hasattr(self, '_transaction_frame') else None
+        # SQLite exposes this connection's candidate component/head writes.
+        # Until COMMIT, every public read must use the transaction's original
+        # logical projection even after those physical pointers have changed.
+        if journal is not None and (frame is not None or not journal.external_dirty and self._database_unchanged(row[0])):
             if field in ('observed', 'orders', 'journeys'):
                 # Select the committed root reference before reconstructing its
                 # changed children. A metadata read never projects the World.
@@ -345,6 +348,62 @@ class Engine:
         """Detached committed knowledge for one person/player, after actual receipt."""
         from .intelligence import view
         return view(self.true_state, subject_ref, subject_or_topic)
+
+    def propose_contact(self, request_id, proposer_country_id, recipient_country_id,
+                        sender_person_id, recipient_person_id, content, *, principal_ref, proposal_id=None):
+        """Submit one bounded contact through the bound, authorized representative."""
+        from .diplomacy import propose, request_receipt
+        committed = self.true_state
+        args = (request_id, proposer_country_id, recipient_country_id, sender_person_id, recipient_person_id, content)
+        kwargs = {'principal_ref': principal_ref, 'proposal_id': proposal_id}
+        if request_receipt(committed, request_id, principal_ref) is not None:
+            return propose(committed, *args, **kwargs)[0]
+        with self._transaction():
+            result, events = propose(self._world, *args, **kwargs)
+            for event in events:
+                self._event('system_event', event)
+        return result
+
+    def respond_contact(self, request_id, proposal_id, executing_person_id, accept_or_reject, *, principal_ref):
+        """Execute a response after rechecking current authority and actual receipt."""
+        from .diplomacy import respond, request_receipt
+        committed = self.true_state
+        args = (request_id, proposal_id, executing_person_id, accept_or_reject)
+        if request_receipt(committed, request_id, principal_ref) is not None:
+            return respond(committed, *args, principal_ref=principal_ref)[0]
+        with self._transaction():
+            result, events = respond(self._world, *args, principal_ref=principal_ref)
+            for event in events:
+                self._event('system_event', event)
+        return result
+
+    def _apply_diplomacy_event(self, event):
+        if (self._world.diplomacy_state is not None and isinstance(event, dict)
+                and event.get('system') == 'diplomacy' and event.get('kind') == 'dispatch_delivered'):
+            dispatch = event['dispatch']
+            if dispatch['belief_accepted'] and dispatch['recipient']['kind'] == 'player':
+                from .diplomacy_perception import perception_key, player_report
+                self._apply_observation(dispatch['recipient']['id'],
+                    perception_key(dispatch['payload'], dispatch['message_kind']),
+                    player_report(dispatch['payload'], dispatch['message_kind']))
+
+    def tick_diplomacy(self):
+        """Trusted runtime delivery/decision hook; actor knowledge uses diplomacy_view."""
+        from .diplomacy import due, actionable, tick
+        committed = self.true_state
+        if not due(committed) and not actionable(committed):
+            return []
+        with self._transaction():
+            events = tick(self._world)
+            for event in events:
+                self._apply_diplomacy_event(event)
+                self._event('system_event', event)
+        return copy.deepcopy(events)
+
+    def diplomacy_view(self, subject_ref):
+        """Detached, committed contact knowledge for one explicit person/player."""
+        from .diplomacy import view
+        return view(self.true_state, subject_ref)
 
     def enable_military(self, config=None):
         from .military_state import initialize
@@ -779,7 +838,10 @@ class Engine:
                 intelligence_events = [(day, json.loads(body)) for day, body in self.db.execute(
                     "SELECT day,payload FROM ledger WHERE kind='system_event' "
                     "AND json_extract(payload,'$.system')='intelligence' ORDER BY id")]
-                validate_diplomacy_intelligence_ledger(self._world, activations, intelligence_events)
+                diplomacy_events = [(day, json.loads(body)) for day, body in self.db.execute(
+                    "SELECT day,payload FROM ledger WHERE kind='system_event' "
+                    "AND json_extract(payload,'$.system')='diplomacy' ORDER BY id")]
+                validate_diplomacy_intelligence_ledger(self._world, activations, intelligence_events, diplomacy_events)
             physical = state_storage.compact(self.db, after, self._storage_cache)
             physical = state_storage.write_components(self.db, physical, after, self._component_cache, self._revision + 1)
             text = encode(physical)
@@ -816,6 +878,8 @@ class Engine:
             raise ValueError("Ledger events require a kind and a JSON object payload")
         self.db.execute("INSERT INTO ledger(day,kind,payload) VALUES(?,?,?)",
                         (self._world.date, kind, encode(payload)))
+        if kind == 'system_event' and payload.get('system') == 'diplomacy':
+            state_storage.archive_diplomacy_event(self.db, payload, self._storage_cache)
 
     def ledger(self):
         return [{"id": i, "day": d, "kind": k, "payload": json.loads(p)}
@@ -875,6 +939,7 @@ class Engine:
                 for system in self._systems:
                     for event in system(self._world, copy.deepcopy(tick), self._rng) or []:
                         self._apply_intelligence_event(event)
+                        self._apply_diplomacy_event(event)
                         self._event("system_event", event)
                     if self._world.date != tick["date"]:
                         raise ValueError("Only the game clock may change the world date")

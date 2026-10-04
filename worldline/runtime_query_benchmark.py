@@ -22,7 +22,7 @@ from types import SimpleNamespace
 
 from .performance_benchmark import canonical_sha256, load_baseline_modules, package_sources
 
-BASELINE_COMMIT = "0779cebcc4aa8e17f30c4ee0bb3cf5fa134157b9"
+BASELINE_COMMIT = "66dcf5371b3aa321522ae858eae5f9b234838bd2"
 REPOSITORY = Path(__file__).resolve().parents[1]
 MODULES = ("models", "engine", "economy", "state_storage", "state_runtime",
            "crisis", "crisis_state", "crisis_effects", "crisis_response",

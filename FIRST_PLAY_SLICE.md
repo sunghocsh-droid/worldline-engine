@@ -1,6 +1,8 @@
 # 첫 LLM 대화형 플레이: 최소 acceptance contract
 
-상태: **scope frozen / implementation not yet started**. 2026-10-03에 확정한 Diplomacy & Intelligence v1의 첫 플레이 계약이다. 정본 기준은 `f492d755ff30abe79943c3f73d134263adf92f8c`, tag `runtime-query-performance-v1-stable`, 기존 검증 기록은 **1,350 passed**다. 이 문서는 실행 결과가 아니며 LLM adapter·생산 코드·테스트 구현을 포함하지 않는다. 상세 소유권·저장 계약은 `DIPLOMACY_INTELLIGENCE_AUDIT_DESIGN.md`를 따른다.
+상태: **scope frozen / D&I Stage 3+4 Engine 구현·기존 검증 완료 / LLM adapter 미구현**. 2026-10-03에 확정한 Diplomacy & Intelligence v1의 첫 플레이 계약을 유지한다. Engine만 사용하는 접촉 왕복·NPC 판단·양방향 in-transit save/load acceptance를 구현했고, 기존 전체 검증 기록은 **1,830 passed**다. 저장소 정리 후 최종 재검증 상태는 [CURRENT_STATE.md](CURRENT_STATE.md)를 따른다. 자연어부터 LLM 표현까지의 실제 플레이는 adapter 구현 후 확인할 대상이다.
+
+최초 설계 기준은 원본 `f492d755ff30abe79943c3f73d134263adf92f8c`의 Runtime Query Performance v1 안정점이다. generated benchmark 이력을 정리한 현재 대응 commit은 `c3fa97517721fd6fe71552179c317cc0cfc28f4d`, tag는 `runtime-query-performance-v1-stable`이며 보존한 코드·문서·테스트 blob은 원본과 같다. 원본→현재 대응과 제외 경로는 [GIT_HISTORY_REWRITE_MAP.json](GIT_HISTORY_REWRITE_MAP.json), 상세 소유권·저장 계약은 `DIPLOMACY_INTELLIGENCE_AUDIT_DESIGN.md`를 따른다.
 
 Worldline이 실제 계산을 담당하고 LLM이 주 플레이 인터페이스가 되는 대체역사 국가운영 게임의 첫 목표는 **평시 외국 정부와의 접촉 요청 한 건을 실제 지연·판단·응답·기억·저장을 거쳐 완주하는 것**이다. LLM vendor, API, MCP, Apps SDK, UI, 요금제와 첫 캠페인의 시대는 선택하지 않는다.
 
@@ -48,7 +50,7 @@ Worldline이 실제 계산을 담당하고 LLM이 주 플레이 인터페이스�
 | write 요청 | 검증된 contact 제출, 자기 제어·권한 범위에서 실제 수신한 contact의 accept/reject 응답, simulation 시간 진행 요청만 allowlist에 등록. 외국 NPC의 응답은 Engine/NPC 내부 판단 경로 |
 | 응답 표현 | Engine의 receipt·recipient view에 있는 결과와 simulation 날짜를 표현. 수신하지 않은 결과나 NPC의 비공개 이유를 생성해 실제 결과로 제시하지 않음 |
 
-`propose_contact`, `respond_contact`, `diplomacy_view`, `intelligence_view` 같은 새 이름은 **후속 구현의 계약 명칭**이며 현재 동작하는 API라는 뜻이 아니다. 질문은 truth를 변경하지 않는다. 자연어·LLM 출력은 검증할 요청이며 실행 권한이나 사실 증명이 아니다.
+`Engine.propose_contact`, `Engine.respond_contact`, `Engine.diplomacy_view`, `Engine.intelligence_view`는 현재 구현된 API다. LLM adapter의 인증된 binding·allowlist·자연어 변환은 후속 구현이며, Engine API만으로 외부 호출자의 인증이 해결되지는 않는다. 질문은 truth를 변경하지 않는다. 자연어·LLM 출력은 검증할 요청이며 실행 권한이나 사실 증명이 아니다.
 
 LLM에 `Engine.true_state`, Engine 객체, 전체 Ledger, DB path/connection, `historical_state`, hidden archive, 미수신 dispatch, 전체 observation table, audit-only accuracy, 상대국의 hidden truth를 전달하지 않는다. `npc_report`, `npc_outcome`, observation ingestion, 직접 DB 주입은 trusted scenario/domain hook이며 LLM write 경계에 넣지 않는다. actor-facing 오류도 상대의 미관측 실제 상태를 드러내지 않는다.
 
@@ -64,7 +66,7 @@ LLM에 `Engine.true_state`, Engine 객체, 전체 Ledger, DB path/connection, `h
 | Military | 기존 command delay·operation 보고·전투 결과·publish와 군사 actor. 기존 report를 연결할 경우 원래 observation/delivery identity와 수신 사실을 보존 |
 | Engine/Runtime | 기존 simulation clock, transaction/Journal, 단일 Ledger, archive, committed public view와 필요한 recipient query |
 
-최초 ingestion/delivery와 지연은 deterministic하고 난수를 사용하지 않는다. 국제 지연은 trusted 설정의 명시적 정수 simulation days로 정하고 기존 국내 leg가 있는 경우에만 기존 helper를 재사용한다. NPC의 새 외교 선택에 실제 noise가 필요한 경우에만 독립 named Diplomacy stream을 사용한다. 기존 global/NPC RNG 순서를 바꾸거나 legacy 정기 council을 같은 tick에 다시 실행하지 않는다.
+최초 ingestion/delivery와 지연은 deterministic하고 난수를 사용하지 않는다. 국제 지연은 trusted 설정의 명시적 정수 simulation days로 정하고 기존 국내 leg가 있는 경우에만 기존 helper를 재사용한다. 현재 NPC contact adapter도 기존 deterministic evaluator를 사용하며 새 RNG stream을 만들거나 draw를 소비하지 않는다. 향후 실제 noise가 필요한 경우에만 감사 설계의 독립 named Diplomacy stream 계약을 검토한다. 기존 global/NPC RNG 순서를 바꾸거나 legacy 정기 council을 같은 tick에 다시 실행하지 않는다.
 
 첫 플레이 전에 일반 treaty DSL, 다자 협상, 동맹 자동 이행, guarantee, 군사통행권 협상, peace settlement, 첩보망, spy/agent, 공작, 방첩, 기만, 국제 통신망, 전역 intelligence score, 자동 국가별 전수 수집, 새 사회·이념·금융 엔진은 필요하지 않다. counteroffer, deadline, withdraw/expiry, 통신 실패·재시도 시뮬레이션, 기존 Crisis/Military queue의 이전·자동 relay/재발행도 v1 필수에서 보류한다. 완성된 MCP/API/UI, 특정 provider의 대화 session, 20년/30년 캠페인과 첫 시대 결정도 이 contract의 전제조건이 아니다.
 
@@ -78,7 +80,7 @@ save는 proposal lifecycle, frozen payload, outbox, 예정일·실제 수신일,
 
 ## 6. 성공·실패 acceptance criteria
 
-아래는 후속 구현·첫 플레이의 검증 기준이며 이번 문서 작업에서 실행하지 않는다.
+아래는 유지하는 첫 플레이 계약이다. Engine 측 기준은 Stage 3+4 acceptance 테스트에 연결했고, 자연어·인증된 session·LLM 표현을 포함한 전체 왕복은 LLM adapter 구현 후 실제 플레이로 확인한다. 저장소 정리 전 검증 기록과 정리 후 재검증 결과는 구별해 `CURRENT_STATE.md`에 기록한다.
 
 | 기준 | 성공 | 실패 |
 |---|---|---|
